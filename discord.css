@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: dotted 1px black;
+}
+
+.container {
+            display: grid;
+            grid-template: 
+                            "home server-name current-chat-group" 60px
+                            "servers invite chat-log" 200px
+                            "servers chat-groups chat-log" 1fr
+                            "servers settings-bar text-box" 60px /
+                            90px 225px 1fr;
+            height: 100vh;
+            width: 100vw;
+}
+
+.home {
+    grid-area: home;
+    background-color: #E3E5E8;
+    display: grid;
+    place-items: center;
+}
+
+.server-icon {
+    height: 55px;
+    width: 55px;
+    border-radius: 30px;
+}
+
+.icon {
+    height: 35px;
+    width: 35px;
+}
+
+.spacer-icon {
+    height: 35px;
+    width: 35px;
+    border: none;
+}
+
+.server-name {
+    grid-area: server-name;
+    background-color: #E3E5E8;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    grid-template-columns: 70px 1fr 45px ;
+}
+
+.current-chat-group{
+    grid-area: current-chat-group;
+    background-color: white;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    grid-template-columns: 45px 70px 1fr 45px 45px 45px 70px 45px 45px;
+}
+
+.servers {
+    grid-area: servers;
+    background-color: #E3E5E8;
+    display: grid;
+    place-items: center;
+    padding-bottom: 450px;
+}
+
+.invite {
+    grid-area: invite;
+    background-color: #E3E5E8;
+}
+
+.chat-log {
+    grid-area: chat-log;
+    background-color: white;
+}
+
+.chat-groups {
+    grid-area: chat-groups;
+    background-color: #E3E5E8;
+    display: grid;
+}
+
+.chat-groups ul {
+    display: grid;
+    grid-auto-rows: repeat(auto-fit, 10px);
+    border: none;
+    gap: 3px;
+}
+
+.chat-groups li {
+    height: 10px;
+    list-style: none;
+}
+
+.settings-bar {
+    grid-area: settings-bar;
+    background-color: #E3E5E8;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+}
+
+.profile-info {
+    height: 35px;
+    width: 70px;
+}
+
+.text-box {
+    grid-area: text-box;
+    background-color: #E3E5E8;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    grid-template-columns: 45px 1fr 45px 45px 45px;
+}
+
+.message-box {
+    border: none;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template: 
+                        "home server-name current-chat-group" 60px
+                        "servers chat-log chat-log" 200px
+                        "chat-groups chat-log chat-log" 1fr
+                        "settings-bar text-box text-box" 60px /
+                        150px 100px 1fr;
+}
+
+.invite {
+    display: none;
+}
+}
