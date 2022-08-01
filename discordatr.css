@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template:
+        "sidebar menu-top top-bar" 50px
+        "sidebar menu chat" 600px/
+        80px 150px 600px;
+        height: 600px;
+        width: 600px;
+        margin:auto;
+        gap: 5px;
+        font-size:x-large;
+        color: #fff;
+        justify-content: center;
+        text-align: center;
+
+
+}
+
+
+
+.top-bar {
+    grid-area: top-bar;
+    background-color: red;
+    /* padding-top: 10px;
+    padding-left: 10px; */
+
+    padding: 10px 10px 5px 10px;
+    display: grid;
+    grid-template-columns: 30px 30px 240px 30px 30px 30px 90px 30px 30px;
+    gap: 5px;
+    /* padding-bottom: 5px; */
+}
+
+.top-bar div {
+    border: 1px white dotted;
+    border-radius: 10px;
+}
+
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: blue;
+
+    display: grid;
+    grid-template-rows: repeat (7, 5px);
+    gap: 5px;
+    padding: 10px 15px 300px 15px;
+
+}
+
+.sidebar div {
+    border: 1px white dotted;
+    border-radius: 50px;
+    /* margin-bottom: 35px; */
+}
+
+
+
+.menu {
+    grid-area: menu;
+    background-color: cadetblue;
+
+    display: grid;
+    grid-template-rows: 100px 300px;
+    gap: 10px;
+    padding: 5px;
+}
+
+.menu-top {
+    grid-area: menu-top;
+    background-color: rgb(87, 138, 139);
+}
+
+.menu-top div {
+    border: 1px white dotted;
+    border-radius: 10px;
+    line-height: 1;
+    margin: 3px 5px 0 5px;
+    padding: 20px 5px;    
+}
+
+.menu div {
+    border: 1px white dotted;
+    border-radius: 10px;
+    padding: 1px 5px;
+    margin: 5px 2px ;
+    line-height: 0;
+}
+
+.inside div {
+    display: grid;
+    grid-template-rows: repeat (17, 10px);
+    height: 4%;
+}
+
+/* .bottom-options {
+    padding-top: 40px;
+} */
+
+.chat {
+    grid-area: chat;
+    background-color: burlywood;
+    /* padding-top: 245px; */
+
+    display: grid;
+    grid-template-rows: 1fr 70px 120px 70px 50px;
+}
+
+.chat .hashtag {
+    padding-top: 45px;
+    margin-right: 90%;
+    border-radius: 35px;
+}
+
+.chat .welcome {
+    padding-top: 95px;
+    margin-right: 70%;
+}
+.chat div {
+    border: 1px white dotted;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.message-box {
+    display:grid;
+    grid-template-columns: 40px 430px 40px 40px 40px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 880px) {
+    .container {
+    grid-template:
+        "sidebar menu-top top-bar" 50px
+        "sidebar menu chat" 600px/
+        80px 150px 600px;
+        height: 600px;
+        width: 600px;
+        margin:auto;
+}
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+    grid-template:
+        "menu-top top-bar" 50px
+        "menu chat" 600px/
+        300px 300px;
+        height: 600px;
+        width: 600px;
+        margin:auto;
+}
+}

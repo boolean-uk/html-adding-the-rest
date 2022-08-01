@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template:
+        "header header header header" 50px
+        "left-menu main right-menu sidebar" 1fr/
+        200px 1fr 250px 50px;
+
+        width: auto;    
+}
+
+.header {
+    grid-area: header;
+    border: solid 1px rgb(193, 193, 193);
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+.header-el1, .header-el2, .header-el3 {
+    margin: 10px;
+   }   
+
+ .header .header-el1 {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-gap: 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+   }
+
+   .container .header .header-el1 .main-menu-icon img {
+    width: 20px;
+   }
+   .container .header .header-el1 .gmail-icon img {
+       width: 30px;
+   }
+   .container .header .header-el1 span {
+       font-size: x-large;
+         margin-left: 10px;  
+
+    }
+
+.header .header-el2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 5%;
+    margin-right: 25%;
+    background-color:rgb(227, 226, 226);
+    border-radius: 6px;
+   }
+
+.header .header-el3 {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    grid-gap: 5px;
+}
+
+.header .header-el2 .search img{
+    width: 20px;
+    margin: 5px;
+}
+.container .header-el3 .item img {
+    width: 20px;
+}
+
+
+/* LEFT MENU */
+
+.left-menu {    
+    grid-area: left-menu;
+    display: grid;
+    grid-template-rows: 400px 100px 120px 50px;
+}
+.left-menu .categories {
+    border-bottom: solid 1px rgb(193, 193, 193);
+}
+
+.left-menu .categories li {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(11, 3px);
+}
+
+.left-menu .meet .meet-options li {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(3, 3px);
+    margin-top: 15px;
+}
+                                    
+.left-menu .chat .chat-items {
+    display: grid;
+    border-top: solid 1px rgb(193, 193, 193);
+}
+
+.left-menu .chat .chat-items li {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(4, 7px);
+}
+
+.left-menu .chat-options {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    padding-left: 40px;
+    border: solid 1px rgb(193, 193, 193);
+    height: 30px;
+}
+
+
+
+/* LEFT MENU ICONS */
+
+#compose img{
+    width: 90px;
+    height:60px;
+    margin-left:20%;
+}
+
+.left-menu .icon img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+
+/* MAIN */
+
+.main .emails li{
+    display: grid;
+    border: solid 1px rgb(193, 193, 193);
+    grid-template-columns: 4% 5% 25% 45% 20%;
+    grid-template-rows: repeat(17, 2px);
+    align-items: baseline;
+}
+
+
+/* RIGHT-MENU  */
+
+.right-menu .right-menu-container { 
+    grid-area: right-menu;
+    display: grid;
+    grid-template-rows: 100px 140px 140px 270px; 
+    border: solid 1px rgb(193, 193, 193);
+}
+
+.right-menu .quick-settings {
+    display: grid;
+    grid-template-rows: 30px 30px;
+    border-bottom: solid 1px rgb(193, 193, 193);
+    padding-top: 10px;
+}
+.right-menu .quick-settings button {
+    padding: 5px 60px;
+    margin-left: 15px;
+    color: blue;
+    background-color: #ffff;
+    border-radius: 5px;
+    border-color:rgb(193, 193, 193);
+}
+
+.right-menu .density {
+    border-bottom: solid 1px rgb(193, 193, 193);
+    padding: 10px 0px;
+}
+.right-menu .density .diagram img {
+    width: 50px;
+    height: 25px;
+    margin-left: 40px;
+}
+
+.right-menu .density .icon img {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.right-menu .right-menu-container .right-menu-section-name {
+    padding-left: 15px;
+    margin-bottom: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+    font-size: small;
+    color:rgb(152, 152, 152);
+}
+
+#quick-settings-title {
+    padding-left: 10px;
+}
+
+.right-menu .density .density-type {
+    display: grid;
+    grid-template-rows: repeat(3, 10px);
+    grid-template-columns: 40px 100px 90px;
+}
+
+.right-menu .section-name-header {
+    display: grid;
+    grid-template-rows: 30px;
+    grid-template-columns: 100px 100px;
+}
+
+.right-menu .theme {
+    padding-top: 10px;
+    border-bottom: solid 1px rgb(193, 193, 193);
+
+}
+.right-menu .theme span {
+    color: blue;
+    margin-left: 40px;
+}
+
+.right-menu .theme-images-container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: 30px 30px;
+    place-content: center;
+}
+.right-menu .theme-images .theme-images-container img {
+    width: 50px;
+    height: 30px;
+}
+
+.right-menu .inbox-type {
+    padding-top:10px;
+}
+
+.right-menu .type {
+    display: grid;
+    grid-template-rows: 20px 20px 20px;
+    grid-template-columns: 40px 100px 90px;
+}
+
+.right-menu .type .icon img {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.right-menu .type .diagram img {
+    width: 50px;
+    height: 30px;
+    margin-left: 40px;
+}
+
+.right-menu .inbox-type .section-name {
+    margin-bottom: 10px;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+}   
+.sidebar .sidebar-icons {
+    display: grid;
+    grid-template-columns: 50px;
+    grid-template-rows: repeat(5, 50px);
+}
+.sidebar .sidebar-icons .icon img {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+
+@media screen and (max-width: 1265px) {
+    .container {
+        grid-template:
+            "header header header" 50px
+            "left-menu main right-menu" 1fr /
+            200px 1fr 200px ;
+    }
+
+    .sidebar {
+        display: none;
+        }
+    }
+
+    @media screen and (max-width: 987px){
+        .container {
+            grid-template:
+                "header header " 50px
+                "left-menu main " 1fr /
+                300px 1fr ;
+        }
+
+        .right-menu {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 499px){
+        .container {
+            grid-template:
+                "header" 50px
+                "main" 1fr /
+                 1fr ;
+        }
+
+        .left-menu{
+            display:none;
+        }
+
+  } 
