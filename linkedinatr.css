@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template:
+        "navbar navbar navbar navbar navbar" 50px
+        ". left-menu main right-menu ." 1fr/
+        150px 150px 250px 200px 150px;
+        height: 600px;
+        width: 600px;
+        margin: auto;
+        margin:auto;
+        gap: 5px;
+        font-size:x-large;
+        color: #fff;
+        justify-content: center;
+        text-align: center;
+
+}
+
+/* NAVBAR */
+.navbar {
+    grid-area: navbar;
+    background-color: blue;
+
+    display: grid;
+    grid-template-columns: 40px 120px 120px repeat(8, 40px);
+    justify-content: center;
+    align-content: center;
+    gap: 3px;
+}
+
+.navbar div {
+    border: 1px white dotted;
+        padding-bottom: 10px;
+
+
+}
+
+/* LEFT-MENU */
+
+.left-menu {
+    grid-area: left-menu;
+    background-color: orange;
+
+    display: grid;
+    grid-template-rows: 1fr 100px 1fr;
+    gap: 3px;
+
+}
+
+.left-menu div {
+    border: 1px white dotted;
+    margin:5px;
+}
+
+
+/* MAIN */
+
+.main {
+    grid-area: main;
+    background-color: red;
+
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    gap: 3px;
+}
+
+.main div {
+    border: 1px white dotted;
+    margin:5px;
+}
+
+/* RIGHT-MENU */
+.right-menu {
+    grid-area: right-menu;
+    background-color: pink;
+
+    display: grid;
+    grid-template-rows: 1fr 100px 1fr;
+    gap: 3px;
+}
+
+.right-menu div {
+    border: 1px white dotted;
+    margin:5px;
+}
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 980px) {
+    .container{
+    grid-template:
+        " navbar navbar navbar " 50px
+        " left-menu main main " 1fr/
+        150px 150px 250px 200px 150px;
+        height: 600px;
+        width: 600px;
+        margin: auto;
+}
+.right-menu {
+    display: none;
+}
+}
+
+@media screen and (max-width: 760px) {
+    .container{
+    grid-template:
+        " navbar navbar " 50px
+        "left-menu left-menu" 200px
+        " main main " 1fr/
+        150px 150px 250px 200px 150px;
+        height: 600px;
+        width: 600px;
+        margin: auto;
+}
+
+}
