@@ -44,13 +44,14 @@
 .left-bar {
     text-align: center;
     grid-area: left-bar;
-    background-color: rgb(209, 209, 255);
+    background-color: #f3f2ef;
 }
 
 .main {
     text-align: center;
     grid-area: main;
-    background-color: rgb(209, 209, 255);
+    background-color: #f3f2ef;
+    padding: 16px;
 }
 
 .right-bar {
@@ -103,6 +104,10 @@
     border-radius: 10px;
 }
 
+.inner-box {
+    border: 2px dotted #ec407a;
+    border-radius: 10px;
+}
 
 /* Header */
 
@@ -141,16 +146,66 @@
     height: 30px;
 }
 
+/* Left bar */
+
 .left-bar {
-    padding: 16px;
+    padding-top: 16px;
 }
 .profile {
+    background-color: white;
 }
 .profile-block-1 {
-    margin: 0 8px;
+    margin: 8px;
     height: 200px;
 }
 .profile-block {
-    margin: 0 8px;
+    margin: 8px;
     height: 50px;
+}
+.my-pages, .discover {
+    background-color: white;
+    height: 100px;
+    margin-top: 8px
+}
+
+/* Main section */
+
+.start-a-post {
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 8px;
+    grid-gap: 8px;
+    padding: 4px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    padding: 4px;
+}
+
+.category {
+    height: 35px;
+}
+
+.content {
+    height: 400px;
+    margin: 8px;
+}
+
+.start-a-post,
+.main-content {
+    background-color: white;
 }
