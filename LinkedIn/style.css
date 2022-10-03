@@ -57,7 +57,7 @@
 .right-bar {
     text-align: center;
     grid-area: right-bar;
-    background-color: rgb(209, 209, 255);
+    background-color: #f3f2ef;
 }
 
 .right-side {
@@ -76,7 +76,9 @@
 
     .right-side,
     .right-bar,
-    .left-side {
+    .left-side,
+    .top-blank-left,
+    .top-blank-right {
         display: none;
     }
 }
@@ -207,5 +209,21 @@
 
 .start-a-post,
 .main-content {
+    background-color: white;
+}
+
+.recommendations {
+    background-color: white;
+    margin-top: 16px;
+}
+.recommendation {
+    height: 70px;
+    margin: 8px;
+}
+
+.ad,
+.footer {
+    height: 100px;
+    margin-top: 16px;
     background-color: white;
 }
