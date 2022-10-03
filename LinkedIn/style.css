@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+
+    display: grid;
+    grid-template:
+        "top-blank-left top-menu top-menu top-menu top-blank-right" 52px
+        "left-side left-bar main right-bar right-side" 1fr /
+        1fr 250px 500px 300px 1fr
+} 
+
+.top-blank-left {
+    text-align: center;
+    grid-area: top-blank-left;
+    background-color: white;
+}
+
+.top-blank-right {
+    text-align: center;
+    grid-area: top-blank-right;
+    background-color: white;
+}
+
+.top-menu { 
+    text-align: center;
+    grid-area: top-menu;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 5px;
+    /* padding: 5px; */
+    place-items: center;
+}
+
+.left-side { 
+    text-align: center;
+    grid-area: left-side;
+    background-color: #f3f2ef;
+}
+
+.left-bar {
+    text-align: center;
+    grid-area: left-bar;
+    background-color: rgb(209, 209, 255);
+}
+
+.main {
+    text-align: center;
+    grid-area: main;
+    background-color: rgb(209, 209, 255);
+}
+
+.right-bar {
+    text-align: center;
+    grid-area: right-bar;
+    background-color: rgb(209, 209, 255);
+}
+
+.right-side {
+    text-align: center;
+    grid-area: right-side;
+    background-color: #f3f2ef;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template:
+        "top-menu top-menu" 40px
+        "left-bar main" 1fr /
+        250px 1fr
+    }
+
+    .right-side,
+    .right-bar,
+    .left-side {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .container {
+        grid-template:
+        "top-menu" 40px
+        "main" 1fr
+        "left-bar" 100px /
+        1fr
+    }
+
+}
+
+/* BOX ELEMENTS */
+
+.outer-box {
+    border: 2px dotted #5c6bc0;
+    border-radius: 10px;
+}
+
+.middle-box {
+    border: 2px dotted #66bb6a;
+    border-radius: 10px;
+}
+
+/* Header */
+
+.logo {
+    width: 41px;
+    height: 41px;
+}
+
+.search-bar {
+    width: 100%;
+    height: 41px;
+}
+
+.top-nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    height: 41px;
+    gap: 5px;
+    place-items: center;
+}
+
+.top-nav-element {
+    width: 35px;
+    height: 35px;
+}
