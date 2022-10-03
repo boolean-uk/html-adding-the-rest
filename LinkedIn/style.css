@@ -144,6 +144,7 @@
     height: 41px;
     gap: 5px;
     place-items: center;
+    padding: 0 5px
 }
 .top-nav-element {
     width: 30px;
@@ -213,6 +214,8 @@
 .main-content {
     background-color: white;
 }
+
+/* Right bar */
 
 .recommendations {
     background-color: white;
