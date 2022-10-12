@@ -10,7 +10,9 @@
     grid-template:
         "top-blank-left top-menu top-menu top-menu top-blank-right" 52px
         "left-side left-bar main right-bar right-side" 1fr /
-        1fr 250px 500px 300px 1fr
+        1fr 250px 500px 300px 1fr;
+
+    position: relative;
 } 
 
 .top-blank-left {
@@ -171,6 +173,11 @@
     background-color: white;
     height: 100px;
     margin-top: 8px
+}
+
+.discover {
+    position: sticky;
+    top: 16px;
 }
 
 /* Main section */
