@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2f3136;
+}
+
+.container {
+    height: 100vh;
+    gap: 3px;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template:
+        "top-bar top-bar top-bar top-bar" 22px
+        "server-icons rooms status-bar status-bar" 50px
+        "server-icons rooms main right-bar" 1fr 
+        "server-icons rooms input right-bar" 44px /
+        76px 244px 1fr 240px;
+}
+
+.top-bar {
+    grid-area: top-bar;
+    background-color: #202225;
+    position: fixed;
+    left: 0px;
+    height: 18px;
+    width: 100%;
+    font-family: arial;
+    font-weight: 800;
+    font-size: .8rem;
+    color: #a3a6aa;
+    padding-top: 1px;
+    padding-left: 9px;
+    text-align: left;
+}
+
+.right-bar {
+    grid-area: right-bar;
+    background-color: rgb(77, 77, 77);
+}
+
+/* BOX ELEMENTS */
+
+.outer-box {
+    border: 2px dotted #5c6bc0;
+    border-radius: 10px;
+}
+
+.middle-box {
+    border: 2px dotted #66bb6a;
+    border-radius: 10px;
+}
+
+.inner-box {
+    border: 2px dotted #ec407a;
+    border-radius: 10px;
+}
+
+/* SERVER ICONS */
+
+.server-icons {
+    grid-area: server-icons;
+    background-color: #202225;
+    height: calc(100% - 30px);
+    position: fixed;
+    top: 26px;
+    width: 71px;
+}
+
+.server-icon {
+    width: 44px;
+    height: 44px;
+    margin-left: 12px;
+    border-radius: 50%;
+    margin-bottom: 8px
+}
+
+.top {
+    border-radius: 10px;
+    margin-top: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.server-icons .hr {
+    width: 32px;
+    border-top: 2px solid #373a3f;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+/* ROOMS */
+
+.rooms {
+    grid-area: rooms;
+    background-color: #2f3136;
+    height: calc(100% - 30px);
+    position: fixed;
+    top: 26px;
+    left: 78px;
+}
+
+.find-or-start {
+    height: 28px;
+    width: 220px;
+    margin: 8px;
+}
+
+.rooms .hr {
+    width: 100%;
+    height: 1px;
+    background-color: #202225; 
+}
+
+.friends, .nitro, .friend {
+    height: 40px;
+    width: 220px;
+    margin: 8px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 2px;
+}
+
+.direct-messages {
+    height: 20px;
+    width: 220px;
+    margin: 8px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    gap: 2px;
+}
+
+.profile {
+    position: fixed;
+    bottom: 0;
+    background-color: #292b2f;
+    width: 217px;
+    height: 33px;
+    display: grid;
+    grid-template-columns: 33px 1fr 20px 20px 20px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.profile-pic {
+    border-radius: 50%;;
+}
+
+.profilename-container {
+    padding: 3px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* STATUS BAR */
+
+.status-bar {
+    grid-area: status-bar;
+    background-color: #36393f; 
+    place-content: center;
+    display: grid;
+    grid-template-columns: 24px 100px 10px 1fr 24px 24px 24px 24px 144px 24px 24px;
+    gap: 15px;
+    padding: 0 20px;
+    position: fixed;
+    top: 26px;
+    left: 326px;
+    height: 44px;
+    width: calc(100% - 613px);
+}
+
+.status-bar div {
+    height: 20px;
+}
+
+.status-bar .online-circle {
+    height: 8px;
+    margin-top: 5px;
+}
+
+/* MAIN */
+
+.main {
+    grid-area: main;
+    background-color: #36393f;
+}
+
+.date {
+    position: relative;
+    margin: 20px 10px;
+}
+
+.date-text {
+    height: 20px;
+    width: 150px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 75px);
+    background-color: #36393f;    
+}
+
+.message-container {
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+}
+
+.profile-img {
+    height: 36px;
+    border-radius: 50%;
+}
+
+.top-line {
+    display: grid;
+    grid-template-columns: 100px 150px 1fr;
+}
+
+.name, .text-date {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.text1 {
+    margin-top: 10px;
+    height: 20px;
+}
+
+.text2 {
+    margin-top: 10px;
+    height: 20px;
+    width: 75%;
+}
+
+.text3 {
+    margin-top: 10px;
+    height: 20px;
+    width: 60%;
+}
+
+/* INPUT */
+
+.input {
+    grid-area: input;
+    background-color: #36393f;
+    display: grid;
+    position: fixed;
+    bottom: 0;
+    left: 326px;
+    width: calc(100% - 593px);
+    height: 24px;
+    grid-template-columns: 24px 1fr 24px 24px 24px 24px;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* RIGHT BAR */
+
+.right-bar {
+    grid-area: right-bar;
+    background-color: #2f3136;
+    position: fixed;
+    height: calc(100% - 30px);
+    top: 26px;
+    right: 0;
+    width: 235px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.group {
+    width: 100px;
+    height: 15px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.group.first {
+    margin-top: 10px;
+}
+
+.person {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    height: 30px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
