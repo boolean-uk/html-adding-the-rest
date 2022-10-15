@@ -291,3 +291,88 @@ body {
     gap: 10px;
     margin-bottom: 10px;
 }
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        grid-template:
+            "top-bar top-bar top-bar" 22px
+            "server-icons rooms status-bar" 50px
+            "server-icons rooms main" 1fr 
+            "server-icons rooms input" 44px /
+            76px 244px 1fr;
+    }
+
+    .right-bar {
+        display: none;
+    }
+
+    .status-bar {
+        width: calc(100% - 370px)
+    }
+
+    .input {
+        width: calc(100% - 350px)
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        grid-template:
+            "top-bar top-bar" 22px
+            "server-icons status-bar" 50px
+            "server-icons main" 1fr 
+            "server-icons input" 44px /
+            76px 1fr;
+    }
+
+    .rooms {
+        display:none;
+    }
+
+    .status-bar {
+        left: 80px;
+        width: calc(100% - 125px)
+    }
+
+    .input {
+        left: 80px;
+        width: calc(100% - 105px)
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        grid-template:
+            "top-bar top-bar" 22px
+            "server-icons main" 1fr 
+            "server-icons input" 44px /
+            76px 1fr;
+    }
+
+    .status-bar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        grid-template:
+            "main" 1fr 
+            "input" 44px /
+            1fr;
+    }
+    
+    .top-bar {
+        display: none
+    }
+
+    .server-icons {
+        display: none;
+    }
+
+    .input {
+        left: 0;
+        width: calc(100% - 25px)
+    }
+}
