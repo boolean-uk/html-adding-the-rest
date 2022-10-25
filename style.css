@@ -27,5 +27,14 @@ a span {
 }
 
 .container {
+    width: auto;
     margin-top: -10vh;
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    a {
+        width: 60vw
+    }
 }
