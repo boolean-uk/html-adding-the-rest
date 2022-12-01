@@ -1,0 +1,230 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 10vh 90vh;
+    gap: 10px;
+    grid-template-areas: 
+        "header header header"
+        "left middle right"
+        "left middle right";
+    }
+
+div {
+    border: 2px solid black;
+    }
+
+.header {
+    display: grid;
+    grid-template-columns: 35vw 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "inside1 inside2 inside2"
+        "inside1 inside2 inside2"
+        "inside1 inside2 inside2";
+    }
+
+.left {
+    margin-left: 125px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "profile profile profile"
+        "org org org"
+        "recent recent recent";
+    }
+    
+.middle {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    gap: 10px;
+    grid-template-areas: 
+        "post post post"
+        "feed1 feed1 feed1"
+        "feed2 feed2 feed2";
+    }
+
+.post {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "pic typing"
+        "pic typing"
+        "attachments attachments";
+    }
+
+.feed1, .feed2 {
+    display: grid;
+    grid-template-columns: 0.1fr 7fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "picforfeed name"
+        "content content"
+        "like like";
+    }
+
+.right {
+    margin-right: 125px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr 3fr;
+    gap: 10px;
+    grid-template-areas: 
+        "news"
+        "viewed"
+        "feedadd";
+    }
+
+
+
+.picforfeed {
+    margin: 10px 0px 0px 10px;
+    grid-area: picforfeed;
+    border-color: #efcd30;
+    border-radius: 50px;
+}
+
+.news {
+    margin: 10px 10px 0px 10px;
+    grid-area: news;
+    border-color: orange;
+}
+
+.viewed {
+    margin: 10px 10px 0px 10px;
+    grid-area: viewed;
+    border-color: orange;
+}
+
+.feedadd {
+    margin: 10px 10px 0px 10px;
+    grid-area: feedadd;
+    border-color: orange;
+}
+
+.name {
+    margin: 10px 400px 0px 0px;
+    grid-area: name;
+    border-color: #efcd30;
+}
+
+.content {
+    margin: 0px 10px 0px 10px;
+    grid-area: content;
+    border-color: #efcd30;
+}
+
+.like {
+    margin: 10px 10px 0px 10px;
+    grid-area: like;
+    border-color: #efcd30;
+}
+
+.pic {
+    margin: 10px 0px 0px 10px;
+    grid-area: pic;
+    border-color: #efcd30;
+}
+
+.attachments {
+    height: 30px;
+    margin: 10px 10px 0px 10px;
+    grid-area: attachments;
+    border-color: #efcd30;
+}
+
+.typing {
+    margin: 10px 10px 0px 10px;
+    grid-area: typing;
+    border-color: #efcd30;
+}
+
+.header {
+    grid-area: header;
+    border-color: #07272b;
+}
+
+.left {
+    grid-area: left;
+    border-color: #07272b;
+}
+
+.middle {
+    grid-area: middle;
+    border-color: #07272b;
+}
+
+.right {
+    grid-area: right;
+    border-color: #07272b;
+}
+
+.insideHeader1 {
+    margin: 10px 45px 0px 125px;
+    grid-area: inside1;
+    border-color: cyan;
+}
+.insideHeader2 {
+    margin: 10px 125px 0px 125px;
+    grid-area: inside2;
+    border-color: cyan;
+}
+
+.profile{
+    margin: 10px 10px 0px 10px;
+    grid-area: profile;
+    border-color: yellow;
+}
+
+.org{
+    margin: 10px 10px 0px 10px;
+    grid-area: org;
+    border-color: yellow;
+}
+
+.recent{
+    margin: 10px 10px 0px 10px;
+    grid-area: recent;
+    border-color: yellow;
+}
+
+.post {
+    margin: 10px 10px 0px 10px;
+    grid-area: post;
+    border-color: #e74d4b;
+    background-color: #234161;
+}
+
+.feed1 {
+    margin: 10px 10px 0px 10px;
+    grid-area: feed1;
+    background-color: #234161;
+    border-color: #e74d4b;
+}
+
+.feed2 {
+    margin: 10px 10px 0px 10px;
+    grid-area: feed2;
+    background-color: #234161;
+    border-color: #e74d4b;
+}
+
+p {
+    margin: 0px;
+}
+
+* {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #212121;
+    color: black;
+}
