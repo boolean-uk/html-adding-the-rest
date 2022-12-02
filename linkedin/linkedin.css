@@ -54,10 +54,11 @@
     display: grid;
     grid-template:
         "search search search  search search" 60px
-        ".      left   middle  right  ." 1fr/
-        1fr 2fr 4fr 2fr 1fr;
+        ".      left   middle  right  ."      1fr/
+        1fr     2fr    4fr     2fr   1fr;
 }
 
+/* SEARCH BAR AND NAVIGATION: TOP BAR */
 .search {
     background-color: rgba(250, 235, 215, 0.571);
     grid-area: search;
@@ -84,8 +85,16 @@
     border-radius: 6px;
 }
 
-/* LEFT COLUMN*/
+.navigation {
+    /* margin-left: 100px; --> need this to move to 
+    the right edge without AND bring everything inside 
+    along with it. Also would be dank if the box wouldn't
+    squish itself */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
 
+/* LEFT COLUMN*/
 .left {
     grid-area: left;
     display: grid;
@@ -99,7 +108,8 @@
     row-gap: 5px;
 }
 
-/* middle column */
+
+/* MIDDLE COLUMN: POSTING AND POSTS */
 .middle {
     grid-area: middle;
     display: grid;
@@ -119,13 +129,13 @@
     gap: 5px;
 }
 
+.icon {
+    border-radius: 45%;
+}
+
 .post {
     display: grid;
     grid-template-columns: 1fr 8fr;
-}
-
-.icon {
-    border-radius: 45%;
 }
 
 .attachments {
@@ -134,71 +144,19 @@
     gap: 5px;
 }
 
-.navigation {
+.feed {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-
+    grid-template-rows: repeat(3, minmax(50px, 1fr));
 }
-/* right column */
-.right {
 
+/* RIGHT COLUMN: NEWS AND STUFF? */
+.right {
     grid-area: right;
     display: grid;
+    grid-template-rows: 240px 100px 100px;
 }
 
-/* .right {
-    grid-area: news;
-    background-color: whitesmoke;
-} */
-
-
-/* .container {
-display: grid;
- grid-template:
- "searchBar  searchBar searchBar searchBar searchBar" 50px
- ". UserStuff  feed      news ." 800px /
- 200px 200px    minmax(400px, 2fr) 250px 200px;
- gap: 10px;
- background-color: beige;
-}
-
-
-.middle {
-    grid-area: feed;
-    background-color: whitesmoke;
-}
-.topfeed{
-
-}
-#options-etc{
+.news {
     display: grid;
-    grid-template: 1fr / 1fr 1fr  1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
 }
-.profiles{
-    display: grid;
-    grid-template: 300px  100px / 1fr;
-}
-
-#firstprofile{
-    grid-area: feed;
-    border: solid 1px red;
-
-
-}
-#secondprofile{
-    grid-area: feed;
-    border: solid 1px red;
-}
-
-.header {
-    grid-area: searchBar;
-    background-color: whitesmoke;
-}
-
-.left {
-    grid-area: UserStuff;
-    background-color: whitesmoke;
-
-    display: grid;
-
-} */
