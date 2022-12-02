@@ -485,3 +485,44 @@ li{
     margin: 5px 5px 5px 5px;
     grid-area: analytics;
 }
+
+
+@media screen and (max-width: 1000px) {
+    .container {
+      grid-template:
+        "header header header" 50px
+        "middle middle right" 1fr /
+        175px 1fr 50px;
+    }
+  
+    .left {
+      display: none;
+    }
+  }
+
+
+/* @media screen and ( max-width: 800px) {
+    .container {
+      grid-template:
+        "header header" 50px
+        "main main" 1fr /
+        175px 1fr;
+    }
+  
+    .right {
+      display: none;
+    }
+  } */
+
+
+  @media screen and (max-width: 800px) {
+    .container {
+      grid-template:
+        "main" 1fr/
+        1fr;
+    }
+    
+    .right, .left, .header {
+        display: none;
+      }
+  }
