@@ -459,3 +459,16 @@ ul {
     background-color: gray;
     border-radius: 50px;
 }
+
+@media screen and (max-width: 1000px) {
+    .containerMain {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "right";
+    }
+    
+    .box.leftBackground {
+        display: none;
+    }
+}
