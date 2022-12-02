@@ -1,28 +1,36 @@
+.body{
+    background-color: lightgray;
+}
+
 .main-container{
     display: grid;
     grid-template: 
-    "header       header    header" 60px
-    "left-menu    middle    right-menu" 1000px /
-    1fr 2fr 1fr;
+    "header     header      header    header      header" 60px
+    ".         left-menu    middle    right-menu       ." 1000px 
+    ".          .           middle     .               ." 500px /
+    1fr 2fr 6fr 2.5fr 1fr;
     gap: 15px;
-    border: solid black 2px;
 }
+
+/* Main header */
 
 .main-header{
     grid-area: header;
-    background-color: red;
+    background-color: whitesmoke;
     display: grid;
     grid-template: 
-    "logo search nav-buttons workbuttons" 50px /
+    "logo search nav-buttons workbuttons" 1fr /
       0.75fr  8fr    4fr          2fr
     ;
     gap: 5px;
     padding: 5px;
-    border: dotted blue 2px
+    border: dotted blue 2px;
+    align-content: center;
 }
 
 .logo{
     border: dotted black 2px;
+    
 }
 
 .search{
@@ -80,22 +88,97 @@
     border: 5px black solid;
 }
 
-
+/* - LEFT MENU */
 .main-left-menu{
     grid-area: left-menu;
     background-color: blue;
     margin-left: 15px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+    padding: 5px;
+    gap: 5px;
 }
+
+.profile{
+    background-color: red;
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr 2fr;
+    gap: 5px
+}
+
+.profile-info{
+    border: black solid 5px;
+}
+
+.views{
+    border: black solid 5px;
+}
+
+.ad{
+    border: black solid 5px;
+}
+
+.my-items{
+    border: black solid 5px;
+}
+
+.place-of-work{
+    border: black solid 5px;
+}
+
+.recents{
+    border: black solid 5px
+}
+
+/* Middle Section */
 
 .main-middle{
     grid-area: middle;
     background-color: orange;
 }
 
+/* Right Section */
+
 .main-right-menu{
     grid-area: right-menu;
     background-color: pink;
     margin-right: 15px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+    padding: 5px;
+    gap: 5px;
+}
 
+.news{
+    background-color: red;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.news1 {
+    border: black solid 5px;
+}
+.news2 {
+    border: black solid 5px;
+}
+.news3 {
+    border: black solid 5px;
+}
+.news4 {
+    border: black solid 5px;
+}
+.news5 {
+    border: black solid 5px;
+}
+
+.most-viewed{
+    border: black solid 5px;
+}
+
+
+.follow-these{
+    border: black solid 5px
 }
 
