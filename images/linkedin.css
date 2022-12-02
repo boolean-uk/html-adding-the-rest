@@ -1,0 +1,263 @@
+.body{
+    background-color: lightgray;
+}
+
+.main-container{
+    display: grid;
+    grid-template: 
+    "header     header      header    header      header" 60px
+    ".         left-menu    middle    right-menu       ." 1000px 
+    ".          .           middle     .               ." 500px /
+    1fr 2fr 6fr 2.5fr 1fr;
+    gap: 15px;
+}
+
+/* Main header */
+
+.main-header{
+    grid-area: header;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template: 
+    "logo search nav-buttons workbuttons" 1fr /
+      0.75fr  8fr    4fr          2fr
+    ;
+    gap: 5px;
+    padding: 5px;
+    border: dotted black 2px;
+    align-content: center;
+}
+
+.logo{
+    border: red dotted 2px;
+    
+}
+
+.search{
+    border: red dotted 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px
+}
+
+.search-bar{
+    border: 2px black solid;
+}
+
+.nav-buttons{
+    border: red dotted 2px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 5px;
+    gap: 2px
+}
+
+.home-button{
+    border: 2px purple dotted;
+}
+
+.jobs-button{
+    border: 2px purple dotted;
+}
+
+.messaging-button{
+    border: 2px purple dotted;
+}
+
+.notifications-button{
+    border: 2px purple dotted;
+}
+
+.profile-button{
+    border: 2px purple dotted;
+}
+
+.work-buttons{
+    border: red dotted 2px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px;
+    gap: 2px
+}
+
+.work-button{
+    border: 2px purple dotted;
+}
+
+.post-a-job-button{
+    border: 2px purple dotted;
+}
+
+/* - LEFT MENU */
+.main-left-menu{
+    grid-area: left-menu;
+    background-color: whitesmoke;
+    margin-left: 15px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+    padding: 5px;
+    gap: 5px;
+}
+
+.profile{
+
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr 2fr;
+    gap: 5px;
+    border: black dotted 2px;
+    padding: 5px;
+}
+
+.profile-info{
+    border: red dotted 2px;
+}
+
+.views{
+    border: red dotted 2px;
+}
+
+.ad{
+    border: red dotted 2px;
+}
+
+.my-items{
+    border: red dotted 2px;
+}
+
+.place-of-work{
+    border: black dotted 2px;
+}
+
+.recents{
+    border: black dotted 2px;
+}
+
+/* Middle Section */
+
+.main-middle {
+    border: black dotted 2px;
+    grid-area: middle;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    gap: 5px;
+    padding: 5px
+}
+.creation{
+    border: red dotted 2px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    padding: 5px;
+}
+
+.post-box{
+    display: grid;
+    border: blue dotted 2px;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    padding: 5px;
+    gap: 5px
+}
+
+.dp{
+    border: 2px dotted green;
+    border-radius: 50%;
+}
+
+.text-box{
+    border: 2px dotted green;
+}
+
+.type-of-post{
+    border: blue dotted 2px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+    gap: 5px;
+}
+
+.type1{
+    border: green dotted 2px;
+}
+
+.type2{
+    border: green dotted 2px;
+}
+
+.type3{
+    border: green dotted 2px;
+}
+
+.type4{
+    border: green dotted 2px;
+}
+
+
+
+.feed{
+display: grid;
+grid-template-rows: repeat(3, 1fr);
+gap: 5px;
+padding: 5px;
+border: red dotted 2px;
+}
+
+.post1{
+    border: green dotted 2px
+}
+
+.post2{
+    border: green dotted 2px
+}
+
+.post3{
+    border: green dotted 2px
+}
+
+/* Right Section */
+
+.main-right-menu{
+    grid-area: right-menu;
+    background-color:whitesmoke;
+    margin-right: 15px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+    padding: 5px;
+    gap: 5px;
+}
+
+.news{
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 5px;
+    border: black dotted 2px;
+}
+
+.news1 {
+    border: red dotted 2px;
+}
+.news2 {
+    border: red dotted 2px;
+}
+.news3 {
+    border: red dotted 2px;
+}
+.news4 {
+    border: red dotted 2px;
+}
+.news5 {
+    border: red dotted 2px;
+}
+
+.most-viewed{
+    border: black dotted 2px;
+}
+
+
+.follow-these{
+    border: black dotted 2px;
+}
+
