@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.box {
+    /* border: dashed 1px black; */
+}
+
+.server {
+    /* border: dashed 2px rgb(57, 57, 97); */
+    height: 60px;
+    width: 60px;
+    background-color: rgb(221, 219, 219);
+    border-radius: 50px;
+}
+
+.channel {
+    /* border: dashed 2px rgb(33, 78, 92); */
+}
+
+/* MAIN CONTAINER */
+
+.containerMain {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 3fr;
+    grid-template-areas: "left right";
+}
+
+/* LEFT BACKGROUND */
+
+.box.leftBackground {
+    background-color: rgb(202, 200, 200);
+    grid-area: left;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-template-areas: "servers channels";
+    gap: 5px;
+    padding-right: 5px;
+}
+
+/* LEFT MENU /SERVER ICONS */
+
+.box.leftMenuBackground {
+    grid-area: servers;
+    display: grid;
+    grid-template-columns: 75px;
+    grid-template-rows: repeat(6, 75px);
+    grid-template-areas: 
+    "discordDm"
+    "serverOne"
+    "serverTwo"
+    "serverThree"
+    "joinServer"
+    "findServer"
+    ;
+    gap: 5px;
+    place-items: center;
+}
+
+.discordDM {
+    grid-area: discordDm;
+    margin-top: 10px;
+}
+
+.serverOne {
+    grid-area: serverOne;
+}
+
+.serverTwo {
+    grid-area: serverTwo;
+}
+
+.serverThree {
+    grid-area: serverThree;
+}
+
+.joinServer {
+    grid-area: joinServer;
+}
+
+.findServer {
+    grid-area: findServer;
+}
+/* CHANNELS BACKGROUND */
+
+.box.channelsBackground {
+    grid-area: channels;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 200px 1fr 50px;
+    grid-template-areas: 
+    "channelHeader"
+    "inviteBox"
+    "channelArea"
+    "profileSettings"
+    ;
+    gap: 2px;
+}
+
+/* CHANNEL HEADER */
+.channelHeader {
+    grid-area: channelHeader;
+    display: grid;
+    grid-template-columns: 1fr 25px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "serverName dropDown";
+    align-items: center;
+    background-color: rgb(236, 235, 235);
+}
+
+.serverTitle {
+    grid-area: serverName;
+}
+
+.serverTitle > p {
+    margin-left: 20px;
+}
+
+.dropDown {
+    
+    grid-area: dropDown;
+}
+
+/* INVITE BOX */
+
+.inviteBox {
+    grid-area: inviteBox;
+    display: grid;
+    place-items: center;
+    background-color: rgb(236, 235, 235);
+}
+
+.invitePic {
+    margin-top: 10px;
+    height: 100px;
+    width: 150px;
+    border: solid 1px black;
+}
+
+.inviteBut {
+    height: 40px;
+    width: 120px;
+    background-color: rgb(76, 76, 133);
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+}
+
+.inviteBut > p {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* CHANNEL AREA */
+
+.channelArea {
+    grid-area: channelArea;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 200px 150px 1fr;
+    grid-template-areas: "general"
+    "classes"
+    "lobby"
+    "staff"
+    ;
+}
+
+.channelGeneral {
+    grid-area: general;
+    background-color: rgb(236, 235, 235);
+}
+
+.channelClasses {
+    grid-area: classes;
+    background-color: rgb(236, 235, 235);
+}
+
+.channelLobby {
+    grid-area: lobby;
+    background-color: rgb(236, 235, 235);
+}
+
+.channelStaff {
+    grid-area: staff;
+    background-color: rgb(236, 235, 235);
+}
+
+.profileSettings {
+    grid-area: profileSettings;
+    background-color: rgb(219, 218, 218);
+    display: grid;
+    grid-template-columns: 40px 1fr 40px 40px 40px;
+    grid-template-rows: 40px;
+    grid-template-areas: "pic name mic ears cog";
+    align-content: center;
+    gap: 5px;
+    padding: 0 5px 0 5px;
+}
+
+.profilePicture {
+    grid-area: pic;
+    background-color: rgb(231, 231, 231);
+}
+
+.userName {
+    grid-area: name;
+    background-color: rgb(231, 231, 231);
+}
+
+.micIcon {
+    grid-area: mic;
+    background-color: rgb(231, 231, 231);
+}
+
+.headphonesIcon {
+    grid-area: ears;
+    background-color: rgb(231, 231, 231);
+}
+
+.settingsIcons {
+    grid-area: cog;
+    background-color: rgb(231, 231, 231);
+}
+
+p.channelText {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0 0 5px;
+}
+
+ul {
+    font-size: 12px;
+    list-style: none;
+    margin: 5px 0 0 15px;
+}
+
+/* RIGHT BACKGROUND */
+
+.box.rightBackground {
+    background-color: rgb(218, 214, 214);
+    grid-area: right;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 60px;
+    grid-template-areas: 
+    "header"
+    "textArea"
+    "typingArea"
+    ;
+}
+
+.box.header {
+    grid-area: header;
+    background-color: rgb(241, 241, 241);
+    display: grid;
+    grid-template-columns: 1fr 350px;
+
+}
+
+/* CHANNEL NAME IN HEADER */
+
+.channelChatName {
+    display: grid;
+    grid-template-columns: 50px 300px 1fr;
+    align-items: center;
+}
+
+.hashImage {
+    height: 40px;
+    width: 40px;
+    padding-left: 5px;
+}
+
+.currentChannel {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* HEADER ICONS RIGHT SIDE */
+
+.headerIcons {
+    display:grid;
+    grid-template-columns: 40px 40px 40px 1fr 40px 40px;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.headerIconImage {
+    height: 30px;
+    width: 30px;
+}
+
+.searchBar {
+    height: 30px;
+    width: 140px;
+    background-color: rgb(190, 189, 189);
+    border-radius: 2px;
+}
+
+/* TEXT AREA */
+
+.box.textArea {
+    grid-area: textArea;
+    background-color: rgb(241, 241, 241);
+    margin-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px;
+}
+
+/* WELCOME CHAT AREA */
+
+.welcomeChatArea {
+    display:grid;
+    margin: 0 20px 0 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 80px 50px 30px 20px 30px;
+    grid-template-areas:
+    "emptySpace"
+    "hash"
+    "welcome"
+    "startOf"
+    "addMem"
+    "pfps"
+    ;
+    margin-bottom: 5px;
+}
+
+.emptySpace {
+    grid-area: emptySpace;
+}
+
+.bigOlHash {
+    grid-area: hash;
+    height: 75px;
+    width: 75px;
+}
+
+.welcomeHeading {
+    grid-area: welcome;
+}
+
+.welcomePara {
+    grid-area: startOf;
+}
+
+.welcomeAdditions {
+    grid-area: addMem;
+    display: grid;
+    grid-template-columns: 200px 200px 1fr;
+}
+.currentMembersPFPs {
+    grid-area: pfps;
+    height: 30px;
+    width: 80px;
+    background-color: lightgray;
+}
+
+/* ACTUAL TEXT AREA */
+
+.everyonesTextHere {
+    border-top: solid 1px rgb(182, 182, 182);
+    margin: 0 20px 0 20px;
+}
+
+.newMessageBox {
+    display:grid;
+    grid-template-columns: 40px 50px 300px 1fr;
+    grid-template-rows: 30px 30px 1fr;
+    grid-template-areas: 
+    "pfp username date ."
+    "pfp message message message"
+    ". message message message";
+    background-color: rgb(241, 241, 241);
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.profilePicTextMess {
+    grid-area: pfp;
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+}
+
+.userNameTextMess {
+    grid-area: username;
+}
+
+.userNameTextMess > p {
+    font-size: 14px;
+}
+.dateAndTimeTextMess > p {
+    font-size: 14px;
+}
+
+.dataAndTimeTextMess {
+    grid-area: date;
+}
+
+.actualTextMess {
+    grid-area: message;
+}
+
+/* TYPING AREA */
+
+.box.typingArea {
+    grid-area: typingArea;
+    background-color: rgb(241, 241, 241);
+}
+
+.typingBox {
+    height: 40px;
+    width: 1fr;
+    background-color: rgb(202, 200, 200);
+    margin: 10px;
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: 35px 1fr 35px 35px 35px;
+    grid-template-rows: 30px;
+    align-content: center;
+}
+
+.typingBoxPlus {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50px;
+    margin-left: 5px;
+}
+
+.typingBoxMess {
+
+}
+
+.typingBoxPresent {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.typingBoxGifs {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.typingBoxEmojis {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .containerMain {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "right";
+    }
+    
+    .box.leftBackground {
+        display: none;
+    }
+}
