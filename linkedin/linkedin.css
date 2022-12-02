@@ -5,6 +5,154 @@
 }
 
 .container {
+    height: 100vh;
+    /* width: 100vw; */
+    padding: 8px;
+    border: 2px dotted lightblue;
+    gap: 15px;
+
+}
+
+.box {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 4px;
+    /* border: 2px dotted lightcoral; */
+    gap: 15px;
+
+}
+
+.mid-box {
+    background-color: antiquewhite;
+
+    min-width: 40px;
+    min-height: 40px;
+    padding: 3px;
+    border: 2px dotted rgb(15, 9, 9);
+    gap: 5px;
+}
+
+.inner-box {
+    min-width: 40px;
+    min-height: 40px;
+    border: 2px dotted lightgreen;
+    gap: 5px;
+}
+
+.finale-box {
+    min-width: 40px;
+    min-height: 40px;
+    border: 2px dotted coral;
+    gap: 5px;
+    /* margin: 3px; i want some gaps around the icons but then it pushes everything outside the og box. 
+    Defs need help to get things to resize better*/
+}
+
+/* MAIN SECTIONS */
+.container {
+    background-color: rgba(128, 128, 128, 0.354);
+    display: grid;
+    grid-template:
+        "search search search  search search" 60px
+        ".      left   middle  right  ." 1fr/
+        1fr 2fr 4fr 2fr 1fr;
+}
+
+.search {
+    background-color: rgba(250, 235, 215, 0.571);
+    grid-area: search;
+    display: grid;
+    width: 100vw;
+    /* margin: 0px; can't remember how to make it cover the 
+    whole width */
+    grid-template-columns: 50px 600px 250px;
+    gap: 10px;
+}
+
+.home {
+    border-radius: 4px;
+}
+
+.search2 {
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 400px;
+}
+
+.bar {
+    border: solid black 2px;
+    border-radius: 6px;
+}
+
+/* LEFT COLUMN*/
+
+.left {
+    grid-area: left;
+    display: grid;
+
+    grid-template-rows: 240px 100px 100px;
+}
+
+.profile {
+    display: grid;
+    grid-template-rows: 115px 30px 30px 30px;
+    row-gap: 5px;
+}
+
+/* middle column */
+.middle {
+    grid-area: middle;
+    display: grid;
+    padding: 5px;
+
+    align-content: center;
+    /*goal is to put these things in the hor -center*/
+    grid-template-rows: 100px 1fr;
+    gap: 10px;
+    background-color: pink;
+}
+
+.newpost {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+
+.icon {
+    border-radius: 45%;
+}
+
+.attachments {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+/* right column */
+.right {
+
+    grid-area: right;
+    display: grid;
+}
+
+/* .right {
+    grid-area: news;
+    background-color: whitesmoke;
+} */
+
+
+/* .container {
 display: grid;
  grid-template:
  "searchBar  searchBar searchBar searchBar searchBar" 50px
@@ -13,6 +161,8 @@ display: grid;
  gap: 10px;
  background-color: beige;
 }
+
+
 .middle {
     grid-area: feed;
     background-color: whitesmoke;
@@ -48,10 +198,7 @@ display: grid;
 .left {
     grid-area: UserStuff;
     background-color: whitesmoke;
-}
 
+    display: grid;
 
-.right {
-    grid-area: news;
-    background-color: whitesmoke;
-}
+} */
