@@ -14,6 +14,7 @@
     height: 60px;
     width: 60px;
     background-color: rgb(221, 219, 219);
+    border-radius: 50px;
 }
 
 .channel {
@@ -57,7 +58,7 @@
     "findServer"
     ;
     gap: 5px;
-    justify-items: center;
+    place-items: center;
 }
 
 .discordDM {
@@ -97,7 +98,7 @@
     "channelArea"
     "profileSettings"
     ;
-    gap: 5px;
+    gap: 2px;
 }
 
 /* CHANNEL HEADER */
@@ -161,13 +162,12 @@
     grid-area: channelArea;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 200px 150px 100px;
+    grid-template-rows: 100px 200px 150px 1fr;
     grid-template-areas: "general"
     "classes"
     "lobby"
     "staff"
     ;
-    gap: 5px;
 }
 
 .channelGeneral {
@@ -192,7 +192,7 @@
 
 .profileSettings {
     grid-area: profileSettings;
-    background-color: rgb(189, 187, 187);
+    background-color: rgb(219, 218, 218);
     display: grid;
     grid-template-columns: 40px 1fr 40px 40px 40px;
     grid-template-rows: 40px;
@@ -228,13 +228,13 @@
 }
 
 p.channelText {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     margin: 5px 0 0 5px;
 }
 
 ul {
-    font-size: 10px;
+    font-size: 12px;
     list-style: none;
     margin: 5px 0 0 15px;
 }
@@ -257,14 +257,205 @@ ul {
 .box.header {
     grid-area: header;
     background-color: rgb(241, 241, 241);
+    display: grid;
+    grid-template-columns: 1fr 350px;
+
 }
+
+/* CHANNEL NAME IN HEADER */
+
+.channelChatName {
+    display: grid;
+    grid-template-columns: 50px 300px 1fr;
+    align-items: center;
+}
+
+.hashImage {
+    height: 40px;
+    width: 40px;
+    padding-left: 5px;
+}
+
+.currentChannel {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* HEADER ICONS RIGHT SIDE */
+
+.headerIcons {
+    display:grid;
+    grid-template-columns: 40px 40px 40px 1fr 40px 40px;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.headerIconImage {
+    height: 30px;
+    width: 30px;
+}
+
+.searchBar {
+    height: 30px;
+    width: 140px;
+    background-color: rgb(190, 189, 189);
+    border-radius: 2px;
+}
+
+/* TEXT AREA */
 
 .box.textArea {
     grid-area: textArea;
     background-color: rgb(241, 241, 241);
+    margin-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px;
+}
+
+/* WELCOME CHAT AREA */
+
+.welcomeChatArea {
+    display:grid;
+    margin: 0 20px 0 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 80px 50px 30px 20px 30px;
+    grid-template-areas:
+    "emptySpace"
+    "hash"
+    "welcome"
+    "startOf"
+    "addMem"
+    "pfps"
+    ;
+    margin-bottom: 5px;
+}
+
+.emptySpace {
+    grid-area: emptySpace;
+}
+
+.bigOlHash {
+    grid-area: hash;
+    height: 75px;
+    width: 75px;
+}
+
+.welcomeHeading {
+    grid-area: welcome;
+}
+
+.welcomePara {
+    grid-area: startOf;
+}
+
+.welcomeAdditions {
+    grid-area: addMem;
+    display: grid;
+    grid-template-columns: 200px 200px 1fr;
+}
+.currentMembersPFPs {
+    grid-area: pfps;
+    height: 30px;
+    width: 80px;
+    background-color: lightgray;
+}
+
+/* ACTUAL TEXT AREA */
+
+.everyonesTextHere {
+    border-top: solid 1px rgb(182, 182, 182);
+    margin: 0 20px 0 20px;
+}
+
+.newMessageBox {
+    display:grid;
+    grid-template-columns: 40px 50px 300px 1fr;
+    grid-template-rows: 30px 30px 1fr;
+    grid-template-areas: 
+    "pfp username date ."
+    "pfp message message message"
+    ". message message message";
+    background-color: rgb(241, 241, 241);
+    gap: 5px;
     margin-top: 5px;
 }
 
+.profilePicTextMess {
+    grid-area: pfp;
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+}
+
+.userNameTextMess {
+    grid-area: username;
+}
+
+.userNameTextMess > p {
+    font-size: 14px;
+}
+.dateAndTimeTextMess > p {
+    font-size: 14px;
+}
+
+.dataAndTimeTextMess {
+    grid-area: date;
+}
+
+.actualTextMess {
+    grid-area: message;
+}
+
+/* TYPING AREA */
+
 .box.typingArea {
     grid-area: typingArea;
+    background-color: rgb(241, 241, 241);
+}
+
+.typingBox {
+    height: 40px;
+    width: 1fr;
+    background-color: rgb(202, 200, 200);
+    margin: 10px;
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: 35px 1fr 35px 35px 35px;
+    grid-template-rows: 30px;
+    align-content: center;
+}
+
+.typingBoxPlus {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50px;
+    margin-left: 5px;
+}
+
+.typingBoxMess {
+
+}
+
+.typingBoxPresent {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.typingBoxGifs {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.typingBoxEmojis {
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    border-radius: 50px;
 }

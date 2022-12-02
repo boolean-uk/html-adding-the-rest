@@ -15,7 +15,7 @@ div {
 
 .header {
     display: grid;
-    grid-template-columns: 35vw 1fr;
+    grid-template-columns: 40vw 1fr;
     grid-template-rows: 1fr;
     gap: 10px;
     grid-template-areas: 
@@ -24,11 +24,20 @@ div {
         "inside1 inside2 inside2";
     }
 
+.insideHeader2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "inside1 inside2 inside3 inside4 inside5 inside6 inside7 inside8";
+    }
+
 .left {
     margin-left: 125px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
     gap: 10px;
     grid-template-areas: 
         "profile profile profile"
@@ -64,7 +73,7 @@ div {
     grid-template-rows: 1fr 5fr 1fr;
     gap: 10px;
     grid-template-areas: 
-        "picforfeed name"
+        "picforfeedd name"
         "content content"
         "like like";
     }
@@ -81,11 +90,19 @@ div {
         "feedadd";
     }
 
+.insideHeader1 {
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "inside11 inside12";
+}
 
-
-.picforfeed {
+.picforfeedd {
     margin: 10px 0px 0px 10px;
-    grid-area: picforfeed;
+    grid-area: picforfeedd;
     border-color: #efcd30;
     border-radius: 50px;
 }
@@ -93,23 +110,121 @@ div {
 .news {
     margin: 10px 10px 0px 10px;
     grid-area: news;
-    border-color: orange;
+    border-color: #e74d4b;
+    background-color: #234161;
 }
 
 .viewed {
     margin: 10px 10px 0px 10px;
     grid-area: viewed;
-    border-color: orange;
+    border-color: #e74d4b;
+    background-color: #234161;
 }
 
 .feedadd {
     margin: 10px 10px 0px 10px;
     grid-area: feedadd;
-    border-color: orange;
+    border-color: #e74d4b;
+    background-color: #234161;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr 0.25fr;
+    gap: 10px;
+    grid-template-areas: 
+        "adder"
+        "feedadd1"
+        "feedadd2"
+        "feedadd3"
+        "viewer";
+}
+
+.adder {
+    margin: 0px 10px 0px 10px;
+    grid-area: adder;
+}
+
+.viewer {
+    margin: 0px 10px 0px 10px;
+    grid-area: viewer;
+}
+
+.picforfeed {
+    margin: 10px 0px 0px 10px;
+    grid-area: picforfeed;
+    border-color: #3eca6f;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+}
+
+.nameforfeed {
+    margin: 0px 0px 0px 10px;
+    grid-area: nameforfeed;
+    border-color: #3eca6f;
+    color: white;
+}
+
+.typeforfeed {
+    margin: 0px 0px 0px 10px;
+    grid-area: typeforfeed;
+    border-color: #3eca6f;
+    color: white;
+}
+
+.followforfeed {
+    margin: 0px 0px 0px 10px;
+    grid-area: followforfeed;
+    border-color: #3eca6f;
+    color: white;
+}
+
+.feedadd1 {
+    margin: 0px 10px 0px 10px;
+    grid-area: feedadd1;
+    border-color: #efcd30;
+    background-color: #1f1e20;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "picforfeed nameforfeed"
+        "picforfeed typeforfeed"
+        ". followforfeed";
+}
+
+.feedadd2 {
+    margin: 0px 10px 0px 10px;
+    grid-area: feedadd2;
+    border-color: #efcd30;
+    background-color: #1f1e20;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "picforfeed nameforfeed"
+        "picforfeed typeforfeed"
+        ". followforfeed";
+}
+
+.feedadd3 {
+    margin: 0px 10px 0px 10px;
+    grid-area: feedadd3;
+    border-color: #efcd30;
+    background-color: #1f1e20;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+        "picforfeed nameforfeed"
+        "picforfeed typeforfeed"
+        ". followforfeed";
 }
 
 .name {
-    margin: 10px 400px 0px 0px;
+    margin: 10px 700px 0px 0px;
     grid-area: name;
     border-color: #efcd30;
 }
@@ -127,6 +242,8 @@ div {
 }
 
 .pic {
+    text-align: center;
+    border-radius: 50px;
     margin: 10px 0px 0px 10px;
     grid-area: pic;
     border-color: #efcd30;
@@ -147,51 +264,79 @@ div {
 
 .header {
     grid-area: header;
-    border-color: #07272b;
+    border-color: #d1b498;
+    background-color: #243e2d;
 }
 
 .left {
     grid-area: left;
-    border-color: #07272b;
+    border-color: #d1b498;
+    background-color: #243e2d;
 }
 
 .middle {
     grid-area: middle;
-    border-color: #07272b;
+    border-color: #d1b498;
+    background-color: #243e2d;
 }
 
 .right {
     grid-area: right;
-    border-color: #07272b;
+    border-color: #d1b498;
+    background-color: #243e2d;
 }
 
 .insideHeader1 {
-    margin: 10px 45px 0px 125px;
+    margin: 10px 45px 10px 125px;
     grid-area: inside1;
-    border-color: cyan;
+    border-color: #e74d4b;
+    background-color: #234161;
 }
 .insideHeader2 {
-    margin: 10px 125px 0px 125px;
+    margin: 10px 125px 10px 125px;
     grid-area: inside2;
-    border-color: cyan;
+    border-color: #e74d4b;
+    background-color: #234161;
 }
 
 .profile{
     margin: 10px 10px 0px 10px;
     grid-area: profile;
-    border-color: yellow;
+    border-color: #e74d4b;
+    background-color: #234161;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.3fr 1fr 1fr 0.5fr 0.2fr;
+    gap: 10px;
+    grid-template-areas: 
+        "profilebanner profilebanner profilebanner"
+        ". profilepic ."
+        "profileabout profileabout profileabout"
+        "profileviews profileviews profileviews"
+        "premium premium premium"
+        "items items items";
 }
 
 .org{
     margin: 10px 10px 0px 10px;
     grid-area: org;
-    border-color: yellow;
+    border-color: #e74d4b;
+    background-color: #234161;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    gap: 10px;
+    grid-template-areas: 
+        "orgpic"
+        "orgname"
+        "analytics";
 }
 
 .recent{
     margin: 10px 10px 0px 10px;
     grid-area: recent;
-    border-color: yellow;
+    border-color: #e74d4b;
+    background-color: #234161;
 }
 
 .post {
@@ -215,6 +360,58 @@ div {
     border-color: #e74d4b;
 }
 
+.insideHeader1-1 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside11;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.insideHeader1-2 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside12;
+}
+
+.insideHeader2-1 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside1;
+}
+
+.insideHeader2-2 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside2;
+}
+
+.insideHeader2-3 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside3;
+}
+
+.insideHeader2-4 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside4;
+}
+
+.insideHeader2-5 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside5;
+}
+
+.insideHeader2-6 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside6;
+}
+
+.insideHeader2-7 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside7;
+}
+
+.insideHeader2-8 {
+    margin: 5px 5px 5px 5px;
+    grid-area: inside8;
+}
+
 p {
     margin: 0px;
 }
@@ -225,6 +422,66 @@ p {
 }
 
 body {
-    background-color: #212121;
-    color: black;
+    background-color: #232235;
+    color: #ffbfa2;
+}
+
+li{
+    margin: 10px 0;
+}
+
+.profilebanner {
+    border-color: #efcd30;
+    margin: 5px 5px 0px 5px;
+    grid-area: profilebanner;
+}
+
+.profilepic {
+    border-color: #efcd30;
+    margin: 0px 110px 0px 5px;
+    grid-area: profilepic;
+    padding: 5px;
+}
+
+.profileabout {
+    border-color: #efcd30;
+    margin: 5px 5px 0px 5px;
+    grid-area: profileabout;
+    
+}
+
+.profileviews {
+    border-color: #efcd30;
+    margin: 5px 5px 0px 5px;
+    grid-area: profileviews;
+}
+
+.premium {
+    border-color: #efcd30;
+    margin: 5px 5px 0px 5px;
+    grid-area: premium;
+}
+
+.items {
+    border-color: #efcd30;
+    margin: 5px 5px 0px 5px;
+    grid-area: items;
+}
+
+.orgpic {
+    border-color: #efcd30;
+    margin: 5px 250px 0px 5px;
+    grid-area: orgpic;
+}
+
+.orgname {
+    border-color: #efcd30;
+    margin: 0px 5px 0px 5px;
+    grid-area: orgname;
+}
+
+.analytics {
+    border-color: #efcd30;
+    margin: 5px 5px 5px 5px;
+    grid-area: analytics;
 }
