@@ -1,0 +1,101 @@
+.main-container{
+    display: grid;
+    grid-template: 
+    "header       header    header" 60px
+    "left-menu    middle    right-menu" 1000px /
+    1fr 2fr 1fr;
+    gap: 15px;
+    border: solid black 2px;
+}
+
+.main-header{
+    grid-area: header;
+    background-color: red;
+    display: grid;
+    grid-template: 
+    "logo search nav-buttons workbuttons" 50px /
+      0.75fr  8fr    4fr          2fr
+    ;
+    gap: 5px;
+    padding: 5px;
+    border: dotted blue 2px
+}
+
+.logo{
+    border: dotted black 2px;
+}
+
+.search{
+    border: dotted black 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px
+}
+
+.search-bar{
+    border: 5px black solid;
+}
+
+.nav-buttons{
+    border: dotted black 2px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 5px;
+    gap: 2px
+}
+
+.home-button{
+    border: 5px black solid;
+}
+
+.jobs-button{
+    border: 5px black solid;
+}
+
+.messaging-button{
+     border: 5px black solid;
+}
+
+.notifications-button{
+    border: 5px black solid;
+}
+
+.profile-button{
+    border: 5px black solid;
+}
+
+.work-buttons{
+    border: dotted black 2px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5px;
+    gap: 2px
+}
+
+.work-button{
+    border: 5px black solid;
+}
+
+.post-a-job-button{
+    border: 5px black solid;
+}
+
+
+.main-left-menu{
+    grid-area: left-menu;
+    background-color: blue;
+    margin-left: 15px;
+}
+
+.main-middle{
+    grid-area: middle;
+    background-color: orange;
+}
+
+.main-right-menu{
+    grid-area: right-menu;
+    background-color: pink;
+    margin-right: 15px;
+
+}
+
