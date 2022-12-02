@@ -1,6 +1,6 @@
 div
 {
-   border: 2px dotted;
+   border: 2px dotted rgb(255, 0, 0);
    padding: 5px;
 }
 
@@ -15,41 +15,92 @@ body
     gap: 5px;
 }
 
+.innerContainer
+{
+    border-color: rgb(9, 255, 5);
+}
+.innerContainer2
+{
+    border-color: rgb(255, 251, 3);
+}
+
+.finalContainer
+{
+    border-color: rgb(255, 255, 255);
+}
+
 .main-container
 {
     grid-template: 
-        "top top top top top" 75px
+        "emptyTop top top top emptyTop2" 75px
         "empty left center right empty2" 1fr /
         1fr 2fr 2fr 2fr 1fr;
     height: 900px;
+    gap: 10px
 }
 
 
 #topBar
 {
-    background-color: aqua;
+    background-color: rgb(177, 177, 177);
     grid-area: top;
     grid-template-columns: 50px 1fr 1fr;
 }
 
 #leftSection
 {
-    background-color: chartreuse;
+    background-color: rgb(116, 113, 94);
     grid-area: left;
-    grid-template-rows:
-    minmax(2fr, 200px) minmax(50px, 100px) minmax(2fr, 200px);
+    grid-template-rows: 2fr 1fr 2fr;
 }
 
 #mainSection
 {
-    background-color: brown;
+    background-color: rgb(102, 87, 87);
     grid-area: center;
     grid-template-rows: 100px 1fr;
+    gap: 15px;
 }
 
 #rightSection
 {
-    background-color: coral;
+    background-color: rgb(119, 107, 103);
     grid-area: right;
     grid-template-rows: 2fr 1fr 2fr;
+}
+
+#searchBarArea
+{
+    grid-template-areas: "searchBar empty";
+    grid-template-columns: 1fr 1fr;
+}
+
+#searchBar
+{
+    grid-area: searchBar;
+}
+
+#topRight
+{
+    grid-template-columns: repeat(auto-fit, 50px);
+}
+
+#profileBox
+{
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+}
+
+#post
+{
+    grid-template-columns: 25px 1fr;
+}
+
+#addFiles
+{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#feed
+{
+    grid-template-rows: 1fr 1fr 1fr;
 }
