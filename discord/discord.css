@@ -87,6 +87,7 @@
   display: grid;
   grid-template-columns: 45px 45px 140px 45px 45px;
 }
+
 /* pt 4 */
 .messages {
   grid-area: messages;
@@ -105,4 +106,9 @@
   display: grid;
   grid-template-columns: 50px 1fr 155px;
   gap: 5px
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
