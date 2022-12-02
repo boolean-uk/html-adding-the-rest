@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,13 +7,59 @@
     <title>Discord basic layout</title>
     <link rel="stylesheet" href="discord.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="channels">channels</div>
-        <div class="friends">friends</div>
-        <div class="headding">headding</div>
-        <div class="messages">messages</div>
-        <div class="type-here">type-here</div>
+        <div class="channels">
+            <div class="mid-box icon"></div>
+            <div class="mid-box groups">
+                <div class="inner-box"></div>
+                <div class="inner-box"></div>
+                <div class="inner-box"></div>
+                <div class="inner-box"></div>
+            </div>
+            <div class="mid-box dropdown"></div>
+        </div>
+        <div class="friends">
+            <div class="mid-box boolean"></div>
+            <div class="mid-box invite-people"></div>
+            <div class="mid-box channel-list">
+                <div class="inner-box">general</div>
+                <div class="inner-box">lobby</div>
+                <div class="inner-box">class</div>
+                <div class="inner-box">staff</div>
+
+            </div>
+            <div class="mid-box user-call">
+                <div class="inner-box"></div>
+                <div class="inner-box"></div>
+            </div>
+        </div>
+        <div class="headding">
+            <div class="mid-box friend-name"></div>
+            <div class="mid-box buttons">
+                <div class="inner-box">bell</div>
+                <div class="inner-box">pin</div>
+                <div class="inner-box">seach</div>
+                <div class="inner-box">box</div>
+                <div class="inner-box">?</div>
+            </div>
+        </div>
+        <div class="messages">  
+            <div class="mid-box"></div>
+
+            <!-- want to try add a scroll feature inside this div -->
+        </div>
+        <div class="type-here">
+            <div class="mid-box media"></div>
+            <div class="mid-box type"></div>
+            <div class="mid-box icons">
+                <div class="inner-box">gift</div>
+                <div class="inner-box">gif</div>
+                <div class="inner-box">emojis</div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>

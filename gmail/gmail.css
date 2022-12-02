@@ -93,8 +93,14 @@
 
 .navigation {
   display: grid;
-  grid-template-columns: 60px repeat(5, 35px);
-  gap: 5px;
+  grid-template-columns: repeat(3, 55px) auto repeat(2, 30px);
+  gap: 1px;
+}
+
+.received {
+  display: grid;
+  grid-template-columns: 50px 50px 1fr 2fr 70px ;
+  gap: 1px;
 }
 /* shortcuts, mid-right */
 .shortcuts {
