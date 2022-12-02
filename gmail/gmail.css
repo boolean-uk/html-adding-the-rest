@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.255);
+
+  display: grid;
+  border: dotted 1px black;
+  grid-template:
+    "top       top    top      top" 50px
+    "left-menu emails shortcuts other" 1fr/
+    220px minmax(390px, 2fr) 220px 55px;
+}
+
+.outer-box {
+  border: dotted 1px blue;
+  margin: 2px;
+
+}
+
+.mid-box {
+  border: dotted 1px coral;
+  margin: 2px;
+}
+
+.inner-box {
+  border: dotted 2px rgba(80, 156, 255, 0.883);
+  margin: 3px;
+}
+
+/* Top Bar */
+.top {
+  grid-area: top;
+  background-color: rgba(156, 30, 210, 0.294);
+  
+  display: grid;
+  grid-template:
+    "mid-box mid-box mid-box" 1fr/
+    220px auto 275px;
+}
+
+.gmail-bar {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 5px;
+  margin: 5px
+}
+.search-bar {
+  display: grid;
+  grid-template-rows: 1fr;
+  margin: 5px;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: repeat(3, 45px) 80px;
+  padding-left: 50px
+}
+
+/* Left menu */
+.left-menu {
+  grid-area: left-menu;
+  background-color: rgba(255, 0, 0, 0.191);
+  display: grid;
+  grid-template-rows: 60px 2fr 70px 1fr;
+  gap: 5px
+}
+
+.inboxes {
+  display: grid;
+  grid-template-rows: repeat(6, 30px);
+}
+
+/* .final {
+  display: grid;
+  border: 1px dotted black;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px
+} */
+
+/* main middle block */
+.emails {
+  grid-area: emails;
+  background-color: rgba(255, 166, 0, 0.148);
+  display: grid;
+  grid-template-rows: 60px repeat(5, 35px);
+  gap: 5px;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 60px repeat(5, 35px);
+  gap: 5px;
+}
+/* shortcuts, mid-right */
+.shortcuts {
+  grid-area: shortcuts;
+  background-color: rgba(255, 255, 0, 0.138);
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 2fr;
+  gap: 5px;
+}
+
+/* app column, far right */
+.other {
+  grid-area: other;
+  background-color: rgba(0, 128, 0, 0.221);
+  display: grid;
+  grid-template-rows: repeat(4, 70px);
+  gap: 5px;
+  /* column-gap: 5px; ???*/
+}
