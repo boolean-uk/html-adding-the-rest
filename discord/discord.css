@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* styling */
+
+.container {
+  padding: 8px;
+  border: 2px dotted lightblue;
+  background-color: rgba(128, 128, 128, 0.284);
+}
+
+.mid-box {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 4px;
+
+  border: 2px dotted lightcoral;
+  background-color: beige;
+
+  gap: 5px;
+  margin-right: 5px;
+}
+
+.inner-box {
+  min-width: 40px;
+  min-height: 40px;
+  border: 2px dotted lightgreen;
+}
+
+/* more specific */
+.container {
+  height: 100%;
+
+  display: grid;
+  grid-template:
+    "channels friends headding " 50px
+    "channels friends  messages" 1fr
+    "channels friends type-here" 50px/
+    75px 200px 1fr;
+}
+
+/* pt 1 */
+.channels {
+  grid-area: channels;
+
+  display: grid;
+  grid-template-rows: 50px minmax(200px, 1fr) 3fr;
+  gap: 5px;
+}
+
+.discord-icon {
+  display: grid;
+  border-radius: 45%;
+}
+
+.groups {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+.chan {
+  border-radius: 45%;
+
+}
+
+/* pt 2 */
+.friends {
+  grid-area: friends;
+
+  display: grid;
+  grid-template-rows: 50px 120px minmax(200px, 1fr) 50px;
+  gap: 5px;
+}
+
+.channel-list {
+  display: grid;
+  grid-template-rows: 80px 250px 180px 80px;
+}
+
+.user-call {
+  display: grid;
+  grid-template-columns: 140px 30px;
+  gap: 2px;
+}
+
+/* pt 3 */
+.headding {
+  grid-area: headding;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 30px 30px 150px 30px 30px;
+  gap: 2px;
+}
+
+/* pt 4 */
+.messages {
+  grid-area: messages;
+  margin-bottom: 3px;
+  margin-top: 3px;
+
+  display: grid;
+  grid-template-rows: 90vh;
+  /*would like some feedback on this to check it's 
+  correct or if its a hard code*/
+}
+
+/* pt 5 */
+.type-here {
+  grid-area: type-here;
+
+  display: grid;
+  grid-template-columns: 50px 1fr 155px;
+  gap: 5px
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
