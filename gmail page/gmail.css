@@ -197,4 +197,16 @@ body{
     margin: 5px;
 
 }
- 
+
+@media screen and (max-width:1000px) {
+    .container{
+        grid-template:
+        "topbar topbar topbar" 50px
+        "main   main   main" 400px/
+        1fr      1fr   1fr
+    }
+    .left-menu, .shortcuts, .right-menu {
+        display:none
+    }
+
+}

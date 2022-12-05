@@ -5,12 +5,12 @@ body{
 .container{
     display: grid;
     grid-template:
-    "topbar  topbar  topbar" 50px
-    "left-menu  header  right-menu" 80px
-    "left-menu  main  right-menu" 300px
-    "left-menu  main  right-menu" 300px/
-       350px    1fr      400px;
-    gap:5px;
+    "topbar topbar    topbar   topbar      topbar" 70px
+    " .    left-menu  header  right-menu     ." 130px
+    ".    left-menu  main  right-menu     ."  500px
+    ".    left-menu  main  right-menu     ." 300px/
+    50px     300px    1fr     300px      50px;
+    gap:20px;
 } 
 /* topbar */
 .topbar {
@@ -20,7 +20,12 @@ body{
     border-radius: 15px;
 
     display:grid;
-    grid-template-columns: 300px 1fr 100px;
+    grid-template-areas: 
+    "logo" 
+    "symbols" 
+    "options"/
+     1fr;
+    grid-template-columns: 300px 1fr 150px;
     gap: 5px;
 }
 
@@ -33,15 +38,17 @@ body{
 }
 .topbar .logo .l-logo, .search-bar {
     border: 1px dashed black;
-    margin: 5px
+    margin: 5px;
+    
 }
 
 .topbar .symbols{
     border: 1px dashed black;
     display:grid;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: repeat(6, 70px);
     gap: 50px;
-    padding-left: 400px;
+    align-self: right;
+    justify-content: right;
 }
 .topbar .symbols .home,.Network, .Jobs, .messaging,
 .notifi, .me {
@@ -51,7 +58,7 @@ body{
 .topbar .options {
     border: 1px dashed black;
     display:grid;
-    grid-template-columns: 40px 40px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 5px;
 }
 .topbar .options .work,.post-job {
@@ -59,15 +66,12 @@ body{
     margin: 5px
 }
 
-
 /* left-menu */
 .left-menu {
     grid-area: left-menu ; 
     background-color: rgb(163, 216, 154);
     border: solid 2px rgb(109, 109, 241);
     border-radius: 15px;
-    margin-left: 80px;
-
     display:grid;
     grid-template-rows: 250px 1fr 250px;
     gap: 5px;
@@ -85,16 +89,15 @@ body{
     border: solid 2px rgb(109, 109, 241);
     border-radius: 15px;
     display:grid;
-    grid-template-rows: 40px 30px;
+    grid-template-rows: 50px 60px;
     gap: 5px;
 }
 .header .post {
-    border: 1px dashed black;
+    border: 2px solid red;
     border-radius: 10px;
     display:grid;
-    grid-template-columns: 50px 500px;
+    grid-template-columns: 100px 1fr;
     gap: 50px;
-    padding-left: 80px
 }
 .header .post .picture{
     border: 1px dashed black;
@@ -108,12 +111,13 @@ body{
 }
 
 .header .image {
-    border: 1px dashed black;
+    border: 2px solid red;
     border-radius: 10px;
     display:grid;
-    grid-template-columns: 50px 50px 50px 50px;
-    gap: 120px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     justify-content: center;
+
 }
 
 .header .image .photo, .video, .document, .article{
@@ -128,10 +132,10 @@ body{
     border: solid 2px rgb(109, 109, 241);
     border-radius: 15px;
     display:grid;
-    grid-template-rows: 400px 200px;
+    grid-template-rows: repeat(2, 1fr);
     gap: 5px;
 }
-.main .post1,.post2  {
+.main .post1,.post2 {
     border: 1px dashed black;
     border-radius: 10px;
     margin: 5px
@@ -147,10 +151,36 @@ body{
     display:grid;
     grid-template-rows: 250px 1fr 250px;
     gap: 5px;
-    margin-right: 80px
 }
 .right-menu .News, .viewed, .feed {
     border: 1px dashed black;
     border-radius: 10px;
 }
 
+@media screen and (max-width:1000px) {
+    .container {
+        grid-template:
+        "topbar topbar topbar" 80px
+        "header header  right-menu" 130px
+        "main    main    right-menu" 1000px /
+        175px     1fr      200px;
+    }
+
+    .left-menu {
+      display: none;
+    }
+    }
+
+@media screen and (max-width:800px) {
+    .container {
+      grid-template:
+        "header" 150px 
+        "main" 1000px/
+         1fr;
+    }
+    
+    .left-menu, .right-menu, .topbar {
+        display: none;
+    }
+}
+    

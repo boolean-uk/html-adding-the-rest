@@ -46,14 +46,17 @@
     grid-area: header;
     background-color: rgb(237, 184, 216);
     display: grid;
-    grid-template-columns: 30px 30px 30px 100px 30px 30px;
+    grid-template-columns: 50px 50px 50px 150px 50px 50px;
     grid-gap: 3px;
-    padding-left: 350px
+    align-self: right;
+    justify-content: right;
+   
 
 }
 .header .notification, .pin, .people, .search, .box, .Qmark{
     border: 1px dashed black;
-    margin:5px
+    margin:5px;
+    
 } 
 
 
@@ -77,4 +80,18 @@
 
 .typingArea {
     height: 45px;
+}
+
+@media screen and (max-width: 1000px) {
+    .containerMain {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "channels textarea";
+    }
+
+    .leftMenu {
+        display: none;
+    }
 }
