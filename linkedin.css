@@ -1,0 +1,106 @@
+
+div{
+   border:2px dashed black;
+}
+
+.container{
+    display:grid;
+    grid-template:
+    "   header    header     header " 50px
+    "  left-menu   main   right-menu   " 500px
+    "  left-menu    main  right-menu  "   50px/
+        1fr         2fr         1fr;
+    gap:10px;
+}
+
+.Header{
+    display: grid;;
+    grid-area:header;
+    background-color: red;
+    grid-template-columns: 200px 1fr 100px;
+}
+
+.Header .logo{
+    display:grid;
+    border:1px dashed black;
+    grid-gap:10px;
+    grid-template-columns: 50px 1fr;
+}
+
+.Header .logo, .logo1{
+    display:grid;
+    border:1px dashed black;
+    gap:5px;
+    margin:5px;
+    
+}
+
+.Header .logo, .search{
+    display:grid;
+    border:1px dashed black;
+    gap:5px;
+    margin:5px;
+}
+
+
+/* section2 */
+.Header .section2{
+   display:grid;
+    border:1px dashed black;
+    gap:30px;
+    grid-template-columns: repeat(6,50px);
+    padding-left: 300px;
+   }
+
+/* options */
+.Header .options{
+   display:grid;
+    border:2px dashed black;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+} 
+
+.Header .options, .work{
+    display:grid;
+    border:1px dashed black;
+    gap:5px;
+    margin:5px;
+
+}
+
+.Header .options, .post{
+    display:grid;
+    border:1px dashed black;
+    gap:5px;
+    margin:5px;
+}
+.left-menu{
+    grid-area: left-menu;
+    background-color: aqua;
+    grid-template-rows: 200px 1fr 200px;
+    display: grid;
+    gap:5px;
+    border:1px dashed black;
+
+}
+
+.main{
+    grid-area:main;
+    background-color:pink;
+    display:grid;
+    grid-template-rows: 50px 100px 1fr 1fr;
+    gap:5px;
+    border:1px dashed black;
+}
+
+.right-menu{
+    grid-area: right-menu;
+    background-color: aquamarine;
+    grid-template-rows: 200px 1.2fr 200px;
+    display: grid;
+    gap:5px;
+    border:1px dashed black;
+
+}
+
+   

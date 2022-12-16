@@ -1,0 +1,174 @@
+div
+{
+    border: 2px dotted;
+
+}
+p
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container
+{
+    border: 2px dotted;
+    padding: 3px;
+    display: grid;
+    gap: 3px
+}
+
+.main-container
+{
+    grid-template: 
+    "top top top top" 70px
+    "left center centerRight right"  1fr/
+    1fr 3fr 1fr 50px;
+    height: 900px;
+}
+
+.top-menu
+{
+    background-color:aquamarine;
+    grid-area: top;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+.left-menu
+{
+    background-color: aqua;
+    grid-area: left;
+    display: grid;
+    grid-template-rows: 60px 4fr 1fr 2fr;
+}
+
+.main-area
+{
+    background-color: coral;
+    grid-area: center;
+}
+
+.center-right-menu
+{
+    background-color: rgb(51, 193, 51);
+    grid-area: centerRight;
+}
+
+.right-menu
+{
+    background-color: darkgrey;
+    grid-area: right;
+}
+
+.icon 
+{
+    grid-template-columns: 50px 1fr;
+}
+
+.profile
+{
+    grid-template-columns: 50px 50px 50px 1fr;
+}
+
+.main-area
+{
+    grid-template-rows: 50px 1fr;
+}
+
+.mailList .container
+{
+    grid-auto-rows: 50px;
+    gap: 0px;
+}
+
+#mailMenu
+{
+    grid-template-columns: 50px 50px 50px 1fr 50px 50px;
+}
+
+.mail 
+{
+    height: 50px;
+    grid-template-columns: 25px 25px 1fr 2fr 100px;
+    margin: 1px;
+}
+
+.center-right-menu
+{
+    grid-template-rows: 75px 2fr 1fr 2fr;
+}
+
+.right-menu
+{
+    grid-template-rows: 40px 40px 40px 50px;
+}
+
+.meet
+{
+    grid-template-rows: 25px 1fr 1fr;
+}
+
+.chat
+{
+    grid-template-rows: 25px 1fr 1fr 1fr;
+}
+
+.inbox, .meeting, .contact
+{
+    grid-template-columns: 1fr 3fr;
+}
+
+#quickSettings
+{
+    grid-template: 
+    "text cross" 1fr
+    "seeAll seeAll" 1fr /
+    1fr 30px;
+}
+
+#quickSettingTitle
+{
+    grid-area: text;
+}
+
+#quickSettingsCross
+{
+    grid-area: cross;
+}
+
+#seeAllSettings
+{
+    grid-area: seeAll;
+}
+
+#densityOption, #inboxTypeList
+{
+    grid-template-rows: 25px 1fr;
+}
+
+.density, .inboxType
+{
+    grid-template-columns: 50px 1fr 1fr;
+}
+
+#themeOption
+{
+    grid-template: 
+    "title empty viewAll" 1fr
+    "theme theme theme" 3fr/
+    1fr 2fr 1fr;
+}
+
+#themeSettingTitle
+{
+    grid-area: title;
+}
+#viewAllThemeLink
+{
+    grid-area: viewAll;
+}
+.theme
+{
+    grid-area: theme;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
