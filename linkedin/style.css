@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+
+    display: grid;
+    grid-template:
+        "top-blank-left top-menu top-menu top-menu top-blank-right" 52px
+        "left-side left-bar main right-bar right-side" 1fr /
+        1fr 250px 500px 300px 1fr;
+
+    position: relative;
+} 
+
+.top-blank-left {
+    text-align: center;
+    grid-area: top-blank-left;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+.top-blank-right {
+    text-align: center;
+    grid-area: top-blank-right;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+.top-menu { 
+    text-align: center;
+    grid-area: top-menu;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    place-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.left-side { 
+    text-align: center;
+    grid-area: left-side;
+    background-color: #f3f2ef;
+}
+
+.left-bar {
+    text-align: center;
+    grid-area: left-bar;
+    background-color: #f3f2ef;
+}
+
+.main {
+    text-align: center;
+    grid-area: main;
+    background-color: #f3f2ef;
+    padding: 16px;
+}
+
+.right-bar {
+    text-align: center;
+    grid-area: right-bar;
+    background-color: #f3f2ef;
+}
+
+.right-side {
+    text-align: center;
+    grid-area: right-side;
+    background-color: #f3f2ef;
+}
+
+/* BOX ELEMENTS */
+
+.outer-box {
+    border: 2px dotted #5c6bc0;
+    border-radius: 10px;
+}
+
+.middle-box {
+    border: 2px dotted #66bb6a;
+    border-radius: 10px;
+}
+
+.inner-box {
+    border: 2px dotted #ec407a;
+    border-radius: 10px;
+}
+
+/* Header */
+
+.logo {
+    width: 43px;
+    height: 43px;
+}
+
+.search {
+    width: 100%;
+    height: 41px;
+
+    display: grid;
+    align-items: center;
+}
+.search-bar {
+    max-width: 250px;
+    height: 30px;
+
+    background-color: #eef3f8;
+    margin-left: 7px;
+    margin-right: 7px;
+
+    border-radius: 5px;
+}
+
+.top-nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    height: 41px;
+    gap: 5px;
+    place-items: center;
+    padding: 0 5px
+}
+.top-nav-element {
+    width: 30px;
+    height: 30px;
+}
+
+/* Left bar */
+
+.left-bar {
+    padding-top: 16px;
+}
+.profile {
+    background-color: white;
+}
+.profile-block-1 {
+    margin: 8px;
+    height: 200px;
+}
+.profile-block {
+    margin: 8px;
+    height: 50px;
+}
+.my-pages, .discover {
+    background-color: white;
+    height: 100px;
+    margin-top: 8px
+}
+
+.discover {
+    position: sticky;
+    top: 69px;
+    height: 300px;
+}
+
+/* Main section */
+
+.start-a-post {
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-bottom: 8px;
+    grid-gap: 8px;
+    padding: 4px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    padding: 4px;
+}
+
+.category {
+    height: 35px;
+}
+
+.content {
+    height: 400px;
+    margin: 8px;
+}
+
+.start-a-post,
+.main-content {
+    background-color: white;
+}
+
+/* Right bar */
+
+.recommendations {
+    background-color: white;
+    margin-top: 16px;
+}
+.recommendation {
+    height: 70px;
+    margin: 8px;
+}
+
+.ad {
+    position:sticky;
+    top: 69px;
+}
+
+.footer {
+    position: sticky;
+    top: 191px
+}
+
+.ad,
+.footer {
+    height: 100px;
+    margin-top: 16px;
+    background-color: white;
+}
+
+@media screen and (max-width: 1060px) {
+    .container {
+        grid-template:
+        "top-menu top-menu" 52px
+        "left-bar main" 1fr /
+        250px 1fr
+    }
+
+    .right-side,
+    .right-bar,
+    .left-side,
+    .top-blank-left,
+    .top-blank-right {
+        display: none;
+    }
+
+    .start-a-post {
+        padding-right: 0;
+    }
+
+    .main {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 769px) {
+
+    .main {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .container {
+        grid-template:
+        "top-menu" 52px
+        "main" 1fr /
+        1fr
+    }
+
+    .left-bar {
+        display: none;
+    }
+}

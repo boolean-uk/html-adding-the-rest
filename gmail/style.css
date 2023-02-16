@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    gap: 8px;
+    display: grid;
+    grid-template: 
+        "left-side left-bar top-bar top-bar" 64px
+        "left-side left-bar top-icons top-icons" 48px
+        "left-side left-bar emails single-email" 1fr /
+         68px 256px 6fr 7fr;
+    background-color: #eeeeee
+}
+
+/* BOX ELEMENTS */
+
+.outer-box {
+    border: 2px dotted #5c6bc0;
+    border-radius: 10px;
+}
+
+.middle-box {
+    border: 2px dotted #66bb6a;
+    border-radius: 10px;
+}
+
+.inner-box {
+    border: 2px dotted #ec407a;
+    border-radius: 10px;
+}
+
+/* LEFT SIDE */
+
+.left-side {
+    padding: 8px;
+    grid-area: left-side;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 80px 60px 60px 60px 60px
+}
+
+.left-side div {
+    margin-bottom: 10px;
+    padding: 2px;
+    display: grid;
+    grid-template-rows: 30px 10px;
+}
+
+.left-side div div {
+    margin: 0 ;
+}
+
+.menu-icon-container {
+    height: 40px;
+}
+
+/* LEFT BAR */
+
+
+.left-bar {
+    display: grid;
+    grid-template-rows: 70px 80px 32px 32px 32px 32px 32px 50px 32px 32px 32px;
+    grid-area: left-bar;
+    background-color:rgb(255, 255, 255);
+    padding: 8px;
+}
+
+.gmail-logo {
+    height: 40px;
+}
+
+.left-bar .compose-button-container {
+    height: 50px;
+    display: grid;
+    width: 120px;
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+    padding: 10px;
+    place-content: center;
+}
+
+.left-bar .compose-button-container div {
+    height: 30px;
+}
+
+.inbox, .starred, .sent, .drafts, .more, .label1, .label2, .label3 {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+    padding: 2px 10px;
+}
+
+.labels {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    gap: 10px;
+    padding: 2px 10px;
+    margin-top: 18px;
+    height: 25px;
+}
+
+/* TOP BAR */
+
+.top-bar {
+    grid-area: top-bar;
+    background-color:white;
+    display: grid;
+    grid-template-columns: 720px 1fr 80px 30px 30px 30px 100px;
+    gap: 20px;
+    padding: 8px;
+    place-items: center;
+}
+
+.search-container {
+    display: grid;
+    height: 42px;
+    width: 720px;
+    grid-template-columns: 30px 1fr 30px;
+    gap: 8px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.helper, .settings-icon, .icons-icon {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%
+}
+
+.company-and-profile {
+    height: 42px;
+    width: 100px;
+}
+
+.active-or-not {
+    height: 35px;
+    width: 80px;
+    border-radius: 20px
+}
+
+/* TOP ICONS */
+
+.top-icons {
+    grid-area: top-icons;
+    background-color:white;
+    display: grid;
+    grid-template-columns: 45px 25px 45px 45px 65px 45px 45px 65px 45px 45px 45px 1fr 85px 45px 45px 45px 30px 45px 30px;
+    place-content: center;
+    padding: 0 5px;
+    
+}
+
+.top-icons div {
+    height: 20px;
+    margin: 0 10px;
+}
+
+.top-icons .delete-icon-container, .top-icons .tick-icon-container {
+    margin-left: 0;
+    border-right: 1px solid #ddd;
+    height: 25px;
+}
+
+.top-icons .delete-icon, .top-icons .tick-icon {
+    margin-right: 20px;
+}
+
+.top-icons .down-arrow {
+    height: 10px;
+    width: 10px;
+    margin-top: 5px;
+    margin-left: 0px;
+}
+
+/* EMAILS */
+
+.emails {
+    grid-area: emails;
+    background-color:white;
+    overflow-y: scroll;
+}
+
+.email {
+    display: grid;
+    grid-template-columns: 20px 20px 20px 150px 1fr 50px 30px;
+    padding: 10px 10px;
+    height: 20px;
+    gap: 5px;
+}
+
+/* SINGLE EMAIL */
+
+.single-email {
+    grid-area: single-email;
+    background-color:white;
+    overflow-y: scroll;   
+}
+
+.single-email .title-bar {
+    display: grid;
+    grid-template-columns: 100px 30px 10px 20px 1fr 20px 20px;
+    gap: 10px;
+    height: 26px;
+    padding: 15px 20px 15px 80px;
+}
+
+.single-email .sender-bar {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 20px 20px 20px;
+    gap: 10px;
+    height: 44px;
+    padding: 5px 20px 5px 20px;
+    margin-top: 20px;
+}
+
+.single-email .sender-bar .profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 0
+}
+
+.single-email .sender-bar div {
+    height: 20px;
+    margin-top: 10px;
+}
+
+.single-email .sender-bar .sender-text-container {
+    margin-top: 0px;
+}
+
+.single-email .sender-bar .sender-info {
+    height: 15px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+}
+
+.single-email .sender-bar .email-address {
+    width: 150px;
+    margin-top: 0px;
+    height: 15px;
+}
+
+.single-email .sender-bar .unsubscribe {
+    width: 20px;
+    margin-top: 0px;
+    height: 15px;
+}
+
+.single-email .sender-bar .to-field {
+    width: 100px;
+    margin-top: 10px;
+    height: 15px;
+}
+
+.email-body-container {
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr;
+    margin-top: 20px;
+}
+
+.email-body-container .img {
+    height: 100px;
+    width: 400px;
+    margin: 20px auto;
+}
+
+.email-body-container .txt {
+    height: 400px;
+    width: 460px;
+    margin: 20px auto;
+}
+
+
+
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bbb; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777; 
+  }
+
+@media screen and (max-width: 1500px) {
+    .container {
+        grid-template: 
+        "left-side top-bar top-bar" 64px
+        "left-side top-icons top-icons" 48px
+        "left-side emails single-email" 1fr /
+         68px 6fr 7fr;
+    }
+
+    .left-bar {
+    display: none;
+    }
+}
+@media screen and (max-width: 1215px) {
+    .container {
+        grid-template: 
+        "left-side top-icons" 48px
+        "left-side emails" 1fr /
+         68px 1fr;
+    }
+
+    .single-email, .top-bar {
+    display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        grid-template: 
+        "left-side emails" 1fr /
+         68px 1fr;
+    }
+
+    .top-icons{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .container {
+        grid-template: 
+        "emails" 1fr /
+        1fr;
+    }
+
+    .left-side {
+        display: none;
+    }
+}
