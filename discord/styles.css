@@ -1,0 +1,221 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	color: darkgray;
+}
+
+h3 {
+	font-size: 22px;
+	color: whitesmoke;
+}
+
+.body {
+	background-color: #1e1e1e;
+}
+
+.container {
+	display: grid;
+	grid-template-areas: "server-list active-server chat";
+	grid-template-columns: 65px 200px 1fr;
+	grid-template-rows: 100vh;
+}
+
+.server-list {
+	grid-area: server-list;
+	background-color: #202225;
+}
+
+.server-list .icon {
+	border: dashed 2px white;
+	border-radius: 50%;
+	margin: 10px;
+	width: 40px;
+	height: 40px;
+}
+
+.server-list hr {
+	margin: 20px;
+	height: 4px;
+	border: none;
+	border-radius: 2px;
+	background-color: #36393f;
+}
+
+.selected-server {
+	grid-area: active-server;
+	display: grid;
+	grid-template-areas:
+		"name"
+		"invite-window"
+		"channel-list"
+		"user-info";
+	grid-template-rows: auto min-content 1fr auto;
+	grid-template-columns: 1fr;
+	background-color: #2f3136;
+	min-width: 137px;
+}
+
+.chat {
+	grid-area: chat;
+	display: grid;
+	grid-template-areas:
+		"chat-name"
+		"chat-window"
+		"chat-input";
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr;
+	background-color: #36393f;
+}
+
+.selected-server .server-name {
+	grid-area: name;
+}
+
+.selected-server .server-name .server-name-content {
+	display: flex;
+	margin: 15px;
+}
+
+.selected-server hr {
+	border: none;
+	height: 2px;
+	background-color: #202225;
+}
+
+.selected-server .invite-window {
+	grid-area: invite-window;
+	padding: 15px;
+	text-align: center;
+}
+
+.selected-server .invite-window .icon {
+	border: dashed 2px black;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	margin: auto;
+}
+
+.selected-server .invite-window p {
+	margin: 15px;
+}
+
+.selected-server .invite-window .invite-button {
+	border: none;
+	border-radius: 5px;
+	background-color: #7689d4;
+	color: white;
+	padding: 10px 20px;
+}
+
+.selected-server .channel-list {
+	grid-area: channel-list;
+}
+
+.selected-server .channel-group {
+	margin: 15px 10px;
+}
+
+.selected-server .channel-group h4 {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.selected-server .channel-name {
+	margin: 5px;
+	margin-left: 23px;
+}
+
+.selected-server .channel-name.text-channel {
+	list-style: square;
+}
+
+.selected-server .channel-name.voice-channel {
+	list-style: circle;
+}
+
+.selected-server .user-info {
+	grid-area: user-info;
+	padding: 15px;
+	border: dashed 2px black;
+	border-radius: 5px;
+}
+
+.chat .chat-name {
+	grid-area: chat-name;
+}
+
+.chat .chat-name-content {
+	display: flex;
+	margin: 15px;
+}
+
+.chat .chat-name-content .chat-icons {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.chat .chat-name-content .chat-icon {
+	border: dashed 1px black;
+	border-radius: 5px;
+	min-width: 20px;
+	min-height: 20px;
+	margin: 0px 5px;
+}
+
+.chat .chat-name-content input {
+	background-color: #2f3136;
+	border: none;
+	border-radius: 3px;
+	height: 22px;
+	padding: 0px 10px;
+}
+
+.chat hr {
+	border: none;
+	height: 2px;
+	background-color: #202225;
+}
+
+.chat-input-area {
+	grid-area: chat-input;
+}
+
+.chat-input-area .chat-input {
+	display: flex;
+	align-content: center;
+	margin: 15px;
+	padding: 5px 10px;
+	background-color: #40444b;
+	border-radius: 15px;
+}
+
+.chat-input .icon {
+	border: dashed 2px black;
+	border-radius: 5px;
+	min-width: 22px;
+	min-height: 22px;
+	margin: 0px 5px;
+}
+
+.chat-inputarea .chat-input {
+	align-items: center;
+}
+
+.chat-input-area .chat-input .input-div input {
+	border: none;
+	background-color: #40444b;
+	color: whitesmoke;
+	width: 100%;
+}
+
+.chat-input-area .chat-input .input-div {
+	width: 100%;
+}
+
+.chat-input-area .chat-input ::placeholder {
+	color: grey;
+	opacity: 1;
+}
