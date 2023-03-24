@@ -341,6 +341,7 @@
     background-color: lightsalmon;
     display: grid;
     grid-template-rows: 50px 200px 150px 1fr;
+    grid-template-columns: 200px;
     grid-template-areas: 
     "quicksettings"
     "density"
@@ -368,19 +369,320 @@
 .density{
     grid-area: density;
     border: solid 1px black;
+    display: grid;
+    grid-template-rows: 20px 1fr 1fr 1fr;
+    grid-template-areas: 
+    "dens1"
+    "dens2"
+    "dens3"
+    "dens4";
+}
+.dens1{
+    grid-area: dens1;
+    border: solid 1px black;
+}
+.dens2{
+    grid-area: dens2;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: 
+    "dens2-1 dens2-2";
+}
+.dens2-1{
+    grid-area: dens2-1;
+    font-size: 40px;
+    justify-self: center;
+}
+.dens2-2{
+    grid-area: dens2-2;
+    font-size: 20px;
+    align-self: center;
+}
+.dens3{
+    grid-area: dens3;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: 
+    "dens3-1 dens3-2";
+}
+.dens3-1{
+    grid-area: dens3-1;
+    font-size: 40px;
+    justify-self: center;
+}
+.dens3-2{
+    grid-area: dens3-2;
+    font-size: 20px;
+    align-self: center;
+}
+.dens4{
+    grid-area: dens4;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: 
+    "dens4-1 dens4-2";
+}
+.dens4-1{
+    grid-area: dens4-1;
+    font-size: 40px;
+    justify-self: center;
+}
+.dens4-2{
+    grid-area: dens4-2;
+    font-size: 20px;
+    align-self: center;
 }
 .theme{
     grid-area: theme;
     border: solid 1px black;
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    grid-template-areas: 
+    "theme1"
+    "theme2";
+}
+.theme1{
+    grid-area: theme1;
+    display: grid;
+    grid-template-columns: 1fr 90px;
+    grid-template-areas:
+    "theme1-1 theme1-2";
+}
+.theme1-1{
+    grid-area: theme1-1;
+    padding-left: 10px;
+}
+.theme1-2{
+    grid-area: theme1-2;
+    color: blue;
+}
+.theme2{
+    grid-area: theme2;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "theme2-1"
+    "theme2-2";
+}
+.theme2-1{
+    grid-area: theme2-1;
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    grid-template-areas: 
+    "themepic1 themepic2 themepic3 themepic4";
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+}
+.themepic1{
+    grid-area: themepic1;
+    border: solid 1px black;
+    height: 40px;
+}
+.themepic2{
+    grid-area: themepic2;
+    border: solid 1px black;
+    height: 40px;
+}
+.themepic3{
+    grid-area: themepic3;
+    border: solid 1px black;
+    height: 40px;
+}
+.themepic4{
+    grid-area: themepic4;
+    border: solid 1px black;
+    height: 40px;
+}
+.theme2-2{
+    grid-area: theme2-2;
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "themepic5 themepic6 themepic7 themepic8";
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+}
+.themepic5{
+    grid-area: themepic5;
+    border: solid 1px black;
+    height: 40px;
+}
+.themepic6{
+    grid-area: themepic6;
+    border: solid 1px black;
+    height: 40px;
+}
+.themepic7{
+    grid-area: themepic7;
+    border: solid 1px black;
+    height: 40px;
+}
+.themepic8{
+    grid-area: themepic8;
+    border: solid 1px black;
+    height: 40px;
 }
 .type{
     grid-area: type;
     border: solid 1px black;
+    display: grid;
+    grid-template-rows: 20px 80px 80px 80px 80px 80px;
+    grid-template-areas: 
+    "type1"
+    "type2"
+    "type3"
+    "type4"
+    "type5"
+    "type6";
+    gap: 5px;
+    overflow-x: scroll;
+}
+.type1{
+    grid-area: type1;
+    border: solid 1px black;
+}
+.type2{
+    grid-area: type2;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas:
+    "type2-1 type2-2"
+}
+.type2-1{
+    grid-area: type2-1;
+    font-size: 40px;
+    align-self: center;
+    justify-self: center;
+}
+.type2-2{
+    grid-area: type2-2;
+    font-size: 15px;
+    align-self: center;
+}
+.type3{
+    grid-area: type3;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas:
+    "type3-1 type3-2"
+}
+.type3-1{
+    grid-area: type3-1;
+    font-size: 40px;
+    align-self: center;
+    justify-self: center;
+}
+.type3-2{
+    grid-area: type3-2;
+    font-size: 15px;
+    align-self: center;
+}
+.type4{
+    grid-area: type4;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas:
+    "type4-1 type4-2"
+}
+.type4-1{
+    grid-area: type4-1;
+    font-size: 40px;
+    align-self: center;
+    justify-self: center;
+}
+.type4-2{
+    grid-area: type4-2;
+    font-size: 15px;
+    align-self: center;
+}
+.type5{
+    grid-area: type5;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas:
+    "type5-1 type5-2"
+}
+.type5-1{
+    grid-area: type5-1;
+    font-size: 40px;
+    align-self: center;
+    justify-self: center;
+}
+.type5-2{
+    grid-area: type5-2;
+    font-size: 15px;
+    align-self: center;
+}
+.type6{
+    grid-area: type6;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas:
+    "type6-1 type6-2"
+}
+.type6-1{
+    grid-area: type6-1;
+    font-size: 40px;
+    align-self: center;
+    justify-self: center;
+}
+.type6-2{
+    grid-area: type6-2;
+    font-size: 15px;
+    align-self: center;
 }
 .nav{
     grid-area: nav;
     background-color: peachpuff;
     border: solid 1px black;
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-template-areas: 
+    "nav1"
+    "nav2"
+    "nav3"
+    "nav4";
+    gap: 5px;
+}
+.nav1{
+    grid-area: nav1;
+    border: solid 1px black;
+    text-align: center;
+    font-size:  20px;
+    padding-top: 10px;
+}
+
+.nav2{
+    grid-area: nav2;
+    border: solid 1px black;
+    text-align: center;
+    font-size:  20px;
+    padding-top: 10px;
+
+}
+.nav3{
+    grid-area: nav3;
+    border: solid 1px black;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 8px;
+}
+.nav4{
+    grid-area: nav4;
+    border: solid 1px black;
+    text-align: center;
+    font-size: 40px;
 }
 @media screen and (max-width:800px){
     .grid{
@@ -389,4 +691,18 @@
     .compose{
         display: none;
     }
+}
+@media screen and (max-width:950px) {
+    .search > input{
+         width: 350px;
+
+    }
+    
+}
+@media screen and (max-width:830px) {
+    .search > input{
+         width: 280px;
+
+    }
+    
 }
