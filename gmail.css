@@ -18,9 +18,9 @@
 .header {
     grid-area: header;
     background-color: rgb(255, 255, 255);
-    margin: 15px;
-    padding-top: 12px;
     font-size: 20px;
+    display: grid;
+    grid-template-columns: 300px 1fr 400px;
 }
 
 .left-sidebar {
@@ -30,7 +30,7 @@
     border-top: solid 2px black;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 200px 350px 25px ;
+    grid-template-rows: 1fr 200px 350px 35px ;
     grid-template-areas:
        "compose"
        "meet"
@@ -84,10 +84,11 @@
 }
 
 .mainemails {
-    grid-area: emailsheader;
+    grid-area: emails;
     height: 50px;
     padding-top: 15px;
-
+    display: grid;
+    grid-template-rows: 1fr;
 }
 
 .quickone {
@@ -114,23 +115,102 @@
 
 .leftone {
     grid-area: compose;
-    padding: 15px;
+    padding: 5px;
+    display:grid;
+    grid-template-rows: 50px 1fr;
+    gap: 5px
+
 }
 
 .lefttwo {
     grid-area: meet;
     border-top: solid 2px rgb(208, 208, 208);
-    padding-top: 15px;
+    padding: 5px;
+    display:grid;
+    grid-template-rows: 50px 1fr;
+    gap: 5px
 }
 
 .leftthree {
     grid-area: chat;
     border-top: solid 2px rgb(208, 208, 208);
-    padding-top: 15px;
+    padding: 5px;
+    display:grid;
+    grid-template-rows: 50px 1fr;
+    gap: 5px
 }
 
 .leftfour {
     grid-area: buttons;
     border-top: solid 2px rgb(208, 208, 208);
     border-bottom: solid 2px black;
+    display:grid;
+    padding: 1px;
+    grid-template-columns: 50px 50px 50px;
+    gap: 5px;
+    justify-content: center;
+}
+
+.headerleft {
+    display:grid ;
+    grid-template-columns: 50px 1fr;
+    gap: 2px;
+    padding: 5px
+
+
+}
+
+.headermain {
+    border-right: solid 2px black;
+    border-left: solid 2px black;
+    padding: 5px;
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+.headerright {
+    padding: 5px;
+    display:grid;
+    grid-template-columns: 50px 50px 50px 150px;
+    justify-content: end;
+    gap: 5px
+    
+}
+
+.burgerbar {
+    border: dotted 2px red;
+}
+
+.logo {
+    border: dotted 2px red;
+}
+
+.headermain > div {
+    border: dotted 2px red;
+}
+
+.headerright > div {
+    border: dotted 2px red;
+}
+
+.leftone > div {
+    border: dotted 2px red;
+}
+
+.lefttwo > div {
+    border: dotted 2px red;
+}
+
+.leftthree > div {
+    border: dotted 2px red;
+}
+
+.leftfour > div {
+    border: dotted 2px red;
+}
+
+.emails > div {
+    height: 50px;
+    border: dotted 2px red;
+    margin: 5px
 }
