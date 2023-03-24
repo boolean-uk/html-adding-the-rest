@@ -29,6 +29,8 @@
     "holla"  50px;
 }
 .search {
+    display: grid;
+    grid-template-columns: 10% 50% 5% 5% 5% 15% 5% 5%;
     grid-area: search;
     background-color: rgb(132, 81, 19);
 }
