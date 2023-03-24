@@ -30,9 +30,21 @@
 }
 .search {
     display: grid;
-    grid-template-columns: 10% 50% 5% 5% 5% 15% 5% 5%;
+    grid-template-columns: 10fr 50fr 5fr 5fr 5fr 15fr 5fr 5fr;
     grid-area: search;
+    padding: 2px;
+    align-content: center;
     background-color: rgb(132, 81, 19);
+}
+.chatgrid .search > button {
+    border: dashed 1px black;
+    border-radius: 50px;
+    margin: 2px;
+    height: 30px;
+    width: 30px;
+}
+.chatgrid .search button:nth-last-child(3){
+    width: 100px;
 }
 .convo {
     grid-area: convo;
@@ -55,8 +67,17 @@
     background-color: rebeccapurple;
 }
 .invite {
+    display: grid;
+    place-content: center;
     grid-area: invite;
     background-color: bisque;
+}
+.invite p {
+    display: grid;
+    place-content: center;
+    border: dashed 1px black;
+    height: 50px;
+    width: 100px;
 }
 .icons {
     display: grid;
@@ -111,10 +132,13 @@
 }
 .server {
     grid-area: server;
+    display: grid;
+    padding-left: 10px;
+    align-content: center;
     background-color: lime;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 560px) {
     .grid {
         grid-template-columns: 50px 1fr;
         grid-template-areas: 
