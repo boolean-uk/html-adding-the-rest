@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  gap: 5px;
+}
+
+html,
+body,
+.page {
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+}
+
+.page {
+  grid-template: 
+  'nav-bar' 50px
+  'main-content' 1fr /
+  1fr;
+}
+
+.nav-bar {
+  grid-template: 
+  '. main-area .' auto /
+  auto 1500px auto;
+}
+
+
+.nav-bar > .main-area {
+  grid-area: main-area;
+  grid-template: 
+  'logo search-bar menu-buttons' auto /
+  50px 1fr 850px;
+  gap: 5px;
+}
+
+.nav-bar > .main-area > .logo {
+  grid-area: logo;
+  border: 3px dotted red;
+}
+
+.nav-bar > .main-area > .search-bar {
+  grid-area: search-bar;
+  border: 3px dotted green;
+}
+
+.nav-bar > .main-area > .menu-buttons {
+  grid-area: menu-buttons;
+  border: 3px dotted blue;
+  grid-template:
+  'home my-network jobs messaging notifications me work post-a-job' auto /
+  auto
+}
+
+.nav-bar > .main-area > .menu-buttons > .button {
+  border: 3px dotted orange;
+}
+
+.main-content {
+  grid-template: 
+  '. main-area .' auto /
+  auto 1500px auto;
+}
+
+.main-content > .main-area {
+  grid-area: main-area;
+  grid-template: 
+  'left-column main right-column' auto /
+  250px 1fr 300px
+}
+
+.main-content > .main-area > .left-column {
+  grid-area: left-column;
+  border: 3px dotted yellow;
+  grid-template: 
+  'profile' 300px
+  'visitors-analytics' 250px
+  'searches' 500px /
+  auto;
+}
+
+.main-content > .main-area > .left-column > .profile {
+  grid-area: profile;
+  border: 3px dotted aqua;
+}
+
+.main-content > .main-area > .left-column > .visitors-analytics {
+  grid-area: visitors-analytics;
+  border: 3px dotted red;
+}
+
+.main-content > .main-area > .left-column > .searches {
+  grid-area: searches;
+  border: 3px dotted blue;
+}
+.main-content > .main-area > .main {
+  grid-area: main;
+  border: 3px dotted purple;
+  grid-template: 
+  'post' 100px
+  'feed' 1fr /
+  auto;
+}
+
+.main-content > .main-area > .main > .post {
+  grid-area: post;
+  border: 3px dotted green;
+}
+
+.main-content > .main-area > .main > .feed {
+  grid-area: feed;
+  border: 3px dotted magenta;
+}
+
+.main-content > .main-area > .right-column {
+  grid-area: right-column;
+  border: 3px dotted green;
+  grid-template:
+  'news' 400px
+  'courses' 250px
+  'add-to-feed' 300px /
+  auto
+}
+
+.main-content > .main-area > .right-column > .news {
+  grid-area: news;
+  border: 3px dotted cyan;
+}
+
+.main-content > .main-area > .right-column > .courses {
+  grid-area: courses;
+  border: 3px dotted grey;
+}
+
+.main-content > .main-area > .right-column > .add-to-feed {
+  grid-area: add-to-feed;
+  border: 3px dotted brown;
+}
