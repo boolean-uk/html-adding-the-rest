@@ -1,0 +1,101 @@
+.grid {
+    display: grid;
+    grid-template:
+        "header header header" 50px
+        "left main right" 100vh/
+        200px 1fr 200px;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: bisque;
+
+    display: grid;
+    grid-template-columns: 60px 1fr 200px;
+    gap: 5px;
+}
+
+.left {
+    grid-area: left;
+    background-color: beige;
+
+    display: grid;
+    grid-template-rows: 400px 100px 100px;
+    gap: 5px;
+    align-content: start;
+    row-gap: 20px;
+}
+
+.main {
+    grid-area: main;
+    background-color: aquamarine;
+}
+
+.right {
+    grid-area: right;
+    background-color: greenyellow;
+}
+
+.box {
+    display: grid;
+    border: 2px dotted black;
+    justify-items: center;
+    align-items: center;
+
+}
+
+img {
+    height: 45px;
+    border-radius: 20%;
+
+
+}
+
+input {
+    position: absolute;
+    justify-items: center;
+    margin-left: 10px;
+    width: 400px;
+
+    height: 20px;
+
+}
+
+.little {
+    display: grid;
+    border: 2px dotted black;
+    min-height: 25px;
+    min-width: 25px;
+
+}
+
+.box,
+.three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+
+.lefty {
+    display: grid;
+    border: dotted 2px blue;
+}
+
+* {
+    gap: 5px
+}
+
+.inner-box-one {
+    display: grid;
+    border: dotted 2px green;
+    margin: 2px;
+
+}
+
+.left>.lefty {
+    display: grid;
+    grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr;
+    gap: 5px;
+}
