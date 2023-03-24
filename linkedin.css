@@ -161,8 +161,9 @@ grid-template: 'photo start-a-post-text' auto /
 .main-content > .main-area > .main > .post > .post-buttons {
 grid-area: post-buttons;
 border: 3px dotted blue;
-grid-template: 'photo video document article' auto /
-repeat(4, 1fr);
+grid-template: 
+'photo video document article' auto / 
+1fr 1fr 1fr 1fr
 }
 
 .main-content > .main-area > .main > .post > .post-buttons > .photo {
