@@ -7,33 +7,48 @@
   height: 100vh;
   display: grid;
   grid-template: 
-  "header header header header" 100px
-  "nav main settings icons" 100% /
-  26vw 47vw 20vw 7vw;
+  "header header header header" 6vh
+  "nav main settings icons" 94vh /
+  20vw 53vw 20vw 7vw;
   /* grid-template-columns: 2fr 4fr 2fr 1fr;  */
   /* grid-template-rows: 100px 300px 100px 50px */
+}
+
+/* boxes 1 */
+.header > div, 
+.nav > div {
+  border: 3px solid black;
+  border-radius: 8px;
+  margin: 3px;
+  display: grid;
+  box-sizing: border-box;
 }
 
 .header {
   grid-area: header;
   background-color: yellow;
   display: grid;
-  grid-template-columns: 6vw 20vw 47vw 5vw 3vw 3vw 3vw 13vw ;
+  grid-template-columns: 6vw 14vw 53vw 5vw 3vw 3vw 3vw 13vw ;
   grid-template-rows: 100%;
 }
 
-
 .nav {
+  display: grid;
   grid-area: nav;
-  background-color: red;
+  grid-template-rows: 6vh 40vh 20vh 20vh 7vh; 
+  border: 3px solid red;
+  margin: 3px;
+  border-radius: 8px;
+  text-align: center;
 
 }
+
 
 .main {
   grid-area: main;
   background-color: orange;
   display: grid;
-  grid-template-rows: 30px repeat(auto-fit, 50px);
+  grid-template-rows: repeat(auto-fit, 50px);
   overflow: auto;
 }
 
