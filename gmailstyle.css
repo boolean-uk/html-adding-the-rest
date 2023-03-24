@@ -14,19 +14,40 @@
   /* grid-template-rows: 100px 300px 100px 50px */
 }
 
-/* boxes 1 */
+/* outer boxes */
+.main, 
+.nav,
+.header,
+.settings {
+  border: 3px solid #C64343;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+/* inner boxes */
 .header > div, 
-.nav > div {
-  border: 3px solid black;
+.nav > div,
+.main > div,
+.settings > div {
+
+  border: 3px dashed #3EC5A3;
   border-radius: 8px;
   margin: 3px;
   display: grid;
   box-sizing: border-box;
 }
 
+/* inner-inner boxes */
+.main > .control > div,
+.settings > .density > div,
+.settings > .theme > div {
+  border: 3px dashed #F2DC23;
+  border-radius: 8px;
+  margin: 3px;
+}
+
 .header {
   grid-area: header;
-  background-color: yellow;
   display: grid;
   grid-template-columns: 6vw 14vw 53vw 5vw 3vw 3vw 3vw 13vw ;
   grid-template-rows: 100%;
@@ -35,10 +56,7 @@
 .nav {
   display: grid;
   grid-area: nav;
-  grid-template-rows: 6vh 40vh 20vh 20vh 7vh; 
-  border: 3px solid red;
-  margin: 3px;
-  border-radius: 8px;
+  grid-template-rows: 6vh 1fr 20vh 20vh 7vh; 
   text-align: center;
 
 }
@@ -46,7 +64,6 @@
 
 .main {
   grid-area: main;
-  background-color: orange;
   display: grid;
   grid-template-rows: repeat(auto-fit, 50px);
   overflow: auto;
@@ -62,24 +79,27 @@
   text-align: center;
 }
   
-.main > div {
-  border: 3px solid black;
-  margin: 3px;
-  border-radius: 8px;
-}
 
 .settings {
   grid-area: settings;
-  background-color: blue;
   display: grid;
-  grid-template-rows: 80px repeat(auto-fit, 250px)
+  grid-template-rows: 80px 250px 150px 400px;
 }
 
-.settings > div {
-  border: 3px solid black;
-  margin: 3px;
-  border-radius: 8px;
+.settings > .density {
+   display: grid;
 }
+
+.settings > .theme > div {
+  display: inline-block;
+}
+
+.settings > .theme {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
 
 .icons {
   grid-area: icons;
