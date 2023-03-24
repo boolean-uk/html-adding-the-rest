@@ -36,7 +36,19 @@
 }
 .convo {
     grid-area: convo;
+    display:grid;
+    align-content: end;
+    gap: 5px;
     background-color: rgb(30, 107, 10);
+}
+.convo .new-chat-welcome {
+    display:grid;
+    background-color: teal;
+    justify-self: start;
+}
+.message {
+    display:grid;
+    background-color: lightseagreen;
 }
 .hollerin {
     grid-area: holla;
@@ -56,14 +68,18 @@
     grid-template-columns: 100%;
     background-color: magenta;
 }
-
 .icons button {
-    width: 50px;
-    height: 50px;
+    justify-self: center;
+    margin: 2px;
+    width: 45px;
+    height: 45px;
     border: dashed 2px black;
     border-radius: 50% ;
 }
-
+.icons .spacer{
+    margin: 5px;
+    border: solid 2px black
+}
 .rooms {
     grid-area: rooms;
     background-color: cyan;
