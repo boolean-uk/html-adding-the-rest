@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    background-color: lightgrey;
+    border-radius: 5px;
 }
 
 .grid {
@@ -11,7 +13,10 @@
     "header header header" 40px
     "left   main   right"  1fr /
     200px   1fr    300px;
+    padding: 2px;
+    margin:2px;    
 }
+
 .header {
     grid-area: header;
     background-color: white;
@@ -35,19 +40,52 @@
     "search nav misc" 50px /
     300px   1fr  100px;
 }
-.searchbar {
-    grid-area: search;
-    background-color: darkred;
-}
-.navbar {
-    grid-area: nav;
-    background-color: rgb(190, 120, 28);
-}
-.misc {
-    grid-area: misc;
-    background-color: mediumslateblue;
-}
-.artgrid {
+    .searchbar {
+        background-color: lightblue;
+        display:grid;
+        padding: 5px;
+        grid-template-columns: 40px 1fr;
+        place-content: center;
+        align-items: center;
+        gap: 5%;
+        grid-template-areas: "logo search"
+    }
+        .searchbar button {
+            grid-area: logo;
+            border: dashed 2px black;
+            border-radius: 5px;
+            height: 40px;
+        }
+        .searchbar p {
+            grid-area: search;
+            border: dashed 2px black;
+            border-radius: 5px;
+            height: 40px;
+        }
+
+    .navbar {
+        grid-area: nav;
+        background-color: lightskyblue;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, min(40px));
+        justify-content: end;
+        gap:5px;
+        padding: 2px;
+        margin:2px;
+    }
+    
+    .misc {
+        grid-area: misc;
+        background-color: lightcyan;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, min(40px));
+        justify-content: center;
+        gap:5px;
+        padding: 2px;
+        margin:2px;
+    }
+
+.articlesgrid {
     gap: 5px;
     height: 100%;
     display: grid;
@@ -56,55 +94,139 @@
     "views" 2fr
     "feed"  3fr;
 }
-.news {
-    grid-area: news;
-    background-color: blue;
-}
-.views {
-    grid-area: views;
-    background-color: chartreuse;
-}
-.feed {
-    grid-area: feed;
-    background-color: darkgray;
-}
+    .news {
+        grid-area: news;
+        background-color: lightgreen;
+        display: grid;
+        grid-template-rows: repeat(auto-fit,1fr);
+        gap:5px;
+        padding: 2px;
+        margin:2px;
+    }
+    .views {
+        grid-area: views;
+        background-color: chartreuse;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap:5px;
+        padding: 2px;
+        margin:2px;
+    }
+    .feed {
+        grid-area: feed;
+        background-color: lightseagreen;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap:5px;
+        padding: 2px;
+        margin:2px;
+    }
+        .articles div p {
+            border: red 2px dashed;
+        }
+
 .leftgrid {
     gap: 5px;
     height: 100%;
     display: grid;
     grid-template: 
     "prof"  3fr
-    "boo" 2fr
-    "rec"  3fr;
+    "boo"   2fr
+    "rec"   3fr;
 }
-.profile {
-    grid-area: prof;
-    background-color: aqua;
-}
-.boolean {
-    grid-area: boo;
-    background-color: black;
-}
-.recent {
-    grid-area: rec;
-    background-color: brown;
-}
+    .profile {
+        grid-area: prof;
+        background-color: aqua;
+        display: grid;
+        grid-template-rows: 5fr 3fr 1fr 1fr;
+        gap:5px;
+        padding: 2px;
+        margin:2px;
+    }
+        .profile p {
+            border: red 2px dashed;
+        }
+    .boolean {
+        grid-area: boo;
+        background-color: aquamarine;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap:5px;
+        padding: 2px;
+        margin:2px;
+    }
+        .boolean p {
+            border: red 2px dashed;
+        }
+    .recent {
+        grid-area: rec;
+        background-color: teal;
+        display: grid;
+        grid-template-rows: 1fr;
+        gap:5px;
+        padding: 2px;
+        margin:2px;
+    }
+        .recent p {
+            border: red 2px dashed;
+        }
+
 .maingrid {
     gap: 5px;
     height: 100%;
     display: grid;
     grid-template:
-    "create" 50px
+    "create" 100px
     "posts"  1fr;
 }
-.create {
-    grid-area: create;
-    background-color: rgb(176, 155, 72);
-}
-.posts {
-    grid-area: posts;
-    background-color: bisque;
-}
+    .create {
+        gap: 2px;
+        padding: 2px;
+        margin: 2px;
+        grid-area: create;
+        background-color: coral;
+        display: grid;
+        grid-auto-rows: 1fr;
+    }
+        .create .text {
+            gap: 2px;
+            padding: 5px;
+            border: green 2px dashed;
+            display: grid;
+            grid-template-areas: "profpic newpost";
+            grid-template-columns: 50px 1fr;
+        }
+            .profpic {
+                grid-area: profpic;
+                border: yellow 2px dashed;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+            }
+            .newpost {
+                grid-area: newpost;
+                border: yellow 2px dashed;
+            }
+        .create .media {
+            gap: 2px;
+            padding: 2px;
+            border: green 2px dashed;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, min(50px));
+            justify-content: center;
+        }
+
+    .postfeed {
+        grid-area: posts;
+        background-color: bisque;
+        display: grid;
+    }
+        .post {
+            padding: 20px;
+            margin: 5px;
+            border: dashed 2px red;
+        }
+
 @media screen and (max-width: 700px) {
     .grid {
     grid-template: 
