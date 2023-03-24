@@ -55,7 +55,7 @@
 
 .channel-bar {
   grid-area: channel;
-  background-color: blue;
+  background-color: rgb(81, 255, 0);
   display: grid;
   grid-template-rows: 50px 1fr 50px;
   grid-template-areas:
@@ -81,29 +81,22 @@
 
 .channel-title {
   grid-area: channel-title;
-  background-color: purple;
+  border: dotted 2px black;
 }
 
 .channel-section {
   display: grid;
   grid-area: channel-section;
-  background-color: orange;
+  border: dotted 2px black;
+  grid-template-rows: repeat(5, 40px);
+
 }
 
 .room {
-  grid-area: room;
+  display: grid;
   border: 2px dotted #000;
-  grid-template-rows: repeat(5, 20px);
-  align-self: start;
+  grid-template-rows: 60px 90vh;
 }
-/* .room1 {
-  grid-area: room1;
-  border: 2px dotted #000;
-}
-.room2 {
-  grid-area: room2;
-  border: 2px dotted #000;
-} */
 
 .channel-settings {
   grid-area: channel-settings;
@@ -129,3 +122,11 @@
       70px 150px 1fr;
   }
 }
+
+/* .title{
+  border: solid 2px rgb(252, 0, 0);
+} */
+
+/* .channel{
+  border: solid 2px white;
+} */
