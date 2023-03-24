@@ -28,7 +28,6 @@ body,
   auto 1500px auto;
 }
 
-
 .nav-bar > .main-area {
   grid-area: main-area;
   grid-template: 
@@ -55,7 +54,8 @@ body,
   auto
 }
 
-.nav-bar > .main-area > .menu-buttons > .button {
+.nav-bar > .main-area > .menu-buttons > .button, 
+.main-content > .main-area > .main > .post > .post-buttons > .button {
   border: 3px dotted orange;
 }
 
@@ -85,6 +85,32 @@ body,
 .main-content > .main-area > .left-column > .profile {
   grid-area: profile;
   border: 3px dotted aqua;
+  grid-template: 
+  'name' 3fr
+  'view-profile' 1fr
+  'free-trial'1fr
+  'my-items' 1fr /
+  auto;
+}
+
+.main-content > .main-area > .left-column > .profile > .name {
+  grid-area: name;
+  border: 3px dotted orange;
+}
+
+.main-content > .main-area > .left-column > .profile > .view-profile {
+  grid-area: view-profile;
+  border: 3px dotted orange;
+}
+
+.main-content > .main-area > .left-column > .profile > .free-trial {
+  grid-area: free-trial;
+  border: 3px dotted orange;
+}
+
+.main-content > .main-area > .left-column > .profile > .my-items {
+  grid-area: my-items;
+  border: 3px dotted orange;
 }
 
 .main-content > .main-area > .left-column > .visitors-analytics {
@@ -95,6 +121,7 @@ body,
 .main-content > .main-area > .left-column > .searches {
   grid-area: searches;
   border: 3px dotted blue;
+  
 }
 .main-content > .main-area > .main {
   grid-area: main;
@@ -108,6 +135,50 @@ body,
 .main-content > .main-area > .main > .post {
   grid-area: post;
   border: 3px dotted green;
+  grid-template: 
+  'start-a-post' 1fr
+  'post-buttons' 1fr /
+  auto;
+}
+
+.main-content > .main-area > .main > .post > .start-a-post {
+grid-area: start-a-post;
+border: 3px dotted blue;
+grid-template: 'photo start-a-post-text' auto /
+                40px 1fr;
+}
+
+.main-content > .main-area > .main > .post > .start-a-post > .photo {
+  grid-area: photo;
+  border: 3px dotted orange;
+}
+
+.main-content > .main-area > .main > .post > .start-a-post > .start-a-post-text {
+  grid-area: start-a-post-text;
+  border: 3px dotted orange;
+}
+
+.main-content > .main-area > .main > .post > .post-buttons {
+grid-area: post-buttons;
+border: 3px dotted blue;
+grid-template: 'photo video document article' auto /
+repeat(4, 1fr);
+}
+
+.main-content > .main-area > .main > .post > .post-buttons > .photo {
+  grid-area: photo;
+}
+
+.main-content > .main-area > .main > .post > .post-buttons > .video {
+  grid-area: video;
+}
+
+.main-content > .main-area > .main > .post > .post-buttons > .document {
+  grid-area: document;
+}
+
+.main-content > .main-area > .main > .post > .post-buttons > .article {
+  grid-area: article;
 }
 
 .main-content > .main-area > .main > .feed {
