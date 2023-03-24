@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 .grid {
     display: grid;
     grid-template-columns: 120px 150px 2fr 220px 120px ;
@@ -5,8 +8,98 @@
     column-gap: 25px;
     row-gap: 25px;
     grid-template-areas:
-    "header header header header header"
+    ". header header header ."
     ". leftbar main rightbar .";
+}
+.header{
+    border: dotted 1px black;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50px 1fr 2fr;
+    grid-template-rows: 50px;
+    /* grid-template-rows: repeat(auto-fit, 50px); */
+    gap: 5px;
+    grid-template-areas: 
+    "icon search icons";
+    /* "icon search ic1 ic2 ic3 ic4 ic5 ic6 ic7 ic8"; */
+}
+.ic1{
+    
+    grid-area: ic1;
+    display: grid;
+    border: dotted 1px black;
+}
+.ic2{
+    
+    grid-area: ic2;
+    display: grid;
+    border: dotted 1px black;
+}
+.ic3{
+    
+    grid-area: ic3;
+    display: grid;
+    border: dotted 1px black;
+}
+.ic4{
+    
+    grid-area: ic4;
+    display: grid;
+    border: dotted 1px black;
+}
+.ic5{
+    
+    grid-area: ic5;
+    display: grid;
+    border: dotted 1px black;
+}
+.ic6{
+    
+    grid-area: ic6;
+    display: grid;
+    border: dotted 1px black;
+}
+.ic7{
+    
+    grid-area: ic7;
+    display: grid;
+    border: dotted 1px black;
+}
+.ic8{
+    
+    grid-area: ic8;
+    display: grid;
+    border: dotted 1px black;
+}
+.icons{
+    grid-area: icons;
+    display: grid;
+    border: dotted 1px black;
+    grid-template-columns: repeat(auto-fit, 40px); 
+    grid-template-rows: 40px;
+    grid-template-areas: 
+    "ic1 ic2 ic3 ic4 ic5 ic6 ic7 ic8";
+    align-content: center;
+    justify-content: end;
+    gap: 5px;
+}
+.icon{
+    grid-area: icon;
+    border: dotted 1px black;
+
+}
+.search{
+    grid-area: search;
+    border: dotted 1px black;
+    grid-template-areas: 
+    "searchbar";
+}
+.searchbar{
+    grid-area: searchbar;
+    border: dotted 1px black;
+    height: 45px;
+    border-radius: 50px;
+    gap: 5px
 }
 .nav{
     grid-area: header;
@@ -46,32 +139,257 @@
 .name{
     grid-area: name;
     background-color: darkcyan;
+    display: grid;
+    grid-template-rows: 1fr 80px 50px 40px;
+    grid-template-areas: 
+    "item1"
+    "item2"
+    "item3"
+    "item4";
+    gap: 5px;
+}
+.item1{
+    grid-area: item1;
+    border: dotted 1px black;
+}
+.item2{
+    grid-area: item2;
+    border: dotted 1px black;
+}
+.item3{
+    grid-area: item3;
+    border: dotted 1px black;
+}
+.item4{
+    grid-area: item4;
+    border: dotted 1px black;
 }
 .company{
     grid-area: company;
     background-color: crimson;
+    display: grid;
+    grid-template-rows: 1fr 30px;
+    grid-template-areas: 
+    "notif"
+    "analytics";    
+    gap: 5px;
+}
+.notif{
+    grid-area: notif;
+    border: dotted 1px black;
+
+}
+.analytics{
+    grid-area: analytics;
+    border: dotted 1px black;
 }
 .recent{
     grid-area: recent;
     background-color: darkorange;
+    display: grid;
+    grid-template-rows: 1fr 1fr 30px;
+    grid-template-areas:
+    "recent1"
+    "recent2"
+    "recent3"; 
+    gap: 5px;
+}
+.recent1{
+    grid-area: recent1;
+    border: dotted 1px black;
+}
+.recent2{
+    grid-area: recent2;
+    border: dotted 1px black;
+}
+.recent3{
+    grid-area: recent3;
+    border: dotted 1px black;
 }
 .news{
     grid-area: news;
     background-color: darkslategray;
+    display: grid;
+    grid-template-rows: repeat(7, 50px);
+    grid-template-areas:  
+    "line1"
+    "line2"
+    "line3"
+    "line4"
+    "line5"
+    "line6"
+    "line7";
+    gap: 5px
+}
+.line1{
+    grid-area: line1;
+    border: dotted 1px black;
+}
+.line2{
+    grid-area: line2;
+    border: dotted 1px black;
+}
+.line3{
+    grid-area: line3;
+    border: dotted 1px black;
+}
+.line4{
+    grid-area: line4;
+    border: dotted 1px black;
+}
+.line5{
+    grid-area: line5;
+    border: dotted 1px black;
+}
+.line6{
+    grid-area: line6;
+    border: dotted 1px black;
+}
+.line7{
+    grid-area: line7;
+    border: dotted 1px black;
 }
 .mostviewed{
     grid-area: mostviewed;
     background-color: deepskyblue;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:  
+    "mostviewed1"
+    "mostviewed2"
+    "mostviewed3"
+    "mostviewed4"
+    "mostviewed5";
+    gap: 5px;
+
+}
+.mostviewed1{
+    grid-area: mostviewed1;
+    border: dotted 1px black;
+}
+.mostviewed2{
+    grid-area: mostviewed2;
+    border: dotted 1px black;
+}
+.mostviewed3{
+    grid-area: mostviewed3;
+    border: dotted 1px black;
+}
+.mostviewed4{
+    grid-area: mostviewed4;
+    border: dotted 1px black;
+}
+.mostviewed5{
+    grid-area: mostviewed5;
+    border: dotted 1px black;
 }
 .recomendations{
     grid-area: recomendations;
     background-color: plum;
+    display: grid;
+    grid-template-rows: 20px 1fr 1fr 1fr 20px;
+    grid-template-areas:  
+    "rec1"
+    "rec2"
+    "rec3"
+    "rec4"
+    "rec5";
+    gap: 5px;
+}
+.rec1{
+    grid-area: rec1;
+    border: dotted 1px black;
+}
+.rec2{
+    grid-area: rec2;
+    border: dotted 1px black;
+}
+.rec3{
+    grid-area: rec3;
+    border: dotted 1px black;
+}
+.rec4{
+    grid-area: rec4;
+    border: dotted 1px black;
+}
+.rec5{
+    grid-area: rec5;
+    border: dotted 1px black;
 }
 .create{
     grid-area: create;
     background-color: indigo;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "line1"
+    "line2";
+
+}
+.line1{
+    grid-area: line1;
+    display: grid;
+    border: dotted 1px black;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: 
+    "pic post";
+    gap: 5px;
+    
+}
+.line2{
+    grid-area: line2;
+    display: grid;
+    border: dotted 1px black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:  
+    "icn1 icn2 icn3 icn4";
+    gap: 5px;
+}
+.icn1{
+    grid-area: icn1;
+    border: dotted 1px black;
+}
+.icn2{
+    grid-area: icn2;
+    border: dotted 1px black;
+}
+.icn3{
+    grid-area: icn3;
+    border: dotted 1px black;
+}
+.icn4{
+    grid-area: icn4;
+    border: dotted 1px black;
+}
+.pic{
+    grid-area: pic;
+    border: dotted 1px black;   
+}
+.post{
+    grid-area: post;
+    border: dotted 1px black;
+    border-radius: 50px;
 }
 .feed{
     grid-area: feed;
     background-color: hotpink;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:  
+    "feed1"
+    "feed2"
+    "feed3";
+    gap: 5px
+}
+.feed1{
+    grid-area: feed1;
+    border: dotted 1px black;
+}
+.feed2{
+    grid-area: feed2;
+    border: dotted 1px black;
+}
+.feed3{
+    grid-area: feed3;
+    border: dotted 1px black;
 }
