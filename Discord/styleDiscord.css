@@ -89,13 +89,33 @@
   grid-area: channel-section;
   border: dotted 2px black;
   grid-template-rows: repeat(5, 40px);
-
+  grid-template-areas:
+    "title"
+    "channel";
+  margin: 5px;
 }
 
 .room {
   display: grid;
-  border: 2px dotted #000;
-  grid-template-rows: 60px 90vh;
+  border: 2px dotted white;
+}
+
+.title {
+  /* grid-area: title;
+  border: 2px red solid;
+  margin-bottom: 30px; */
+  display: grid;
+  font-size: 12px;
+  display: grid;
+  place-content: center;
+  border: 2px red dotted;
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 5px;
+  row-gap: 5px;
+}
+
+.channel {
+  place-self: stretch;
 }
 
 .channel-settings {
@@ -122,11 +142,3 @@
       70px 150px 1fr;
   }
 }
-
-/* .title{
-  border: solid 2px rgb(252, 0, 0);
-} */
-
-/* .channel{
-  border: solid 2px white;
-} */
