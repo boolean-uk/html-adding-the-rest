@@ -88,7 +88,7 @@
   display: grid;
   grid-area: channel-section;
   border: dotted 2px black;
-  grid-template-rows: repeat(5, 40px);
+  /* grid-template-rows: repeat(5, 40px); */
   grid-template-areas:
     "title"
     "channel";
@@ -104,19 +104,18 @@
   /* grid-area: title;
   border: 2px red solid;
   margin-bottom: 30px; */
-  display: grid;
+  /* display: grid; */
   font-size: 12px;
-  display: grid;
   place-content: center;
   border: 2px red dotted;
-  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+  /* grid-template-rows: 60px; */
   gap: 5px;
   row-gap: 5px;
 }
 
-.channel {
+/* .channel {
   place-self: stretch;
-}
+} */
 
 .channel-settings {
   grid-area: channel-settings;
