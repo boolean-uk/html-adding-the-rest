@@ -17,8 +17,11 @@
 .header {
   grid-area: header;
   background-color: yellow;
-  
+  display: grid;
+  grid-template-columns: 6vw 20vw 47vw 5vw 3vw 3vw 3vw 13vw ;
+  grid-template-rows: 100%;
 }
+
 
 .nav {
   grid-area: nav;
