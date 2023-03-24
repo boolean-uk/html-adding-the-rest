@@ -20,16 +20,44 @@
         250px 1fr 300px;
     }
         .logo {
+            padding-left: 20px;
+            display: grid;
+            grid-template-columns: 2fr 8fr;
+            align-content: center;
             grid-area: logo;
             background-color: black;
         }
+        .logo button {
+            height: 25px;
+            width: 25px;
+        }
+        .logo .two {
+            width: 100px;
+        }
         .searchbar {
+            display: grid;
+            grid-template-columns: 5fr 90fr 5fr;
+            place-content: center;
             grid-area: bar;
             background-color: bisque;
         }
         .profile {
+            padding: 2px;
+            display: grid;
+            align-content: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
             grid-area: prof;
             background-color: aqua;
+        }
+        .profile button {
+            height: 30px;
+            border: dashed 1px black;
+            margin: 2px;
+            border-radius: 25px;
+        }
+        .profile button:nth-child(4) {
+            border: solid 1px black;
+            border-radius: 0;
         }
 .nav {
     grid-area: nav;
@@ -40,30 +68,65 @@
         height: 100%;
         grid-template:
         "comp" 50px
-        "navs" 1fr
+        "navs" 361px
+        "meeet" 30px
         "meet" 120px
-        "chat" 200px
+        "chaat" 30px
+        "chat" 140px
         "butt" 40px;
     }
         .compose {
+            display: grid;
+            padding-left: 20px;
+            align-content: center;
             grid-area: comp;
             background-color: aliceblue;
         }
+        .compose button {
+            border: dashed 1px black;
+            border-radius: 25px;
+            height: 35px;
+            width: 100px;
+        }
         .navigation {
+            overflow: scroll;
             grid-area: navs;
             background-color: burlywood;
         }
+        div p {
+            padding-left: 20px;
+        }
         .meet {
             grid-area: meet;
+            overflow: scroll;
             background-color: chartreuse;
         }
+        .meeet {
+            grid-area: meeet;
+        }
+        .chat div, .meet div, .navigation div {
+            border: solid 1px black;
+            height: 45px;
+        }
         .chat {
+            overflow: scroll;
             grid-area: chat;
             background-color: darkorchid;
         }
+        .chaat {
+            grid-area: chaat;
+        } 
         .buttons {
+            display: grid;
+            grid-template-columns: 35px 35px 35px;
+            justify-content: center;
             grid-area: butt;
             background-color: lightcoral;
+        }
+        .buttons button {
+            height: 40px;
+            width: 30px;
+            border: dashed 1px black;
         }
 .main {
     grid-area: main;
@@ -74,15 +137,21 @@
         height: 100%;
         grid-template:
         "pages"  40px
-        "emails" 1fr;
+        "emails" 731px;
     }
         .pages {
             grid-area: pages;
             background-color: crimson;
         }
         .emails {
+            display: grid;
+            overflow: scroll;
             grid-area: emails;
             background-color: rgb(98, 92, 16);
+        }
+        .emails div {
+            height: 30px;
+            border: solid 1px black;
         }
 .settings {
     grid-area: set;
@@ -98,18 +167,45 @@
         "inbox" 3fr;
     }
         .quick {
+            display: grid;
+            padding: 10px;
+            justify-content: center;
+            grid-template-columns: 4fr 1fr;
             grid-area: quick;
             background-color: bisque;
         }
+        .quick button {
+            width: 125%; 
+        }
         .density {
+            padding-top: 20px;
             grid-area: den;
             background-color: chartreuse;
         }
+        li {
+            list-style: circle;
+            margin: 20px;
+            margin-left: 0;
+        }
         .theme {
+            padding-top: 10px;
+            display: grid;
+            grid-template-rows: 20px;
             grid-area: theme;
             background-color: cornflowerblue;
         }
+        .eight{
+            display: grid;
+            place-items: center;
+            grid-template-columns: repeat(4, 25%);
+        }
+        .eight > div {
+            height: 30px;
+            width: 40px;
+            border: solid 1px black;
+        }
         .inbox {
+            padding-top: 20px;
             grid-area: inbox;
             background-color: chocolate;
         }
@@ -125,12 +221,25 @@
         "plus"  1fr;
     }
         .iconss {
+            display: grid;
+            place-items: center;
             grid-area: iconss;
             background-color: fuchsia;
         }
+        .iconss button {
+            height: 30px;
+            width: 30px;
+            border: solid 1px black;
+            border-radius: 50%;
+        }
         .plus {
+            padding-top: 20px;
             grid-area: plus;
             background-color: pink;
+        }
+        .plus p {
+          font-size: 30px;  
+          font-weight: bold;
         }
 @media screen and (max-width: 1000px) {
     .grid {
@@ -156,9 +265,9 @@
         height: 100vh;
         display: grid;
         grid-template:
-        "head head head" 50px
-        "nav  main set" 1fr /
-        250px 1fr 50px;
+        "head head" 50px
+        "nav  main" 1fr /
+        250px 1fr;
     }
     .headgrid {
         display: grid;
@@ -166,20 +275,31 @@
         "logo bar prof" 50px /
         250px 1fr 100px;
     }
+    .profile {
+        grid-template-columns: 1fr;
+    }
+    .profile .hide, .settings {
+        display: none;
+    }
 }
 @media screen and (max-width: 500px) {
     .grid {
         height: 100vh;
         display: grid;
         grid-template:
-        "head head head" 50px
-        "nav  main set" 1fr /
-        50px 1fr 50px;
+        "head" 50px
+        "main"1fr /
+        1fr;
     }
     .headgrid {
-        display: grid;
         grid-template:
-        "logo bar prof" 50px /
-        50px 1fr 50px;
+        "bar prof" 50px /
+        90% 10%;
+    }
+    .log, .nav{
+        display: none;
+    }
+    .profile .hide {
+        display: none;
     }
 }
