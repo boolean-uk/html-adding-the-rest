@@ -105,30 +105,59 @@
     grid-area: rooms;
     background-color: cyan;
 }
-
 .chat {
     grid-area: chat;
     background-color: yellow;
 }
+.roomgrid > .general > p, .classes > p, .lobby > p, .staff > p {
+    display: grid;
+    place-content: center;
+    border: dashed 1px black;
+    height: 50px;
+    width: 100px;
+}
+
 .general {
+    display: grid;
+    place-content: center;
     grid-area: general;
     background-color: aqua;
 }
 .classes {
+    display: grid;
+    place-content: center;
     grid-area: classes;
     background-color: burlywood;
 }
 .lobby {
     grid-area: lobby;
+    display: grid;
+    place-content: center;
     background-color: lightseagreen;
 }
 .staff {
     grid-area: staff;
+    display: grid;
+    place-content: center;
     background-color: teal;
 }
 .user {
     grid-area: user;
+    grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
     background-color: olive;
+    display: grid;
+    align-content: center;
+}
+.user button {
+    margin: 2px;
+    height: 25px;
+    width: 25px;
+    border: 2px black dashed;
+    border-radius: 50%;
+}
+.user button:nth-child(2) {
+    border-radius:20%;
+    width:75px;
 }
 .server {
     grid-area: server;
