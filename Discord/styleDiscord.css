@@ -89,32 +89,31 @@
   grid-area: channel-section;
   border: dotted 2px black;
   /* grid-template-rows: repeat(5, 40px); */
-  grid-template-areas:
+  /* grid-template-areas:
     "title"
-    "channel";
-  margin: 5px;
+    "channel"; */
+  /* margin: 5px; */
 }
 
 .room {
-  display: grid;
-  border: 2px dotted white;
+  /* display: grid; */
+  /* border: 2px dotted white; */
+  /* grid-template-rows: repeat(auto-fit, 20px); */
 }
 
 .title {
   /* grid-area: title;
-  border: 2px red solid;
   margin-bottom: 30px; */
   /* display: grid; */
-  font-size: 12px;
-  place-content: center;
+  /* place-content: center; */
   border: 2px red dotted;
-  /* grid-template-rows: 60px; */
-  gap: 5px;
-  row-gap: 5px;
+  /* grid-template-rows: 10px; */
+  height: 10px;
+  padding: 5px;
 }
 
 /* .channel {
-  place-self: stretch;
+  height: 10px;
 } */
 
 .channel-settings {
