@@ -37,7 +37,10 @@
 
 .right {
     grid-area: right;
-    background-color: greenyellow;
+    background-color: lightyellow;
+        display: grid;
+        grid-template-rows: 3.5fr 1.5fr 1.5fr;
+        gap: 5px;
 }
 
 .box {
@@ -113,6 +116,7 @@ input {
 
 }
 
+
 .centercontent1 {
     display: grid;
     border: dotted 2px black;
@@ -155,5 +159,17 @@ input {
 
 .maincontent {
     border: dotted 2px blue;
+    margin: 3px;
+}
+.updates {
+    display: grid;
+    border: dotted 2px blue;
+    gap: 5px;
+
+}
+
+.updates.one>div {
+    display: grid;
+    border: dotted 2px green;
     margin: 3px;
 }
