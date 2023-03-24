@@ -138,16 +138,17 @@
 
 .feed {
     grid-area: feed;
-    /* display: grid;
-    grid-template-rows: repeat(auto-fit, 300px);
-    overflow: hidden; */
+    max-height: 700px;
+    display: grid;
+    grid-template-rows: repeat(5, 300px);
+    overflow: scroll;
 }
 
-/* .feed > div {
+.feed > div {
     border: solid 1px green;
     margin: 5px;
     border-radius: 10px;
-} */
+}
 
 .right-sidebar {
     grid-area: right;
