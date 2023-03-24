@@ -18,7 +18,8 @@
 .main, 
 .nav,
 .header,
-.settings {
+.settings, 
+.icons{
   border: 3px solid #C64343;
   border-radius: 8px;
   margin: 5px;
@@ -28,8 +29,8 @@
 .header > div, 
 .nav > div,
 .main > div,
-.settings > div {
-
+.settings > div, 
+.icons > div {
   border: 3px dashed #3EC5A3;
   border-radius: 8px;
   margin: 3px;
@@ -40,7 +41,8 @@
 /* inner-inner boxes */
 .main > .control > div,
 .settings > .density > div,
-.settings > .theme > div {
+.settings > .theme > div, 
+.settings > .inbox-type > div{
   border: 3px dashed #F2DC23;
   border-radius: 8px;
   margin: 3px;
@@ -49,7 +51,7 @@
 .header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 6vw 14vw 53vw 5vw 3vw 3vw 3vw 13vw ;
+  grid-template-columns: 6vw 14vw 1fr 5vw 3vw 3vw 3vw 13vw ;
   grid-template-rows: 100%;
 }
 
@@ -83,7 +85,7 @@
 .settings {
   grid-area: settings;
   display: grid;
-  grid-template-rows: 80px 250px 150px 400px;
+  grid-template-rows: 80px 250px 150px 1fr;
 }
 
 .settings > .density {
@@ -97,13 +99,20 @@
 .settings > .theme {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+.settings > .inbox-type {
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
 }
 
 
 
 .icons {
   grid-area: icons;
-  background-color: green;
+  grid-template-rows: 70px 70px  70px 70px 70px;
+  display: grid;
+ 
 }
 
 @media screen and (max-width: 1200px) {
