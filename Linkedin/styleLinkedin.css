@@ -7,7 +7,6 @@
 .grid {
   display: grid;
   grid-template:
-    "header header header" 50px
     "left feed right" 100vh /
     200px 500px 300px;
   grid-gap: 20px;
@@ -15,9 +14,81 @@
 }
 
 .header {
+  display: grid;
   grid-area: header;
-  background-color: red;
+  background-color: grey;
+  width: 100vw;
+  height: 55px;
+  margin-bottom: 20px;
+  grid-template-columns: 220px 860px;
+  padding: 5px;
+  justify-content: center;
 }
+
+.format-left{
+  display: grid;
+  grid-template-columns: 50px 150px;
+ 
+}
+
+.format-right{
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 1fr;
+  margin-left: 100px;
+}
+
+.linkedinIcon{
+  border: 2px dotted black;
+
+  margin: 2px 2px ;
+
+}
+
+.search{
+  border: 2px dotted blue;
+  margin: 2px 2px;
+}
+
+.home{
+  border: 2px dotted green;
+  margin: 2px 2px ;
+}
+
+.network{
+  border: 2px dotted orangered;
+  margin: 2px 2px ;
+}
+
+.jobs{
+  border: 2px dotted yellow;
+  margin: 2px 2px ;
+}
+
+.messages{
+  border: 2px dotted purple;
+  margin: 2px 2px ;
+}
+
+.notification{
+  border: 2px dotted brown;
+  margin: 2px 2px ;
+}
+
+.profile-picture{
+  border: 2px dotted white;
+  margin: 2px 2px ;
+}
+
+.work{
+  border: 2px dotted lightblue;
+  margin: 2px 2px ;
+}
+
+.post-a-job{
+  border: 2px dotted lightgreen;
+  margin: 2px 2px ;
+}
+
 
 .left-bar {
   display: grid;
