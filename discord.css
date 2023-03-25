@@ -1,0 +1,204 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.dotted {
+  border: 1px dodgerblue dotted;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 65px 250px 1fr;
+  height: 100vh;
+}
+
+.icon-bar {
+  /* 65px width */
+  padding-top: 15px;
+  display: grid;
+  grid-auto-rows: 35px;
+  grid-auto-columns: 35px;
+  gap: 15px;
+  justify-content: center;
+}
+
+.icon-bar div {
+  border-radius: 25px;
+}
+
+.left-bar {
+  display: grid;
+  grid-template-rows: 50px 0.75fr 0.5fr 1fr 0.5fr 0.75fr 50px;
+  gap: 3px;
+}
+
+.logo-area {
+  display: grid;
+  grid-template-rows: 25px;
+  grid-template-columns: 1fr 20px;
+  align-content: center;
+  padding: 0 11px;
+}
+
+.logo {
+  width: 45%;
+}
+
+.invite {
+  display: grid;
+  grid-template-rows: 50px 20px 40px;
+  grid-template-columns: 0.5fr;
+  place-content: center;
+  gap: 11px;
+}
+
+.invite .avatar {
+  border-radius: 25px;
+  width: 40%;
+  justify-self: center;
+}
+
+.general-section,
+.lobby {
+  display: grid;
+  align-content: center;
+  gap: 11px;
+}
+
+.general {
+  display: grid;
+  grid-auto-rows: 20px;
+  grid-template-columns: 25px 25px 75px;
+  gap: 11px;
+  padding-left: 15px;
+}
+
+.classes-section {
+  display: grid;
+  align-content: center;
+  gap: 15px;
+}
+
+.classes {
+  display: grid;
+  grid-auto-rows: 20px;
+  grid-template-columns: 20px 20px 1fr 20px 20px;
+  gap: 11px;
+  padding-left: 15px;
+  padding-right: 11px;
+}
+
+.staff {
+  padding-top: 15px;
+  display: grid;
+  grid-auto-rows: 20px;
+  gap: 11px;
+}
+
+.staff-section {
+  display: grid;
+  grid-template-columns: 25px 25px 75px;
+  padding-left: 15px;
+  gap: 11px;
+}
+
+.user-settings {
+  display: grid;
+  grid-auto-rows: 20px;
+  grid-template-columns: 20px 1fr 15px 15px 15px;
+  gap: 11px;
+  padding-left: 15px;
+  padding-right: 11px;
+  place-content: center;
+}
+
+.main-section {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+.top-main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 5px;
+  border-bottom: 1px solid rgb(223, 220, 220);
+}
+
+.channel-name {
+  padding-left: 11px;
+  display: grid;
+  grid-template-rows: 25px;
+  grid-template-columns: 20px 20px 75px;
+  align-content: center;
+  gap: 7px;
+}
+
+.search-area {
+  padding-right: 15px;
+  display: grid;
+  grid-template-rows: 25px;
+  grid-template-columns: repeat(3, 25px) 150px repeat(2, 25px);
+  align-content: center;
+  justify-content: end;
+  gap: 7px;
+}
+
+/* .bottom-main {
+  display: grid;
+  grid-template:
+    "channel-icon" 75px
+    "welcome" 40px
+    "intro" 25px
+    "add-member" 75px
+    "members-avatar" 75px
+    "users-post" 95px
+    "message-area" 55px /
+    1fr;
+} */
+
+.bottom-main {
+  padding: 25px;
+  display: grid;
+  grid-template-rows: 75px 40px 25px 75px 75px 90px 55px;
+  align-content: end;
+  gap: 5px;
+}
+
+.channel-icon {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+}
+
+.welcome {
+  height: 35px;
+  width: 55%;
+}
+
+.intro {
+  height: 20px;
+  width: 50%;
+}
+
+.add-member {
+  height: 50px;
+  width: 45%;
+  margin: 9px 0;
+}
+
+.members-avatar {
+  height: 50px;
+  width: 15%;
+  margin: 9px 0;
+}
+
+.user-post {
+  height: 75px;
+  width: 30%;
+}

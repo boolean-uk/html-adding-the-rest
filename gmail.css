@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+
+  display: grid;
+  grid-template-rows: 75px 1fr;
+}
+
+.header-section {
+  /* background-color: rgb(184, 230, 214); */
+  border-bottom: 1px solid rgb(221, 219, 219);
+
+  display: grid;
+  grid-template-columns: 350px 1fr 550px;
+  align-content: center;
+}
+
+.header-section__sub1 {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 50px;
+}
+
+.burger {
+  display: grid;
+  grid-auto-rows: 5px;
+  gap: 2px;
+  place-content: center;
+}
+
+.burger-line {
+  background-color: grey;
+  height: 3px;
+  width: 25px;
+}
+
+.logo-container {
+  display: grid;
+  width: 155px;
+}
+
+.header-section__sub2 {
+  display: grid;
+  grid-template-columns: 95%;
+}
+
+.header-section__sub3 {
+  display: grid;
+  grid-template-columns: repeat(3, 45px) 135px;
+  gap: 19px;
+
+  justify-content: end;
+  margin-right: 15px;
+}
+
+.header-section__sub3 div {
+  height: 45px;
+}
+
+.mail-section {
+  margin: 11px 0 0 11px;
+  display: grid;
+  grid-template-columns: 0.75fr 2.5fr 1fr 70px;
+  gap: 3px;
+}
+
+.left-bar {
+  display: grid;
+  grid-template-rows: 55px 4fr 1fr 2fr 45px;
+  gap: 5px;
+}
+
+.left-bar__1 {
+  display: grid;
+  grid-template-columns: 0.5fr;
+  padding: 11px 0 11px 25px;
+}
+
+.compose {
+  border-radius: 30px;
+}
+
+.left-bar__2 {
+  display: grid;
+  grid-auto-rows: 23px;
+  gap: 15px;
+  padding: 20px 0 20px 25px;
+}
+
+.bottom-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 45px);
+  padding: 5px;
+  justify-content: center;
+  gap: 11px;
+}
+
+.mail-functions {
+  display: grid;
+  grid-template-columns: 45px 0.5fr;
+  gap: 15px;
+}
+
+.inbox-list {
+  display: grid;
+  grid-auto-rows: 45px;
+}
+
+.inbox-list__entry {
+  display: grid;
+  grid-template-columns: 20px 20px 1fr 1fr 50px;
+  gap: 5px;
+  margin: 15px 9px;
+}
+
+.right-bar {
+  display: grid;
+  grid-template-rows: 0.75fr 1fr 0.75fr 1fr;
+  padding: 9px;
+}
+
+.theme {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 15px;
+  gap: 9px;
+}
+
+.theme.dotted div {
+  border-radius: 5px;
+}
+
+.density, .inbox-type {
+  display: grid;
+  grid-auto-rows: 55px;
+  align-content: center;
+}
+
+.density-type {
+  margin: 11px;
+  display: grid;
+  grid-template-columns: 25px 1fr 0.75fr;
+}
+
+.dotted .radio {
+  height: 15px;
+  width: 15px;
+  border-radius: 25px;
+}
+
+.density-name {
+  height: 15px;
+  width: 65px;
+}
+
+.density-box {
+  height: 35px;
+}
+
+.tool-bar {
+  display: grid;
+  grid-auto-rows: 35px;
+  grid-template-columns: 35px;
+  gap: 45px;
+  justify-content: center;
+  padding-top: 11px;
+}
+
+.settings {
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
+  gap: 19px;
+  padding: 25px 11px 0 11px;
+}
+
+.settings > div:last-child {
+  border-radius: 7px;
+  height: 65%;
+}
+
+.dotted {
+  border: 1px dodgerblue dotted;
+}
