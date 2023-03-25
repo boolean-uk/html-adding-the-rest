@@ -9,7 +9,8 @@
 }
 .header{
     grid-area: header;
-    background-color: bisque;
+    background-color: white;
+    border-bottom: solid 1px rgba(128, 128, 128, 0.478);
     display: grid;
     grid-template-columns: 200px 2fr 250px;
     grid-template-rows: 50px;
@@ -19,7 +20,7 @@
 }
 .icon{
     grid-area: icon;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas: 
@@ -42,19 +43,21 @@
 }
 .search{
     grid-area: search;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     
 }
 .search > input{
+    background-color: rgba(128, 128, 128, 0.21);
     display: grid;
-    height: 42px;
+    height: 35px;
     width: 472px;
     /* margin: 10px 10px 10px 30px; */
-    border-radius: 5px;
+    border-radius: 8px;
+    border: solid 1px rgba(128, 128, 128, 0.025);
 }
 .account{
     grid-area: account;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
     grid-template-columns:20px 40px 40px 40px 1fr ;
     grid-template-areas: 
@@ -62,9 +65,11 @@
 
 }
 .acc{
+    background-color: white;
     grid-area: acc;
+    border: solid 1px rgba(128, 128, 128, 0.21);
     border-radius: 10px;
-    height: 48px;
+    height: 40px;
 
 }
 .bttn3{
@@ -92,7 +97,7 @@
 .menu{
     padding: 0;
     grid-area: menu;
-    background-color: burlywood;
+    background-color: white;
     display: grid;
     grid-template-rows: 62px 2fr 100px 150px 50px;
     grid-template-areas: 
@@ -104,14 +109,15 @@
 }
 .compose{
     grid-area: compose;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     padding-top: 6px;
 }
 .composebutton{
+border: solid 1px rgba(128, 128, 128, 0.478);
     display: grid;
     padding: none;
     height: 50px;
-    width: 180px;
+    width: 160px;
     border-radius: 50px;
     background-color: white;
     
@@ -134,7 +140,7 @@
 }
 .folders{
     grid-area: folders;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     overflow-x: scroll;
     align-content: center;
     grid-template-columns: 50px 1fr;
@@ -143,34 +149,36 @@
 }
 .folders > div{
     grid-area: folders;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     
     align-content: center;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 30px 1fr;
     grid-template-areas:
     "icons foldername" ;
 }
 .foldername{
+    margin: 0;
     grid-area: foldername;
 }
 .icons{
     grid-area: icons;
     margin: 0;
-    padding-left: 20px;
+    padding-left: 8px;
     transform: rotate(90deg);
     
 }
 .folders > div{
+    margin: 0;
     grid-area: foldername;
     display: grid;
-    border: solid 0.1px black;
-    grid-auto-rows: 45px;
+    /* border: solid 0.1px black; */
+    grid-auto-rows: 35px;
     align-items: center;
-    padding-left: 25px;
+    /* padding-left: 25px; */
 }
 .meet{
     grid-area: meet;
-    border: solid 1px black;
+    border-top: solid 1px rgba(128, 128, 128, 0.478);
     display: grid;
     grid-template-rows: 30px 30px 1fr;
     grid-template-areas:
@@ -178,68 +186,70 @@
     "meet2"
     "meet3";
 }
+.meet1{
+    font-size: 15px;
+    font-weight: bold;
+}
 .meet1,.meet2,.meet3{
-    margin: 0
-    ;
+    margin: 0;
     display: grid;
-    border: solid 1px black;
+    padding-top: 5px;
+    padding-left: 10px;
+    /* border: solid 1px black; */
     
 }
 .chat{
     grid-area: chat;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     overflow-x: scroll ;
     grid-template-columns: repeat(6, 40px);
 }
 .friends{
     display: grid; 
-    border: solid 1px black; 
+    /* border: solid 1px black;  */
     height: 50px;  
     padding-left: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+}
+.friends > img{
+    height: 40px;
+    width: 40px;
 }
 .chat > p{
     margin: 0;
-    border: solid 1px white;
+    border-top: solid 1px rgba(128, 128, 128, 0.478);
     padding-left: 10px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
 }
 .actions{
     grid-area: actions;
-    border: solid 1px black;
+    border-top: solid 1px rgba(128, 128, 128, 0.478);
     display: grid;
     grid-template-columns: repeat(3, 40px);
     align-content: center;
     justify-content: center;
+    border-bottom: solid 1px rgba(128, 128, 128, 0.478);
     
 }
 .actions > div{ 
-    border: solid 1px black; 
+    /* border: solid 1px black;  */
     height: 40px;
 }
-.phoneimg{
+.actions > div > p{
+    margin: 0;
+    font-size: 20px;
     display: grid;
-    height: 30px;
-    width: 30px;
-    padding-top: 5px;
-    padding-left: 5px;
-}
-.chaticon{
-    display: grid;
-    height: 30px;
-    width: 40px;
-    padding-top: 5px;
-}
-.personicon{
-    display: inline-block;
-    height: 20px;
-    width: 30px;
-    padding-top: 10px;
-    padding-left: 5px;
+    align-items: bottom;
+    justify-items: bottom;
 }
 .mail{
     grid-area: mail;
-    background-color: lightcoral;
+    background-color: white;
     display: grid;
     grid-template-rows: 30px 1fr;
     grid-template-areas: 
@@ -249,7 +259,7 @@
 .options{
     display: grid;
     grid-area: options;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     grid-template-columns: 30px 30px 30px 1fr 30px 30px 30px;
     grid-template-areas: 
     "sq refresh dots . pages arrow1 arrow2";
@@ -300,14 +310,15 @@
 }
 .inbox{
     grid-area: inbox;
-    border: solid 1px black;
+    /* border-top: solid 1px rgba(128, 128, 128, 0.478); */
     display: grid;
     grid-template-rows: repeat(autofit, 25px);
     overflow-x: scroll;
+    border-bottom: solid 1px rgba(128, 128, 128, 0.478);
 }
 .message{
     height: 30px;
-    border: solid 1px black;
+    border-top: solid 1px rgba(128, 128, 128, 0.478);
     display: grid;
     grid-template-columns: 30px 30px 1fr 40px;
     grid-template-areas:
@@ -338,7 +349,7 @@
 }
 .settings{
     grid-area: settings;
-    background-color: lightsalmon;
+    background-color:white;
     display: grid;
     grid-template-rows: 50px 200px 150px 1fr;
     grid-template-columns: 200px;
@@ -347,10 +358,11 @@
     "density"
     "theme"
     "type";
+    overflow-x: scroll;
 }
 .quicksettings{
     grid-area: quicksettings;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
     grid-template-columns: 1fr 30px;
     grid-template-areas:
@@ -359,18 +371,33 @@
 .ex{
     margin: 0;
     grid-area: ex;
-    font-size: 35px;
+    font-size: 20px;
     text-align: center;
 }
 .qset{
+    border-left: solid 1px  rgba(128, 128, 128, 0.478);
+    padding-top: 5px;
+    font-size: 15px;
+    margin: 0;
     grid-area: qset;
-    text-align: center
+    padding-left: 5px;
+    text-align: left;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.qset > button{
+    height: 20px;
+    color: blue;
+    background-color: white;
+    border: solid 1px rgba(128, 128, 128, 0.478);
+    border-radius: 5px;
 }
 .density{
     grid-area: density;
-    border: solid 1px black;
+    border-left: solid 1px  rgba(128, 128, 128, 0.478);
+    border-top: solid 1px rgba(128, 128, 128, 0.478);
     display: grid;
-    grid-template-rows: 20px 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr 1fr;
     grid-template-areas: 
     "dens1"
     "dens2"
@@ -379,65 +406,86 @@
 }
 .dens1{
     grid-area: dens1;
-    border: solid 1px black;
+    /* border: solid 1px black; */
+    padding-left: 5px;
+    padding-top: 5px;
 }
 .dens2{
     grid-area: dens2;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 50px 1fr 70px;
     grid-template-areas: 
     "dens2-1 dens2-2";
 }
+.dens2 > img {
+    padding-top: 5px;
+    height: 40px;
+    width: 60px;
+}
 .dens2-1{
     grid-area: dens2-1;
-    font-size: 40px;
+    padding-top: 7px;
+    font-size: 30px;
     justify-self: center;
 }
 .dens2-2{
     grid-area: dens2-2;
-    font-size: 20px;
+    font-size: 13px;
     align-self: center;
 }
 .dens3{
     grid-area: dens3;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 50px 1fr 70px;
     grid-template-areas: 
     "dens3-1 dens3-2";
 }
+.dens3 > img {
+    padding-top: 5px;
+    height: 40px;
+    width: 60px;
+}
 .dens3-1{
     grid-area: dens3-1;
-    font-size: 40px;
+    padding-top: 7px;
+    font-size: 30px;
     justify-self: center;
 }
 .dens3-2{
     grid-area: dens3-2;
-    font-size: 20px;
+    font-size: 13px;
     align-self: center;
 }
 .dens4{
     grid-area: dens4;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 50px 1fr 70px;
     grid-template-areas: 
     "dens4-1 dens4-2";
 }
+.dens4 > img {
+    padding-top: 5px;
+    height: 40px;
+    width: 60px;
+}
 .dens4-1{
     grid-area: dens4-1;
-    font-size: 40px;
+    padding-top: 7px;
+    font-size: 30px;
     justify-self: center;
 }
 .dens4-2{
     grid-area: dens4-2;
-    font-size: 20px;
+    font-size: 13px;
     align-self: center;
 }
 .theme{
     grid-area: theme;
-    border: solid 1px black;
+    border-left:solid 1px rgba(128, 128, 128, 0.478);
+    border-top: solid 1px rgba(128, 128, 128, 0.478);
     display: grid;
     grid-template-rows: 20px 1fr;
     grid-template-areas: 
@@ -445,17 +493,23 @@
     "theme2";
 }
 .theme1{
+
     grid-area: theme1;
     display: grid;
     grid-template-columns: 1fr 90px;
     grid-template-areas:
     "theme1-1 theme1-2";
 }
-.theme1-1{
+.theme1-1{    
+    font-size: 15px;
+    padding-top: 5px;
     grid-area: theme1-1;
     padding-left: 10px;
 }
 .theme1-2{
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left: 18px;
     grid-area: theme1-2;
     color: blue;
 }
@@ -479,23 +533,39 @@
 }
 .themepic1{
     grid-area: themepic1;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 40px;
+}
+.themepic1 > img {
+    height: 30px;
+    width: 40px;
 }
 .themepic2{
     grid-area: themepic2;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 40px;
+}
+.themepic2 > img {
+    height: 30px;
+    width: 40px;
 }
 .themepic3{
     grid-area: themepic3;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 40px;
+}
+.themepic3 > img {
+    height: 30px;
+    width: 40px;
 }
 .themepic4{
     grid-area: themepic4;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 40px;
+}
+.themepic4 > img {
+    height: 30px;
+    width: 40px;
 }
 .theme2-2{
     grid-area: theme2-2;
@@ -510,27 +580,44 @@
 }
 .themepic5{
     grid-area: themepic5;
-    border: solid 1px black;
-    height: 40px;
+    /* border: solid 1px black; */
+
+}
+.themepic5 > img {
+    height: 30px;
+    width: 40px;
 }
 .themepic6{
     grid-area: themepic6;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 40px;
+}
+.themepic6 > img {
+    height: 30px;
+    width: 40px;
 }
 .themepic7{
     grid-area: themepic7;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 40px;
+}
+.themepic7 > img {
+    height: 30px;
+    width: 40px;
 }
 .themepic8{
     grid-area: themepic8;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 40px;
+}
+.themepic8 > img {
+    height: 30px;
+    width: 40px;
 }
 .type{
     grid-area: type;
-    border: solid 1px black;
+    border-left: solid 1px rgba(128, 128, 128, 0.478);
+    border-top: solid 1px rgba(128, 128, 128, 0.478);
     display: grid;
     grid-template-rows: 20px 80px 80px 80px 80px 80px;
     grid-template-areas: 
@@ -541,15 +628,18 @@
     "type5"
     "type6";
     gap: 5px;
-    overflow-x: scroll;
+    
 }
 .type1{
     grid-area: type1;
-    border: solid 1px black;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-size: 15px;
+    /* border: solid 1px black; */
 }
 .type2{
     grid-area: type2;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-areas:
@@ -557,18 +647,24 @@
 }
 .type2-1{
     grid-area: type2-1;
-    font-size: 40px;
-    align-self: center;
+    padding-top: 7px;
+    font-size: 30px;
     justify-self: center;
 }
 .type2-2{
     grid-area: type2-2;
-    font-size: 15px;
     align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    font-size: 13px;
+}
+.type2-2 > img {
+    height: 40px;
+    width: 60px;
 }
 .type3{
     grid-area: type3;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-areas:
@@ -576,18 +672,24 @@
 }
 .type3-1{
     grid-area: type3-1;
-    font-size: 40px;
-    align-self: center;
+    padding-top: 7px;
+    font-size: 30px;
     justify-self: center;
 }
 .type3-2{
     grid-area: type3-2;
-    font-size: 15px;
     align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    font-size: 13px;
+}
+.type3-2 > img {
+    height: 40px;
+    width: 60px;
 }
 .type4{
     grid-area: type4;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-areas:
@@ -595,18 +697,24 @@
 }
 .type4-1{
     grid-area: type4-1;
-    font-size: 40px;
-    align-self: center;
+    padding-top: 7px;
+    font-size: 30px;
     justify-self: center;
 }
 .type4-2{
     grid-area: type4-2;
-    font-size: 15px;
     align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    font-size: 13px;
+}
+.type4-2 > img {
+    height: 40px;
+    width: 60px;
 }
 .type5{
     grid-area: type5;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-areas:
@@ -614,38 +722,52 @@
 }
 .type5-1{
     grid-area: type5-1;
-    font-size: 40px;
-    align-self: center;
+    padding-top: 7px;
+    font-size: 30px;
     justify-self: center;
 }
 .type5-2{
     grid-area: type5-2;
-    font-size: 15px;
     align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    font-size: 13px;
+}
+.type5-2 > img {
+    height: 40px;
+    width: 60px;
 }
 .type6{
     grid-area: type6;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-template-areas:
-    "type6-1 type6-2"
+    "type6-1 type6-2";
+    border-bottom: solid 1px rgba(128, 128, 128, 0.478);
 }
 .type6-1{
     grid-area: type6-1;
-    font-size: 40px;
-    align-self: center;
+    padding-top: 7px;
+    font-size: 30px;
     justify-self: center;
 }
 .type6-2{
     grid-area: type6-2;
-    font-size: 15px;
     align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    font-size: 13px;
+}
+.type6-2 > img {
+
+    height: 40px;
+    width: 60px;
 }
 .nav{
     grid-area: nav;
-    background-color: peachpuff;
-    border: solid 1px black;
+    background-color: white;
+    border-left: solid 1px rgba(128, 128, 128, 0.478);;
     display: grid;
     grid-template-rows: 50px 50px 50px 50px;
     grid-template-areas: 
@@ -657,32 +779,32 @@
 }
 .nav1{
     grid-area: nav1;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     text-align: center;
-    font-size:  20px;
+    font-size:  15px;
     padding-top: 10px;
 }
 
 .nav2{
     grid-area: nav2;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     text-align: center;
-    font-size:  20px;
+    font-size:  15px;
     padding-top: 10px;
 
 }
 .nav3{
     grid-area: nav3;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     padding-top: 8px;
 }
 .nav4{
     grid-area: nav4;
-    border: solid 1px black;
+    border-top: solid 1px rgba(128, 128, 128, 0.478);
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
 }
 @media screen and (max-width:800px){
     .grid{
