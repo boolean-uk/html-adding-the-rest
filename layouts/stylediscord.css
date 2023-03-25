@@ -1,11 +1,18 @@
+.body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
 .grid {
     display: grid;
     grid-template-areas: 
     "leftbar  server  chat";
-    grid-template-columns: 80px 180px 75vw;
+    grid-template-columns: 80px 180px 100%;
+    
 }
-
-
 
 .leftbar{
     display: grid;
@@ -14,8 +21,8 @@
     "allservers"
     "download";
     grid-template-rows: 80px 1fr 80px;
-    background-color: darkslateblue;
-
+    background-color: mediumpurple;
+    border: solid 1px black;
 }
 
 .DM {
@@ -23,6 +30,7 @@
     border-radius: 50%;
     text-align: center;
     padding-top: 15px;
+    border: solid 1px black;
 }
 
 .allservers >p {
@@ -30,16 +38,26 @@
     border-radius: 50%;
     text-align: center;
     padding: 15px;
-}
+    border: solid 1px black;
+    }
 
+.sidebar {
+    border: solid 3px white;
+    background-color: mediumorchid;
+    border-radius: 50%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    border: solid 1px black;    
+}
 
 .download {
     border: solid 3px white;
     border-radius: 50%;
     text-align: center;
     padding: 15px;
+    border: solid 1px black;
 }
-
 
 .server {
     display: grid;
@@ -49,28 +67,32 @@
     "rooms"
     "status";
 grid-template-rows: 40px 1fr 3fr 40px;
-
-
+border: solid 1px black;
+text-align: center;
 }
 
 .ID {
     grid-area: ID;
     background-color: darkorchid;
+    border: solid 1px black;
 }
 
 .profile {
     grid-area: profile;
     background-color: darkgreen;
+    border: solid 1px black;
 }
 
 .rooms {
     grid-area: rooms;
     background-color: deepskyblue;
+    border: solid 1px black;
 }
 
 .status {
     grid-area: status;
     background-color: greenyellow;
+    border: solid 1px black;
 }
 
 .chat {
@@ -78,29 +100,83 @@ grid-template-rows: 40px 1fr 3fr 40px;
     grid-template-areas: 
     "header"
     "speech"
-    "message"
+    /* "message" */
     "input";
-grid-template-rows: 40px 3fr 1fr 50px;
-
+grid-template-rows: 40px 3fr 50px;
+border: solid 1px black;
 }
 
 .header {
-    grid-area: header;
+    /* grid-area: header; */
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    grid-template-areas:  
+    "room-name action";
     background-color: aqua;
-
+    border: solid 1px black;
+    
+}
+.action {
+    grid-area: action;
+    border: solid 1px black;
+    display: grid;
+    grid-template-columns:20px 20px 20px 0.75fr 20px 20px ;
+    grid-template-rows: 20px;
+    grid-template-areas: 
+    "notification pinned members search inbox help";
+    place-content: center;
 }
 
 .speech { 
     grid-area: speech;
     background-color: burlywood;
+    border: solid 1px black;
+    align-items: end;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
-.message {
+/* .message {
     grid-area: message;
-    background-color: darkblue;
-}
+    background-color:cadetblue;
+    border: solid 1px black;
+} */
 
 .input {
-    grid-area: input;
-background-color:gold;
+    /* grid-area: input; */
+    border: solid 1px black;
+    display: grid;
+    height: 50px;
+    width: 1fr;
+    border-radius: 5px;
 }
+/* 
+.img {
+    max-width: 19px;
+    max-height: 19px;
+} */
+
+.button >img {
+    max-width: 19px;
+    max-height: 19px;
+}
+
+@media screen and (max-width:800) {
+    .grid {
+        grid-template-columns: 0px 75px 75%;
+    }
+    .leftbar {
+        display: none;
+    }
+}
+
+@media screen and (max-height:800) {
+    .grid {
+        grid-template-columns: 0px 75px 75%;
+    }
+    .leftbar {
+        display: none;
+    }
+}
+
+
