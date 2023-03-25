@@ -81,19 +81,34 @@
   grid-template-rows: 40px 200px 150px 230px 150px 100px 1fr 40px;
 }
 
-.channels > div + div {
+.channels > .invite {
   grid-template-rows: 70px 1fr 1fr;
-  justify-items: center;
+
+}
+.channels > .invite > .channel-circle {
+  justify-self: center;
+}
+.channels > div + div + div {
+  grid-template-rows: repeat(auto-fit, );
+ 
 }
 
-.channels > div + div > div {
-  width: 18vw;
+.channels > div + div + div + div + div + div + div + div {
+box-sizing: border-box;
+display: grid;
+grid-template-columns: 40px 1fr 30px 30px 30px;
+
 }
 
 .channels > div + div > .channel-circle {
   border-radius: 50%;
   width: 60px;
 }
+.channels > div + div > {
+  border-radius: 50%;
+  width: 60px;
+}
+
 
 @media screen and (max-width: 1200px) {
   .grid {
