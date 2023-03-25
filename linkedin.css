@@ -2,7 +2,7 @@
   display: grid;
   grid-template:
     "header    header   header" 3fr
-    "left      main     right" 800px /
+    "left      main     right" 900px /
     1fr 3fr 2fr;
   max-width: 1000px;
   margin: 0 auto;
@@ -39,6 +39,47 @@
     "Bloomberg";
 }
 
+.user_icon {
+  display: grid;
+  grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr 1fr;
+  grid-template-areas: "like comment share send . ";
+}
+
+.Like {
+  grid-area: like;
+  border: 1px dashed black;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 5px;
+}
+
+.Comment {
+  grid-area: comment;
+  border: 1px dashed black;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 5px;
+}
+
+.Share {
+  grid-area: share;
+  border: 1px dashed black;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 5px;
+}
+
+.Send {
+  grid-area: send;
+  border: 1px dashed black;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding: 5px;
+}
+.user_info_text {
+  font-size: small;
+  color: grey;
+}
 .right-sidebar {
   display: grid;
   grid-area: right;
@@ -193,6 +234,7 @@
   background-color: white;
   margin: 15px;
 }
+
 .search_bar {
   border: 1px dashed black;
   margin: 5px;
