@@ -25,91 +25,143 @@
   justify-content: center;
 }
 
-.format-left{
+.format-left {
   display: grid;
   grid-template-columns: 50px 150px;
- 
 }
 
-.format-right{
+.format-right {
   display: grid;
   grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 1fr;
   margin-left: 100px;
 }
 
-.linkedinIcon{
+.linkedinIcon {
   border: 2px dotted black;
 
-  margin: 2px 2px ;
-
+  margin: 2px 2px;
 }
 
-.search{
+.search {
   border: 2px dotted blue;
   margin: 2px 2px;
 }
 
-.home{
+.home {
   border: 2px dotted green;
-  margin: 2px 2px ;
+  margin: 2px 2px;
 }
 
-.network{
+.network {
   border: 2px dotted orangered;
-  margin: 2px 2px ;
+  margin: 2px 2px;
 }
 
-.jobs{
+.jobs {
   border: 2px dotted yellow;
-  margin: 2px 2px ;
+  margin: 2px 2px;
 }
 
-.messages{
+.messages {
   border: 2px dotted purple;
-  margin: 2px 2px ;
+  margin: 2px 2px;
 }
 
-.notification{
+.notification {
   border: 2px dotted brown;
-  margin: 2px 2px ;
+  margin: 2px 2px;
 }
 
-.profile-picture{
+.profile-picture {
   border: 2px dotted white;
-  margin: 2px 2px ;
+  margin: 2px 2px;
 }
 
-.work{
+.work {
   border: 2px dotted lightblue;
-  margin: 2px 2px ;
+  margin: 2px 2px;
 }
 
-.post-a-job{
+.post-a-job {
   border: 2px dotted lightgreen;
-  margin: 2px 2px ;
+  margin: 2px 2px;
 }
-
 
 .left-bar {
   display: grid;
   grid-area: left;
   /* background-color: antiquewhite; */
 
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 400px 200px 200px;
   grid-template-areas:
     "profile"
+    "analytics"
     "recent";
   grid-gap: 20px;
 }
 
 .profile {
+  display: grid;
   grid-area: profile;
   background-color: blueviolet;
+  grid-template-rows: 200px 80px repeat(2, 1fr);
 }
 
+.photo {
+  border: 2px dotted white;
+  display: grid;
+  grid-template-rows: 50px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.picture {
+  display: grid;
+  border: 2px black dotted;
+  border-radius: 50%;
+  width: 50px;
+  font-size: 12px;
+  place-content: center;
+}
+
+.profile-name {
+  text-align: center;
+}
+
+.views {
+  border: 2px dotted black;
+  padding: 2px 0 0 3px;
+}
+
+.try-premium {
+  border: 2px dotted red;
+  padding: 8px 0 0 3px;
+}
+
+.my-items {
+  border: 2px dotted blue;
+  padding: 8px 0 0 3px;
+}
 .recent {
   grid-area: recent;
   background-color: brown;
+}
+
+.analytics {
+  grid-area: analytics;
+  background-color: aqua;
+  display: grid;
+  grid-template-rows: 1fr 40px 40px;
+}
+
+.symbol {
+  border: 2px dotted black;
+}
+.page-notification {
+  border: 2px dotted red;
+}
+.visitor-analytics {
+  border: 2px dotted blue;
 }
 
 .feed {
@@ -128,9 +180,10 @@
   background-color: indianred;
 }
 
-p {
+.feed > p {
   background-color: crimson;
 }
+
 .right-bar {
   display: grid;
   grid-area: right;
