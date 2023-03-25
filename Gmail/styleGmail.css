@@ -115,10 +115,20 @@
 .left-menu .folders li div {
   border: 1px black dashed;
 }
+
 /* EMAILS*/
 .emails {
+  display: grid;
   grid-area: emails;
-  background-color: #000fff50;
+  background-color: #00843350;
+  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
+  /* overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+.received-email {
+  border: 2px dotted black;
+  font-size: 20px;
 }
 
 /*SETTINGS*/
