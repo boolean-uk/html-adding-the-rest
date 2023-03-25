@@ -2,7 +2,7 @@
   display: grid;
   grid-template:
     "header    header   header" 3fr
-    "left      main     right" 750px /
+    "left      main     right" 800px /
     1fr 3fr 2fr;
   max-width: 1000px;
   margin: 0 auto;
@@ -98,13 +98,14 @@
   border: 1px dashed black;
 
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 20px 0.25fr 0.25fr 0.25fr;
   grid-template-areas:
+    "feed"
     "some_recommended_page1"
     "some_recommended_page2"
     "some_recommended_page3";
   background-color: white;
-  margin: 15px;
+  margin: 10px;
 }
 
 .Logo {
@@ -231,23 +232,51 @@
   padding: 5px;
 }
 
+.feed {
+  grid-area: feed;
+}
+
 .some_recommended_page1 {
   grid-area: some_recommended_page1;
-  border: 1px dashed black;
+  border: 1px dotted #000000;
   background-color: white;
-  margin: 15px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .some_recommended_page2 {
   grid-area: some_recommended_page2;
-  border: 1px dashed black;
+  border: 1px dotted black;
   background-color: white;
-  margin: 15px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .some_recommended_page3 {
   grid-area: some_recommended_page3;
-  border: 1px dashed black;
+  border: 1px dotted black;
   background-color: white;
-  margin: 15px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Headline {
+  margin: 10px;
+}
+
+.info_about_article {
+  color: grey;
+  font-size: small;
+}
+
+.course {
+  margin: 10px;
+}
+
+.course_info {
+  color: grey;
+  font-size: small;
 }
