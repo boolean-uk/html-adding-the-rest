@@ -33,7 +33,9 @@
 }
 
 /* inner-inner boxes */
+.messaging > .new-chat > div,
 .enter-message > div,
+.messaging > div > div,
 .channels > div + div > div {
   border: 3px dashed #F2DC23;
   border-radius: 8px;
@@ -53,8 +55,29 @@
   grid-area: messaging;
   display:grid;
   grid-template-columns: auto;
-  grid-template-rows: 40px 1fr 150px 100px 68px;
+  grid-template-rows: 40px 1fr 200px 80px 68px;
 }
+
+.messaging > .messaging-top-bar {
+  grid-template-columns: 80px 1fr 30px 30px 30px 80px 30px 30px;
+}
+
+.messaging > .new-chat > .messaging-circle{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+
+.messaging > .new-chat {
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.messaging > .new-chat > div + div {
+  width: 400px;
+}
+
+
 
 .enter-message {
   box-sizing: border-box;
@@ -85,9 +108,6 @@
   grid-template-rows: 70px 1fr 1fr;
 
 }
-.channels > .invite > .channel-circle {
-  justify-self: center;
-}
 .channels > div + div + div {
   grid-template-rows: repeat(auto-fit, );
  
@@ -100,10 +120,12 @@ grid-template-columns: 40px 1fr 30px 30px 30px;
 
 }
 
-.channels > div + div > .channel-circle {
+.channels > .invite > .channel-circle {
   border-radius: 50%;
   width: 60px;
+  justify-self: center;
 }
+
 .channels > div + div > {
   border-radius: 50%;
   width: 60px;
