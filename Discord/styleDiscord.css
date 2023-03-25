@@ -53,10 +53,6 @@
   row-gap: 5px;
 }
 
-
-
-
-
 .channel-title {
   grid-area: channel-title;
   border: dotted 2px black;
@@ -65,28 +61,22 @@
 .channel-section {
   display: grid;
   grid-area: channel-section;
-  
+
   grid-template-rows: repeat(auto-fit, 1fr);
 
   margin: 5px;
-
- 
 }
 
 .room {
-  display: grid; 
+  display: grid;
   border: 2px dotted red;
   grid-template-rows: repeat(auto-fit, 40px);
   margin-top: 15px;
-  
 }
-
 
 .channel {
- 
- border: 2px dotted white;
+  border: 2px dotted white;
 }
-
 
 .channel-bar {
   grid-area: channel;
@@ -104,30 +94,28 @@
   grid-area: channel-settings;
   border: dotted 2px black;
   grid-template-columns: 1fr 35px 35px 35px;
-  
 }
 
-.username{
+.username {
   border: dotted 2px red;
   margin: 5px;
   border-radius: 5px;
 }
 
-.microphone{
+.microphone {
   border: dotted 2px white;
   margin: 5px 0px;
 }
 
-.headphones{
+.headphones {
   border: dotted 2px blue;
   margin: 5px 0px;
 }
 
-.gear{
+.gear {
   border: dotted 2px purple;
   margin: 5px 0px;
 }
-
 
 .main-menu {
   display: grid;
@@ -140,8 +128,50 @@
 }
 
 .search-menu {
+  display: grid;
   grid-area: search;
-  background-color: green;
+  background-color: lightblue;
+  grid-template-columns: 1fr 35px 35px 35px 35px 0.2fr 35px 35px;
+}
+
+.hashtag {
+  border: dotted 2px blue;
+  margin: 2px 2px 2px 0;
+}
+
+.thread {
+  border: dotted 2px red;
+  margin: 2px;
+}
+
+.notification {
+  border: dotted 2px green;
+  margin: 2px;
+}
+
+.pin {
+  border: dotted 2px yellow;
+  margin: 2px;
+}
+
+.members {
+  border: dotted 2px orange;
+  margin: 2px;
+}
+
+.search {
+  border: dotted 2px black;
+  margin: 2px;
+}
+
+.inbox {
+  border: dotted 2px purple;
+  margin: 2px;
+}
+
+.help {
+  border: dotted 2px brown;
+  margin: 2px;
 }
 
 .messages {
@@ -153,39 +183,34 @@
   border-radius: 5px;
 }
 
-.plus{
+.plus {
   border: dotted 2px green;
-  margin: 2px 0;
+  margin: 2px;
 }
 
-.send-message{
+.send-message {
   border: dotted 2px red;
-  margin: 2px 0;
-
+  margin: 2px;
 }
 
-.gift{
+.gift {
   border: dotted 2px purple;
-  margin: 2px 0;
-
+  margin: 2px;
 }
 
-.gif{
+.gif {
   border: dotted 2px blue;
-  margin: 2px 0;
-
+  margin: 2px;
 }
 
-.stickers{
+.stickers {
   border: dotted 2px orangered;
-  margin: 2px 0;
-
+  margin: 2px;
 }
 
-.emoji{
+.emoji {
   border: dotted 2px brown;
-  margin: 2px 0;
-
+  margin: 2px;
 }
 
 .paragraph {
