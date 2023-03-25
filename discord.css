@@ -1,9 +1,8 @@
 .grid {
   display: grid;
   grid-template:
-    "header    header   header" 5fr
     "left      main     right" 750px /
-    0.35fr 1fr 2fr;
+    0.35fr 0.75fr 2fr;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -11,7 +10,6 @@
 .left-side-bar {
   display: grid;
   background-color: khaki;
-
   grid-template-rows: 70px 70px 70px 70px 70px 0.25fr;
   grid-template-areas:
     "icon1"
@@ -35,8 +33,11 @@
 
 .invite_box {
   display: grid;
+  justify-content: center;
   grid-area: invite_box;
-  border: 1px solid black;
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
+
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     "invite_circle"
@@ -48,7 +49,7 @@
   grid-area: invite_circle;
   border-radius: 1000px;
   border: 3px dotted black;
-  margin: 15px;
+  margin: 5px;
   height: 50px;
   width: 50px;
 }
@@ -59,17 +60,22 @@
   text-align: center;
 }
 
-button {
+.invite_people {
+  grid-area: invite_people;
+
+}
+.invite_people > button {
   background-color: blue;
   color: white;
-  grid-area: invite_people;
 }
-
 .right-side-bar {
   display: grid;
   background-color: rgb(202, 85, 211);
 }
-
+.chat_name > p {
+  border-bottom: 1px solid black;
+  margin: 5px
+}
 .logo {
   grid-area: logo;
   border: 1px dashed black;
@@ -77,15 +83,16 @@ button {
 
 .Boolean-UK {
   grid-area: Boolean-UK;
+  margin: 5px;
 }
 
-.Invite-people {
-  grid-area: Invite-people;
-  border: 1px dashed black;
-}
 
+.invite_text > p {
+margin: 0px;
+}
 .General {
   grid-area: General;
+  margin: 15px;
 }
 
 .icon1 {
@@ -94,8 +101,10 @@ button {
   margin: 15px;
   height: 50px;
   width: 50px;
-
   grid-area: icon1;
+}
+.icon1:hover {
+text-decoration: underline 3px grey solid;
 }
 
 .icon2 {
