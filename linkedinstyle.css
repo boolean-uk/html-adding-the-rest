@@ -2,35 +2,109 @@
     margin: 0%;
     padding: 0%;
 }
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
-    grid-template-rows: 5vh 90vh ;
+    grid-template-rows: 6vh 1fr ;
     grid-template-areas:
-    "header   header   header    header    header"
+    ".   header   header    header    ."
     ". profile   main      news ." ;
     row-gap: 15px;
     column-gap: 20px;
 }
 
+/* outer boxes */
+.empty,
+.header,
+.profile,
+.main,
+.news {
+  background-color: white;
+  display: grid;
+  margin: 5px;
+  border: 3px solid #C64343;
+  border-radius: 8px;
+}
+
+/* inner boxes */
+.empty > div,
+.header > div,
+.profile > div,
+.main > div,
+.news > div {
+  border: 3px dashed #3EC5A3;
+  border-radius: 8px;
+  margin: 3px;
+  display: grid;
+  box-sizing: border-box;
+}
+
+/* inner-inner boxes */
+.empty,
+.profile > .profile-1 > div,
+.news > .news-1 > div,
+.main > .compose-post > div {
+  border: 3px dashed #F2DC23;
+  border-radius: 8px;
+  margin: 3px;
+}
+
+/* inner-inner-inner boxes */
+.main > .compose-post > .start-a-post > div,
+.main > .compose-post > .attach-to-post > div {
+  border: 3px dashed #7478D1;
+  border-radius: 8px;
+  margin: 3px;
+}
+
 .header {
     grid-area: header;
-    background-color: red;
+    grid-template-columns: 5vh minmax(70px, 380px) 1fr minmax(300px, 500px) 30px 200px;
+}
+
+.header > .search {
+  border: 3px solid #3EC5A3;
 }
 
 .profile {
-    grid-area: profile;
-    background-color: rgb(89, 62, 198);
+  grid-area: profile;
+  grid-template-rows: 600px 200px 400px ;
+}
+
+.profile > .profile-1 {
+  grid-template-rows: 3fr 1fr 1fr 1fr;
 }
 
 .main {
-    grid-area: main;
-    background-color: rgb(49, 162, 68);
+  grid-area: main;
+  grid-template-rows: 170px repeat(10, 350px);
+  overflow: auto;
+}
+
+.main > .compose-post > .start-a-post {
+  display: grid;
+  grid-template-columns: 69px 1fr;
+  grid-template-rows: 1fr;
+}
+
+.main > .compose-post > .start-a-post > .start-a-post-text {
+  border-style: solid;
+}
+
+.main > .compose-post > .attach-to-post {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.main > .compose-post > .start-a-post > .display-pic-1 {
+  border-radius: 50%;
 }
 
 .news {
-    grid-area: news;
-    background-color: rgb(201, 136, 23);
+  grid-area: news;
+  grid-template-rows: 400px 200px 400px repeat(10, 300px);
 }
 
 @media screen and (max-width: 1200px) {
@@ -40,6 +114,9 @@
       "header    header    header"
       "profile   main      news" ;
   }
+  /* .header > .spacer { */
+  /*   display: none; */
+  /* } */
 }
 
 @media screen and (max-width: 900px) {
