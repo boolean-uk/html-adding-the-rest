@@ -173,3 +173,7 @@ input {
     border: dotted 2px green;
     margin: 3px;
 }
+
+body {
+    margin: 0;
+}
