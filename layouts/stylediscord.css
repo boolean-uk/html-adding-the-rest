@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+}
+.body {
+    display: grid;
+    margin: 0px;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "leftbar  server  chat";
+    grid-template-columns: 60px 180px 1fr;
+    
+}
+
+.leftbar{
+    display: grid;
+    grid-template-areas:
+    "DM"
+    "allservers"
+    "download";
+    grid-template-rows: 60px 265px 1fr;
+    background-color: rgba(216, 215, 218, 0.679);
+    /* border: solid 1px black; */
+}
+
+.DM {
+    text-align: center;
+    margin: 6px;
+
+    height: 45px;
+    width: 45px;
+    border: solid 1px rgb(243, 237, 237);
+    border-radius: 50px;
+    background-color: white;
+
+}
+.DM > img{
+    align-self: center;
+    height: 25px;
+    width: 30px;
+    padding-top: 8px;
+
+    /* border: solid 1px black; */
+    /* border-radius: 50px; */
+}
+
+.allservers >p {
+    text-align: center;
+    margin: 6px;
+    height: 45px;
+    width: 45px;
+}
+.allservers > p > img{
+    align-self: center;
+    height: 50px;
+    width: 50px;
+
+}
+.allservers p:nth-of-type(2) > img{
+    padding-top: 5px;
+    border-radius: 15px;
+}
+.allservers p:nth-of-type(3) > img{
+    padding-top: 10px;
+    border-radius: 15px;
+}
+.allservers p:nth-of-type(4){
+    margin-top: 18px;
+}
+.allservers p:nth-of-type(4) > span{
+    font-size: 20px;
+    color: green;
+    height: 45px;
+    width: 45px;
+    border: solid 1px rgb(243, 237, 237);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.download {
+    text-align: center;
+
+
+}
+.download >img{
+    padding-left: 5px;
+    padding-top: 12px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-self: center;
+}
+
+.server {
+    padding: x;
+    display: grid;
+    grid-template-areas: 
+    "ID"
+    "profile"
+    "rooms"
+    "status";
+    grid-template-rows: 40px 1fr 3fr 40px;
+
+/* border: solid 1px black; */
+    /* text-align: center; */
+}
+
+.ID {
+    padding-left: 5px;
+    font-size: 15px;
+    padding-top: 10px;
+    grid-area: ID;
+    background-color: rgb(239, 237, 237);
+    /* border: solid 1px black; */
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    border-bottom: solid 1px rgb(214, 212, 212);
+}
+
+.ID > span{
+    font-size: 30px;
+}
+.profile {
+    grid-area: profile;
+    background-color: rgb(239, 237, 237);
+    border-bottom: solid 1px rgb(214, 212, 212);
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+}
+.profilepic{
+    justify-self: center;
+    align-self: center;
+    height: 50px;
+    width: 50px;
+}
+.profile > p:nth-of-type(1){
+    color: grey;
+    font-size: 10px;
+    justify-self: center;
+    align-self: center;
+}
+.profile >button{
+    color: white;
+    border-radius: 5px;
+    border: solid 1px rgb(98, 98, 185) ;
+    background-color: rgb(98, 98, 185);
+    justify-self: center;
+    align-self: center;
+    font-size: 10px;
+    height: 30px;
+    width: 80px;
+}
+.rooms {
+    padding-top: 10px;
+    grid-area: rooms;
+    background-color: rgb(239, 237, 237);
+    display: grid;
+    grid-template-rows: 65px 180px 85px 85px;
+    grid-template-areas: 
+    "general"
+    "classes"
+    "lobby"
+    "staff";
+}
+.general {
+    margin-top: 3px;
+    padding-left: 10px;
+    font-size: 12px;
+    grid-area: general;
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.general > span{
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.classes{
+    text-justify: center;
+    grid-area: classes;
+    margin-top: 3px;
+    padding-left: 10px;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-rows: repeat(autofit, 15px);
+}
+.classes > span{
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+.lobby{
+    grid-area: lobby;
+    text-justify: center;
+    margin-top: 3px;
+    padding-left: 10px;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-rows: repeat(autofit, 15px);
+}
+.lobby > span{
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 13px;
+}
+.staff{
+    grid-area: staff;
+    text-justify: center;
+    margin-top: 3px;
+    padding-left: 10px;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    grid-template-rows: repeat(autofit, 15px);
+}
+.staff > span{
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 13px;
+}
+.status {
+    grid-area: status;
+    background-color:  rgb(239, 237, 237);
+    display: grid;
+    border-top: solid 1px rgb(214, 212, 212);
+    grid-template-columns: 50px 1fr 20px 20px 30px;
+}
+.status >img{
+    height: 30px;
+    align-self: center;
+    justify-self: center;
+
+}
+.status > p:nth-of-type(1){
+    padding-top: 2px;
+    font-weight: bold;
+    font-size: 10px;
+    display: grid;
+    grid-template-rows: 20px 1fr;
+}
+.status > p:nth-of-type(1) > span{
+    text-justify: center;
+    color: grey;
+    padding-top: 5px;
+}
+.status > p:nth-of-type(2){
+    font-size: 20px;
+    padding-top: 3px;
+
+    text-align: center;
+}
+.status > p:nth-of-type(3){
+    padding-top: 3px;
+    font-size: 20px;
+    text-align: center;
+}
+.status > p:nth-of-type(4){
+    padding-top: 3px;
+    font-size: 20px;
+    text-align: center;
+}
+.chat {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "speech"
+    /* "message" */
+    "input";
+    grid-template-rows: 40px 3fr 50px;
+    /* border: solid 1px black; */
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas:  
+    "room-name action";
+    background-color: white;
+    /* border: solid 1px black; */
+    
+}
+.room-name{
+    padding: 10px;
+    grid-area: room-name;
+    font-size: 18px;
+    text-justify: center;
+}
+.room-name > span{
+    color: gray;
+    font-size: 25px;
+}
+.action {
+    grid-area: action;
+    /* border: solid 1px black; */
+    display: grid;
+    grid-template-columns:25px 25px 25px 1fr 25px 25px ;
+    grid-template-rows: 20px;
+    place-content: center;
+}
+.action >input{
+    width: 150px;
+    background-color: rgb(233, 229, 229);
+    border: solid 1px rgb(233, 229, 229);
+    border-radius: 5px;
+}
+
+
+.speech { 
+    grid-area: speech;
+    background-color: white;
+    align-content: end;
+    border-top: solid 1px rgb(214, 212, 212);
+    display: grid;
+    grid-template-rows: 60px 30px 30px ;
+}
+.speech > p:nth-of-type(1){
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    border: solid 1px grey;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: grey;
+}
+.speech > p:nth-of-type(2){
+    padding-left: 5px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.speech > p:nth-of-type(3){
+    padding-left: 5px;
+    font-size: 10px;
+    color: gray;
+
+}
+.speech > p:nth-of-type(4){
+    font-size: 10px;
+    color: blue;
+    padding-left: 5px;
+}
+.speech > div > img{
+    padding-top: 5px;
+    height: 30px;
+    margin: 5px;
+
+}
+.speech > div {
+    border-top: solid 1px rgb(214, 212, 212);
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.speech > div > p {
+    padding-top: 5px;
+    display: grid;
+    grid-template-rows: 10px 10px;
+    grid-template-columns: 170px 100px;
+    font-size: 10px;
+    color: rgb(22, 185, 7);
+}
+.speech > div > p >span:nth-of-type(1){
+    padding-top: 5px;
+    color: rgb(178, 178, 178);
+    font-size: 8px;
+}
+.speech > div > p >span:nth-of-type(2){
+    color: black;
+    font-size: 15px;
+
+}
+.speech > div:nth-of-type(2) > p {
+    padding-top: 5px;
+    display: grid;
+    grid-template-rows: 10px 10px;
+    grid-template-columns: 170px 100px;
+    font-size: 10px;
+    color: rgb(22, 185, 7);
+}
+.speech > div:nth-of-type(2) > p >span:nth-of-type(1){
+    padding-top: 5px;
+    color: rgb(178, 178, 178);
+    font-size: 8px;
+}
+.speech > div:nth-of-type(2) > p >span:nth-of-type(2){
+    color: black;
+    font-size: 15px;
+
+}
+.speech > p:nth-of-type(4) > span {
+    padding-left: 20px;
+}
+/* .message {
+    grid-area: message;
+    background-color:cadetblue;
+    border: solid 1px black;
+} */
+
+.input {
+    /* grid-area: input; */
+    display: grid;
+    height: 28px;
+    width: 1fr;
+    margin: 15px;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    margin-top: 12px;
+}
+.input > input{
+    font-size: 10px;
+    background-color: rgba(233, 233, 233, 0.637);
+    border: solid 1px rgba(233, 233, 233, 0.637);
+    border-radius: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+}
+/* 
+.img {
+    max-width: 19px;
+    max-height: 19px;
+} */
+
+.button >img {
+    max-width: 19px;
+    max-height: 19px;
+}
+
+@media screen and (max-width:800) {
+    .grid {
+        grid-template-columns: 0px 75px 75%;
+    }
+    .leftbar {
+        display: none;
+    }
+}
+
+@media screen and (max-height:800) {
+    .grid {
+        grid-template-columns: 0px 75px 75%;
+    }
+    .leftbar {
+        display: none;
+    }
+}
+
+
