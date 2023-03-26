@@ -121,28 +121,218 @@
   display: grid;
   grid-area: emails;
   background-color: #00843350;
-  grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
-  /* overflow: hidden;
-  text-overflow: ellipsis; */
+  grid-template-rows: repeat(auto-fit, 30px);
+ overflow-y: auto;
 }
 
 .received-email {
+  display: grid;
   border: 2px dotted black;
-  font-size: 20px;
+  grid-template-columns: 30px 30px 100px 1fr 40px;
+  padding: 2px;
+  gap: 5px;
+  
 }
+
+.checkbox{
+  border: 2px dotted red;
+}
+
+.star{
+  border: 2px dotted red;
+}
+
+.sender{
+  border: 2px dotted red;
+}
+
+.subject{
+  border: 2px dotted red;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.date{
+  border: 2px dotted red;
+}
+
 
 /*SETTINGS*/
 .settings {
+  display: grid;
   grid-area: settings;
   background-color: #ff00ff50;
+  grid-template-rows: 100px 238px 150px 1fr;
+  padding: 5px;
+  gap: 5px;
 }
 
+
+.quick-settings{
+  display: grid;
+  border: 2px dotted red;
+  grid-template-rows: repeat(2, 40px);
+  gap: 5px;
+  padding: 5px;
+}
+
+.density{
+  display: grid;
+  border: 2px dotted red;
+  grid-template-rows: repeat(4, 52px);
+  gap: 5px;
+  padding: 5px;
+}
+
+.theme{
+  display: grid;
+  border: 2px dotted red;
+  grid-template-rows: repeat(3, 42px);
+  gap: 5px;
+  padding: 5px;
+}
+
+.inbox-type{
+  display: grid;
+  border: 2px dotted red;
+  grid-template-rows: 40px repeat(3, 120px);
+  gap: 5px;
+  padding: 5px;
+}
+
+
+.quick-settings-text{
+  border: 2px dotted blue;
+}
+
+.see-all-settings{
+  border: 2px dotted blue;
+}
+
+.default-density{
+  display: grid;
+  border: 2px dotted blue;
+  grid-template-columns: 50px 1fr 30px ;
+  gap: 5px;
+  padding: 5px;
+}
+
+.comfortable{
+  display: grid;
+  border: 2px dotted blue;
+  grid-template-columns: 50px 1fr 30px ;
+  gap: 5px;
+  padding: 5px;
+}
+
+.compact{
+  display: grid;
+  border: 2px dotted blue;
+  grid-template-columns: 50px 1fr 30px ;
+  gap: 5px;
+  padding: 5px;
+}
+
+.tick-box{
+  border: 2px dotted green;
+}
+
+.specific-setting{
+  border: 2px dotted green;
+}
+
+.setting-view{
+  border: 2px dotted green;
+}
+
+.theme-1{
+  display: grid;
+  border: 2px dotted blue;
+  grid-template-columns: repeat(auto-fit, 46.5px);
+  gap: 5px;
+  padding: 5px;
+}
+
+.theme-2{
+  display: grid;
+  border: 2px dotted blue;
+  grid-template-columns: repeat(auto-fit, 46.5px);
+  gap: 5px;
+  padding: 5px
+}
+
+.theme-view{
+  border: 2px dotted green;
+  border-radius: 5px;
+}
+
+.default-inbox{
+  display: grid;
+  border: 2px dotted blue;
+  grid-template-columns: 50px 1fr 30px ;
+  padding: 5px;
+  gap: 5px;
+}
+
+.important-first{
+  display: grid;
+  border: 2px dotted blue;
+  grid-template-columns: 50px 1fr 30px ;
+  padding: 5px;
+  gap: 5px;
+}
+
+.unread-first{
+  display: grid;
+  border: 2px dotted blue;
+  grid-template-columns: 50px 1fr 30px ;
+  padding: 5px;
+  gap: 5px;
+}
+
+.density-title{
+  border: 2px dotted blue;
+}
+
+.theme-title{
+  border: 2px dotted blue;
+}
+
+.inbox-type-title{
+
+  border: 2px dotted blue;
+
+}
 /*SHORTCUTS*/
 .shortcuts {
+  display: grid;
   grid-area: shortcuts;
   background-color: #ffff0050;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
+  grid-template-rows: repeat(4, 40px);
+  gap: 5px;
+  padding: 5px;
+}
+
+.calendar{
+border: 2px dotted blue;
+}
+
+.light-bulb{
+  border: 2px dotted blue;
+
+}
+
+.pen{
+  border: 2px dotted blue;
+
+}
+
+.plus{
+  margin-top: 10px;
+  border: 2px dotted blue;
+
 }
 
 @media screen and (max-width: 880px) {
