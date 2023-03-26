@@ -1,0 +1,247 @@
+body {
+    background-color: #d9d9d9;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    margin: auto;
+    min-height: 100vh;
+    width: 70%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template:
+    "header header  header"  50px
+    "top   top     top"     50px
+    "left  center  right"   1fr/
+    200px  1fr     240px;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: white;
+    border: solid 1px rgb(207, 207, 207);
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+}
+
+.header > div {
+
+        display: grid;
+        margin: 5px;
+        border: dotted 2px blue;
+        border-radius: 10px;
+        grid-template-columns: repeat(5, 1fr);
+}
+
+.header > .icons > div {
+    margin: 5px;
+    border: dotted 2px green;
+}
+
+
+.left-menu {
+    display: grid;
+    grid-area: left;
+    row-gap: 10px;
+    grid-template-areas: 
+   "profile"   
+   "boolean"   
+   "recent"; 
+grid-template-rows: 
+2fr 
+1fr 
+2fr;
+}
+
+
+.profile {
+    grid grid-area: top;
+    display: grid;
+    background-color: white;
+    border: dotted 1px;
+    grid-template-rows: 60px 3fr 1fr 1fr 1fr;
+}
+
+.profile > div {
+    margin: 5px;
+    border: dotted 2px green;
+}
+.profile > div > div {
+    display: grid;
+    border: dotted 2px green ;
+}
+.profile > div + div {
+    display: grid;    
+    margin: 5px;
+    border: dotted 2px green;
+}
+.boolean {
+    display: grid;
+    background-color: white;
+    border: dotted blue;
+}
+.recent {
+display: grid;
+background-color: white;
+    
+}
+.main {
+    grid-area: center;
+    display: grid;
+    grid-template-areas: 
+    "newpost"
+    "feed";
+    grid-template-rows: 50px 1fr;
+    row-gap: 10px;
+}
+
+.new-post {
+    border: solid 2px;
+    display: grid;
+    background-color: white;
+    border: dotted blue;
+    grid-template-rows: 1fr 1fr;
+}
+
+.new-post > .post {
+
+    display: grid;
+    border: dotted 2px red;
+    margin: 0.5px;
+    
+}
+
+.new-post > .post + div {
+    margin: 5px;
+    border: dotted 1px red;
+    border-radius: 10px;
+}
+
+.new-post > .attachments {
+    margin: 5px;
+    border: dotted 1px blue;
+    border-radius: 10px;
+}
+
+.new-post > .attachments > div {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    margin: 5px;
+    border: dotted 1px purple;
+}
+
+.feed {
+   display: grid;
+    /* grid-area: main; */
+    margin: 10px;
+    background-color: white;
+    border: solid 2px blue;
+    border: dotted 2px blue ;
+}
+
+.third-main {
+    display: grid;
+    background-color: white;
+    border: dotted 2px blue;
+    margin: 10px;
+}
+
+.right-menu {
+    grid-area: right;
+    display: grid;
+    grid-template-areas: 
+    "news"
+    "viewed"
+    "addfeed";
+    grid-template-rows: 1.6fr 1.4fr 2fr;
+    row-gap: 10px;
+}
+
+.news{
+     border: solid 4px;
+     display: grid;
+     background-color: white;
+     border: dotted blue;
+     grid-template-rows: repeat(5, 1fr);
+}
+
+.news > div {
+    display: grid;
+    border: dotted green 2px;
+}
+
+
+.boolean {
+    grid-area: boolean; 
+    border: solid 2px; 
+    border: solid 2px;
+    display: grid;
+    background-color: white;
+    border: dotted blue;
+
+}
+
+.recent {
+    grid-area: recent; 
+    border: solid 2px;
+    border: solid 2px;
+    display: grid;
+    background-color: white;
+    border: dotted blue;
+
+}
+
+.new-post {
+    grid-area: newpost; 
+    border: solid 2px;
+    border: solid 2px;
+    display: grid;
+    background-color: white;
+    border: dotted blue;
+
+}
+
+
+
+.feed {
+    grid-area: feed; 
+    border: solid 2px;
+    display: grid;
+    border: dotted blue;
+
+}
+
+.feed > div {
+    display: grid;
+    border: dotted 2px green
+}
+
+
+.news {
+    display: grid;
+    border: dotted blue;
+   margin: 5px;
+    
+
+}
+
+.most-viewed {
+    display: grid;
+    grid-area: viewed; 
+    border: dotted blue 2px;
+    background-color: white;
+
+}
+
+.add-to-feed {
+    display: grid;
+    background-color: white;
+    border: dotted 2px blue;
+
+}
