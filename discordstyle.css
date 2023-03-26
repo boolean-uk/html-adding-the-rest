@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .grid {
@@ -50,6 +51,22 @@
 .server-buttons {
     grid-area: servers;
     border: solid 2px black;
+    display: grid;
+    align-content: start;
+}
+
+.server-buttons > div {
+    border: solid 1px green;
+    margin: 5px;
+    height: 46px;
+    border-radius: 5px;
+}
+
+.home-button > div {
+    border: solid 1px green;
+    margin: 5px;
+    height: 46px;
+    border-radius: 5px;
 }
 
 .server-header {
@@ -60,6 +77,27 @@
 .server-details {
     grid-area: details;
     border: solid 2px black;
+    display: grid;
+    grid-template-areas:
+    "invite-people"
+    "server-channels"
+    "mic-settings";
+    grid-template-rows: 180px 1fr 50px;
+}
+
+.server-details > div {
+    border: solid 1px red;
+}
+
+.invite-people {
+    display: grid;
+    grid-template-rows: 1fr 40px;
+    padding: 10px 25%;
+    gap: 10px;
+}
+
+.invite-people > div {
+    border: solid 1px orange;
 }
 
 .chat-header {
