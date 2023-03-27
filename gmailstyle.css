@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f3f2ef;
+    text-align: center;
+}
+
+.grid {
+    height: 100vh;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 300px 1fr 350px 50px;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: 
+    "header     header  header          header"
+    "left-menu  main    quick-settings  right-menu";
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 300px 1fr 400px;
+    border-bottom: solid 1px grey;
+}
+
+.header-left {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+.header-left > div {
+    border: solid 1px blue;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.header-mid {
+    display: grid;
+}
+
+.search {
+    border: solid 1px blue;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.header-right {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 200px;
+    justify-content: right;
+    gap: 5px;
+    padding: 5px;
+}
+
+.header-right > div {
+    border: solid 1px blue;
+    border-radius: 10px;
+}
+
+.left-menu {
+    grid-area: left-menu;
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    grid-template-rows: 50px 400px 1fr 50px;
+    grid-template-areas:
+    "compose"
+    "inbox-select"
+    "meet"
+    "three-buttons";
+}
+
+.compose {
+    grid-area: compose;
+    border: solid 1px blue;
+}
+
+.inbox-select {
+    grid-area: inbox-select;
+    border: solid 1px blue;
+}
+
+.meet {
+    border: none;
+    grid-area: meet;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 25% 1fr;
+    grid-template-areas: 
+    "meet"
+    "chat";
+}
+
+.meet > div {
+    border: solid 1px blue;
+}
+
+.three-buttons {
+    grid-area: three-buttons;
+    display: grid;
+    grid-template-columns: 40px 40px 40px;
+    place-content: center;
+    gap: 5px;
+}
+
+.three-buttons > div {
+    border: solid 1px blue;
+    height: 40px;
+}
+
+.main {
+    grid-area: main;
+    gap: 10px;
+    display: grid;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+    "email-header"
+    "emails";
+}
+
+.email-header {
+    grid-area: email-header;
+    border-bottom: 1px solid red;
+    height:50px ;
+    border-bottom: solid 1px grey;
+    
+}
+
+.emails {
+    grid-area: emails; 
+}
+
+.emails > div {
+    height: 50px;
+    border: solid 1px blue;  
+    margin: 10px;
+}
+
+.quick-settings {
+    grid-area: quick-settings;
+    display: grid;
+    /* padding: 10px; */
+    gap: 10px;
+    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-template-areas:
+    "all-settings"
+    "density"
+    "theme"
+    "type";
+}
+
+.quick-settings > div {
+    /* border: solid 1px blue; */
+    padding: 10px;
+    /* margin: 10px; */
+    border-bottom: solid 1px grey;
+}
+
+.all-settings {
+    grid-area: all-settings;
+}
+
+.right-menu {
+    padding: 10px;
+    grid-area: right-menu;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    border-left: solid 1px grey;
+}
+
+/* .grid > div {
+    border: solid 1px black;
+} */
