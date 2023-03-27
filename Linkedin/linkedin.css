@@ -1,0 +1,179 @@
+.grid {
+    display: grid;
+    grid-template:
+        "header header header" 50px
+        "left main right" 100vh/
+        200px 1fr 200px;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: bisque;
+
+    display: grid;
+    grid-template-columns: 60px 1fr 200px;
+    gap: 5px;
+}
+
+.left {
+    grid-area: left;
+    background-color: beige;
+
+    display: grid;
+    grid-template-rows: 400px 100px 100px;
+    gap: 5px;
+    align-content: start;
+    row-gap: 20px;
+}
+
+.main {
+    grid-area: main;
+    background-color: lightgray;
+    row-gap: 10px;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.right {
+    grid-area: right;
+    background-color: lightyellow;
+        display: grid;
+        grid-template-rows: 3.5fr 1.5fr 1.5fr;
+        gap: 5px;
+}
+
+.box {
+    display: grid;
+    border: 2px dotted black;
+    justify-items: center;
+    align-items: center;
+
+}
+
+img {
+    height: 45px;
+    border-radius: 20%;
+
+
+}
+
+input {
+    position: absolute;
+    justify-items: center;
+    margin-left: 10px;
+    width: 400px;
+
+    height: 20px;
+
+}
+
+.little {
+    display: grid;
+    border: 2px dotted black;
+    min-height: 25px;
+    min-width: 25px;
+
+}
+
+.box,
+.three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+
+.lefty {
+    display: grid;
+    border: dotted 2px blue;
+}
+
+* {
+    gap: 5px
+}
+
+.inner-box-one {
+    display: grid;
+    border: dotted 2px green;
+    margin: 2px;
+
+}
+
+.left>.lefty {
+    display: grid;
+    grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr;
+    gap: 5px;
+}
+
+
+.main_box1 {
+    display: grid;
+    border: dotted 2px black;
+    background-color: lightcoral;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2px;
+
+}
+
+
+.centercontent1 {
+    display: grid;
+    border: dotted 2px black;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 5px;
+
+}
+
+.profile1 {
+    border: dotted 2px blue;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.profile2 {
+    border: dotted 2px blue;
+    margin: 3px;
+}
+
+.centercontent2 {
+    display: grid;
+    border: dotted 2px black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.profile3 {
+    border: dotted 2px blue;
+    margin: 3px;
+}
+
+
+.main_box2 {
+    border: dotted 2px black;
+    background-color: lightcoral;
+    display: grid;
+    grid-template-rows: 180px 180px 180px 100vh;
+}
+
+.maincontent {
+    border: dotted 2px blue;
+    margin: 3px;
+}
+.updates {
+    display: grid;
+    border: dotted 2px blue;
+    gap: 5px;
+
+}
+
+.updates.one>div {
+    display: grid;
+    border: dotted 2px green;
+    margin: 3px;
+}
+
+body {
+    margin: 0;
+}
