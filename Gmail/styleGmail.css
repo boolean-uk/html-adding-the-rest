@@ -122,7 +122,7 @@
   grid-area: emails;
   background-color: #00843350;
   grid-template-rows: repeat(auto-fit, 30px);
- overflow-y: auto;
+  overflow-y: auto;
 }
 
 .received-email {
@@ -131,33 +131,30 @@
   grid-template-columns: 30px 30px 100px 1fr 40px;
   padding: 2px;
   gap: 5px;
-  
 }
 
-.checkbox{
+.checkbox {
   border: 2px dotted red;
 }
 
-.star{
+.star {
   border: 2px dotted red;
 }
 
-.sender{
+.sender {
   border: 2px dotted red;
 }
 
-.subject{
+.subject {
   border: 2px dotted red;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-
-.date{
+.date {
   border: 2px dotted red;
 }
-
 
 /*SETTINGS*/
 .settings {
@@ -169,8 +166,7 @@
   gap: 5px;
 }
 
-
-.quick-settings{
+.quick-settings {
   display: grid;
   border: 2px dotted red;
   grid-template-rows: repeat(2, 40px);
@@ -178,7 +174,7 @@
   padding: 5px;
 }
 
-.density{
+.density {
   display: grid;
   border: 2px dotted red;
   grid-template-rows: repeat(4, 52px);
@@ -186,7 +182,7 @@
   padding: 5px;
 }
 
-.theme{
+.theme {
   display: grid;
   border: 2px dotted red;
   grid-template-rows: repeat(3, 42px);
@@ -194,7 +190,7 @@
   padding: 5px;
 }
 
-.inbox-type{
+.inbox-type {
   display: grid;
   border: 2px dotted red;
   grid-template-rows: 40px repeat(3, 120px);
@@ -202,52 +198,51 @@
   padding: 5px;
 }
 
-
-.quick-settings-text{
+.quick-settings-text {
   border: 2px dotted blue;
 }
 
-.see-all-settings{
+.see-all-settings {
   border: 2px dotted blue;
 }
 
-.default-density{
+.default-density {
   display: grid;
   border: 2px dotted blue;
-  grid-template-columns: 50px 1fr 30px ;
+  grid-template-columns: 50px 1fr 30px;
   gap: 5px;
   padding: 5px;
 }
 
-.comfortable{
+.comfortable {
   display: grid;
   border: 2px dotted blue;
-  grid-template-columns: 50px 1fr 30px ;
+  grid-template-columns: 50px 1fr 30px;
   gap: 5px;
   padding: 5px;
 }
 
-.compact{
+.compact {
   display: grid;
   border: 2px dotted blue;
-  grid-template-columns: 50px 1fr 30px ;
+  grid-template-columns: 50px 1fr 30px;
   gap: 5px;
   padding: 5px;
 }
 
-.tick-box{
+.tick-box {
   border: 2px dotted green;
 }
 
-.specific-setting{
+.specific-setting {
   border: 2px dotted green;
 }
 
-.setting-view{
+.setting-view {
   border: 2px dotted green;
 }
 
-.theme-1{
+.theme-1 {
   display: grid;
   border: 2px dotted blue;
   grid-template-columns: repeat(auto-fit, 46.5px);
@@ -255,55 +250,53 @@
   padding: 5px;
 }
 
-.theme-2{
+.theme-2 {
   display: grid;
   border: 2px dotted blue;
   grid-template-columns: repeat(auto-fit, 46.5px);
   gap: 5px;
-  padding: 5px
+  padding: 5px;
 }
 
-.theme-view{
+.theme-view {
   border: 2px dotted green;
   border-radius: 5px;
 }
 
-.default-inbox{
+.default-inbox {
   display: grid;
   border: 2px dotted blue;
-  grid-template-columns: 50px 1fr 30px ;
+  grid-template-columns: 50px 1fr 30px;
   padding: 5px;
   gap: 5px;
 }
 
-.important-first{
+.important-first {
   display: grid;
   border: 2px dotted blue;
-  grid-template-columns: 50px 1fr 30px ;
+  grid-template-columns: 50px 1fr 30px;
   padding: 5px;
   gap: 5px;
 }
 
-.unread-first{
+.unread-first {
   display: grid;
   border: 2px dotted blue;
-  grid-template-columns: 50px 1fr 30px ;
+  grid-template-columns: 50px 1fr 30px;
   padding: 5px;
   gap: 5px;
 }
 
-.density-title{
+.density-title {
   border: 2px dotted blue;
 }
 
-.theme-title{
+.theme-title {
   border: 2px dotted blue;
 }
 
-.inbox-type-title{
-
+.inbox-type-title {
   border: 2px dotted blue;
-
 }
 /*SHORTCUTS*/
 .shortcuts {
@@ -315,24 +308,21 @@
   padding: 5px;
 }
 
-.calendar{
-border: 2px dotted blue;
-}
-
-.light-bulb{
+.calendar {
   border: 2px dotted blue;
-
 }
 
-.pen{
+.light-bulb {
   border: 2px dotted blue;
-
 }
 
-.plus{
+.pen {
+  border: 2px dotted blue;
+}
+
+.plus {
   margin-top: 10px;
   border: 2px dotted blue;
-
 }
 
 @media screen and (max-width: 880px) {
@@ -348,3 +338,17 @@ border: 2px dotted blue;
     display: none;
   }
 }
+
+/* 
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template:
+      " main main" 50px 
+      "left-bar main right-bar" 1fr / 
+      220px 1fr;
+  }
+  .left-bar,
+  .right-bar {
+    display: none;
+  }
+} */
