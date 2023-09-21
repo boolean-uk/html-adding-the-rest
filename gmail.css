@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: grid;
+    grid-template: 
+    "logo search icons" 4rem /
+    1fr 2fr 1fr
+    ;
+    text-align: center;
+    border-bottom: 1px solid rgb(128, 126, 126);
+}
+
+.search, .logo, .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search > input {
+    width: 100%;
+}
+
+.logo { 
+    min-width: 139px;
+    color:#c71610;
+}
+
+/* Main section */
+main {
+    display: grid;
+    height: 100%;
+    grid-template: 
+    "folders mail settings apps" 75rem /
+    20rem 1fr 20rem 5rem
+    ;
+    text-align: center;
+    padding: 1rem;
+    gap: 0.5px;
+}
+
+/* Folder Section */
+.folders {
+    display: grid;
+    grid-area: folders;
+    grid-template: 75px 200px 100px 50px/ 1fr;
+    gap: 10px;
+}
+
+.subfolder {
+    border: 2px dotted black;
+}
+
+.folders, .mail, .settings, .apps {
+    border: 1px solid rgb(128, 126, 126);
+    border-radius: 4px;
+}
+
+/* Mail Section */
+
+.mail {
+    display: grid;
+    grid-template: repeat(auto-fit, 25px) / 1fr;
+    align-items: center;
+    overflow-y: scroll;
+    grid-area: mail;
+    min-width: 220px;
+    gap: 2px;
+}
+
+.mail-top {
+    border-bottom: 1px solid rgb(128, 126, 126);
+}
+
+.advent {
+    display: grid;
+    border: 1px dotted red;
+    grid-template: 1fr / 35px 2fr 2fr 1fr;
+}
+
+.advent > .advent-inner > p {
+    font-weight: bold;
+}
+
+.advent-inner:nth-child(2) {
+    min-width: 130px;
+}
+
+.advent-inner:nth-child(3) {
+    min-width: 250px;
+}
+
+.advent-inner:nth-child(4) {
+    min-width: 70px;
+}
+
+.advent > .advent-inner > p > span {
+    font-weight: 400;
+}
+
+/* Settings Section */
+.settings {
+    display: grid;
+    grid-template: 50px 200px 75px 250px / 1fr ;
+    grid-area: settings;
+    gap: 10px;
+}
+
+.subfolder-settings {
+    border: 2px dotted blue;
+}
+
+/* App Section */
+
+.apps {
+    display: grid;
+    grid-area: apps;
+    grid-template: repeat(auto-fit, 30px) / 1fr;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.app {
+    border: 2px dotted greenyellow;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1400px) {
+    main {
+        display: grid;
+        grid-template: 
+        "folders mail mail mail" 75rem /
+        20rem 1fr 
+        ;
+    }
+
+    .mail {
+        grid-area: mail;
+    }
+
+    .settings {
+        display: none;
+    }
+
+    .apps {
+        display: none;
+    }
+}
+
+@media screen and (max-width:890px) {
+    main {
+        display: grid;
+        grid-template: 
+        "mail mail mail mail" 75rem /
+        1fr
+        ;
+    }
+
+    .mail {
+        grid-area: mail;
+    }
+
+    .settings {
+        display: none;
+    }
+
+    .apps {
+        display: none;
+    }
+
+    .folders {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .advent-inner:nth-child(3) {
+        display: none;
+    }
+}
