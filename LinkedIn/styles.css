@@ -37,16 +37,31 @@ body {
     grid-template-columns: 40px 1fr;
   }
 
-  header > div:nth-of-type(2) > div:nth-of-type(2){
+  header > div:nth-of-type(2) > div:nth-of-type(1) >  div:nth-of-type(2){
     display: grid;
-    align-content: center;
+    align-items: center;
   }
   header .logo {
-    background: rgb(46, 46, 128);
+    display: grid;
+    background-color: rgb(46, 46, 128);
     height: 30px;
     width: 30px;
   }
 
+
+  header > div:nth-of-type(2) > div:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    pad: 5px;
+  }
+
+ /*STYLES THE NAVIGUATION BAR*/
+  header > div:nth-of-type(2) {
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 3.2fr 3.2fr 1fr;
+    align-content: center; 
+  }
 
     /*STYLES THE LEFT-MENU*/
   
