@@ -103,21 +103,26 @@ ul > ul > li {
   font-weight: normal;
 }
 
+li::before {
+  content: "# ";
+}
+
 h1 {
   font-weight: bold;
+}
+
+h2, .header {
+  font-weight: bold;
+  font-size: 14px;
+  align-self: start;
+  padding: 10px;
+  border-bottom: #bcbcbc 1px solid;
 }
 
 .user > .name {
   font-weight: bold;
 }
 
-.admin {
-  color: red;
-}
-
-.teacher {
-  color: rgb(18, 180, 99);
-}
 
 .messages {
   display: grid;
@@ -147,4 +152,20 @@ h1 {
   padding-left: 10px;
   display: grid;
   align-content: center;
+}
+
+.mention {
+  color: rgb(119, 119, 230)
+}
+
+.mention::before {
+  content: "@"
+}
+
+.admin {
+  color: red;
+}
+
+.teacher {
+  color: rgb(18, 180, 99);
 }
