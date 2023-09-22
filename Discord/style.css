@@ -3,10 +3,10 @@
     padding: 0;
 
     font-family: sans-serif;
-    color: white;
+    color: black;
     text-align: center;
     font-weight: bold;
-    text-shadow: 1px 2px 5px blue, 2px 1px 5px red;
+    /* text-shadow: 1px 2px 5px blue, 2px 1px 5px red; */
 }
 
 
@@ -16,10 +16,9 @@
     width: 100vw;
     display: grid;
     grid-template: 
-    "left-icons    header     header" 50px
+    "left-icons    header     header" 80px
     "left-icons   left-menu    main" 1fr /
         70px       200px       1fr;
-
 }
 
 
@@ -32,16 +31,68 @@
 }
 
 .server {
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     padding: 10px;
+    display: grid;
+    justify-self: start;
+    align-self: center;
 }
 
 .search {
     background-color: red;
     padding: 15px;
     text-align: right;
+
+    display: grid;
+    grid-template-columns: 1fr 80px 80px 80px 80px;
+    grid-template-areas: "class-1 notification pin profile search-bar";
+    gap: 5px;
 }
 
+.class-1 {
+    grid-area: class-1;
+    border: solid 2px black;
+    justify-self: start;
+
+    display: grid;
+    align-self: center;
+
+}
+
+.notification {
+    grid-area: notification;
+    border: solid 2px black;
+    justify-self: end;
+    display: grid;
+    place-self: center;
+
+}
+
+.pin {
+    border: solid 2px black;
+    grid-area: pin;
+    display: grid;
+    justify-self: end;
+    place-self: center;
+}
+
+.profile-icon {
+    border: solid 2px black;
+    justify-self: end;
+    display: grid;
+    grid-area: profile;
+    place-self: center;
+
+}
+
+.search-bar {
+    border: solid 2px black;
+    justify-self: end;
+    display: grid;
+    grid-area: search-bar;
+    place-self: center;
+
+}
 
 /* LEFT ICONS */
 .left-icons {
