@@ -12,6 +12,8 @@ body {
 
 p {
     display:inline;
+    padding: 0;
+    margin: 0;
 }
 
 /*SECTION BY SECTION:*/
@@ -19,12 +21,37 @@ p {
 /*1 - STYLES THE HEADER*/
 
 header {
-    display: grid;
     background-color:rgb(240, 240, 240);
     grid-area: header;
     border-bottom: 2px solid rgb(220, 220, 220);
+    display: grid;
+    grid-template-columns: 215px 1fr 275px;
+    gap: 20px;
+    grid-template-areas: "left middle right";
 } 
 
+header > div:nth-of-type(1){
+    grid-area: left;
+    
+}
+header > div:nth-of-type(1) > p {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+header > div:nth-of-type(2){
+
+}
+header > div:nth-of-type(3){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 100px repeat(2, 1fr);
+    gap: 2px;
+}
+
+header > div:nth-of-type(3) > div {
+    display: grid;
+    border: 2px dotted blue;
+}
 
 
 /*2 - STYLES THE UTMOST LEFT MENU CONTAINING SERVER ICONS*/
@@ -62,7 +89,3 @@ header {
 
 
 /*GENEREAL OR RECURRENT CLASSES*/
-
-.center {
-    place-content: center;
-}
