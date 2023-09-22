@@ -11,6 +11,20 @@
   grid-area: header;
   background-color:#ffffff;
   border: 1px #eeeeee solid;
+  display: grid;
+  grid-template-columns: 110px 110px 1fr repeat(3, 50px) 180px;
+  place-items: center;
+}
+.menu {
+  font-size: 2em;
+  padding: 0 10px;
+}
+
+.searchbar {
+  background-color: #eeeeee;
+  border-radius: 10px;
+  height: 2.5em;
+  width: 100%;
 }
 
 .left-sidebar {
