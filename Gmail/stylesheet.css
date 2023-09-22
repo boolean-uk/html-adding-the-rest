@@ -18,7 +18,8 @@
   grid-template-columns: 110px 110px 1fr repeat(3, 50px) 180px;
   place-items: center;
 }
-.menu {
+
+.hamburgerMenu {
   font-size: 2em;
   padding: 0 10px;
 }
@@ -40,9 +41,20 @@
   overflow: scroll;
 }
 
+.menu {
+  display: grid;
+  overflow: scroll;
+}
+
+.menu .shortcut {
+  display: grid;
+  align-items: center;
+  height: 35px;
+  margin: 0;
+}
+
 .left-sidebar .chat {
   display: grid;
-  grid-template-rows: repeat(auto-fill, 3em);
   overflow: scroll;
 }
 
@@ -52,8 +64,6 @@
   border: 1px #eeeeee solid;
 
   display: grid;
-  grid-template-rows: repeat(auto-fill, 3em);
-
   overflow: scroll;
 }
 
