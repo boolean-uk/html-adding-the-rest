@@ -114,6 +114,9 @@ header > div:nth-of-type(2) > div:nth-of-type(2) > div {
     background-color: rgb(230, 230, 230);
 }
 
+.channels > div > div{
+    margin: 10px 0;
+}
 /*4 - STYLES THE MAIN PART WHERE THE SELECTED CHANNEL'S CONTENT IS DISPLAYED*/
 .main {
     background-color: white;
@@ -122,9 +125,11 @@ header > div:nth-of-type(2) > div:nth-of-type(2) > div {
     grid-template-rows: 10fr 5fr 1fr;
     padding: 0 20px 20px 20px;
 }
+
 .main > div {
     display: grid;   
 }
+
 .main > div > input {
     display: grid;
     max-width: none;
@@ -136,6 +141,5 @@ h1 {
     font-weight: 900;
     transform: scale(0.9, 1);
 }
-
 
 /*GENEREAL OR RECURRENT CLASSES*/
