@@ -34,6 +34,16 @@
   grid-area: left-sidebar;
   background-color:#ffffff;
   border: 1px #eeeeee solid;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 80px 6fr 2fr 3fr;
+  overflow: scroll;
+}
+
+.left-sidebar .chat {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 3em);
+  overflow: scroll;
 }
 
 .main {
