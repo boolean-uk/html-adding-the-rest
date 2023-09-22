@@ -2,6 +2,18 @@
   font-family: sans-serif;
 }
 
+.darkestColour {
+  background-color: #E5E5E5;
+}
+
+.mediumColour {
+  middle: #EDEDEC
+}
+
+.lightestColour {
+  background-color: #F4F3F2;
+}
+
 .container {
   display: grid;
   grid-template:
@@ -13,18 +25,17 @@
 
 .nav {
   grid-area: nav;
-  background-color: lightcoral;
+  background-color: #E5E5E5;
 }
 
 .logo {
   grid-area: logo;
-  background-color: lightblue;
   padding: 10px
 }
 .sidebar {
   grid-area: sidebar;
   display: grid;
-  background-color: lightblue;
+  background-color: #F4F3F2;
   grid-template: 
   "logo" 40px
   "invitation" 150px
@@ -35,14 +46,35 @@
 
 .invitation {
   grid-area: invitation;
-  background-color: blanchedalmond;
   padding: 10px
 }
 
 .channels {
   grid-area: channels;
-  background-color: lightgrey;
   padding: 10px
+}
+
+.status {
+  grid-area: status;
+  background-color: #EDEDEC
+}
+
+.header {
+  grid-area: header;
+  background-color: #FFFFFB
+}
+
+.main {
+  grid-area: main;
+  background-color: #FFFFFB
+}
+
+.profileImg {
+  border-radius: 100%;
+  margin: 10px;
+  background-color: rgba(248, 248, 248, 0.73);
+  width: 40px;
+  height: 40px;
 }
 
 ul {
@@ -57,27 +89,4 @@ ul {
 ul > ul > li {
   padding-left: 10px;
   font-weight: normal;
-}
-
-.status {
-  grid-area: status;
-  background-color: lightpink;
-}
-
-.header {
-  grid-area: header;
-  background-color: lightgoldenrodyellow;
-}
-
-.main {
-  grid-area: main;
-  background-color: lightgreen;
-}
-
-.profileImg {
-  border-radius: 100%;
-  margin: 10px;
-  background-color: rgba(148, 31, 31, 0.524);
-  height: 40px;
-  width: 40px;
 }
