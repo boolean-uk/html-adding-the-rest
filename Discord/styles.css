@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60px 215px 1fr;
+    grid-template-rows: 40px 1fr;
+    grid-template-areas: 
+    "servers header header"
+    "servers channels main";
+}
+
+p {
+    display:inline;
+}
+
+/*SECTION BY SECTION:*/
+
+/*1 - STYLES THE HEADER*/
+
+header {
+    display: grid;
+    background-color:rgb(240, 240, 240);
+    grid-area: header;
+    border-bottom: 2px solid rgb(220, 220, 220);
+} 
+
+
+
+/*2 - STYLES THE UTMOST LEFT MENU CONTAINING SERVER ICONS*/
+.servers {
+    background-color: rgb(220, 220, 220);
+    grid-area: servers;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: repeat(auto, 30px);
+    gap: 5px;
+    align-content: start;
+}
+
+.logo {
+    display: grid;
+    background-color: white;
+    border-radius: 40px;
+    min-height: 40px;
+    align-self: start;
+}
+
+/*3 - STYLES THE MENU CONTAINING THE VARIOUS CHANNEL CATEGORIES AND CHANNELS*/
+.channels {
+    background-color: rgb(240, 240, 240);
+    grid-area: channels;
+    display: grid;
+}
+
+/*4 - STYLES THE MAIN PART WHERE THE SELECTED CHANNEL'S CONTENT IS DISPLAYED*/
+.main {
+    background-color: white;
+    grid-area: main;
+    display: grid;
+}
+
+
+/*GENEREAL OR RECURRENT CLASSES*/
+
+.center {
+    place-content: center;
+}
