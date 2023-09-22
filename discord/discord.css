@@ -32,7 +32,6 @@ body {
 
 .servers h2 {
     text-align: center;
-    grid-template: repeat(5, 1fr) / 1fr;
     color: white;
     margin: 10px 0;
     border-radius: 200px;
