@@ -1,7 +1,10 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: rgb(230, 245, 250);
 }
+
+
 
 /* Container */
 /* 1. Grid in this */
@@ -26,8 +29,9 @@ width
 /* Grid-area: header */
 
 .header {
+    background-color: lightpink;
     grid-area: header;
-    background-color: lightblue;
+    
     border: 1px solid black;
 
     /* create a grid */
@@ -37,9 +41,15 @@ width
 
     display: grid;
     grid-template: 
-    "logo        search-bar"         50px /
-    70px           300px  ;
+    "logo        search-bar     container-for-icons"      90px /
+    70px           800px            400px;
+
+    padding-top: 20px;
+    gap:70px;
+    
+
 }
+
 
 /* Reference grid area in logo and search-bar */
 
@@ -48,21 +58,84 @@ width
 .logo {
     grid-area: logo;
     border: 1px dashed black ;
-    background-color: yellow;
+    
     margin-top: 10px ;
     margin-left: 20px;
-    
-}
+
+ 
+}   
 
 
 /* Search-bar */
 .search-bar {
     grid-area: search-bar;
     border: 1px dashed black ;
-    background-color: hotpink;
+    
     margin-left: 60px;
     margin-top: 10px ; 
+   
+/* search-bar content */
+display: grid;
+grid-template:
+"search-bar-content"
+;
 
+grid-template-columns: 400px;
+grid-template-rows: 50px;
+padding-top: 13px;
+padding-left: 10px;
+}
+
+
+
+.search-bar-content {
+    grid-area: search-bar-content;
+    border: 1px dashed black ;
+   
+   
+}
+
+/* container-for-icons */
+
+.container-for-icons {
+    grid-area: container-for-icons;
+    border: 1px dashed black ;
+
+    display: grid;
+    grid-template: 
+    "icon1 icon2 icon3 icon4 icon5"
+    
+    ;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    gap: 5px;
+   
+
+}
+
+.icon1 {
+    grid-area: icon1;
+    border: 1px dashed black;
+}
+
+.icon2 {
+    grid-area: icon2;
+    border: 1px dashed black;
+}
+.icon3 {
+    grid-area: icon3;
+    border: 1px dashed black;
+}
+
+.icon4 {
+    grid-area: icon4;
+    border: 1px dashed black;
+}
+
+.icon5 {
+    grid-area: icon5;
+    border: 1px dashed black;
+    
 }
 
 /* Left-bar */
@@ -71,7 +144,8 @@ width
 .left-bar {
     grid-area: left-bar;
     background-color: lightpink;
-    border: 1px solid orangered;
+    border: 1px dashed black
+    ;
 
     /* display: grid */
     /* grid-template area */
@@ -95,46 +169,78 @@ width
 
 .username {
 grid-area: username;
-background-color: darkgoldenrod;
-border: 1px solid orangered;
-margin-left: 5px;
-margin-top: 5px;
+
+border: 1px dashed black;
+margin: 5px;
 }
 
 
 /* Views */
 .views {
 grid-area: views;
-background-color: darkred;
-border: 1px solid orangered;
-margin-left: 5px;
+
+border: 1px dashed black;
+margin: 5px;
 }
 
 /* Premium */
 
 .premium {
 grid-area: premium;
-background-color: darkorchid;
-border: 1px solid orangered;
-margin-left: 5px;
+
+border: 1px dashed black;
+margin: 5px;
 }
 
 /* My-items */
 
 .my-items {
 grid-area: my-items;
-background-color: darkturquoise;
-border: 1px solid orangered;
-margin-left: 5px;
+
+border: 1px dashed black;
+margin: 5px;
 }
+
+/* Recent */
+
+.recent {
+    display: grid;
+    grid-template: 
+    "recent";
+    grid-template-rows: 1fr;
+    border: 1px dashed black;
+    margin: 5px;
+}
+
+
+.groups {
+    display: grid;
+    grid-template: 
+    "groups";
+    grid-template-rows: 1fr;
+    border: 1px dashed black;
+    margin: 5px;
+}
+
 
 /* Main */
 /* Grid-area: main */
 
 .main {
     grid-area: main;
-    background-color: lightslategray;
-    border: 1px solid darkorchid
+    background-color: lightpink;
+    border: 1px dashed black;
+
+    /* main */
+
+    display: grid;
+    grid-template: 
+    "post-container"    50px
+    "content"           1fr /
+    1fr
+    ;
+    padding: 30px;
+
 }
 
 /* Right-bar */
@@ -142,6 +248,6 @@ margin-left: 5px;
 
 .right-bar {
     grid-area: right-bar;
-    background-color: lightseagreen;
-    border: 1px solid darkslategray
+    background-color: lightpink;
+    border: 1px dashed black
 }
