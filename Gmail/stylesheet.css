@@ -70,6 +70,14 @@
   content: "☑️";
 }
 
+.starred_true::before {
+  content: "⭐️"
+}
+
+.starred_false::before {
+  content: "☆"
+}
+
 .unread {
   font-weight: bold;
 }
