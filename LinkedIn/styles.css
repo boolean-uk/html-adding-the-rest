@@ -17,16 +17,38 @@ body {
   
   .left-menu{
     grid-area: left-menu;
+    background-color: rgb(220, 220, 220);
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+    gap: 20px;
+  }
+  .left-menu > div{
+    display: grid;
     background-color: white;
+    border-radius: 10px;
   }
   
   .main{
     grid-area: main;
-    background-color: white;
+    background-color: rgb(220, 220, 220);
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    gap: 20px;
   }
-
+  .main > div{
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+  }
   .right-menu{
     grid-area: right-menu;
-    background-color: white;
+    background-color: rgb(220, 220, 220);
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+    gap: 20px;
   }
-  
+  .right-menu > div{
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+  }
