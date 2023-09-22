@@ -55,15 +55,31 @@
   padding: 10px
 }
 
+.selection {
+  border: 1px darkgray solid;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.selected {
+  border: none;
+}
+
+.selected::before {
+  content: "☑️";
+}
+
 .unread {
   font-weight: bold;
 }
 
 .read {
   background-color: #eeeeee;
+  color: rgb(82, 82, 82);
 }
 
-.subject {
+.title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
