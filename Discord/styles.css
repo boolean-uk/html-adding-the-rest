@@ -1,3 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
 body {
     margin: 0;
     width: 100vw;
@@ -16,6 +23,9 @@ p {
     margin: 0;
 }
 
+input {
+    width: 96.5px;
+}
 /*SECTION BY SECTION:*/
 
 /*1 - STYLES THE HEADER*/
@@ -25,32 +35,43 @@ header {
     grid-area: header;
     border-bottom: 2px solid rgb(220, 220, 220);
     display: grid;
-    grid-template-columns: 215px 1fr 275px;
-    gap: 20px;
-    grid-template-areas: "left middle right";
+    grid-template-columns: 215px 1fr;
+    grid-template-areas: "left right";
 } 
+
+/*FORMATS THE HEADER ABOVE THE CHANNELS*/
 
 header > div:nth-of-type(1){
     grid-area: left;
-    
+    align-content: center;
 }
-header > div:nth-of-type(1) > p {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-header > div:nth-of-type(2){
 
-}
-header > div:nth-of-type(3){
+/*FORMATS THE HEADER ABOVE MAIN*/
+header > div:nth-of-type(2) {
     display: grid;
+    grid-area: right;
+    grid-template-columns: 1fr 250px;
+    grid-template-areas: "L R";
+    background-color: white;
+    align-content: center;
+    padding-right: 20px;
+}
+
+header > div:nth-of-type(2) > div:nth-of-type(1){
+    display: grid;
+    grid-area: L;
+}
+
+header > div:nth-of-type(2) > div:nth-of-type(2) {
+    display: grid;
+    grid-area: R;
     grid-template-columns: repeat(3, 1fr) 100px repeat(2, 1fr);
-    gap: 2px;
+    gap: 12px; 
 }
-
-header > div:nth-of-type(3) > div {
+header > div:nth-of-type(2) > div:nth-of-type(2) > div {
     display: grid;
-    border: 2px dotted blue;
+    justify-self: center;
+    background-color: rgb(240, 240, 240);
 }
 
 
