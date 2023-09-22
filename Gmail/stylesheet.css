@@ -5,22 +5,24 @@
     "left-sidebar main right-sidebar icon-bar" 1fr /
     220px 1fr 280px 50px;
   height: 100vh;
-  grid-gap: 10px;
 }
 
 .header {
   grid-area: header;
-  background-color: rgb(255, 211, 91, 0.25);
+  background-color:#ffffff;
+  border: 1px #eeeeee solid;
 }
 
 .left-sidebar {
   grid-area: left-sidebar;
-  background-color: rgba(14, 194, 29, 0.25);
+  background-color:#ffffff;
+  border: 1px #eeeeee solid;
 }
 
 .main {
   grid-area: main;
-  background-color: rgba(255, 74, 113, 0.25);
+  background-color:#ffffff;
+  border: 1px #eeeeee solid;
 
   display: grid;
   grid-template-rows: repeat(calc(1000 / 200), 30px);
@@ -35,12 +37,14 @@
 
 .right-sidebar {
   grid-area: right-sidebar;
-  background-color: rgba(9, 34, 255, 0.25);
+  background-color:#ffffff;
+  border: 1px #eeeeee solid;
 }
 
 .icon-bar {
   grid-area: icon-bar;
-  background-color: rgba(174, 0, 255, 0.25);
+  background-color:#ffffff;
+  border: 1px #eeeeee solid;
 }
 
 @media screen and (max-width: 1000px) {
