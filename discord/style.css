@@ -2,14 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: sans-serif;
+  color: #cccccc;
 }
 
 html,
 body,
 .container {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .container {
@@ -22,10 +23,27 @@ body,
   grid-template-rows: 50px 1fr;
 }
 
+.box {
+  display: grid;
+
+  align-content: center;
+  gap: 10px;
+}
+
 .header {
   grid-area: header;
 
+  grid-template-columns: auto 1fr repeat(7, auto);
+
   background-color: rgb(70, 70, 70);
+}
+
+.header img {
+  height: 24px
+}
+
+.search {
+  grid-template-columns: repeat(2, auto);
 }
 
 .server-menu {
@@ -36,18 +54,18 @@ body,
 
 .channel-menu {
   grid-area: channel-menu;
-  
+
   background-color: rgb(42, 42, 42);
 }
 
 .chat-area {
   grid-area: chat-area;
-  
+
   background-color: rgb(55, 55, 55);
 }
 
 .users {
   grid-area: users;
-  
+
   background-color: rgb(42, 42, 42);
 }
