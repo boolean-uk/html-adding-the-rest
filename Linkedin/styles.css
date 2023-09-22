@@ -20,7 +20,7 @@ width
     display: grid;
     grid-template: 
     "header     header      header"         150px
-    "left-bar   main        right-bar"      800px /
+    "left-bar   main        right-bar"      1200px /
     300px       1fr             400px
     ; 
 }
@@ -32,7 +32,7 @@ width
     background-color: lightpink;
     grid-area: header;
     
-    border: 1px solid black;
+    border: 1px dashed black;
 
     /* create a grid */
     /* grid template
@@ -42,7 +42,7 @@ width
     display: grid;
     grid-template: 
     "logo        search-bar     container-for-icons"      90px /
-    70px           800px            400px;
+    100px           800px            400px;
 
     padding-top: 20px;
     gap:70px;
@@ -235,12 +235,116 @@ margin: 5px;
 
     display: grid;
     grid-template: 
-    "post-container"    50px
+    "post-container"    200px
     "content"           1fr /
     1fr
     ;
-    padding: 30px;
+    padding: 10px;
+    gap: 5px;
 
+}
+
+.post-container {
+    grid-area: post-container;
+     border: 1px dashed black;
+     padding: 10px;
+
+     /* container-profile-startpost */
+     display: grid;
+     grid-template: "container-profile-startpost"
+     "photo-video-doc-article-container";
+     grid-template-rows: 1fr 1fr;
+     gap: 5px;
+}
+
+.container-profile-startpost {
+    grid-area: container-profile-startpost;
+    border: 1px dashed black;
+
+    /* Profile pic and start a post */
+
+    display: grid;
+    grid-template: "profile start-post";
+    grid-template-columns: 80px 1fr;
+    gap: 5px;
+   
+}
+
+.profile {
+    grid-area: profile;
+    border: 1px dashed black;
+   margin: 10px;
+   border-radius: 50%;
+}
+
+.start-post {
+    grid-area: start-post;
+    border: 1px dashed black;
+    margin: 10px;
+}
+
+.photo-video-doc-article-container {
+    grid-area: photo-video-doc-article-container ;
+    border: 1px dashed black;
+
+    /* grid photo.... */
+
+    display: grid;
+    grid-template: "photo video document write-article";
+    grid-template-columns: repeat(autofit,1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.photo {
+    grid-area: photo;
+    border: 1px dashed black;
+}
+.video {
+    grid-area: video;
+    border: 1px dashed black;
+}
+.document {
+    grid-area: document;
+    border: 1px dashed black;
+}
+
+.write-article {
+    grid-area: write-article;
+    border: 1px dashed black;
+}
+
+
+.content {
+    grid-area: content;
+    border: 1px dashed black;
+    padding: 20px;
+    
+    /* content */
+    display: grid;
+    grid-template: 
+    "content1"
+    "content2"
+    "content3";
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+
+.content1 {
+    grid-area: content1;
+    border: 1px dashed black;
+    
+}
+.content2{
+    grid-area: content2;
+    border: 1px dashed black;
+    
+}
+.content3 {
+    grid-area: content3;
+    border: 1px dashed black;
+    
 }
 
 /* Right-bar */
@@ -249,5 +353,78 @@ margin: 5px;
 .right-bar {
     grid-area: right-bar;
     background-color: lightpink;
-    border: 1px dashed black
+    border: 1px dashed black;
+
+    /* containers */
+
+    display: grid;
+    grid-template: 
+    "right-container1"
+   "right-container2"
+   "right-container3"
+    ;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+.right-container1 {
+    grid-area: right-container1;
+    border: 1px dashed black;
+
+    /* container */
+
+    display: grid;
+    grid-template:
+    "courses-news1"
+    "courses-news2"
+    "courses-news3"
+    "courses-news4"
+    "courses-news5"
+  ;
+  
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+
+.courses-news1 {
+    grid-area: courses-news1;
+    border: 1px dashed black;
+}
+
+.courses-news2 {
+    grid-area: courses-news2;
+    border: 1px dashed black;
+}
+
+.courses-news3 {
+    grid-area: courses-news3;
+    border: 1px dashed black;
+}
+
+.courses-news4 {
+    grid-area: courses-news4;
+    border: 1px dashed black;
+}
+
+.courses-news5 {
+    grid-area: courses-news5;
+    border: 1px dashed black;
+}
+
+
+
+
+.right-container2 {
+    grid-area: right-container2;
+    border: 1px dashed black;
+}
+
+.right-container3{
+    grid-area: right-container3;
+    border: 1px dashed black;
 }
