@@ -111,6 +111,14 @@ h1 {
   font-weight: bold;
 }
 
+.admin {
+  color: red;
+}
+
+.teacher {
+  color: rgb(18, 180, 99);
+}
+
 .messages {
   display: grid;
   align-items: end;
@@ -118,11 +126,18 @@ h1 {
 
 .message {
   font-size: 1rem;
+  margin-bottom: 1em;
 }
 
 .message > .content {
   font-size: 1em;
-  margin: 1em 0.2em;
+  margin: 0.2em 0.3em;
+}
+
+.message .timestamp {
+  color: #898989;
+  margin-left: 1em;
+  font-size: 0.9em;
 }
 
 .bubble {
