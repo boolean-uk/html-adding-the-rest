@@ -31,7 +31,7 @@ body {
     grid-template-columns: 3.2fr 3.2fr 1fr;
     align-content: center; 
   }
-
+ /*SEARCH BAR*/
   header > div:nth-of-type(2) > div:nth-of-type(1){
     display: grid;
     grid-template-columns: 40px 1fr;
@@ -47,20 +47,11 @@ body {
     height: 30px;
     width: 30px;
   }
-
-
+ /*NAVIGATION BAR*/
   header > div:nth-of-type(2) > div:nth-of-type(2){
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     pad: 5px;
-  }
-
- /*STYLES THE NAVIGUATION BAR*/
-  header > div:nth-of-type(2) {
-    padding: 0 10px;
-    display: grid;
-    grid-template-columns: 3.2fr 3.2fr 1fr;
-    align-content: center; 
   }
 
     /*STYLES THE LEFT-MENU*/
