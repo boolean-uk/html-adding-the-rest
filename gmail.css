@@ -133,8 +133,8 @@ main {
     main {
         display: grid;
         grid-template: 
-        "folders mail mail mail" 75rem /
-        20rem 1fr 
+        "folders mail mail apps" 75rem /
+        20rem 1fr 1fr 5rem
         ;
     }
 
@@ -145,11 +145,22 @@ main {
     .settings {
         display: none;
     }
+}
 
-    .apps {
-        display: none;
+@media screen and (max-width:960px) {
+    .apps { 
+       display: none;
+    }
+
+    main {
+        display: grid;
+        grid-template: 
+        "folders mail mail mail" 75rem /
+        20rem 1fr 1fr 1fr
+        ;
     }
 }
+
 
 @media screen and (max-width:890px) {
     main {
@@ -165,10 +176,6 @@ main {
     }
 
     .settings {
-        display: none;
-    }
-
-    .apps {
         display: none;
     }
 
