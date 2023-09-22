@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
@@ -26,19 +27,42 @@ body {
 /* Server Section */
 
 .servers {
-    text-align: center;
+    display: grid;
+    grid-template: repeat(auto-fit, 65px) / 1fr;
     background-color: #1e2124;
     grid-area: servers;
     padding: 1rem;
+    gap: 15px;
 }
 
-.servers h2 {
-    margin: 1rem 0;
-    padding: 1.35rem 0;
+.server-icon, .server-ex {
     border: 1px solid #1e2124;
-    border-radius: 30mm;
+    border-radius: 40mm;
     background-color: #36393e;
     cursor: pointer;
+}
+
+.server-ex {
+    display: grid;
+    place-items: center;
+}
+
+.server-icon:nth-child(1) {
+    background-image: url(images/discord-logo.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.server-icon:nth-child(2) {
+    background-image: url(images/boolean.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.server-icon:nth-child(3) {
+    background-image: url(images/monkey.jpg);
+    background-size: cover;
+    overflow: hidden;
 }
 
 /* Chat Section */
@@ -59,13 +83,20 @@ body {
 /* Category Section */
 .categorys {
     display: grid;
-    grid-template: fit-content repeat(3, 1fr) / 1fr;
     padding: 1rem;
 }
 
-.button {
-    text-align: center;
+.category {
+    padding: 0.5rem;
 }
+
+.button {
+    display: grid;
+    grid-template: 1fr 40px / 1fr;
+    text-align: center;
+    gap: 10px;
+}
+
 
 .button button{
     border: 1px solid #4682B4;
@@ -85,6 +116,10 @@ body {
 
 
 /* Core section */
+.core {
+    min-width: 410px;
+}
+
 .container-two {
     height: 97vh;
     display: grid;
@@ -132,6 +167,12 @@ body {
 
 .four p:nth-child(1) {
     color: lightgreen;
+}
+
+.four a {
+    text-decoration: none;
+    background-color: rgb(64, 103, 233, 40%);
+    border-radius: 5px;
 }
 
 .text > p > span, .text2 > p > span {
