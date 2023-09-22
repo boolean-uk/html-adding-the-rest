@@ -5,9 +5,9 @@
 }
 
 .container {  
-
-    background-color: green;
-    grid-gap: 10px;
+    
+    background-color: lightgray;
+    gap: 10px;
     display: grid;
     grid-template:
 
@@ -18,19 +18,52 @@
 
 
 .header {
+    display: grid;
     grid-area: header;
-    background-color: lightgray;
-    margin-bottom: -5px
+    background-color: white;
+    gap: 5px;
+    grid-template-columns: 50px 4fr  3fr;
 }
 
+.header > div {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50px;
+    justify-content: start;
+    border: solid 2px black;
+    border-radius: 5px;
+    gap: 5px;
+
+}
+
+.header > .div > .div {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    border: solid 2px white;
+    border-radius: 5px;
+    gap: 5px;
+
+}
+
+.header > .elements {
+    display: grid;
+    grid-template-columns:repeat(5, 1fr) ;
+    border: solid 2px black;
+    gap: 5px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+
 .left-tab {
-   min-height: 800px;
+    min-height: 700px;
     text-align: center;
     border-radius: 5px;
     margin-left: 20px;
     display: grid;
-   background-color: lightgray;
     grid-area: left-tab;
+    gap: 10px;
     grid-template: 
 
     "profile" 250px
@@ -40,30 +73,55 @@
 }
 
 .left-tab > div {
-    background-color: orange;
-    margin: 10px 0px  0px 20px;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    background-color: white;
     border-radius: 5px;
 }
 
+
 .main-menu {
-    min-height: 800px;
+    background-color: lightgray;
+    min-height: 200px;
+    max-height: 300px;
     text-align: center;
     border-radius: 5px;
     display: grid;
-    background-color: lightgray;
+    grid-template-rows: repeat(2, 1fr);
     grid-area: main-menu;
+    gap: 10px;
     grid-template: 
 
-    "start-post" 150px
-    "main-content" 1fr
-    "main-content1" 1fr/
+    "start-post" 200px
+    "main-content" 2fr/
     1fr;
 }
-.main-menu > div {
-    margin: 10px;
-    background-color: red;
+.main-menu > .start-post {
+    display: grid;
+    background-color:  white;
     border-radius: 5px;
+    gap: 10px;
+    grid-template-columns: repeat(50px, 1fr);
 }
+
+.main-menu > .elements{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr) ;
+    border: solid 2px black;
+    gap: 5px;
+    border-radius: 5px;
+    justify-content: center;
+    justify-content: start;
+}
+
+.main-menu > .main-content {
+    display: grid;
+    background-color:  white;
+    grid-template-rows: repeat(4, 1fr);
+    border-radius: 5px;
+    gap: 10px;
+}
+
 
 .right-tab {
     min-height: 800px;
@@ -71,6 +129,7 @@
     display: grid;
     background-color: lightgray;
     grid-area: right-tab;
+    gap: 10px;
     grid-template: 
 
     "news" 1fr
@@ -80,7 +139,11 @@
 }
 
 .right-tab > div {
-    margin: 10px;
-    background-color: blue;
+    display: grid;
+    background-color: white;
     border-radius: 5px;
+    gap: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    justify-content: center;
 }
