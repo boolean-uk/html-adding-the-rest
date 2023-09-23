@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: 50px;
     justify-content: start;
-    border: solid 2px black;
+    border: dotted 1px black;
     border-radius: 5px;
     gap: 5px;
 
@@ -40,7 +40,6 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
-    border: solid 2px white;
     border-radius: 5px;
     gap: 5px;
 
@@ -49,10 +48,9 @@
 .header > .elements {
     display: grid;
     grid-template-columns:repeat(5, 1fr) ;
-    border: solid 2px black;
+    border: dotted 1px black;
     gap: 5px;
     border-radius: 5px;
-    justify-content: center;
 }
 
 
@@ -79,50 +77,49 @@
     border-radius: 5px;
 }
 
-
 .main-menu {
+    display: grid;
     background-color: lightgray;
     min-height: 200px;
-    max-height: 300px;
+    max-height: 800px;
     text-align: center;
     border-radius: 5px;
-    display: grid;
     grid-area: main-menu;
     gap: 10px;
-    grid-template: 
-
-    "start-post" 1fr
-    "main-content" 2fr/
-    1fr;
-}
-.main-menu > .start-post{
-    display: grid;
-    background-color:  white;
-    border-radius: 5px;
-    gap: 10px;
-    grid-template-columns: repeat(50px, 1fr);
+    grid-template:
+        "start-post" auto
+        "main-content" 1fr/
+         1fr;
 }
 
-.main-menu > .elements{
-    display: grid;
-    grid-template-columns:repeat(4, 1fr) ;
-    border: solid 2px black;
-    gap: 5px;
+.main-menu > .start-post {
+    background-color: white;
     border-radius: 5px;
-    justify-content: center;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: auto;
+    grid-template-columns: 50px 1fr;
+}
+
+.main-menu > .start-post > .elements {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 20px;
     justify-content: start;
+}
+
+.main-menu > .start-post > .elements > div {
+    justify-content: center;
 }
 
 .main-menu > .main-content {
     display: grid;
-    overflow-y: scroll;
-    background-color:  white;
-    grid-template-rows: 50px;
+    overflow-y: auto; 
+    background-color: white;
     border-radius: 5px;
     gap: 10px;
-    height: 1fr;
 }
-
 
 .right-tab {
     min-height: 800px;
