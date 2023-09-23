@@ -276,9 +276,8 @@ than 180px and I don't know why :(
 }
 
 .channel-container .footer {
-  grid-template: 1fr / 1fr 1fr;
+  grid-template: 1fr / 1fr auto;
   align-items: center;
-  justify-items: left;
 
   padding: 10px;
 
@@ -312,6 +311,20 @@ than 180px and I don't know why :(
   width: 100%;
 }
 
+.voice-controls {
+  grid-template: 1fr / repeat(3, auto);
+  justify-self: right;
+  gap: 0;
+}
+
+.voice-controls img {
+  height: 24px
+}
+
+.voice-controls .box {
+  padding: 6px;
+}
+
 /* ======== chat area ======== */
 
 .chat-area {
@@ -331,6 +344,12 @@ footer > div {
 }
 
 /* ======== hover effects ======== */
+
+.hover:hover {
+  background-color: var(--hover-dark);
+  cursor: pointer;
+  border-radius: 4px;
+}
 
 .channel-header:hover,
 .browse-channels:hover,
