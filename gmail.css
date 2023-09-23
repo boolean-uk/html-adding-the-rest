@@ -30,7 +30,7 @@ main {
     display: grid;
     height: 100%;
     grid-template: 
-    "folders mail settings apps" 75rem /
+    "folders mail settings apps" calc(100vh - 97px) /
     20rem 1fr 20rem 5rem
     ;
     text-align: center;
@@ -129,7 +129,7 @@ main {
     main {
         display: grid;
         grid-template: 
-        "folders mail mail apps" 75rem /
+        "folders mail mail apps" calc(100vh - 97px) /
         20rem 1fr 1fr 5rem
         ;
     }
@@ -151,7 +151,7 @@ main {
     main {
         display: grid;
         grid-template: 
-        "folders mail mail mail" 75rem /
+        "folders mail mail mail" calc(100vh - 97px) /
         20rem 1fr 1fr 1fr
         ;
     }
@@ -162,7 +162,7 @@ main {
     main {
         display: grid;
         grid-template: 
-        "mail mail mail mail" 75rem /
+        "mail mail mail mail" calc(100vh - 97px) /
         1fr
         ;
     }
