@@ -25,6 +25,7 @@ body {
 }
 
 .core h2, .chat h2 {
+    padding-top: 0.2rem;
     font-size: 1.35rem;
 }
 /* Server Section */
