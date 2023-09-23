@@ -188,14 +188,27 @@ body {
     grid-area: main;
     background-color: rgb(220, 220, 220);
     display: grid;
-    grid-template-rows: 80px 1fr;
-    gap: 20px;
+    grid-template-rows: 120px 1fr;
+    gap: 40px;
   }
   .main > div{
     display: grid;
     background-color: white;
     border-radius: 10px;
   }
+  .main > div:nth-of-type(1){
+    display: grid;
+    grid-template-rows: 60px 50px;
+
+  }
+  .main > div:nth-of-type(2){
+    display: grid;
+    grid-template-rows: 35px 120px 1fr 35px 40px;
+  }
+
+  
+
+
 
     /*STYLES THE RIGHT-MENU*/
   .right-menu{
