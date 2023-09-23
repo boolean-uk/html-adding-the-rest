@@ -21,6 +21,7 @@ body,
   --channel-footer-bg: #252525;
 
   --hover-dark: #444;
+  --hover-highlight: #fff;
 
   --header-height: 80px;
   --channel-width: 275px;
@@ -149,12 +150,19 @@ than 180px and I don't know why :(
   padding: 0;
 }
 
-.server-menu .img {
+.server-img {
   grid-template-columns: 1fr;
+  place-items: center;
+
+
   height: 50px;
   border-radius: 100%;
-  background-color: var(--header-bg);
   overflow: hidden;
+
+  transition: 0.25s;
+
+
+  background-color: var(--header-bg);
 }
 
 .server-menu img {
@@ -168,12 +176,34 @@ than 180px and I don't know why :(
   height: 50px;
 }
 
+.hover-appear {
+  height: 15px;
+  width: 5px;
+  
+  align-self: center;
+  border-radius: 0 2px 2px 0;
+
+  transform: translateX(-6px);
+  
+  transition: 0.3s;
+
+  background-color: var(--hover-highlight)
+}
+
+.hover:hover > .hover-appear{
+  transform: translateX(0);
+}
+
 .boolean .highlight {
   grid-area: "highlight";
-  height: 50px;
+  align-self: center;
+  height: 40px;
   width: 5px;
-  background-color: #ffffff;
   border-radius: 0 2px 2px 0;
+
+  transform: translateX(0);
+
+  background-color: var(--hover-highlight);
 }
 
 /* ======== channel menu ======== */
@@ -345,19 +375,21 @@ footer > div {
 
 /* ======== hover effects ======== */
 
-.hover:hover {
+.hover-box:hover {
   background-color: var(--hover-dark);
   cursor: pointer;
   border-radius: 4px;
 }
 
-.channel-header:hover,
-.browse-channels:hover,
-.channel-list li:hover,
-.footer-profile-container:hover {
-  background-color: var(--hover-dark);
+.hover-highlight:hover {
   cursor: pointer;
-  border-radius: 4px;
+  color: var(--hover-highlight);
+  border-radius: 5px;
+}
+
+.hover-squarcle:hover {
+  cursor: pointer;
+  border-radius: 35%;
 }
 
 .channel-header:hover {
@@ -369,11 +401,5 @@ footer > div {
 }
 
 .channel-menu:hover::-webkit-scrollbar {
-  display: initial;
-}
-
-.channel-group:hover {
-  cursor: pointer;
-  color: #fff;
-  border-radius: 5px;
+  display: block;
 }

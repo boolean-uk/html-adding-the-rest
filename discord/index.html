@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <header class="box pad-10 header">
-        <div class="box pad-10 channel-header">
+        <div class="box pad-10 channel-header hover-box">
           <div class="box server-type img">
             <img src="https://img.icons8.com/666666/home" alt="home" />
           </div>
@@ -25,22 +25,22 @@
           <img src="https://img.icons8.com/666666/hashtag" alt="channel icon" />
         </div>
         <div class="box channel-name">exercises</div>
-        <div class="box thread">
+        <div class="box hover-highlight thread">
           <img
             src="https://img.icons8.com/666666/speech-bubble"
             alt="start thread"
           />
         </div>
-        <div class="box notification">
+        <div class="box hover-highlight notification">
           <img
             src="https://img.icons8.com/666666/bell"
             alt="notification settings"
           />
         </div>
-        <div class="box pinned">
+        <div class="box hover-highlight pinned">
           <img src="https://img.icons8.com/666666/pin" alt="pinned messages" />
         </div>
-        <div class="box members">
+        <div class="box hover-highlight members">
           <img src="https://img.icons8.com/666666/user" alt="member list" />
         </div>
         <div class="box search pad-10">
@@ -50,17 +50,17 @@
             alt="magnifying glass"
           />
         </div>
-        <div class="box inbox">
+        <div class="box hover-highlight inbox">
           <img src="https://img.icons8.com/666666/inbox" alt="inbox" />
         </div>
-        <div class="box help">
+        <div class="box hover-highlight help">
           <img src="https://img.icons8.com/666666/help" alt="help" />
         </div>
       </header>
       <div class="box pad-10 server-menu">
-        <div class="box">
-          <div class="highlight"></div>
-          <div class="box img">
+        <div class="box hover">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
             <img
               src="https://img.icons8.com/material-rounded/48/cccccc/controller.png"
               alt="controller"
@@ -68,51 +68,51 @@
           </div>
         </div>
         <hr />
-        <div class="box boolean">
-          <div class="highlight"></div>
-          <div class="box img">
+        <div id="active-server" class="box hover boolean">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
             <img
               src="https://yt3.ggpht.com/a/AATXAJznBBSM3EjQOemVqScCHToqHCJ8Gce-XtMvpg=s900-c-k-c0xffffffff-no-rj-mo"
               alt="boolean server"
             />
           </div>
         </div>
-        <div class="box lucas-fav-game">
-          <div class="highlight"></div>
-          <div class="box img">
+        <div class="box hover lucas-fav-game">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/2/2a/LoL_icon.svg"
               alt="lucas-fav-game"
             />
           </div>
         </div>
-        <div class="box cirno">
-          <div class="highlight"></div>
-          <div class="box img">
+        <div class="box hover cirno">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
             <img src="https://i.redd.it/jsu1c12zh9271.gif" alt="cirno server" />
           </div>
         </div>
-        <div class="box tesseract">
-          <div class="highlight"></div>
-          <div class="box img">
+        <div class="box hover tesseract">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/2/26/Album_cover_for_Polaris_%28Tesseract_album%29.jpg"
               alt="tesseract server"
             />
           </div>
         </div>
-        <div class="box">
-          <div class="highlight"></div>
-          <div class="box img">
+        <div class="box hover">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
             <img
               src="https://img.icons8.com/33cc33/plus"
               alt="add new server"
             />
           </div>
         </div>
-        <div class="box">
-          <div class="highlight"></div>
-          <div class="box img">
+        <div class="box hover">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
             <img
               src="https://img.icons8.com/33cc33/compass"
               alt="explore servers"
@@ -122,7 +122,7 @@
       </div>
       <div class="box channel-container">
         <div class="box pad-10 channel-menu">
-          <div class="box browse-channels">
+          <div class="box browse-channels hover-box">
             <img
               src="https://img.icons8.com/666666/hashtag"
               alt="channel icon"
@@ -132,7 +132,7 @@
           <div class="box group-list">
             <input id="check-general" type="checkbox" name="menu" checked />
             <label for="check-general">
-              <div class="box channel-group">
+              <div class="box channel-group hover-highlight">
                 <img
                   class="expand"
                   src="https://img.icons8.com/666666/expand-arrow"
@@ -142,11 +142,11 @@
               </div>
             </label>
             <ol class="box channel-list">
-              <li class="box">
+              <li class="box hover-box">
                 <img src="https://img.icons8.com/666666/book" alt="book" />
                 📝general
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
@@ -158,7 +158,7 @@
           <div class="box group-list">
             <input id="check-lobby" type="checkbox" name="menu" />
             <label for="check-lobby">
-              <div class="box channel-group">
+              <div class="box channel-group hover-highlight">
                 <img
                   class="expand"
                   src="https://img.icons8.com/666666/expand-arrow"
@@ -168,70 +168,70 @@
               </div>
             </label>
             <ol class="box channel-list">
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 🤹‍♀️random
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 🎮gaming
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 🍿watching
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 📖reading
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 🧞‍♀️social-chat
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 💻code-talk
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 ⚽️fantasy-football
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 🖥️-women-in-tech
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 🎁-adventofcode
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
@@ -243,7 +243,7 @@
           <div class="box group-list">
             <input id="check-careers" type="checkbox" name="menu" checked />
             <label for="check-careers">
-              <div class="box channel-group">
+              <div class="box channel-group hover-highlight">
                 <img
                   class="expand"
                   src="https://img.icons8.com/666666/expand-arrow"
@@ -253,28 +253,28 @@
               </div>
             </label>
             <ol class="box channel-list">
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 👣careers
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 🗓️events
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 tech-support
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
@@ -286,7 +286,7 @@
           <div class="box group-list">
             <input id="check-learning" type="checkbox" name="menu" checked />
             <label for="check-learning">
-              <div class="box channel-group">
+              <div class="box channel-group hover-highlight">
                 <img
                   class="expand"
                   src="https://img.icons8.com/666666/expand-arrow"
@@ -296,14 +296,14 @@
               </div>
             </label>
             <ol class="box channel-list">
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 general
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speech-bubble"
                   alt="speech bubble"
@@ -315,7 +315,7 @@
           <div class="box group-list">
             <input id="check-class-11" type="checkbox" name="menu" checked />
             <label for="check-class-11">
-              <div class="box channel-group">
+              <div class="box channel-group hover-highlight">
                 <img
                   class="expand"
                   src="https://img.icons8.com/666666/expand-arrow"
@@ -325,259 +325,259 @@
               </div>
             </label>
             <ol class="box channel-list">
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 classroom
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 code-examples
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 collaboration
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 resources
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 exercises
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/hashtag"
                   alt="hashtag"
                 />
                 general-chat
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 out-of-hours-chat
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻1
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻2
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻3
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻4
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻5
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻6
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻7
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻8
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻9
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻10
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻11
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻12
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻13
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻14
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻15
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻16
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻17
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻18
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻19
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 🍐💻20
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 1
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 2
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 3
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 4
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 5
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 6
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 7
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 8
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
                 />
                 Study Group 9
               </li>
-              <li class="box">
+              <li class="box hover-box">
                 <img
                   src="https://img.icons8.com/666666/speaker"
                   alt="speaker"
@@ -588,7 +588,7 @@
           </div>
         </div>
         <div class="box footer">
-          <div class="box footer-profile-container">
+          <div class="box footer-profile-container hover-box">
             <img src="img/icon.png" alt="icon" />
             <div class="box footer-profile">
               <div class="user-name">Eduard does the ellipsis work I sure hope so otherwise this going to look very silly on the final page</div>
@@ -596,9 +596,9 @@
             </div>
           </div>
           <div class="box voice-controls">
-            <div class="box hover"><img src="https://img.icons8.com/666666/microphone" alt="microphone"></div>
-            <div class="box hover"><img src="https://img.icons8.com/666666/headphones" alt="headphones"></div>
-            <div class="box hover"><img src="https://img.icons8.com/666666/settings" alt="voice settings"></div>
+            <div class="box hover-box"><img src="https://img.icons8.com/666666/microphone" alt="microphone"></div>
+            <div class="box hover-box"><img src="https://img.icons8.com/666666/headphones" alt="headphones"></div>
+            <div class="box hover-box"><img src="https://img.icons8.com/666666/settings" alt="voice settings"></div>
           </div>
         </div>
       </div>
