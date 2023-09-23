@@ -25,6 +25,7 @@ body,
 
   --header-height: 80px;
   --channel-width: 275px;
+  --footer-height: 60px;
 
   font-size: 16px;
 }
@@ -154,13 +155,11 @@ than 180px and I don't know why :(
   grid-template-columns: 1fr;
   place-items: center;
 
-
   height: 50px;
   border-radius: 100%;
   overflow: hidden;
 
   transition: 0.25s;
-
 
   background-color: var(--header-bg);
 }
@@ -179,18 +178,18 @@ than 180px and I don't know why :(
 .hover-appear {
   height: 15px;
   width: 5px;
-  
+
   align-self: center;
   border-radius: 0 2px 2px 0;
 
   transform: translateX(-6px);
-  
+
   transition: 0.3s;
 
-  background-color: var(--hover-highlight)
+  background-color: var(--hover-highlight);
 }
 
-.hover:hover > .hover-appear{
+.hover:hover > .hover-appear {
   transform: translateX(0);
 }
 
@@ -210,7 +209,7 @@ than 180px and I don't know why :(
 
 .channel-container {
   grid-area: channel-container;
-  grid-template: 1fr 60px / 1fr;
+  grid-template: 1fr var(--footer-height) / 1fr;
   overflow-y: scroll;
   gap: 0;
 }
@@ -348,7 +347,7 @@ than 180px and I don't know why :(
 }
 
 .voice-controls img {
-  height: 24px
+  height: 24px;
 }
 
 .voice-controls .box {
@@ -359,8 +358,54 @@ than 180px and I don't know why :(
 
 .chat-area {
   grid-area: chat-area;
+  grid-template: 1fr var(--footer-height) / 1fr;
+
+  padding: 0;
+  gap: 0;
 
   background-color: rgb(55, 55, 55);
+  overflow-y: scroll;
+}
+
+.chat-container {
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+
+  overflow-y: scroll;
+}
+
+.chat-entry {
+  grid-template-areas:
+    "sender-icon message-details ."
+    "sender-icon message-body ."
+    "sender-icon message-reaction .";
+
+  grid-template-columns: 60px 1fr 40px;
+  padding: 3px 0 3px 0;
+}
+
+.sender-icon {
+  grid-area: sender-icon;
+  align-content: start;
+  justify-content: center;
+}
+
+.sender-icon img {
+  height: 40px;
+  border-radius: 100%;
+}
+.message-details {
+  grid-area: message-details;
+}
+.message-body {
+  grid-area: message-body;
+}
+.message-reaction {
+  grid-area: message-reaction;
+}
+
+.chat-footer {
+  background-color: pink;
 }
 
 .users {
