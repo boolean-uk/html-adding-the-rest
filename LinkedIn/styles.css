@@ -48,11 +48,27 @@ body {
     width: 30px;
   }
  /*NAVIGATION BAR*/
-  header > div:nth-of-type(2) > div:nth-of-type(2){
+  header #nav-bar-right{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    pad: 5px;
+    gap: 5px;
+    justify-content: end;
+    padding: 0 10px;
   }
+
+  header #nav-bar-left{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    border-left: rgb(220, 220, 220);
+    padding: 0 10px;
+  }
+
+  #nav-bar-left > .logo , 
+  #nav-bar-right > .logo {
+
+  }
+
 
     /*STYLES THE LEFT-MENU*/
   
