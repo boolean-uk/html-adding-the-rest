@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #424549;
+}
+
+/* Main Section */
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    z-index: 10;
+    display: grid;
+    grid-template: 
+    "servers chat core" 1fr/
+    6rem 15rem 3fr
+    ;
+}
+
+.core h2, .chat h2 {
+    padding-top: 0.2rem;
+    font-size: 1.35rem;
+}
+/* Server Section */
+
+.servers {
+    display: grid;
+    grid-template: repeat(auto-fit, 65px) / 1fr;
+    background-color: #1e2124;
+    grid-area: servers;
+    padding: 1rem;
+    gap: 15px;
+}
+
+.server-icon, .server-ex, .server-top {
+    border: 1px solid #1e2124;
+    border-radius: 40mm;
+    background-color: #36393e;
+    cursor: pointer;
+}
+
+.server-ex, .server-top {
+    display: grid;
+    place-items: center;
+}
+
+.server-top > h2 > i {
+    color: #fff;
+}
+
+.server-ex > h2 > i {
+    color: #57f287;
+}
+
+.server-icon:nth-child(1) {
+    background-size: cover;
+    overflow: hidden;
+}
+
+.server-icon:nth-child(2) {
+    background-image: url(images/boolean.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.server-icon:nth-child(3) {
+    background-image: url(images/monkey.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Chat Section */
+
+.chat {
+    background-color: #282b30;
+    grid-area: chat;
+    min-width: 200px;
+}
+
+
+.chat h2 {
+    text-align: center;
+    color: aliceblue;
+    height: 2rem;
+    border-bottom: 2px solid #1e2124
+}
+
+/* Category Section */
+.categorys {
+    display: grid;
+    padding: 1rem;
+}
+
+.category {
+    padding: 0.5rem;
+}
+
+.button {
+    display: grid;
+    grid-template: 1fr 40px / 1fr;
+    text-align: center;
+    gap: 10px;
+}
+
+
+.button button{
+    border: 1px solid #4682B4;
+    border-radius: 10px;
+    background-color:  #4682B4;
+    padding: 0.75rem;
+}
+
+.categorys h3 {
+    padding: 0.5rem 0;
+    color: #c5c4c490;
+}
+
+.categorys p {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+}
+
+
+/* Core section */
+.core {
+    min-width: 410px;
+    height: 100vh;
+}
+
+.container-two {
+    display: grid;
+    height: 100vh;
+    grid-template: 1fr / 1fr;
+    align-items: end;
+    background-color: #36393e;
+    grid-area: core;
+}
+
+.core h2 {
+    width: 100%;
+    position: absolute;
+    padding-left: 1rem;
+    color: aliceblue;
+    background-color: #36393e;
+    height: 2rem;
+    border-bottom: 2px solid #1e2124;
+}
+
+i {
+    color: #121314;
+}
+
+/* Fake Chatters */
+
+.pro-pic {
+    border: 2px solid #282b30;
+    border-radius: 33px;
+}
+
+.p1 {
+    background-image: url(https://wallpapers.com/images/hd/discord-profile-pictures-l0j970l3eqvl86qn.jpg);
+    background-size: cover;
+}
+
+.p2 {
+    background-image: url(images/monkey.jpg);
+    background-size: cover;
+}
+
+.p3 {
+    background-image: url(https://pyxis.nymag.com/v1/imgs/249/37b/116999ecb25ac04c42cdac0a91c578439f-29-angry-face.2x.rsquare.w190.jpg);
+    background-size: cover;
+}
+
+.p4 {
+    background-image: url(images/boolean.png);
+    background-size: cover;
+}
+
+.texts {
+    display: grid;
+    grid-template: repeat(auto-fit, 1fr) / 1fr;
+    overflow-y: auto;
+}
+
+.text {
+    display: grid;
+    grid-template: 55px / 55px 1fr;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.text p:nth-child(2) {
+    padding-left: 1rem;
+    color: #c5c4c4;
+}
+
+.one p:nth-child(1){
+    color: red;
+}
+
+.two p:nth-child(1) {
+    color: yellow;
+}
+
+.three p:nth-child(1) {
+    color: lightgreen;
+}
+
+.four p:nth-child(1) {
+    color: lightgreen;
+}
+
+.four a {
+    text-decoration: none;
+    background-color: rgb(64, 103, 233, 40%);
+    border-radius: 5px;
+}
+
+.message p{
+    padding-left: 0.5rem;
+}
+
+.message > p:nth-child(2) {
+    font-size: 1.2rem;
+}
+
+.message > p > span {
+    color: #ffffff70;
+    font-size: 0.75rem;
+}
+/* Chat Box */
+
+.input {
+    display: grid;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
+
+.input input {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #36393e;
+    border: 2px solid #1e2124;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+    display: grid;
+    grid-template: 
+    "servers container" 1fr/
+    6rem 1fr 
+    ;
+    }
+
+    .chat {
+        display: none;
+    }
+}
