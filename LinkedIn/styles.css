@@ -16,6 +16,11 @@ body {
       gap: 20px;
   }
 
+  div {
+    border: 1px dotted blue;
+  }
+  
+
   /*STYLES THE HEADER*/
 
   header {
@@ -229,6 +234,8 @@ body {
     display: grid;
     grid-template-rows: 35px 1fr 35px;
   }
+
+
   .right-menu > div:nth-of-type(3){
     display: grid;
     grid-template-rows: 35px 1fr 1.1fr 1.2fr;
