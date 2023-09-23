@@ -8,7 +8,7 @@ body {
     height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr 2fr 1.2fr 1fr;
-      grid-template-rows: 40px 1fr;
+      grid-template-rows: 50px 1fr;
       grid-template-areas: 
       "header header header header header "
       ". left-menu main right-menu .";
@@ -22,6 +22,7 @@ body {
     grid-area: header;
     background-color: white;
     display: grid;
+    height: 50px;
     grid-template-columns: 1fr 4.2fr 1fr; 
   }
 
@@ -41,7 +42,7 @@ body {
     display: grid;
     align-items: center;
   }
-  header .logo {
+  header > div:nth-of-type(2) > div:nth-of-type(1) .logo {
     display: grid;
     background-color: rgb(46, 46, 128);
     height: 30px;
@@ -51,22 +52,96 @@ body {
   header #nav-bar-right{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 5px;
+    grid-template-rows: 30px auto;
+    grid-template-areas: 
+      "logo1 logo2 logo3 logo4 logo5 logo6"
+      "name1 name2 name3 name4 name5 name6";
+    gap: 0 5px;
     justify-content: end;
     padding: 0 10px;
   }
 
+
+  .logo1 {
+    grid-area: logo1;
+  } 
+  .logo2 {
+    grid-area: logo2;
+  } 
+  .logo3 {
+    grid-area: logo3;
+  } 
+  .logo4 {
+    grid-area: logo4;
+  } 
+  .logo5 {
+    grid-area: logo5;
+  } 
+  .logo6 {
+    grid-area: logo6;
+  }
+
+  #name1 {
+  grid-area: name1;
+  }
+  #name2 {
+  grid-area: name2;
+  }
+  #name3 {
+  grid-area: name3;
+  }
+  #name4 {
+  grid-area: name4;
+  }
+  #name5 {
+  grid-area: name5;
+  }
+  #name6 {
+  grid-area: name6;
+  }
+
   header #nav-bar-left{
     display: grid;
+    height: 100%;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+    grid-template-rows: 30px auto;
+    grid-template-areas: 
+      "logo7 log8"
+      "name7 name8";
+      gap: 0 5px;
     border-left: rgb(220, 220, 220);
     padding: 0 10px;
   }
 
-  #nav-bar-left > .logo , 
-  #nav-bar-right > .logo {
-
+  #name7 {
+    grid-area: name7;
+  }
+  #name8 {
+    grid-area: name8;
+  }
+  
+  .logo7 {
+    grid-area: logo7;
+  } 
+  .logo8 {
+    grid-area: logo8;
+  }
+  
+  header #nav-bar-right > .logo,
+  header #nav-bar-left > .logo {
+    height: 15px;
+    width: 20px;
+    display: grid;
+    place-self: center;
+    background-color: rgb(220, 220, 220);
+  }
+  header #nav-bar-right > .logo-name,
+  header #nav-bar-left > .logo-name {
+    display: grid;
+    place-self: center;
+    height:fit-content;
+    font-size: 14px;
+    padding: 0;
   }
 
 
