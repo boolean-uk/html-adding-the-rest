@@ -3,15 +3,19 @@
     padding: 0;
     font-family: sans-serif;
 }
+:root {
+    --main-text-colour: color: rgb(66, 66, 66);
+}
 
+/* CONTAINER */
 .container {
     height: 100vh;
     width: 100vw;
     display: grid;
     grid-template: 
-    "logo        search-bar   other-links  other-links" 50px
-    "left-sidebar   main       settings    related-apps" minmax(500px, 1fr)
-    "social         main       settings    related-apps" 100px/
+    "logo        search-bar   other-links  other-links" 60px
+    "left-sidebar   main       settings    related-apps" 470px
+    "social         main       settings    related-apps" 1fr/
        250px         1fr        300px         100px;
 }
 
@@ -38,55 +42,202 @@
     }
 }
 
+/* HEADER */
+
+/* LOGO */
 .logo {
     grid-area: logo;
-    background-color: red;
-    border: solid 5px rgb(211, 1, 1);
-    padding: 10px;
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: 
+    "menu-icon gmail-icon";
+
+    place-items: start;
 }
 
+.menu-icon {
+    grid-area: menu-icon;
+    place-self: center;
+}
+
+.gmail-icon {
+    grid-area: gmail-icon;
+    font-size: 20px;
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-areas: 
+    "gmail-logo gmail-text";
+    gap: 10px;
+
+}
+
+.gmail-logo{
+    grid-area: gmail-logo;
+    justify-self: center;
+}
+
+.gmail-text {  
+    grid-area: gmail-text;
+    font-size: 23px;
+    align-self: center;
+    color: gray;
+
+}
+
+
+/* SEARCH BAR */
 .search-bar {
     grid-area: search-bar;
-    background-color: blue;
-    border: solid 5px rgb(0, 0, 218);
-    padding: 10px;    
+    background-color: rgba(128, 128, 128, 0.158);
+    border-radius: 8px;
+    padding: 10px;   
+    margin: 7px; 
+
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-areas: 
+    "search-icon search-mail";
+    place-items: start;
+    gap: 5px;
 }
 
+.search-icon {
+    grid-area: search-icon;
+    place-self: center;
+}
+
+.search-mail {
+    grid-area: search-mail;
+    align-self: center;
+    color: gray;
+}
+
+/* OTHER LINKS */
 .other-links {
     grid-area: other-links;
-    background-color: greenyellow;
-    border: solid 5px rgb(133, 204, 28);
     padding: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 30px);
+    grid-template-areas: 
+    "help-icon settings-icon google-apps profile-icon";
+    place-items: center;
+    justify-content: end;
+    gap: 10px;
 }
 
+.help-icon {
+    grid-area: help-icon;
+}
+
+.settings-icon {
+    grid-area: settings-icon;
+}
+
+.google-apps {
+    grid-area: google-apps;
+}
+
+.profile-icon {
+    grid-area: profile-icon;
+}
+
+
+/* LEFT SIDEBAR */
 .left-sidebar {
     grid-area: left-sidebar;
-    background-color: rgb(32, 15, 129);
-    border: solid 5px rgb(27, 7, 109);
-    padding: 10px;
 
-    grid-template-rows: auto;
+    display: grid;
+    grid-template-rows: 100px repeat(auto-fit, 37px);
+    justify-content: start;
+    
+    border-top: solid 1px rgba(128, 128, 128, 0.267);
+
 }
 
+/* COMPOSE */
 .compose {
-    color: rgb(240, 233, 233);
-    display: inline-block;
-    border: solid 1px black;
-    border-radius: 10px;
-    margin: 10px;
+    display: grid;
+    justify-items: start;
+    align-items: center;
     padding: 10px;
+}
+
+
+/* FOLDERS */
+.folders {
+    display: grid;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 14px;
+
+    width: 230px;;
+    
+    margin: 0;
+    padding-left: 35px;
+
+    color: var(--main-text-colour);
+}
+
+/* INDIVIDUAL FOLDER PRESETS */
+.folders:nth-of-type(n+1) {
+    display: grid;
+    grid-template-columns: 30px 1fr 20px;
+    gap: 3px;
+}
+
+.inbox {
+    background-color: rgba(255, 0, 0, 0.185);
+    border: none 2px;
+    border-radius: 10px 40px 40px 10px;
+
+}
+
+.inbox-logo {
+    mix-blend-mode:multiply;
+    filter: opacity(0.5) drop-shadow(0 0 0 rgb(223, 22, 22));
+}
+
+.inbox-text {
+    color: rgba(161, 0, 0, 0.945);
     font-weight: bold;
 }
 
-.folders {
-    color: white;
-    min-width: 60px;
-    border: solid 2px rgb(212, 203, 203);
-    border-radius: 3px;
-    margin: 10px;
-    padding: 10px;
+.inbox-email-count {
+    font-size: 14px;
+    color: rgba(161, 0, 0, 0.945);
 }
 
+/* FOLDER CHILD PRESETS */
+.left-sidebar .folders > img, p {
+    display: grid;
+    align-self: center;
+}
+
+.starred-icon {
+    margin: -2px;
+}
+
+.snoozed-icon {
+    filter: opacity(0.8);
+
+}
+
+.sent-icon {
+    filter: opacity(0.6);
+    margin: 2px;
+}
+
+.team-icon {
+    margin: 2px;
+}
+
+
+/* MAIN */
 .main {
     grid-area: main;
     background-color: orange;
@@ -97,6 +248,8 @@
 
     display: grid;
     grid-template-rows: auto;
+    border-top: solid 1px rgba(128, 128, 128, 0.267);
+
 }
 
 
@@ -106,21 +259,212 @@
 }
 
 
+/* SETTINGS */
 .settings {
     grid-area: settings;
     background-color: purple;
     border: solid 5px rgb(63, 0, 63);
     padding: 10px;
+    border: solid 1px rgba(128, 128, 128, 0.267);
+    border-bottom: none;
 }
 
+/* RELATED APPS */
 .related-apps {
     grid-area: related-apps;
     background-color: darkgreen;
     border: solid 5px rgb(0, 66, 0);
+    border-top: solid 1px rgba(128, 128, 128, 0.267);
+
 }
 
+/* SOCIAL */
 .social {
     grid-area: social;
-    background-color: forestgreen;
-    border: solid 5px rgb(21, 107, 21);
+
+    display: grid;
+    grid-template-rows: 120px 1fr 50px;
+    grid-template-areas: 
+    "meet"
+    "chat" 
+    "social-icons";
+}
+
+/* MEET */
+.meet {
+    grid-area: meet;
+    
+    display: grid;
+    grid-template-rows: 35px repeat(2, 35px);
+    gap: 5px;
+}
+
+.meet-sub-section {
+    display: grid;
+    grid-template-rows: 10px 20px;
+
+    border-top: solid 1px rgba(128, 128, 128, 0.267);
+    margin: 0 7px;
+}
+
+.curved-rectange {
+    display: grid;
+    justify-self: center;
+    padding-top: 5px;
+    filter: opacity(0.4);
+}
+
+.meet-subheading {
+    display: grid;
+    padding: 0 0 3px 16px;
+    font-size: 16px;
+}
+
+.start-meeting, .join-meeting {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 3px; 
+
+    color: var(--main-text-colour);
+
+
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 14px;
+    gap: 5px;
+    width: 230px;
+    margin: 0;
+    padding-left: 30px;
+}
+
+.start-meeting .join-meeting > img, p {
+    display: grid;
+    align-self: center;
+}
+
+/* CHAT */
+.chat {
+    grid-area: chat;
+
+    display: grid;
+    grid-template-rows: 40px repeat(4, 1fr);
+    margin: 0 7px;
+
+}
+
+.chat > div {
+    padding-left: 20px;
+    font-size: 13px;
+}
+
+.chat-subheading {
+    font-size: 14px;
+    padding: 10px 0 10px 16px;
+    font-size: 16px;
+
+    border-top: solid 1px rgba(128, 128, 128, 0.267);
+}
+
+.pinned-chat {
+    display: grid;
+
+    grid-template-columns: 50px 1fr 40px;
+    gap: 8px;
+    align-items: center;
+    box-sizing: border-box;
+
+    border-bottom: solid 1px rgba(128, 128, 128, 0.267);
+}
+
+.pinned-chat-image {
+    display: grid;
+    justify-self: center;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.profile-image {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.green-circle {
+    position: absolute;
+    top: 17px;
+    left: 19px;
+
+    font-size: 12px;
+}
+
+.pinned-chat-text {
+    display: grid;
+}
+
+.plus-icon {
+    display: grid;
+    justify-self: start;
+    margin-left: 5px;
+}
+
+.chat-messages {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 8px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+.profile-image-with-status {
+    display: grid;
+    place-self: center;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.chat-profile-image {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.profile-image-with-status .green-circle {
+        position: absolute;
+        top: 20px;
+        left: 21px;
+    
+        font-size: 12px;
+}
+
+.chat-profile-text {
+    display: grid;
+    display: inline;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    grid-area: social-icons;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    justify-content: center;
+
+    border-top: solid 1px rgba(128, 128, 128, 0.267);
+    margin: 0 7px;
+
+}
+
+.social-icons > img {
+    place-self: center;
+}
+
+
+.chat-icon {
+    display: grid;
+    background-color: rgba(128, 128, 128, 0.219);
+    place-content: center;
 }
