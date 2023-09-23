@@ -126,8 +126,24 @@
 .channels {
     background-color: green;
     padding: 10px;
+    display: grid;
+    grid-template-rows:repeat(3, 1fr );
 }
-
+.general{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    text-align: start;
+}
+.class{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    text-align: start;
+}
+.lobby{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    text-align: start;
+}
 .profile {
     background-color: darkgreen;
     padding: 10px;
@@ -136,17 +152,35 @@
 /* MAIN SECTION */
 .main {
     grid-area: main;
-
     display: grid;
     grid-template-rows: 1fr 50px;
+    gap: 50px;
 }
 
 .messages {
-    background-color: lightsalmon;
+    display: grid;
+    grid-template-rows: 1fr;
+    align-content: end;
+    
+
     padding: 10px;
 }
 
+.welcome-text{
+display: grid;
+align-content: end;
+justify-content: start;
+font-size: 20px;
+}
+.message-2{
+    font-size: 10px;
+    display: grid;
+    justify-content: start;
+}
+
 .type-bar {
-    background-color: orange;
+    display: grid;
+    border-top: 1px solid black;
+    justify-content: start;
     padding: 10px;
 }
