@@ -35,13 +35,21 @@ body {
  /*SEARCH BAR*/
   header > div:nth-of-type(2) > div:nth-of-type(1){
     display: grid;
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 40px 165px;
   }
 
-  header > div:nth-of-type(2) > div:nth-of-type(1) >  div:nth-of-type(2){
+  header > div:nth-of-type(2) > div:nth-of-type(1) > div{
     display: grid;
     align-items: center;
   }
+
+  header input,
+  header .logo {
+    height: 30px;
+    display: grid;
+    align-self: center;
+  }
+
   header > div:nth-of-type(2) > div:nth-of-type(1) .logo {
     display: grid;
     background-color: rgb(46, 46, 128);
@@ -49,7 +57,7 @@ body {
     width: 30px;
   }
  /*NAVIGATION BAR*/
-  header #nav-bar-right{
+  header #nav-bar-left{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 30px auto;
@@ -58,7 +66,7 @@ body {
       "name1 name2 name3 name4 name5 name6";
     gap: 0 5px;
     justify-content: end;
-    padding: 0 10px;
+    padding: 0 0 0 80px;
   }
 
 
@@ -100,7 +108,7 @@ body {
   grid-area: name6;
   }
 
-  header #nav-bar-left{
+  header #nav-bar-right{
     display: grid;
     height: 100%;
     grid-template-columns: repeat(2, 1fr);
@@ -129,8 +137,8 @@ body {
   
   header #nav-bar-right > .logo,
   header #nav-bar-left > .logo {
-    height: 15px;
-    width: 20px;
+    height: 20px;
+    width: 22px;
     display: grid;
     place-self: center;
     background-color: rgb(220, 220, 220);
