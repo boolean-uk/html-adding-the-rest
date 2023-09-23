@@ -155,11 +155,11 @@ body {
 
     /*STYLES THE LEFT-MENU*/
   
-  .left-menu{
+  .left-menu {
     grid-area: left-menu;
     background-color: rgb(220, 220, 220);
     display: grid;
-    grid-template-rows: 2fr 1fr 2fr;
+    grid-template-rows: 7fr 4fr 7fr;
     gap: 5px;
   }
   .left-menu > div{
@@ -167,8 +167,24 @@ body {
     background-color: white;
     border-radius: 10px;
   }
+  .left-menu > div:nth-of-type(1){
+    display: grid;
+    background-color: white;
+    grid-template-rows: 40px 2fr 1.2fr 40px;
+  }
+  .left-menu > div:nth-of-type(2){
+    display: grid;
+    background-color: white;
+    grid-template-rows: 20px 1fr 40px;
+  }
+  .left-menu  > div:nth-of-type(3){
+    display: grid;
+    background-color: white;
+    grid-template-rows: 150px 100px 40px;
+
+  }
      /*STYLES MAIN*/
-  .main{
+  .main {
     grid-area: main;
     background-color: rgb(220, 220, 220);
     display: grid;
@@ -180,6 +196,7 @@ body {
     background-color: white;
     border-radius: 10px;
   }
+
     /*STYLES THE RIGHT-MENU*/
   .right-menu{
     grid-area: right-menu;
