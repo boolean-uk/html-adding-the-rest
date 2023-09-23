@@ -1,0 +1,138 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+.grid {
+  height: 100vh;
+  display: grid;
+  grid-template: 
+  "header header header header" 6vh
+  "nav main settings icons" 94vh /
+  20vw 53vw 20vw 7vw;
+  /* grid-template-columns: 2fr 4fr 2fr 1fr;  */
+  /* grid-template-rows: 100px 300px 100px 50px */
+}
+
+/* outer boxes */
+.main, 
+.nav,
+.header,
+.settings, 
+.icons{
+  border: 3px solid #C64343;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+/* inner boxes */
+.header > div, 
+.nav > div,
+.main > div,
+.settings > div, 
+.icons > div {
+  border: 3px dashed #3EC5A3;
+  border-radius: 8px;
+  margin: 3px;
+  display: grid;
+  box-sizing: border-box;
+}
+
+/* inner-inner boxes */
+.main > .control > div,
+.settings > .density > div,
+.settings > .theme > div, 
+.settings > .inbox-type > div{
+  border: 3px dashed #F2DC23;
+  border-radius: 8px;
+  margin: 3px;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 6vw 14vw 1fr 5vw 3vw 3vw 3vw 13vw ;
+  grid-template-rows: 100%;
+}
+
+.nav {
+  display: grid;
+  grid-area: nav;
+  grid-template-rows: 6vh 1fr 20vh 20vh 7vh; 
+  text-align: center;
+
+}
+
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: 65px repeat(auto-fit, 50px);
+  overflow: auto;
+}
+
+.control {
+  display: grid;
+  grid-template-columns: 0.3fr 0.3fr 0.3fr 2fr 0.5fr 0.5fr; 
+}
+.control > div {
+  border: 3px solid black;
+  margin: 3px;
+  border-radius: 8px;
+  text-align: center;
+}
+  
+
+.settings {
+  grid-area: settings;
+  display: grid;
+  grid-template-rows: 80px 250px 150px 1fr;
+}
+
+.settings > .density {
+   display: grid;
+}
+
+.settings > .theme > div {
+  display: inline-block;
+}
+
+.settings > .theme {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+}
+.settings > .inbox-type {
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+
+.icons {
+  grid-area: icons;
+  grid-template-rows: 70px 70px  70px 70px 70px;
+  display: grid;
+ 
+}
+
+@media screen and (max-width: 1200px) {
+  .grid {
+    grid-template: 
+    "header header" 6vh
+    "nav main" 94vh /
+    25vw 75vw;
+  }
+  
+  .icons, .settings {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template: 
+    "header header" 6vh
+    "nav main" 94vh /
+    80px 1fr}
+}
