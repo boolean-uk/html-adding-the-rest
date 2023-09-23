@@ -1,65 +1,135 @@
-body{
-  font-family: sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: solid 2px;
-
+  border: dotted 1px black;
 }
 
-.main-container
-{
+.container {
   display: grid;
-  grid-template-columns: 100px 180px 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-      "server-menu rooms-list main";
-  height: 800px;
-  gap: 2px;
+  grid-template: "home server-name current-chat-group" 60px
+  "servers invite chat-log" 200px
+  "servers chat-groups chat-log" 1fr
+  "servers settings-bar text-box" 60px / 90px 225px 1fr;
+  height: 100vh;
+  width: 100vw;
 }
 
-.server-menu
-{
-  background-color: rgb(158, 154, 154);
+.home {
+  grid-area: home;
+  background-color: rgb(40, 40, 40);
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 100px 1fr;
-  gap: 2px;
+  place-items: center;
 }
 
-.boolean
-{
-  background-color: rgb(227, 225, 225);
-  display: grid;
-  border: solid 2px;
-  grid-template-rows: 50px 150px 1fr 25px;
-  gap: 2px;
-
+.server-icon {
+  height: 55px;
+  width: 55px;
+  border-radius: 30px;
 }
 
-.main
-{
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  gap: 2px;
-  border: solid 1px;
-
+.icon {
+  height: 35px;
+  width: 35px;
 }
 
-.top-row
-{
-  display: grid;
-  grid-template-columns: 1fr 40px 40px 40px 120px 40px 40px;
-  gap: 2px;
-  border: solid 1px;
+.spacer-icon {
+  height: 35px;
+  width: 35px;
+  border: none;
 }
-.main-row {
-  display: grid;
-  grid-template-rows: 1fr 50px;
-  gap: 2px;
-  border: solid 2px;
 
+.server-name {
+  grid-area: server-name;
+  background-color: rgb(64, 64, 64);
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  grid-template-columns: 70px 1fr 45px ;
+}
+
+.current-chat-group{
+  grid-area: current-chat-group;
+  background-color: rgb(80, 80, 80);
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  grid-template-columns: 75px 100px 1fr 75px 75px 75px 75px 75px 75px;
+}
+
+.servers {
+  grid-area: servers; 
+  background-color: rgb(40, 40, 40);
+  display: grid; 
+  place-items: center; 
+  padding-bottom: 450px;
+  gap: 30px;
+}
+
+.invite {
+  grid-area: invite;
+  background-color: rgb(64, 64, 64);
+}
+
+.chat-log {
+  grid-area: chat-log;
+  background-color: rgb(73, 69, 69);
+}
+
+.chat-groups {
+  grid-area: chat-groups;
+  background-color: black;
+  display: grid;
+}
+
+.chat-groups ul {
+  display: grid;
+  grid-auto-rows: repeat(auto-fit, 10px);
+  border: none;
+  gap: 20px;
+  background-color: gray;
+}
+
+.chat-groups li {
+  height: 20px;
+  list-style: none;
+}
+
+.settings-bar {
+  grid-area: settings-bar;
+  background-color: rgb(52, 52, 52);
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+}
+
+.profile-info {
+  height: 35px;
+  width: 70px;
+}
+
+.text-box {
+  grid-area: text-box;
+  background-color: rgb(86, 86, 86);
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  grid-template-columns: 40px 10fr 40px 40px 40px;
+}
+
+.message-box {
+  border: none;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    grid-template: "home server-name current-chat-group" 60px
+     "servers chat-log chat-log" 200px
+     "chat-groups chat-log chat-log" 1fr
+     "settings-bar text-box text-box" 60px / 150px 100px 1fr;
+}
+
+.invite {
+  display: none;
+}
 }
