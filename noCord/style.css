@@ -19,6 +19,7 @@ body,
   --server-menu-bg: #191919;
   --channel-bg: #292929;
   --channel-footer-bg: #252525;
+  --chat-bg: #383838;
 
   --icon-color: #666;
 
@@ -52,6 +53,12 @@ hr {
   border: 1px solid var(--header-bg);
 }
 
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
 .container {
   display: grid;
   grid-template-areas:
@@ -80,7 +87,7 @@ hr {
 
   grid-template:
     1fr / var(--channel-width) min-content 1fr repeat(4, min-content)
-    auto repeat(2, min-content);
+    auto repeat(2, min-content); /*TODO: part of the search bar mess? */
   justify-items: start;
 
   background-color: var(--header-bg);
@@ -118,9 +125,6 @@ hr {
 
 .search input {
   background-color: var(--server-menu-bg);
-  width: 100%;
-  border: none;
-  outline: none;
 }
 
 /*
@@ -368,7 +372,7 @@ than 180px and I don't know why :(
   padding: 0;
   gap: 0;
 
-  background-color: rgb(55, 55, 55);
+  background-color: var(--chat-bg);
   overflow-y: scroll;
 }
 
@@ -377,8 +381,14 @@ than 180px and I don't know why :(
   grid-auto-rows: min-content;
 
   align-content: start;
-
   overflow-y: scroll;
+  margin: 2px 4px 18px 0;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50px;
+  background-color: var(--header-bg);
 }
 
 .chat-start {
@@ -423,8 +433,9 @@ than 180px and I don't know why :(
     "sender-icon message-details ."
     "sender-icon message-body ."
     "sender-icon message-reaction .";
+  column-gap: 0;
 
-  grid-template-columns: 60px 1fr 40px;
+  grid-template-columns: 80px 1fr 40px;
   padding: 3px 0 3px 0;
 }
 
@@ -464,7 +475,34 @@ than 180px and I don't know why :(
   background-color: var(--channel-bg)
 }
 .chat-footer {
-  background-color: pink;
+  grid-template: 1fr / 1fr;
+  padding: 20px;
+}
+
+.input-box {
+  grid-template-columns: auto 1fr repeat(4, minmax(0, auto));
+  grid-template-rows: auto;
+
+  padding: 10px;
+  align-items: center;
+  
+  border-radius: 10px;
+
+  transform: translateY(-18px);
+  background-color: #444;
+}
+
+.input-box img {
+  height: 24px;
+}
+
+.input-box input {
+  background-color: inherit;
+}
+
+.input-box .emoji {
+  font-size: 20px;
+  filter: grayscale(100%);
 }
 
 .users {
