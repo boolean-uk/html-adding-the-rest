@@ -26,6 +26,11 @@ p {
 input {
     width: 96.5px;
 }
+
+h4 {
+    display: grid;
+    place-self: center;
+}
 /*SECTION BY SECTION:*/
 
 /*1 - STYLES THE HEADER*/
@@ -46,6 +51,7 @@ header > div:nth-of-type(1){
     justify-content: center;
     align-content: center;
     grid-template:"potato";
+    padding: 10px;
 }
 header > div:nth-of-type(1) > div {
    display: grid;
@@ -61,7 +67,7 @@ header > div:nth-of-type(2) {
     grid-template-areas: "L R";
     background-color: white;
     align-content: center;
-    padding-right: 20px;
+    padding: 0 20px 0 20px;
 }
 
 header > div:nth-of-type(2) > div:nth-of-type(1){
@@ -108,6 +114,7 @@ header > div:nth-of-type(2) > div:nth-of-type(2) > div {
     grid-area: channels;
     display: grid;
     grid-template-rows: repeat(5, 3fr) 1fr;
+    padding: 5px;
 } 
 
 .channels > div:last-of-type {
@@ -115,7 +122,20 @@ header > div:nth-of-type(2) > div:nth-of-type(2) > div {
 }
 
 .channels > div > div{
-    margin: 10px 0;
+    margin: 5px 0;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 40px 1fr repeat(3, 30px);
+}
+.profile > div > h4{
+ place-self: center;
+}
+
+.profile > div:first-of-type {
+    border-radius: 40px;
+    background-color: aquamarine;
 }
 /*4 - STYLES THE MAIN PART WHERE THE SELECTED CHANNEL'S CONTENT IS DISPLAYED*/
 .main {
