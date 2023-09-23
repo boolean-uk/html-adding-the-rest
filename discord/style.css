@@ -305,3 +305,7 @@ than 180px and I don't know why :(
 
   background-color: rgb(42, 42, 42);
 }
+
+footer > div {
+  width: 100vw;
+}
