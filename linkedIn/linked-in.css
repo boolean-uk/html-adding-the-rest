@@ -59,7 +59,7 @@ html {
     "left-bar-top        lower-header     right-bar-top"    10rem
     "left-bar-middle     main             right-bar-middle" 20rem
     "left-bar-bottom     main             right-bar-bottom" 20rem /
-    20rem                1fr              20rem;
+    20%                1fr                20%;
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -154,7 +154,7 @@ html {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     padding: 1rem;
-    height: 200vh;
+    height: 100vh;
 }
 
 .right-bar-top {
