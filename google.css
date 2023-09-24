@@ -26,6 +26,13 @@
     font-weight: bold;
 }
 
+.search-bar {
+    border-radius: 10px;
+    margin: 6px;
+    margin-right: 20%;
+    border: grey solid 1px;
+}
+
 .left-menu {
     grid-area: left-menu;
 
