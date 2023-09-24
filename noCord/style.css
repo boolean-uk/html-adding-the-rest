@@ -505,6 +505,8 @@ than 180px and I don't know why :(
   filter: grayscale(100%);
 }
 
+/* ======== user list ======== */
+
 .users {
   grid-area: users;
 
