@@ -1,5 +1,9 @@
 * {
-    margin: 0px
+    margin: 0px;
+}
+
+body {
+    background-color: lightgray;
 }
 
 .main {
@@ -15,13 +19,19 @@
 
 .header {
     grid-area: header;
-    background-color: green;
+    background-color: white;
+    /* padding: 5px; */
+    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 50px 150px minmax(50px, 1fr) minmax(200px, 700px) 1fr;
+    grid-template-rows: 1fr;
+
 }
 
 .left-container {
     display: grid;
     grid-area: left-container;
-    background-color: brown;
+    background-color: white;
     grid-template-columns: 1fr;
     grid-template-rows: 250px 70px 1fr;
     gap: 10px
@@ -30,10 +40,11 @@
 .right-container {
     display: grid;
     grid-area: right-container;
-    background-color: orange;
+    background-color: white;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px
+    border-radius: 10px;
+    gap: 10px;
     
 }
 
@@ -42,7 +53,7 @@
     grid-area: main-content;
     background-color: pink;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: 100px 3px 1fr 1fr;
     gap: 10px
 }
 
@@ -50,4 +61,59 @@
     justify-items: center;
     border: solid;
     border-width: 1px;
+}
+
+nav {
+    /* background-color: white; */
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 4px;
+    place-items: center;
+}
+
+nav > p {
+    display: inline-block;
+    color: gray;
+}
+
+.search {
+    background-color: aliceblue;
+    color:grey;
+    border-radius: 5px;
+    margin: 5px 0px;
+    padding: 10px 0px 0px 10px;
+}
+
+.icon {
+    background-color: blue;
+    margin: 5px 0px;
+    border-radius: 5px;
+}
+
+.account > div {
+    padding: 10px;
+}
+
+.name {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+.grey {
+    color: grey;
+}
+
+.news, .courses, .add {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    padding: 10px;
+    gap: 5px;
+    border: grey solid 1px;
+    border-radius: 10px;
+}
+
+.news > div, .courses > div, .add > div {
+    border: 1px solid black;
 }
