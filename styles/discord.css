@@ -31,13 +31,13 @@
 .sidebar__item {
     width: 48px;
     height: 48px;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #313338;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: .5s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .sidebar__item:hover {

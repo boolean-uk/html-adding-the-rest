@@ -2,108 +2,171 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
 }
 
 .container {
-    height: 100%;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: grid;
-    grid-template:
-        "header     header         header        header" 100px
-        "left-menu  main-content   right-menu    right-extra" 1fr/
-        200px 1fr 200px 150px;
+    grid-template: 64px 1fr / 256px 1fr;
+    background-color: #f6f8fc;
 }
 
+.btn {
+    background: none;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: rgba(60, 64, 67, .1);
+}
+
+.btn svg {
+    fill: #5f6368;
+}
+
+/* header */
 .header {
-    grid-area: header;
-    background-color: lightgray;
+    width: 100%;
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    align-items: center;
+    padding: 8px;
 }
 
-.left-menu {
-    border: solid 2px black;
-    display: grid;
-    grid-area: left-menu;
-    grid-template:
-        "compose" 1fr
-        "meet" 150px
-        "chat" 1fr/
-        200px;
+.header__logo {
+    min-width: 238px;
+    height: 48px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.compose {
-    border-bottom: solid 2px black;
+.menu__btn {
+    margin: 0 4px;
 }
 
-.meet {
-    border-bottom: solid 2px black;
+.header__searchbar {
+    position: relative;
+    padding: 0 30px 0 10px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    height: 48px;
 }
 
-.chat {
-    border-bottom: solid 2px black;
+.header__searchbar-wrap {
+    position: relative;
+    background-color: #eaf1fb;
+    border-radius: 24px;
+    min-height: 48px;
+    max-width: 720px;
+    width: 720px;
+    display: flex;
+    align-items: center;
 }
 
-.main-content {
-    grid-area: main-content;
-    border: solid 2px black;
+.header__searchbar-wrap:has(.header__searchbar-input:focus) {
+    background-color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 1px 0 rgba(65, 69, 73, .3), 0 1px 3px 1px rgba(65, 69, 73, .15);
 }
 
-.main-content>div {
-    border: solid 2px black;
-    text-align: center;
+.header__searchbar-btn {
+    margin: 0 6px;
 }
 
-.right-menu {
-    border: solid 2px black;
-    display: grid;
-    grid-area: right-menu;
-    grid-template:
-        "quick-settings" 200px
-        "density" 300px
-        "theme" 150px
-        "index-type" 1fr/
-        200px;
+.header__searchbar-btn:first-child {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 0;
 }
 
-.quick-settings {
-    border-bottom: solid 2px black;
+.header__searchbar-btn:last-child {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
 }
 
-.density {
-    border-bottom: solid 2px black;
+.header__searchbar-input {
+    margin: 0 96px 0 44px;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    font-size: 16px;
+    color: #000;
+    border: none;
+    background: none;
 }
 
-.theme {
-    border-bottom: solid 2px black;
+.header__searchbar-input::placeholder {
+    font-size: 16px;
 }
 
-.index-type {
-    border-bottom: solid 2px black;
+.header__searchbarButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
 }
 
-.right-extra {
-    grid-area: right-extra;
-    border-top: solid 2px black;
-    border-bottom: solid 4px black;
+.header__searchbarButtons-btn:nth-child(1) {
+    width: 40px;
+    height: 40px;
+}
+
+.header__searchbarButtons-btn:nth-child(2) {
+    width: 40px;
+    height: 40px;
+}
+
+.header__buttons {
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.header__buttons-btn:nth-child(1) {
+    width: 40px;
+    height: 40px;
+}
+
+.header__buttons-btn:nth-child(2) {
+    width: 40px;
+    height: 40px;
+}
+
+.header__buttons-btn:nth-child(2) img {
+    border-radius: 50%;
+}
+
+/* sidebar */
+.sidebar {
+    grid-area: 2 / 1 / -1 / 2;
 }
 
 
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template:
-            "header     header         header        header" 100px
-            "left-menu  main-content   right-menu    right-extra" 1fr/
-            0 1fr 0 0;
-    }
 
-    .right-menu,
-    .quick-settings,
-    .compose,
-    .meet,
-    .chat,
-    .density,
-    .theme,
-    .index-type,
-    .right-extra {
-        display: none;
-    }
+
+/* content */
+.content {
+    grid-area: 2 / 2 / -1 / -1;
 }
