@@ -50,7 +50,7 @@ body {
   grid-template-areas:
     "header"
     "main";
-  grid-template-rows: 75px 1fr;
+  grid-template-rows: 60px 1fr;
   grid-template-columns: 1fr;
 
   gap: 20px;
@@ -62,26 +62,33 @@ body {
 header {
   grid-area: header;
 
-  grid-template-columns: 1fr auto;
-
+  grid-template-areas: ". header-container .";
+  grid-template-columns: 1fr 1300px 1fr;
+  
   background-color: white;
-  background-color: #500;
+}
+
+.header-container {
+  grid-area: header-container;
+  grid-template-columns: minmax(min-content, 1fr) auto;
 }
 
 .search {
-  grid-template: 60px / 60px 1fr;
+  grid-template: 50px / 60px 240px;
 }
 
 .nav {
-  grid-template: 60px / repeat(8, 100px);
+  grid-template: 50px / repeat(8, 100px);
 }
+
+/* ======== main ======== */
 
 main {
   grid-area: main;
 
   display: grid;
   grid-template-areas: ". left centre right .";
-  grid-template-columns: 1fr 250px 3fr 250px 1fr;
+  grid-template-columns: 1fr 300px 650px 350px 1fr;
   grid-template-rows: 1fr;
 
   gap: 20px;
