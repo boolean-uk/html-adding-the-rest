@@ -272,7 +272,6 @@ than 180px and I don't know why :(
 .side-menu .menu-group,
 .side-menu li.box {
   grid-template: 1fr / auto 1fr;
-  align-items: ;
 }
 
 .side-menu .group-list {
@@ -379,6 +378,23 @@ than 180px and I don't know why :(
   padding: 6px;
 }
 
+#check-teachers ~ ol li div{
+  color: #4e7;
+}
+
+#check-student ~ ol li div{
+  color: #54e;
+}
+
+#check-online ~ ol li div{
+  color: #888;
+}
+
+#check-offline ~ ol li div,
+#check-offline ~ ol li{
+  color: #e5a;
+  opacity: 50%;
+}
 /* ======== chat area ======== */
 
 .chat-area {
@@ -567,4 +583,8 @@ footer > div {
 
 .side-menu:hover::-webkit-scrollbar {
   display: block;
+}
+
+#check-offline ~ ol > li:hover {
+  opacity: 100%;
 }
