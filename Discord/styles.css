@@ -119,6 +119,34 @@ header > div:nth-of-type(2) > div:nth-of-type(2) > div {
     grid-template-rows: repeat(5, 3fr) 1fr;
 } 
 
+/*add friends*/
+.channels > div:first-of-type {
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+}
+.close {
+    display: grid;
+    justify-self: end;
+}
+
+.invites {
+    grid-template-rows: 20px 30px 15px 15px 1fr;
+}
+
+.invites-contents {
+    padding: 4px;
+}
+
+.channels .center {   
+    display: grid;
+    justify-self: center;
+}
+
+.invite-button button {
+    background-color: rgb(56, 116, 147);
+    color: white;
+}
+/*channels*/
 .channels > div:last-of-type {
     background-color: rgb(230, 230, 230);
 }
