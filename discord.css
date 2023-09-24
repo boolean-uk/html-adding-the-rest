@@ -35,7 +35,7 @@ img {
 
 .leftlogos {
     border: dotted 2px black;
-    border-radius: 70%;
+    border-radius: 50%;
     display: grid;
     place-items: center;
 
