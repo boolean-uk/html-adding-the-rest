@@ -618,10 +618,12 @@ body {
     .important-first-cont {
         grid-area:important-first-cont ;
         border: 1px dashed black;
+
+       
     }
 
     .unread-first-cont {
-        grid-area:unread-first-cont ;
+        grid-area:unread-first-cont;
         border: 1px dashed black;
     }
 
