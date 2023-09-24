@@ -234,7 +234,7 @@ body {
         grid-template: "filter-box refresh three-dots page-num back forward"
          ;
          grid-template-columns: 
-         50px 30px 30px 400px 30px 30px;
+         50px 30px 30px 1fr 30px 30px;
          padding: 10px;
          gap: 5px;
     }
@@ -297,7 +297,7 @@ body {
         "email-container17"
         ;
 
-        grid-template-rows: repeat(17, auto);
+        grid-template-rows: repeat(auto);
         padding: 10px;
         gap: 5px;
     }
@@ -305,9 +305,76 @@ body {
     .email-container1 {
         grid-area: email-container1;
         border: 1px dashed black;
+
+        display: grid;
+        grid-template: "box star name  detail   time";
+        grid-template-columns: 50px 50px 200px 1fr 150px;
+        padding: 10px;
+         gap: 5px;
+   
+
     }
+
+    .box {
+        grid-area: box;
+        border: 1px dashed black;
+    }
+
+    .star {
+        grid-area: star;
+        border: 1px dashed black;
+    }
+
+    .name {
+        grid-area: name;
+        border: 1px dashed black;
+    }
+
+    .detail {
+        grid-area: detail;
+        border: 1px dashed black;
+    }
+
+    .time {
+        grid-area: time;
+        border: 1px dashed black;
+    }
+
+
     .email-container2 {
         grid-area: email-container2;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: "box2 star2 name2  detail2   time2";
+        grid-template-columns: 50px 50px 200px 1fr 150px;
+        padding: 10px;
+         gap: 5px;
+        
+    }
+
+    .box2 {
+        grid-area: box2;
+        border: 1px dashed black;
+    }
+
+    .star2 {
+        grid-area: star2;
+        border: 1px dashed black;
+    }
+
+    .name2 {
+        grid-area: name2;
+        border: 1px dashed black;
+    }
+
+    .detail2 {
+        grid-area: detail2;
+        border: 1px dashed black;
+    }
+
+    .time2 {
+        grid-area: time2;
         border: 1px dashed black;
     }
 
@@ -381,7 +448,183 @@ body {
         grid-area: right-bar;
         background-color: lightblue;
         border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        "quick-settings"
+        "see-all-settings"
+        "density"
+        "theme"
+        "inbox-type"
+    
+        ;
+        grid-template-rows: 
+      50px 50px  300px 300px 300px
+        
+        ;
+        padding: 10px;
+        gap: 5px;
     }
+
+
+    .quick-settings {
+        grid-area: quick-settings;
+        border: 1px dashed black;
+    }
+
+
+    .see-all-settings {
+        grid-area: see-all-settings;
+        border: 1px dashed black;
+    }
+
+    .density {
+        grid-area: density;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        
+        "density-text"
+        "default"
+        "comfortable"
+        "compact";
+
+        grid-template-rows: 40px 1fr 1fr 1fr;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .density-text {
+        grid-area: density-text;
+        border: 1px dashed black;
+    }
+
+
+    .default {
+        grid-area: default;
+        border: 1px dashed black;
+    }
+
+    .comfortable{
+        grid-area: comfortable;
+        border: 1px dashed black;
+    }
+
+    .compact{
+        grid-area: compact;
+        border: 1px dashed black;
+    }
+    
+    .theme {
+        grid-area: theme;
+        border: 1px dashed black;
+
+     display: grid;
+     grid-template:
+      "theme-text"
+      "pictures"
+     ;
+     grid-template-rows: 40px 1fr;
+     padding: 10px;
+     gap: 5px;
+    }
+
+
+    .theme-text {
+        grid-area: theme-text;
+        border: 1px dashed black;
+    }
+
+    .pictures {
+        grid-area: pictures;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        "pic1 pic2 pic3 pic4"
+        ;
+        grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+       
+        padding: 10px;
+        gap: 5px;
+    }
+
+   
+    .pic1 {
+        grid-area: pic1;
+        border: 1px dashed black;
+    }
+    .pic2 {
+        grid-area: pic2;
+        border: 1px dashed black;
+    }
+    .pic3 {
+        grid-area: pic3;
+        border: 1px dashed black;
+    }
+
+    .pic4 {
+        grid-area: pic4;
+        border: 1px dashed black;
+    }
+
+
+    .inbox-type {
+        grid-area: inbox-type;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template:
+        "inbox-type-text"
+        "default-container"
+        "important-first-cont"
+        "unread-first-cont";
+
+        grid-template-rows: 
+        40px 1fr 1fr 1fr;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .inbox-type-text {
+        grid-area:inbox-type-text ;
+        border: 1px dashed black;
+    }
+
+    .default-container {
+        grid-area:default-container ;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: "bullet default-text";
+        grid-template-columns:50px 1fr ;
+
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .bullet {
+        grid-area: bullet;
+        border: 1px dashed black;
+    }
+
+    .default-text {
+        grid-area: default-text;
+        border: 1px dashed black;
+    }
+
+
+    .important-first-cont {
+        grid-area:important-first-cont ;
+        border: 1px dashed black;
+    }
+
+    .unread-first-cont {
+        grid-area:unread-first-cont ;
+        border: 1px dashed black;
+    }
+
 
      /* icon-bar */
 
