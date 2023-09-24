@@ -418,10 +418,10 @@ than 180px and I don't know why :(
 
   gap: 0;
   padding-bottom: 12px;
+  margin-right: 4px;
 
   align-content: start;
   overflow-y: scroll;
-  margin: 2px 4px 0 0;
 
   background-color: var(--chat-bg);
 }
@@ -433,7 +433,8 @@ than 180px and I don't know why :(
 
 .chat-container::-webkit-scrollbar-track {
   border-radius: 50px;
-  margin-bottom: 12px;
+  margin: 2px 0 18px 0;
+
   background-color: var(--header-bg);
 }
 
