@@ -31,8 +31,17 @@
 .sidebar__item {
     width: 48px;
     height: 48px;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: #313338;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.sidebar__item:hover {
+    border-radius: 15px;
 }
 
 .sidebar__item:not(:last-child) {
@@ -62,6 +71,14 @@
     width: 100%;
     background-color: #2b2d31;
     border-bottom: 2px solid #1f2023;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.channelSidebar__title svg {
+    transform: rotate(90deg);
+    cursor: pointer;
 }
 
 .channelSidebar__title-text {
@@ -73,10 +90,104 @@
 
 .channelSidebar__content {
     background-color: #2b2d31;
+    padding: 12px 8px;
+}
+
+.channelSidebar__listblock {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.channelSidebar__listblock-title {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.channelSidebar__listblock-title:hover h2 {
+    color: #fff;
+}
+
+.channelSidebar__listblock-title h2 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #868e95;
+}
+
+.channelSidebar__list-item {
+    margin-bottom: 1px;
+    width: 100%;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.channelSidebar__list-item:hover {
+    background-color: #404249;
+}
+
+.channelSidebar__list-item svg {
+    margin-right: 5px;
+}
+
+.channelSidebar__list-item a {
+    font-size: 16px;
+    color: #fff;
 }
 
 .channelSidebar__user {
     background-color: #232428;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.channelSidebar__user-left {
+    display: flex;
+}
+
+.channelSidebar__user-photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-image: url(https://cdn.discordapp.com/avatars/513353362914410536/d85e50c85c6ce824e03c29c237a94782.webp?size=40);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 5px;
+}
+
+.channelSidebar__user-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.channelSidebar__user-title h3 {
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.channelSidebar__user-title p {
+    font-size: 12px;
+    color: #868e95;
+}
+
+.channelSidebar__user-buttons {
+    width: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.channelSidebar__user-buttons svg {
+    cursor: pointer;
 }
 
 
@@ -91,16 +202,71 @@
 }
 
 .content__header {
+    padding: 8px 15px;
     background-color: #313338;
     border-bottom: 2px solid #1f2023;
     color: grey;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
+.content__header-title {
+    display: flex;
+    align-items: center;
+}
+
+.content__header-title svg {
+    margin-right: 10px;
+}
+
+.content__header-title h2 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.content__header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.content__header-buttons svg {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.content__searchbar {
+    width: 144px;
+    height: 24px;
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e1f22;
+    margin-left: 15px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.content__searchbar svg {
+    margin: 0;
+}
+
+.content__searchbar input {
+    width: 100px;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+.content__searchbar input::placeholder {
+    color: #949ba4;
+}
+
+
 .content__content {
-    padding: 20px 30px;
+    padding: 16px;
     min-height: 0;
     overflow-y: auto;
     background-color: #313338;
@@ -109,21 +275,144 @@
     flex-direction: column;
 }
 
+.contentWelcome {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentWelcome__svg {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #41434a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.contentWelcome__title {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.contentWelcome__subtitle {
+    font-size: 16px;
+    color: #B5BAC1;
+}
+
 .content__content::-webkit-scrollbar {
     display: none;
 }
 
-.content__content p {
-    margin-bottom: 10px;
+.content__message {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    padding-right: 40%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    border-top: 1px solid #3f4147;
 }
 
+.content__message-photo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 100%;
+    background-image: url(https://cdn.discordapp.com/avatars/513353362914410536/d85e50c85c6ce824e03c29c237a94782.webp?size=40);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 15px;
+}
+
+.content__message-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__message-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.content__message-title h3 {
+    font-size: 16px;
+    color: #00de6b;
+    margin-right: 5px;
+}
+
+.content__message-title p {
+    font-size: 0.75rem;
+    color: #949b8c;
+}
+
+.content__message-text {
+    color: #dbdbdc;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
 .content__input {
-    background-color: #383a40;
-    color: grey;
+    background-color: #313338;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 16px;
 }
+
+.content__inputWrap {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #383a40;
+    padding: 11px 16px;
+    display: grid;
+    grid-template-columns: 24px 1fr 154px;
+    grid-gap: 11px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.content__input-input {
+    background: none;
+    border: none;
+    color: #f6f6f6;
+    font-size: 16px;
+}
+
+.content__input-input::placeholder {
+    color: #6c6e77;
+}
+
+.content__input-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    max-width: 115.5px;
+    justify-self: flex-end;
+}
+
+.content__input-buttons svg {
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 768px) {
     .container {
