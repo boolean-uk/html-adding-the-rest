@@ -59,11 +59,43 @@ background-color: antiquewhite;
 .recent{
   display: block;
   padding: 10px;
-  border: dotted 2px black;
+  border: solid 2px black;
+  border-radius: 10px;
   margin-bottom: 20px;
+}
+
+.profile{
+  padding: 70px 30px;
+}
+
+.boolean,
+.recent{
+  padding: 60px ;
+}
+
+
+.main span{
+  display: grid;
+  grid-template-rows: 35px;
+  border: 2px solid black;
+  border-radius: 10px;
+justify-content: center;
+margin: 10px 40px 15px;
+padding: 40px;
 }
 
 .right-bar{
   grid-area: right-bar;
   background-color: burlywood;
   }
+
+  .right-bar span{
+    display: grid;
+    grid-template-columns: 80px;
+    margin: 10px 40px 15px ;
+    padding: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+
+
