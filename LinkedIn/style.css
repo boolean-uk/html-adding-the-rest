@@ -10,12 +10,12 @@
 .container {
     height: 100vh;
     width: 100vw;
-    padding: 10px;
+    /* margin: 5px; */
     display: grid;
     grid-template: 
-    "header     header    header" 50px
-    "left-menu  main   right-menu" 1fr /
-      250px       1fr       300px;
+    "header         header     header      header       header" 50px
+    "blank-left   left-menu     main     right-menu    blank-right" 1fr /
+      1fr            200px      500px        300px           1fr;
     
     gap: 10px;
     background-color: rgba(128, 128, 128, 0.116);
@@ -27,14 +27,17 @@
     grid-area: header;
 
     display: grid;
-    width: 100%;
-    grid-template-columns: 300px 1fr;
-    gap: 5px;
+    grid-template-columns: 1fr 400px 600px 1fr;
+    grid-template-areas: ".  search  icons .";
+    gap: 20px;
+    justify-content: start;
+
 
     background-color: white;
 }
 
 .search {
+    grid-area: search;
     padding: 5px;
     border: dashed 1px black;
     border-radius: 3px;
@@ -57,10 +60,12 @@
    justify-items: start;
    align-items: center;
    padding-left: 20px;
+   width: 200px;
    font-size: 14px;
 }
 
 .icons {
+    grid-area: icons;
     padding: 5px;
     text-align: right;
     border: dashed 1px black;
@@ -90,6 +95,7 @@
     display: grid;
     grid-template-rows: 250px 150px 1fr;
     gap: 5px;
+
 }
 
 .profile {
@@ -106,6 +112,25 @@
 
 .profile > div {
     border: dashed 1px red;
+}
+
+
+.user {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    padding: 5px;
+}
+
+.user > div {
+    border: dashed 1px green;
+}
+
+.user-image {
+    display: grid;
+    border-radius: 50px;
+    place-self: center;
+    width: 50px;
+    height: 50px;
 }
 
 .boolean {
@@ -205,6 +230,13 @@
     border: dashed 1px black;
     border-radius: 5px;
 
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 40px;
+    gap: 5px;
+}
+
+.feed > div {
+    border: dashed 1px red;
 }
 
 /* RIGHT MENU */
