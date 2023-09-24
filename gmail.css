@@ -5,7 +5,7 @@
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 260px 1fr minmax(300px, 300px) 55px;
+    grid-template-columns: 260px 6fr 1fr 55px;
     grid-template-rows: 70px 1fr;
     grid-template-areas:
     "logo search icons icons"
