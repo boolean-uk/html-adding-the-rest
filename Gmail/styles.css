@@ -19,7 +19,7 @@ body {
     .container {
         display: grid;
         grid-template:
-        "header     header     header       header"     70px
+        "header     header     header       header"     150px
         "left-bar   main       right-bar   icon-bar"   1500px/
         300px       1fr         400px         100px
         ;
@@ -93,6 +93,110 @@ body {
     grid-area: left-container1;
     border: 1px dashed black;
 
+    display: grid;
+    grid-template: 
+    "compose-container"
+    "inboxblah-container";
+    grid-template-rows: 
+    100px 1fr;
+    padding: 10px;
+    gap: 5px;
+
+
+}
+
+.compose-container {
+    grid-area: compose-container;
+    border: 1px dashed black;
+}
+
+.compose {
+    width: 60%; 
+    height: 50%;
+    border-radius: 30%;
+    justify-content: center;
+}
+
+.inboxblah-container {
+    grid-area: inboxblah-container;
+    border: 1px dashed black;
+
+    display: grid;
+    grid-template-areas: 
+    "inbox"
+    "starred"
+    "snoozed"
+    "important"
+    "sent"
+    "team"
+    "new-rfps"
+    "projects"
+    "personal"
+    "more"
+    ;
+    grid-template-rows: auto,repeat(9,1fr);
+    padding: 10px;
+    gap: 5px;
+}
+
+.inbox {
+    grid-area: inbox;
+    border: 1px dashed black;
+    
+}
+
+.starred {
+    grid-area: starred;
+    border: 1px dashed black;
+    
+}
+
+.snoozed {
+    grid-area: snoozed;
+    border: 1px dashed black;
+    
+}
+
+.important {
+    grid-area: important;
+    border: 1px dashed black;
+    
+}
+
+.sent {
+    grid-area: sent;
+    border: 1px dashed black;
+    
+}
+
+.team {
+    grid-area: team;
+    border: 1px dashed black;
+    
+}
+
+.new-rfps {
+    grid-area: new-rfps;
+    border: 1px dashed black;
+    
+}
+
+.projects {
+    grid-area: projects;
+    border: 1px dashed black;
+    
+}
+
+.personal {
+    grid-area: personal;
+    border: 1px dashed black;
+    
+}
+
+.more {
+    grid-area: more;
+    border: 1px dashed black;
+    
 }
 
 .left-container2 {
@@ -112,7 +216,164 @@ body {
         grid-area: main;
         background-color: lightblue;
         border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        "filter-container"
+        "main-email-container";
+        grid-template-rows: 50px 1fr;
+        padding: 10px;
+        gap: 5px;
     }
+
+    .filter-container {
+        grid-area: filter-container;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: "filter-box refresh three-dots page-num back forward"
+         ;
+         grid-template-columns: 
+         50px 30px 30px 400px 30px 30px;
+         padding: 10px;
+         gap: 5px;
+    }
+
+    .filter-box {
+        grid-area: filter-box;
+        border: 1px dashed black;
+        /* gap: 30px; */
+        
+    }
+
+    .refresh {
+        grid-area: refresh;
+        border: 1px dashed black;
+        
+    }
+
+    .three-dots {
+        grid-area: three-dots;
+        border: 1px dashed black;
+    }
+
+    .page-num {
+        grid-area: page-num ;
+        border: 1px dashed black;
+    }
+
+    .back {
+        grid-area: back ;
+        border: 1px dashed black;
+    }
+
+    .forward {
+        grid-area: forward ;
+        border: 1px dashed black;
+    }
+
+    .main-email-container {
+        grid-area: main-email-container;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        "email-container1"
+        "email-container2"
+        "email-container3"
+        "email-container4"
+        "email-container5"
+        "email-container6"
+        "email-container7"
+        "email-container8"
+        "email-container9"
+        "email-container10"
+        "email-container11"
+        "email-container12"
+        "email-container13"
+        "email-container14"
+        "email-container15"
+        "email-container16"
+        "email-container17"
+        ;
+
+        grid-template-rows: repeat(17, auto);
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .email-container1 {
+        grid-area: email-container1;
+        border: 1px dashed black;
+    }
+    .email-container2 {
+        grid-area: email-container2;
+        border: 1px dashed black;
+    }
+
+    .email-container3 {
+        grid-area: email-container3;
+        border: 1px dashed black;
+    }
+
+    .email-container4 {
+        grid-area: email-container4;
+        border: 1px dashed black;
+    }
+
+    .email-container5 {
+        grid-area: email-container5;
+        border: 1px dashed black;
+    }
+    .email-container6 {
+        grid-area: email-container6;
+        border: 1px dashed black;
+    }
+    .email-container7 {
+        grid-area: email-container7;
+        border: 1px dashed black;
+    }
+    .email-container8 {
+        grid-area: email-container8;
+        border: 1px dashed black;
+    }
+    .email-container9 {
+        grid-area: email-container9;
+        border: 1px dashed black;
+    }
+    .email-container10 {
+        grid-area: email-container10;
+        border: 1px dashed black;
+    }
+    .email-container11 {
+        grid-area: email-container11;
+        border: 1px dashed black;
+    }
+    .email-container12 {
+        grid-area: email-container12;
+        border: 1px dashed black;
+    }
+    .email-container13 {
+        grid-area: email-container13;
+        border: 1px dashed black;
+    }
+    .email-container14 {
+        grid-area: email-container14;
+        border: 1px dashed black;
+    }
+    .email-container15 {
+        grid-area: email-container15;
+        border: 1px dashed black;
+    }
+    .email-container16 {
+        grid-area: email-container16;
+        border: 1px dashed black;
+    }
+    .email-container17 {
+        grid-area: email-container17;
+        border: 1px dashed black;
+    }
+
 
 
     /* Right-bar */
