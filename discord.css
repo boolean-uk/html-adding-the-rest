@@ -14,8 +14,7 @@
 }
 
 div {
-    border: solid;
-    border-width: 1px;
+
 }
 
 .server-header {
@@ -49,14 +48,13 @@ div {
     display: grid;
     grid-area: main-content;
     background-color: pink;
+    padding-left: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
 }
 
 .menu {
     justify-items: center;
-    border: solid;
-    border-width: 1px;
 }
 
 .chat-footer {
