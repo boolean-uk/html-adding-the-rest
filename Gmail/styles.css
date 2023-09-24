@@ -16,73 +16,116 @@
     width: auto;
     min-width: 300px;
     height: 100vh;
+    gap: 2px;
+  }
+
+  .container > div {
+    border: 2px dotted blue;
   }
   
   .header {
     grid-area: header;
-    background-color: #ff00ff30;
     display: grid;
     grid-template-columns:auto repeat(6, 1fr);
+    gap: 2px;
     place-items: center;
     grid-gap: 3px;
     padding: 2px;
   }
+  .header > div {
+    border: 2px dotted green;
+  }
   .left-menu {
     grid-area: left-menu;
-    background-color: #0000ff30;
     display: grid;
     grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
     vertical-align: center;
     padding: 0 2px 0 2px;
+  }
+  .left-menu > div {
+    border: 2px dotted red;
   }
   .inboxes {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
+    gap: 2px;
+  } 
+  .inboxes > div {
+    border: 2px dotted green;
   }
   .labels {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
+    gap: 2px;
+  }
+  .labels > div {
+    border: 2px dotted green;
   }
   .meet {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
+    gap: 2px;
+  }
+  .meet > div {
+    border: 2px dotted green;
   }
   .chat {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .chat > div {
+    border: 2px dotted green;
   }
   .chat-shortcuts {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding-bottom: 8px;
+    gap: 2px;
+  }
+  .chat-shortcuts > div {
+    border: 2px dotted green;
   }
   
   .main {
     grid-area: main;
-    background-color: #ff000030;
     display: grid;
     grid-template-rows: repeat(15, 1fr);
     padding: 2px;
     min-width: 200px;
   }
+  .main > div {
+    border: 2px dotted red;
+  }
   .email {
     display: grid;
     grid-template-columns: 0.2fr 0.2fr 1fr 1fr 0.2fr 0.3fr;
   }
+  .email > div {
+    border: 2px dotted green;
+  }
   .settings {
     grid-area: settings;
-    background-color: #ffff0030;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     padding: 4px;
   }
+
+  .settings > div {
+    border: 2px dotted red;
+  }
+
   .right-menu {
     grid-area: right-menu;
-    background-color: #00ffff30;
     display: grid;
     grid-template-rows: 0.1fr 0.1fr 0.1fr 1fr;
     place-items: center;
     padding: 1px;
+  }
+
+  .right-menu > div {
+    border: 2px dotted red;
   }
   button {
     padding: 0;
