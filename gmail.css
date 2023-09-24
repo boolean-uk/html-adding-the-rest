@@ -50,20 +50,16 @@ grid-template:
 
 .header > .elements {
     display: grid;
-    gap:10px;
-    padding-right: 20px;
-    grid-template-columns: repeat(4, 50px);
-    padding-right: 40px;
-    justify-self: center;
+    padding-right: 30px;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: start;
     align-self: center;
 }
 
 .header > .elements > div:nth-child(4n) {
     color: red;
     display: grid;
-    gap: 10px;
-    justify-self: end;
-    align-self: center;
 }
 
 
@@ -179,5 +175,6 @@ border-top: solid 2px black;
     padding-left: 10px;
     grid-area: right-extra;
     border-top: solid 2px black;
-    border-bottom: solid 4px black;
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
 }
