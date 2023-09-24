@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template:
+    "left text-bar right" 115px
+    "left feed right" 100vh /
+    200px 500px 300px;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  background-color: grey;
+  width: 100vw;
+  height: 55px;
+  margin-bottom: 20px;
+  grid-template-columns: 220px 860px;
+  padding: 5px;
+  justify-content: center;
+}
+
+.format-left {
+  display: grid;
+  grid-template-columns: 50px 150px;
+}
+
+.format-right {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 1fr;
+  margin-left: 100px;
+}
+
+.linkedinIcon {
+  border: 2px dotted black;
+
+  margin: 2px 2px;
+}
+
+.search {
+  border: 2px dotted blue;
+  margin: 2px 2px;
+}
+
+.home {
+  border: 2px dotted green;
+  margin: 2px 2px;
+}
+
+.network {
+  border: 2px dotted orangered;
+  margin: 2px 2px;
+}
+
+.jobs {
+  border: 2px dotted yellow;
+  margin: 2px 2px;
+}
+
+.messages {
+  border: 2px dotted purple;
+  margin: 2px 2px;
+}
+
+.notification {
+  border: 2px dotted brown;
+  margin: 2px 2px;
+}
+
+.profile-picture {
+  border: 2px dotted white;
+  margin: 2px 2px;
+}
+
+.work {
+  border: 2px dotted lightblue;
+  margin: 2px 2px;
+}
+
+.post-a-job {
+  border: 2px dotted lightgreen;
+  margin: 2px 2px;
+}
+
+.left-bar {
+  display: grid;
+  grid-area: left;
+  /* background-color: antiquewhite; */
+
+  grid-template-rows: 400px 200px 200px;
+  grid-template-areas:
+    "profile"
+    "analytics"
+    "recent";
+  grid-gap: 20px;
+}
+
+.profile {
+  display: grid;
+  grid-area: profile;
+  background-color: blueviolet;
+  grid-template-rows: 200px 80px repeat(2, 1fr);
+}
+
+.photo {
+  border: 2px dotted white;
+  display: grid;
+  grid-template-rows: 50px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.picture {
+  display: grid;
+  border: 2px black dotted;
+  border-radius: 50%;
+  width: 50px;
+  font-size: 12px;
+  place-content: center;
+}
+
+.profile-name {
+  text-align: center;
+}
+
+.views {
+  border: 2px dotted black;
+  padding: 2px 0 0 3px;
+}
+
+.try-premium {
+  border: 2px dotted red;
+  padding: 8px 0 0 3px;
+}
+
+.my-items {
+  border: 2px dotted blue;
+  padding: 8px 0 0 3px;
+}
+
+
+.recent {
+  display: grid;
+  grid-area: recent;
+  background-color: aqua;
+
+  grid-template-rows: 1fr 40px 40px;
+}
+
+.groups{
+  border: 2px dotted black;
+}
+
+.Events{
+  border: 2px dotted brown;
+}
+
+.Hashtags{
+  border: 2px dotted blue;
+}
+
+.analytics {
+  grid-area: analytics;
+  background-color: aqua;
+  display: grid;
+  grid-template-rows: 1fr 40px 40px;
+}
+
+.symbol {
+  border: 2px dotted black;
+}
+.page-notification {
+  border: 2px dotted red;
+}
+.visitor-analytics {
+  border: 2px dotted blue;
+}
+
+.text-bar {
+  display: grid;
+  grid-area: text-bar;
+  background-color: gray;
+
+  grid-template-rows: 60px 50px;
+  grid-template-areas: "post";
+  gap: 5px;
+  
+}
+
+.entry{
+  display: grid;
+  border: 2px dotted green;
+  grid-template-columns: 50px 1fr;
+  gap: 5px;
+  padding: 5px;
+}
+
+.post-settings{
+  display: grid;
+  border: 2px dotted green;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 120px);
+  /* gap: 5px; */
+}
+
+.profile-image{
+  border-radius: 50%;
+  border: 2px dotted red;
+  margin: 1px 0;
+}
+
+.start-a-post{
+  border: 2px dotted red;
+}
+
+.foto{
+  border: 2px dotted red;
+  margin: 5px;
+}
+
+.video{
+  border: 2px dotted red;
+  margin: 5px;
+
+}
+
+.event{
+  border: 2px dotted red;
+  margin: 5px;
+
+}
+
+.write-article{
+  border: 2px dotted red;
+  margin: 5px;
+
+}
+
+.feed{
+  display: grid;
+  grid-area: feed;
+  background-color: lightgray;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  padding: 5px;
+  gap: 5px;
+  overflow-y: scroll;
+}
+
+.feed > p{
+  border: 2px dotted blue;
+
+}
+
+.right-bar {
+  display: grid;
+  grid-area: right;
+
+  grid-template-rows: 400px 200px 200px;
+  grid-template-areas:
+    "news"
+    "adv"
+    "settings";
+  grid-gap: 20px;
+}
+
+.linkedin-news {
+  display: grid;
+  grid-area: news;
+  background-color: black;
+  color: white;
+  grid-template-rows: repeat(5 60px);
+}
+
+.adv {
+  grid-area: adv;
+  background-color: yellow;
+}
+
+.settings{
+  grid-area: settings;
+  background-color: aqua;
+}
+
+.news{
+  border: 2px dotted white;
+  margin: 5px;
+}
+
