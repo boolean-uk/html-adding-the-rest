@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr 1.2fr 1fr;
+      grid-template-rows: 50px 1fr;
+      grid-template-areas: 
+      "header header header header header "
+      ". left-menu main right-menu .";
+      background-color: rgb(220, 220, 220);
+      gap: 20px;
+  }
+
+  
+
+  /*STYLES THE HEADER*/
+
+  header {
+    grid-area: header;
+    background-color: white;
+    display: grid;
+    height: 50px;
+    grid-template-columns: 1fr 4.2fr 1fr; 
+  }
+
+  header > div:nth-of-type(2) {
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 3.2fr 3.2fr 1fr;
+    align-content: center; 
+  }
+
+  header > div > div {
+    border: 1px dotted blue;
+  }
+  header > div > div > div, 
+  header > div > div > p {
+    border: 2px dotted red;
+  }
+ /*SEARCH BAR*/
+  header > div:nth-of-type(2) > div:nth-of-type(1){
+    display: grid;
+    grid-template-columns: 40px 165px;
+    border: 1px dotted blue;
+  }
+ 
+
+  header > div:nth-of-type(2) > div:nth-of-type(1) > div{
+    display: grid;
+    align-items: center;
+  }
+
+  header input,
+  header .logo {
+    height: 30px;
+    display: grid;
+    align-self: center;
+  }
+
+  header > div:nth-of-type(2) > div:nth-of-type(1) .logo {
+    display: grid;
+    background-color: rgb(46, 46, 128);
+    height: 30px;
+    width: 30px;
+  }
+ /*NAVIGATION BAR*/
+  header #nav-bar-left{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 30px auto;
+    grid-template-areas: 
+      "logo1 logo2 logo3 logo4 logo5 logo6"
+      "name1 name2 name3 name4 name5 name6";
+    gap: 0 5px;
+    justify-content: end;
+    padding: 0 0 0 80px;
+    border: 1px dotted blue;
+  }
+
+
+  .logo1 {
+    grid-area: logo1;
+  } 
+  .logo2 {
+    grid-area: logo2;
+  } 
+  .logo3 {
+    grid-area: logo3;
+  } 
+  .logo4 {
+    grid-area: logo4;
+  } 
+  .logo5 {
+    grid-area: logo5;
+  } 
+  .logo6 {
+    grid-area: logo6;
+  }
+
+  #name1 {
+  grid-area: name1;
+  }
+  #name2 {
+  grid-area: name2;
+  }
+  #name3 {
+  grid-area: name3;
+  }
+  #name4 {
+  grid-area: name4;
+  }
+  #name5 {
+  grid-area: name5;
+  }
+  #name6 {
+  grid-area: name6;
+  }
+
+  header #nav-bar-right{
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30px auto;
+    grid-template-areas: 
+      "logo7 log8"
+      "name7 name8";
+      gap: 0 5px;
+    border-left: rgb(220, 220, 220);
+    padding: 0 10px;
+    border: 1px dotted blue;
+  }
+
+  #name7 {
+    grid-area: name7;
+  }
+  #name8 {
+    grid-area: name8;
+  }
+  
+  .logo7 {
+    grid-area: logo7;
+  } 
+  .logo8 {
+    grid-area: logo8;
+  }
+  
+  header #nav-bar-right > .logo,
+  header #nav-bar-left > .logo {
+    height: 20px;
+    width: 22px;
+    display: grid;
+    place-self: center;
+    background-color: rgb(220, 220, 220);
+  }
+  header #nav-bar-right > .logo-name,
+  header #nav-bar-left > .logo-name {
+    display: grid;
+    place-self: center;
+    height:fit-content;
+    font-size: 14px;
+    padding: 0;
+  }
+
+
+
+    /*STYLES THE LEFT-MENU*/
+  
+  .left-menu {
+    grid-area: left-menu;
+    background-color: rgb(220, 220, 220);
+    display: grid;
+    grid-template-rows: 7fr 4fr 7fr;
+    gap: 5px;
+  }
+
+  .left-menu > div > div {
+    border: 1px dotted blue;
+  }
+  .left-menu > div {
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .left-menu > div:nth-of-type(1){
+    display: grid;
+    background-color: white;
+    grid-template-rows: 40px 2fr 1.2fr 40px;
+    gap: 5px;
+  }
+  .left-menu > div:nth-of-type(2){
+    display: grid;
+    background-color: white;
+    grid-template-rows: 20px 1fr 40px;
+    gap: 5px;
+  }
+  .left-menu  > div:nth-of-type(3){
+    display: grid;
+    background-color: white;
+    grid-template-rows: 150px 100px 40px;
+    gap: 5px;
+  }
+     /*STYLES MAIN*/
+  .main {
+    grid-area: main;
+    background-color: rgb(220, 220, 220);
+    display: grid;
+    grid-template-rows: 130px 1fr;
+    gap: 40px;
+  }
+  .main > div{
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .main > div:nth-of-type(1){
+    display: grid;
+    grid-template-rows: 60px 50px;
+    gap: 5px;
+  }
+
+  .main > div:nth-of-type(1) > div:nth-of-type(1){
+    display: grid;
+    grid-template-columns: 38.4px 1fr;
+    gap: 5px;
+    padding: 10px;
+  } 
+  .main > div > div > div {
+    border: 2px dotted red;
+    display: grid;
+  } 
+  .main > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1){
+    border-radius: 38.4px;
+  } 
+  .main > div:nth-of-type(1) > div:nth-of-type(2){
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 10px;
+  } 
+  
+
+  .main > div:nth-of-type(2){
+    display: grid;
+    grid-template-rows: 35px 120px 1fr 35px 40px;
+    padding: 10px;
+    gap: 5px;
+  }
+  .main > div > div {
+  border: 1px dotted blue;
+  }
+
+
+    /*STYLES THE RIGHT-MENU*/
+  .right-menu{
+    grid-area: right-menu;
+    background-color: rgb(220, 220, 220);
+    display: grid;
+    grid-template-rows: 3fr 2fr 3fr;
+    gap: 5px;
+  }
+  .right-menu > div{
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .right-menu > div:nth-of-type(1){
+    display: grid;
+    grid-template-rows: 35px 1fr 35px;
+  }
+  .right-menu > div:nth-of-type(2){
+    display: grid;
+    grid-template-rows: 35px 1fr 35px;
+  }
+
+
+  .right-menu > div:nth-of-type(3){
+    display: grid;
+    grid-template-rows: 35px 1fr 1.1fr 1.2fr;
+    gap: 5px;
+  }
+  .right-menu > div > div,
+  .right-menu > div > ul,
+  .right-menu > div > ol{
+    border: 1px dotted blue;
+    padding: 10px;
+  }
+
+  .right-menu > div:nth-of-type(1) ul, 
+  .right-menu > div:nth-of-type(2) ol{
+    padding-left: 10px;
+    list-style-position: inside;
+  }
+
+  .right-menu > div:nth-of-type(1) li, 
+  .right-menu > div:nth-of-type(2) li{
+    padding: 5px 0;
+    margin: 5px 0;
+    border: 2px dotted red;
+  }
+
