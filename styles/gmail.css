@@ -396,3 +396,68 @@
 .content__headerNavigation-arrow:not(:last-child) {
     margin-left: 20px;
 }
+
+.content__messages {
+    width: 100%;
+    height: 83vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 40px);
+}
+
+.content__messages::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content__messages::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+}
+
+.content__message {
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e1e7ee;
+    border-bottom: 1px solid #e1e7ee;
+    cursor: pointer;
+}
+
+.content__message:hover {
+    border: 1px solid #e1e7ee;
+    border-bottom: 2px solid #e1e7ee;
+}
+
+.content__message-btn {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+}
+
+.content__message-btn:nth-child(2) {
+    margin-right: 10px;
+}
+
+.content__message-title {
+    max-width: 168px;
+    padding-right: 32px;
+    font-size: .875rem;
+}
+
+.content__message-text {
+    font-size: .875rem;
+    padding-right: 10px;
+}
+
+.content__message-time {
+    position: absolute;
+    right: 0;
+    padding-right: 16px;
+    font-size: .75rem;
+}
