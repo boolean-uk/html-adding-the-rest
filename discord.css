@@ -1,0 +1,105 @@
+* {
+    margin: 0px
+}
+
+div {
+    color: rgb(219, 222, 225);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 72px 240px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+    "left-container server-header chat"
+    "left-container server-content right-container"
+    "left-container username right-container"
+}
+
+.server-header {
+    grid-area: server-header;
+    padding-left: 10px;
+    background-color: rgb(43, 45, 49);
+    border-bottom: solid;
+    border-color: rgb(30, 31, 34);
+    border-width: 1px;
+}
+
+.chat {
+    grid-area: chat;
+    background-color: rgb(49, 51, 56);
+    border-bottom: solid;
+    border-color: rgb(30, 31, 34);
+    border-width: 1px;
+}
+
+.left-container {
+    grid-area: left-container;
+    background-color: rgb(30, 31, 34);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 50px);
+    padding: 10px;
+    gap: 10px;
+   
+}
+
+.right-container {
+    grid-area: right-container;
+    display: grid;
+    padding: 20px;
+    background-color: rgb(49, 51, 56);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 50px;
+    grid-template-areas: 
+    "chat-content"
+    "chat-footer";
+}
+
+.chat-footer {
+    grid-area: chat-footer;
+    display: grid;
+    background-color: rgb(56, 58, 64);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.chat-footer > input {
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    caret-color: white;
+    color: white;
+}
+
+.server-content {
+    grid-area: server-content;
+    background-color: rgb(43, 45, 49);
+}
+
+.category {
+    display: grid;
+    padding-bottom: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 40px);
+}
+
+.channel {
+    display: grid;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.username {
+    grid-area: username;
+    background-color: rgb(35, 36, 40);
+}
+
+.icon {
+    border: solid;
+    border-radius: 60px;
+    border-width: 1px;
+    place-items: center;
+    display: grid;
+}
