@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {  
+    
+    background-color: lightgray;
+    gap: 10px;
+    display: grid;
+    grid-template:
+
+"header    header       header" 50px
+"left-tab  main-menu    right-tab" 1fr/
+250px      1fr          250px;
+}
+
+
+.header {
+    display: grid;
+    grid-area: header;
+    background-color: white;
+    gap: 5px;
+    grid-template-columns: 50px 4fr  3fr;
+}
+
+.header > div {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50px;
+    justify-content: start;
+    border: dotted 1px black;
+    border-radius: 5px;
+    gap: 5px;
+
+}
+
+.header > .div > .div {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 5px;
+
+}
+
+.header > .elements {
+    display: grid;
+    grid-template-columns:repeat(5, 1fr) ;
+    border: dotted 1px black;
+    gap: 5px;
+    border-radius: 5px;
+}
+
+
+.left-tab {
+    min-height: 700px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: grid;
+    grid-area: left-tab;
+    gap: 10px;
+    grid-template: 
+
+    "profile" 250px
+    "visitor" 150px
+    "recent" 1fr/
+    200px;
+}
+
+.left-tab > div {
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.main-menu {
+    display: grid;
+    background-color: lightgray;
+    min-height: 200px;
+    max-height: 800px;
+    text-align: center;
+    border-radius: 5px;
+    grid-area: main-menu;
+    gap: 10px;
+    grid-template:
+        "start-post" auto
+        "main-content" 1fr/
+         1fr;
+}
+
+.main-menu > .start-post {
+    background-color: white;
+    border-radius: 5px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: auto;
+    grid-template-columns: 50px 1fr;
+}
+
+.main-menu > .start-post > .elements {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 20px;
+    justify-content: start;
+}
+
+.main-menu > .start-post > .elements > div {
+    justify-content: center;
+}
+
+.main-menu > .main-content {
+    display: grid;
+    overflow-y: auto; 
+    background-color: white;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.right-tab {
+    min-height: 800px;
+    border-radius: 5px;
+    display: grid;
+    background-color: lightgray;
+    grid-area: right-tab;
+    gap: 10px;
+    grid-template: 
+
+    "news" 1fr
+    "most-viewed" 1fr
+    "add" 1fr/
+    250px;
+}
+
+.right-tab > div {
+    display: grid;
+    background-color: white;
+    border-radius: 5px;
+    gap: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    justify-content: center;
+}
