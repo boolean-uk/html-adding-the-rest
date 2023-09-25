@@ -1,0 +1,99 @@
+.linkedin {
+    background-color:grey;
+    display: grid;
+    grid-template:
+    "header     header    header"      50px
+    "left-menu  main      right-menu"  1fr/
+    250px       700px     400px;
+     gap: 10px;
+     
+  }
+  
+  .main {
+    grid-area: main;
+    background-color:white;
+    min-height: 600px;
+    grid-template:
+    "popular" 1fr
+    "shorts"  1fr /
+    1fr;
+
+
+  }
+  .main > div  {
+    margin-bottom:10px;
+    background-color:aqua;
+    height:600px;
+  }
+  .main .popular{
+    height:100px;
+    background-color:blue
+  }
+  .main .shorts{
+    height:1250px;
+    background-color:whitesmoke
+  }
+  .left-menu {
+    grid-area:left-menu;
+    background-color: antiquewhite;;
+    min-height:600px;
+    grid-template:
+    "one" 1fr
+    "two" 1fr
+    "three" 1fr /
+    1fr;
+
+  }
+  .left-menu > div {
+    margin-bottom:10px;
+    background-color:blueviolet;
+    height: 450px;
+    display: grid;
+
+  }
+  .left-menu .one {
+    height:510px;
+    background-color: white;
+
+  }
+  .left-menu .three {
+    height:510px;
+    background-color: white;
+  }
+  .left-menu .two {
+    background-color: blue;
+    height:300px;
+
+  }
+  .right-menu {
+    grid-area:right-menu;
+    background-color: antiquewhite;
+    min-height: 600px;
+    grid-template:
+    "rightone" 1fr
+    "righttwo" 1fr
+    "rightthree"1fr /
+    1fr
+  }
+  .right-menu > div {
+    margin-bottom:10px;
+    background-color:chartreuse;
+    height: 500px;
+  }
+  .right-menu .rightone {
+    background-color: white;
+    height: 450Px
+  }
+  .right-menu .righttwo{
+    background-color:blue;
+    height:250px;
+  }
+  .right-menu .rightthree{
+    background-color:white;
+    height:700px;
+  }
+  header{
+    grid-area: header;
+    background-color: white;
+    display: grid;
+  }
