@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    text-align: center;
     color: rgba(128, 128, 128, 0.846);
 }
 
@@ -10,10 +9,9 @@
 .container {
     height: 100vh;
     width: 100vw;
-    /* margin: 5px; */
     display: grid;
     grid-template: 
-    "header         header     header      header       header" 50px
+    "header         header     header      header       header" 60px
     "blank-left   left-menu     main     right-menu    blank-right" 1fr /
       1fr            200px      500px        300px           1fr;
     
@@ -30,6 +28,7 @@
     grid-template-columns: 1fr 400px 600px 1fr;
     grid-template-areas: ".  search  icons .";
     gap: 20px;
+    padding: 5px;
     justify-content: start;
 
 
@@ -57,11 +56,11 @@
     border: dashed 1px red;
     background-color: rgba(62, 65, 249, 0.061);
     border-radius: 5px;
-   justify-items: start;
-   align-items: center;
-   padding-left: 20px;
-   width: 200px;
-   font-size: 14px;
+    justify-items: start;
+    align-items: center;
+    padding-left: 20px;
+    width: 200px;
+    font-size: 14px;
 }
 
 .icons {
@@ -75,6 +74,7 @@
     grid-template-columns: repeat(8, 70px);
     gap: 5px;
     justify-content: end;
+
 }
 
 .icons > div {
@@ -82,10 +82,12 @@
     gap: 3px;
     font-size: 12px;
     border: dashed 1px red;
+
 }
 
 .icons > div > div {
     border: dashed 1px green;
+    text-align: center;
 }
 
 /* LEFT MENU */
@@ -95,7 +97,7 @@
     display: grid;
     grid-template-rows: 250px 150px 1fr;
     gap: 5px;
-
+    padding-bottom: 20px;
 }
 
 .profile {
@@ -170,6 +172,7 @@
     display: grid;
     grid-template-rows: 130px 1fr;
     gap: 30px;
+    overflow-y: scroll;
 }
 
 .posts {
@@ -221,8 +224,9 @@
     display: grid;
     border: dashed 1px green;
     align-items: center;
-}
+    justify-items: center;
 
+}
 
 .feed {
     background-color: white;
@@ -231,7 +235,7 @@
     border-radius: 5px;
 
     display: grid;
-    grid-template-rows: 20px 50px 1fr 40px;
+    grid-template-rows: 30px 70px 1fr 40px;
     gap: 5px;
 }
 
@@ -239,13 +243,55 @@
     border: dashed 1px red;
 }
 
+.reactions {
+    padding: 5px;
+    font-size: 12px;
+    color: black;
+}
+
+.reactions strong {
+    color: black;
+}
+
+.poster-details {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+.poster-photo {
+    place-self: center;
+    border: solid 1px black;
+    border-radius: 100px;
+    padding: 8px;
+    height: 38px;
+}
+
+.poster-name {
+    justify-self: start;
+    align-self: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.poster-name > span {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.post-content {
+    display: grid;
+    place-content: center;
+}
+
 /* RIGHT MENU */
 .right-menu {
     grid-area: right-menu;
 
     display: grid;
-    grid-template-rows: 200px 100px 1fr;
+    grid-template-rows: 250px 1fr 250px;
     gap: 5px;
+    padding-bottom: 20px;
 }
 
 .news {
@@ -253,6 +299,20 @@
     padding: 10px;
     border: dashed 1px black;
     border-radius: 5px;
+
+    display: grid;
+    grid-template-rows: 30px 1fr 30px;
+    gap: 5px;
+}
+
+.news > div {
+    display: grid;
+    border: dashed 1px red;
+    justify-items: start;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
 }
 
 .most-viewed {
@@ -260,6 +320,20 @@
     padding: 10px;
     border: dashed 1px black;
     border-radius: 5px;
+
+    display: grid;
+    grid-template-rows: 30px 1fr;
+    gap: 5px;
+}
+
+.most-viewed > div {
+    display: grid;
+    border: dashed 1px red;
+    justify-content: start;
+    align-content: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
 }
 
 .add-to-feed {
@@ -267,4 +341,39 @@
     padding: 10px;
     border: dashed 1px black;
     border-radius: 5px;
+
+    display: grid;
+    grid-template-rows: 30px repeat(3, 1fr) 30px;
+    gap: 5px;
+}
+
+.add-to-feed > div {
+    display: grid;
+    border: dashed 1px red;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.add-to-feed-heading {
+    align-items: center;
+    justify-items: start;
+}
+
+.view-all-recommendations {
+    align-items: center;
+    justify-items: start;
+}
+
+.javascript, .sustainability, .tony-robbins {
+    grid-template-columns: 50px 1fr;
+}
+
+.feed-rec > div {
+    border: dashed 1px green;
+    margin: 5px;
+}
+
+.recommended-icon {
+    border-radius: 60px;
 }
