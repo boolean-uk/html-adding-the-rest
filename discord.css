@@ -90,14 +90,21 @@ border-bottom: 2px solid  #1e1f22;
 }
 
 .channelSidebar__title-text {
+    display: grid;
     color: #fff;
     font-size: 16px;
     line-height: 20px;
     font-weight: 600px;
+    background-color:#2b2d31;
 }
 
 .channelSidebar__content {
+    display: grid;
+    color: white;
+    gap: 10px;
+    padding-left: 20px;
     background-color: #2b2d31;
+
 }
 
 .channelSidebar__user {
