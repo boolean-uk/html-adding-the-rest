@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(4rem);
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template: "logo search icons";
+  text-align: center;
+  border: 2px dashed lightcoral;
+  margin: 0 auto;
+}
+
+.header-search,
+.header-logo,
+.icons {
+  display: grid;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+
+.header-logo i {
+  color: lightseagreen;
+  font-size: 50px;
+}
+#search {
+  height: 40px;
+  width: 600px;
+  padding-left: 20px;
+  place-self: center;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+/* ---------------Main section------------- */
+
+main {
+  display: grid;
+  grid-template:
+    "folders mail settings apps" calc(100dvh - 130px) /
+    15rem 1fr 20rem 5rem;
+  text-align: center;
+  padding: 1rem;
+  column-gap: 15px;
+}
+
+.mail {
+  border: 3px dashed purple;
+  border-radius: 10px;
+}
+
+.folders {
+  border: 3px dashed lightgreen;
+  border-radius: 10px;
+}
+.settings {
+  border: 3px dashed lightskyblue;
+  border-radius: 10px;
+}
+.apps {
+  border: 3px dashed red;
+  border-radius: 10px;
+}
+.folders > h2 {
+  margin-top: 2rem;
+}
+.inner-folder {
+  margin-top: 3rem;
+}
+.advent p {
+  font-size: 20px;
+}
+.folders {
+  grid-area: folders;
+  display: grid;
+  grid-template: repeat(10, 1fr) / 1fr;
+  grid-area: folders;
+  padding: 1rem;
+}
+
+.mail {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-area: mail;
+  padding-inline: 1rem;
+  overflow-y: scroll;
+  row-gap: 1rem;
+}
+
+.inner-folder .advent {
+  border: 1px dashed lightsalmon;
+  padding: 1rem;
+  margin: 0.5rem;
+  height: 50px;
+}
+.mail > h2 {
+  place-self: center;
+}
+.advent > p {
+  font-weight: bold;
+  text-align: left;
+}
+
+.advent > p > span {
+  font-weight: 400;
+}
+
+.settings {
+  grid-area: settings;
+}
+.settings > h2 {
+  padding: 1.5rem 0rem;
+}
+
+.apps {
+  grid-area: apps;
+}
+.apps > h2 {
+  padding: 1.5rem 0rem;
+}
+.mail .advent:nth-of-type(odd) {
+  border: 2px dashed red;
+  height: 30px;
+}
+.mail .advent:nth-of-type(even) {
+  border: 2px dashed red;
+  height: 30px;
+}
