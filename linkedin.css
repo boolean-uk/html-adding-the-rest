@@ -1,0 +1,175 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 250px 3fr 250px 1fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+    "header header header header header"
+    ". left-container main-content right-container .";
+    gap: 15px;
+}
+
+.header {
+    grid-area: header;
+    background-color: white;
+    /* padding: 5px; */
+    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 50px 150px minmax(50px, 1fr) minmax(200px, 700px) 1fr;
+    grid-template-rows: 1fr;
+
+}
+
+.left-container {
+    display: grid;
+    grid-area: left-container;
+    background-color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 70px 1fr;
+    gap: 10px
+}
+
+.right-container {
+    display: grid;
+    grid-area: right-container;
+    background-color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-radius: 10px;
+    gap: 10px;
+    
+}
+
+.main-content {
+    display: grid;
+    grid-area: main-content;
+    background-color: pink;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 3px 1fr 1fr;
+    gap: 10px
+}
+
+/* Toggle this to see diffrent sections */
+.menu {
+    /* justify-items: center; */
+    border: solid;
+    border-width: 1px;
+}
+
+nav {
+    /* background-color: white; */
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 4px;
+    place-items: center;
+}
+
+nav > p {
+    display: inline-block;
+    color: gray;
+}
+
+.search {
+    background-color: aliceblue;
+    color:grey;
+    border-radius: 5px;
+    margin: 5px 0px;
+    padding: 10px 0px 0px 10px;
+}
+
+.icon {
+    background-color: blue;
+    margin: 5px 0px;
+    border-radius: 5px;
+}
+
+.account > div {
+    padding: 10px;
+}
+
+.name {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+.grey {
+    color: grey;
+}
+
+.news, .courses, .add {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    padding: 10px;
+    gap: 5px;
+    border: grey solid 1px;
+    border-radius: 10px;
+}
+
+.news > div, .courses > div, .add > div {
+    border: 1px solid black;
+}
+
+.menu.create-post {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    background-color: yellow;
+
+}
+
+.pic-name {
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    margin: 5px;
+}
+
+.post {
+    background-color: lightgreen;
+}
+
+.pic {
+    width: 40px;
+    background-color: blue;
+    border-radius: 50%;
+   
+}
+ 
+.text {
+    background-color: turquoise;
+    border: solid grey 1px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+} 
+
+.post {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+    gap: 5px;
+}
+
+.post > div {
+    background-color: brown;
+}
+    /* background-color: cadetblue;
+    width: 50px;
+    height: ; */
+/* }
+
+
+/* .inline > div {
+    background-color: aqua;
+    height: 50px;
+    width: 50px;
+} */
