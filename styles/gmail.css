@@ -279,6 +279,7 @@
     margin-bottom: 12px;
     padding: 8px 8px 0 26px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -289,8 +290,8 @@
 }
 
 .navigation__list-btn {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,4 +306,93 @@
 /* content */
 .content {
     grid-area: 2 / 2 / -1 / -1;
+    padding-right: 15px;
+}
+
+.content__wrap {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    overflow-y: hidden;
+}
+
+.content__header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 48px;
+    z-index: 5;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content__headerButtons {
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+
+.content__header-checkbox {
+    height: 100%;
+    margin-left: 16px;
+    margin-right: 12px;
+    display: flex;
+}
+
+.content__header-checkbox img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.content__header-checkbox button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+
+.content__header-btn {
+    width: 38px;
+    height: 38px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content__headerNavigation {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-left: 10px;
+    padding-right: 20px;
+}
+
+.content__headerNavigation-pages {
+    background: none;
+    border: none;
+    color: #5e5e5e;
+    font-size: .75rem;
+    cursor: pointer;
+}
+
+.content__headerNavigation-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.content__headerNavigation-arrow:not(:last-child) {
+    margin-left: 20px;
 }
