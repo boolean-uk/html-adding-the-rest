@@ -1,0 +1,133 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  
+
+  .full-page {
+    display: grid;
+    grid-template:
+        "left-menu  channels-menu   header"  50px
+        "left-menu  channels-menu   main"    1fr/
+        70px         280px          1fr;
+  }
+  
+  .left-bar {
+    grid-area: left-menu;
+    background-color: rgba(34, 32, 32, 0.777);
+  }
+  
+  .left-bar-channels{
+    background-color: white;
+    border: white;
+    border-radius: 100px;
+    padding: 30px;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+  
+  }
+  
+  .left-bar-chats {
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  .channels-menu {
+    grid-area: channels-menu;
+    background-color: rgba(34, 36, 34, 0.858);
+  }
+  
+  .channels-grid {
+    display: grid;
+    grid-template:
+        "channels-header" 50px
+        "channels-general" 100vh
+        "speaker-name" 50px /
+        1fr;
+  }
+  
+  .channels-header {
+    grid-area: channels-header;
+    border-bottom: solid 1px rgba(144, 144, 144, 0.237);
+    font-weight: bold;
+    padding: 15px;
+    color: white;
+  }
+  
+  .channels-general {
+    grid-area: channels-general;
+    border-bottom: solid 1px rgba(144, 144, 144, 0.251);
+    padding: 10px;
+  }
+  
+  .speaker-name {
+    grid-area: speaker-name;
+    padding: 15px;
+    background-color: rgba(128, 128, 128, 0.141);
+    color: white;
+  }
+  
+  
+  .header {
+    grid-area: header;
+    border-bottom: solid 1px rgba(128, 128, 128, 0.224);
+    font-weight: bold;
+    padding: 15px;
+  }
+  
+  .main {
+    grid-area: main;
+    margin-left: 10px;
+    /* border: red dotted 1px; */
+  
+  }
+  
+  .main {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+  
+  
+    gap: 10px;
+  
+    align-items: end;    
+    overflow-y: scroll;
+  
+  }
+  
+  
+  .welcome-area {
+    font-weight: bolder;
+  }
+  
+  .messages-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, auto);
+  
+    margin: 10px;
+  
+  }
+  
+  
+  .messages {
+    border-top: solid 1px rgba(128, 128, 128, 0.319);
+    color: rgb(53, 53, 53);
+    padding: 10px;
+  
+  }
+  
+  .message-bar {
+    background-color: rgba(128, 128, 128, 0.149);
+    border-radius: 10px;
+    height: 40px;
+    color: rgba(128, 128, 128, 0.731);
+    padding: 5px;
+    margin: 10px;
+    margin-right: 10vh;;
+  }
