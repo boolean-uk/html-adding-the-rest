@@ -1,12 +1,19 @@
+* {
+    margin: 0
+}
+body{
+    width: 800px;
+}
 .linkedin {
     background-color:grey;
     display: grid;
     grid-template:
     "header     header    header"      50px
     "left-menu  main      right-menu"  1fr/
-    250px       700px     400px;
-     gap: 10px;
-     
+    200px       minmax(200px, 1fr)    200px;
+    width: 100vw;
+    height:100vh; 
+    
   }
   
   .main {
@@ -27,42 +34,48 @@
   }
   .main .popular{
     height:100px;
-    background-color:blue
+    background-color:blue;
+    outline: 3px solid blue;
   }
   .main .shorts{
-    height:1250px;
-    background-color:whitesmoke
+    /*height:1250px;*/
+    background-color:whitesmoke;
+    outline: 3px solid blue;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
   }
   .left-menu {
     grid-area:left-menu;
     background-color: antiquewhite;;
     min-height:600px;
     grid-template:
-    "one" 1fr
-    "two" 1fr
-    "three" 1fr /
+    "one" 200px
+    "two" 300px
+    "three" 400px /
     1fr;
 
   }
   .left-menu > div {
     margin-bottom:10px;
     background-color:blueviolet;
-    height: 450px;
     display: grid;
 
   }
   .left-menu .one {
-    height:510px;
+    grid-area: one;
     background-color: white;
+    outline: 3px solid blue;
 
   }
   .left-menu .three {
-    height:510px;
+    grid-area: three;
     background-color: white;
+    outline: 3px solid blue;
   }
   .left-menu .two {
+    grid-area: two;
     background-color: blue;
-    height:300px;
+    outline: 3px solid blue;
 
   }
   .right-menu {
@@ -82,18 +95,23 @@
   }
   .right-menu .rightone {
     background-color: white;
-    height: 450Px
+    height: 450Px;
+    outline: 3px solid blue;
   }
   .right-menu .righttwo{
     background-color:blue;
     height:250px;
+    outline: 3px solid blue;
+
   }
   .right-menu .rightthree{
     background-color:white;
     height:700px;
+    outline: 3px solid blue;
   }
   header{
     grid-area: header;
     background-color: white;
     display: grid;
+    outline: 3px solid blue;
   }
