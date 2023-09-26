@@ -6,7 +6,7 @@
   }
   
 
-  .full-page {
+  .discord {
     display: grid;
     grid-template:
         "left-menu  channels-menu   header"  50px
@@ -67,7 +67,7 @@
     padding: 10px;
   }
   
-  .speaker-name {
+  .host-name {
     grid-area: speaker-name;
     padding: 15px;
     background-color: rgba(128, 128, 128, 0.141);
