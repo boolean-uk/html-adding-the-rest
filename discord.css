@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+}
+.container{
+    display: grid; 
+     grid-template: 
+    "icons channels settings"   40px
+    "icons channels chat"       50px
+    "icons channels chat"       50px
+    "icons channels chat"       50px
+    "icons channels chat"       50px
+    "icons channels chat"       auto
+    "icons channels messages"   30px /
+    50px 15% 1fr;
+    height: 100vh;
+} 
+    
+.icons{
+    grid-area: icons;
+    background-color:grey;
+    border-right: 1px solid #202225;
+}
+/* icons */
+.icon1{
+    background-color:blueviolet;
+    border-right: 1px solid #202225;
+    border-radius: 50%;
+}
+.icon2{
+    background-color:rgb(50, 41, 175);
+    border-right: 1px solid #202225;
+    border-radius: 50%;
+}
+.icon3{
+    background-color:rgb(175, 41, 72);
+    border-right: 1px solid #202225;
+    border-radius: 50%;
+}
+.icon4{
+    background-color:#fff;
+    border-right: 1px solid #202225;
+    border-radius: 50%;
+}
+
+.channels{
+    grid-area: channels;
+    background-color: #656565;
+    border-right: 1px solid #202225;
+    /*grid-template-rows: repeat(7, 50px);*/
+    display: grid;
+    grid-template:
+    "one" 50px
+    "two" 50px
+    "three" 50px
+    "four" 50px
+    "five" 50px
+    "six" 50px
+    "seven" 30px / auto
+}
+.setting{
+    grid-area: settings;
+    background-color: rgb(142, 138, 138);
+    border-right: 1px solid #202225;
+    display: grid;
+    grid-template-columns: 150px 1fr repeat(3, 50px) 1fr;
+}
+input{
+    grid-column: 6/7;
+    height: fit-content;
+    border-radius: 5px;
+    border: 1px solid #202225;
+    background-color: #7a7b7b;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+}
+.setting2, setting3, setting4{
+    grid-column: 2/3;
+    height: fit-content;
+   justify-self: end;
+}
+
+img{
+    width: 20px;
+    margin: 10px;
+}
+
+.chat{
+    grid-area: chat;
+    background-color: whitesmoke;
+    border-right: 1px solid #202225;
+}
+
+.messages{
+    grid-area: messages;
+    background-color: rgb(83, 80, 80);
+    border-right: 1px solid #202225;
+    ;
+}
