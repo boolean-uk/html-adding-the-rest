@@ -286,6 +286,8 @@ than 180px and I don't know why :(
   display: none;
 }
 
+/* https://stackoverflow.com/questions/44832572/pure-css-clickable-dropdown */
+
 .side-menu input:checked ~ label img {
   rotate: 0deg;
 }
