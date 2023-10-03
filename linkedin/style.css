@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+}
+
+body,
+.container {
+  width: 100%;
+}
+
+/* ======== building blocks ======== */
+
+body {
+  font-family: sans-serif;
+  color: #999;
+
+}
+
+.grid {
+  display: grid;
+
+  border: 1px dashed grey;
+
+  align-content: center;
+
+  padding: 1px;
+  gap: 5px;
+}
+
+.card {
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+
+  padding: 5px;
+  border-radius: 10px;
+
+  background-color: #333;
+}
+
+.column {
+  align-content: start;
+}
+
+.container {
+  grid-template-areas:
+    "header"
+    "main";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 1fr;
+
+  gap: 20px;
+  background-color: #555;
+}
+
+/* ======== header ======== */
+
+header {
+  grid-area: header;
+
+  grid-template-areas: ". header-container .";
+  grid-template-columns: 1fr 1300px 1fr;
+  
+  background-color: white;
+}
+
+.header-container {
+  grid-area: header-container;
+  grid-template-columns: minmax(min-content, 1fr) auto;
+}
+
+.search {
+  grid-template: 50px / 60px 240px;
+}
+
+.nav {
+  grid-template: 50px / repeat(8, 100px);
+}
+
+/* ======== main ======== */
+
+main {
+  grid-area: main;
+
+  display: grid;
+  grid-template-areas: ". left centre right .";
+  grid-template-columns: 1fr 300px 650px 350px 1fr;
+  grid-template-rows: 1fr;
+
+  gap: 20px;
+}
+
+/* ======== left column ======== */
+
+.left {
+  grid-area: left;
+}
+
+/* || profile || */
+
+.profile {
+  grid-template-rows: 200px 60px 50px 40px;
+}
+
+/* || organisation || */
+
+.organisation {
+  grid-template-rows: 120px 80px 60px;
+}
+
+/* || trending || */
+
+.trending {
+  grid-template-rows: 180px 80px 120px;
+}
+
+/* ======== centre column ======== */
+
+.centre {
+  grid-area: centre;
+  grid-template-rows: repeat(2, min-content)
+}
+
+/* || input box || */
+
+.input {
+  grid-template: 72px / 72px 1fr;
+}
+
+.avatar {
+  border-radius: 100%;
+}
+
+/* || main feed || */
+
+.main-feed {
+  grid-auto-rows: min-content;
+}
+
+.attach {
+  grid-template: 60px / repeat(4, 1fr);
+}
+
+.story {
+  grid-template-rows: 80px 100px auto 320px 50px 80px;
+}
+
+/* ======== right column ======== */
+
+.right {
+  grid-area: right;
+}
+
+.right .card {
+  grid-template-rows: 50px 1fr 50px;
+}
+
+.right li {
+  grid-template: repeat(2, 18px) / 1fr;
+}

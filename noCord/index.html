@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>noCord</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="box header">
+        <div class="box pad-10 channel-header hover-box">
+          <div class="box server-type img">
+            <img src="https://img.icons8.com/666666/home" alt="home" />
+          </div>
+          <div class="box server-name">Boolean UK</div>
+          <div class="box server-options img">
+            <img
+              src="https://img.icons8.com/666666/expand-arrow"
+              alt="expand arrow"
+            />
+          </div>
+        </div>
+        <div class="box channel-icon">
+          <img src="https://img.icons8.com/666666/hashtag" alt="channel icon" />
+        </div>
+        <div class="box channel-name">noCord</div>
+        <div class="box hover-highlight thread">
+          <img
+            src="https://img.icons8.com/666666/speech-bubble"
+            alt="start thread"
+          />
+        </div>
+        <div class="box hover-highlight notification">
+          <img
+            src="https://img.icons8.com/666666/bell"
+            alt="notification settings"
+          />
+        </div>
+        <div class="box hover-highlight pinned">
+          <img src="https://img.icons8.com/666666/pin" alt="pinned messages" />
+        </div>
+        <div class="box hover-highlight members">
+          <img src="https://img.icons8.com/666666/user" alt="member list" />
+        </div>
+        <div class="box search pad-10">
+          <input type="text" placeholder="Search" />
+          <img
+            src="https://img.icons8.com/666666/search"
+            alt="magnifying glass"
+          />
+        </div>
+        <div class="box hover-highlight inbox">
+          <img src="https://img.icons8.com/666666/inbox" alt="inbox" />
+        </div>
+        <div class="box hover-highlight help">
+          <img src="https://img.icons8.com/666666/help" alt="help" />
+        </div>
+      </header>
+      <div class="box pad-10 server-menu">
+        <div class="box hover">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
+            <img
+              src="https://img.icons8.com/material-rounded/48/cccccc/controller.png"
+              alt="controller"
+            />
+          </div>
+        </div>
+        <hr />
+        <div id="active-server" class="box hover boolean">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
+            <img
+              src="https://yt3.ggpht.com/a/AATXAJznBBSM3EjQOemVqScCHToqHCJ8Gce-XtMvpg=s900-c-k-c0xffffffff-no-rj-mo"
+              alt="boolean server"
+            />
+          </div>
+        </div>
+        <div class="box hover lucas-fav-game">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2a/LoL_icon.svg"
+              alt="lucas-fav-game"
+            />
+          </div>
+        </div>
+        <div class="box hover cirno">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
+            <img src="https://i.redd.it/jsu1c12zh9271.gif" alt="cirno server" />
+          </div>
+        </div>
+        <div class="box hover tesseract">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/2/26/Album_cover_for_Polaris_%28Tesseract_album%29.jpg"
+              alt="tesseract server"
+            />
+          </div>
+        </div>
+        <div class="box hover">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
+            <img
+              src="https://img.icons8.com/33cc33/plus"
+              alt="add new server"
+            />
+          </div>
+        </div>
+        <div class="box hover">
+          <div class="highlight hover-appear"></div>
+          <div class="box server-img hover-squarcle">
+            <img
+              src="https://img.icons8.com/33cc33/compass"
+              alt="explore servers"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="box side-container server-container">
+        <div class="box pad-10 side-menu">
+          <div class="box browse-channels hover-box">
+            <img
+              src="https://img.icons8.com/666666/hashtag"
+              alt="channel icon"
+            />Browse Channels
+          </div>
+          <div class="hr"></div>
+          <div class="box group-list">
+            <input id="check-general" type="checkbox" name="menu" checked />
+            <label for="check-general">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand hover-highlight"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">general</div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img src="https://img.icons8.com/666666/book" alt="book" />
+                <div class="nowrap-ellipsis">📝general</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">📢general</div>
+              </li>
+            </ol>
+          </div>
+          <div class="box group-list">
+            <input id="check-lobby" type="checkbox" name="menu" />
+            <label for="check-lobby">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">lobby</div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">🤹‍♀️random</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">🎮gaming</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">🍿watching</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">📖reading</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">🧞‍♀️social-chat</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">💻code-talk</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">⚽️fantasy-football</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">🖥️-women-in-tech</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">🎁-adventofcode</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">📢social chat</div>
+              </li>
+            </ol>
+          </div>
+          <div class="box group-list">
+            <input id="check-careers" type="checkbox" name="menu" checked />
+            <label for="check-careers">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand hover-highlight"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">careers</div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">👣careers</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">🗓️events</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">tech-support</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">tech-coaching</div>
+              </li>
+            </ol>
+          </div>
+          <div class="box group-list">
+            <input id="check-learning" type="checkbox" name="menu" checked />
+            <label for="check-learning">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand hover-highlight"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">learning</div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">general</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speech-bubble"
+                  alt="speech bubble"
+                />
+                <div class="nowrap-ellipsis">questions</div>
+              </li>
+            </ol>
+          </div>
+          <div class="box group-list">
+            <input id="check-class-11" type="checkbox" name="menu" checked />
+            <label for="check-class-11">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand hover-highlight"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">class 11</div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">classroom</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">code-examples</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">collaboration</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">resources</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">exercises</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/hashtag"
+                  alt="hashtag"
+                />
+                <div class="nowrap-ellipsis">general-chat</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">out-of-hours-chat</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻1</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻2</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻3</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻4</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻5</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻6</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻7</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻8</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻9</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻10</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻11</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻12</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻13</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻14</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻15</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻16</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻17</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻18</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻19</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">🍐💻20</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 1</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 2</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 3</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 4</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 5</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 6</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 7</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 8</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 9</div>
+              </li>
+              <li class="box hover-box">
+                <img
+                  src="https://img.icons8.com/666666/speaker"
+                  alt="speaker"
+                />
+                <div class="nowrap-ellipsis">Study Group 10</div>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="box footer">
+          <div class="box footer-profile-container hover-box">
+            <img src="img/icon.png" alt="icon" />
+            <div class="box footer-profile">
+              <div class="user-name nowrap-ellipsis">Lorem McLorem Face</div>
+              <div class="availability">Online</div>
+            </div>
+          </div>
+          <div class="box voice-controls">
+            <div class="box hover-box">
+              <img
+                src="https://img.icons8.com/666666/microphone"
+                alt="microphone"
+              />
+            </div>
+            <div class="box hover-box">
+              <img
+                src="https://img.icons8.com/666666/headphones"
+                alt="headphones"
+              />
+            </div>
+            <div class="box hover-box">
+              <img
+                src="https://img.icons8.com/666666/settings"
+                alt="voice settings"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box chat-area">
+        <div class="box chat-container">
+          <div class="chat-start">
+            <div class="box hashtag">
+              <img src="https://img.icons8.com/ffffff/hashtag" alt="hashtag" />
+            </div>
+            <h1>Welcome to #noCord!</h1>
+            <p>This is the start of the #noCord channel.</p>
+          </div>
+          <div class="box date date-hr">
+            <div class="hr"></div>
+            30 August 2023
+            <div class="hr"></div>
+          </div>
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Test Post</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>🤡</span><span>3</span>
+              </div>
+              <div class="box hover-box react-box">
+                <span>🤡</span><span>3</span>
+              </div>
+            </div>
+          </div>
+          <div class="box date date-hr">
+            <div class="hr"></div>
+            02 September 2023
+            <div class="hr"></div>
+          </div>
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">02/09/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">02/09/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">02/09/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">02/09/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="box chat-entry">
+            <div class="box sender-icon">
+              <img src="img/icon.png" alt="sender icon" />
+            </div>
+            <div class="message-details">
+              <span class="sender-name">Lorem McLorem Face</span>
+              <span class="send-date date">30/08/2023 10:28</span>
+            </div>
+            <div class="message-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quas
+              nulla est autem cum fugit. Est sequi dolorem ea odit error
+              repellendus quas nesciunt ipsa? Aperiam, similique? Itaque, aut
+              commodi.
+            </div>
+            <div class="box message-reaction">
+              <div class="box hover-box react-box">
+                <span>♥️</span><span>3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box chat-footer">
+          <div class="box input-box">
+            <img
+              class="hover-highlight"
+              src="https://img.icons8.com/666666/plus"
+              alt="attach file"
+            />
+            <input type="text" placeholder="Message #noCord" />
+            <img
+              class="hover-highlight"
+              src="https://img.icons8.com/666666/gift"
+              alt=""
+            />
+            <img
+              class="hover-highlight"
+              src="https://img.icons8.com/666666/gif"
+              alt=""
+            />
+            <img
+              class="hover-highlight"
+              src="https://img.icons8.com/666666/sticker"
+              alt=""
+            />
+            <span class="hover-highlight emoji">😢</span>
+          </div>
+        </div>
+      </div>
+      <div class="box side-container user-container">
+        <div class="box pad-10 side-menu">
+          <div class="box group-list">
+            <input id="check-teachers" type="checkbox" name="menu" checked />
+            <label for="check-teachers">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand hover-highlight"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">
+                  <div class="nowrap-ellipsis"></div>
+                  teachers - 1
+                </div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Teacher McTeacher Face</div>
+              </li>
+            </ol>
+          </div>
+          <div class="box group-list">
+            <input id="check-student" type="checkbox" name="menu" checked />
+            <label for="check-student">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand hover-highlight"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">
+                  <div class="nowrap-ellipsis"></div>
+                  student - 7
+                </div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Student McStudent Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Student McStudent Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Student McStudent Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Student McStudent Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Student McStudent Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Student McStudent Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Student McStudent Face</div>
+              </li>
+            </ol>
+          </div>
+          <div class="box group-list">
+            <input id="check-online" type="checkbox" name="menu" checked />
+            <label for="check-online">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand hover-highlight"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">
+                  <div class="nowrap-ellipsis"></div>
+                  online - 4
+                </div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Online McOnline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Online McOnline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Online McOnline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Online McOnline Face</div>
+              </li>
+            </ol>
+          </div>
+          <div class="box group-list">
+            <input id="check-offline" type="checkbox" name="menu" checked />
+            <label for="check-offline">
+              <div class="box menu-group hover-highlight">
+                <img
+                  class="expand hover-highlight"
+                  src="https://img.icons8.com/666666/expand-arrow"
+                  alt="expand channel group"
+                />
+                <div class="nowrap-ellipsis">
+                  <div class="nowrap-ellipsis"></div>
+                  offline - 20
+                </div>
+              </div>
+            </label>
+            <ol class="box item-list">
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+              <li class="box hover-box">
+                <img src="img/icon.png" alt="speaker" />
+                <div class="nowrap-ellipsis">Offline McOffline Face</div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div>Icons by <a href="https://icons8.com/">Icons8</a></div>
+      </footer>
+    </div>
+  </body>
+</html>
