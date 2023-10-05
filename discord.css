@@ -1,0 +1,146 @@
+.grid {
+  display: grid;
+  grid-template:
+    "left      main     right" 750px /
+    0.35fr 0.75fr 2fr;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.left-side-bar {
+  display: grid;
+  background-color: khaki;
+  grid-template-rows: 70px 70px 70px 70px 70px 0.25fr;
+  grid-template-areas:
+    "icon1"
+    "icon2"
+    "icon3"
+    "icon4"
+    "icon5"
+    ".";
+}
+
+.middle-bar {
+  display: grid;
+  grid-template-rows: 5% 15% 80%;
+  background-color: darkviolet;
+  grid-area: main;
+  grid-template-areas:
+    "Boolean-UK"
+    "invite_box"
+    "General";
+}
+
+.invite_box {
+  display: grid;
+  justify-content: center;
+  grid-area: invite_box;
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "invite_circle"
+    "invite_text"
+    "invite_people";
+}
+
+.invite_circle {
+  grid-area: invite_circle;
+  border-radius: 1000px;
+  border: 3px dotted black;
+  margin: 5px;
+  height: 50px;
+  width: 50px;
+}
+
+.invite_text {
+  grid-area: invite_text;
+  justify-content: center;
+  text-align: center;
+}
+
+.invite_people {
+  grid-area: invite_people;
+}
+.invite_people > button {
+  background-color: blue;
+  color: white;
+}
+.right-side-bar {
+  display: grid;
+  background-color: rgb(202, 85, 211);
+}
+.chat_name > p {
+  border-bottom: 1px solid black;
+  margin: 5px;
+}
+.logo {
+  grid-area: logo;
+  border: 1px dashed black;
+}
+
+.Boolean-UK {
+  grid-area: Boolean-UK;
+  margin: 5px;
+}
+
+.invite_text > p {
+  margin: 0px;
+}
+.General {
+  grid-area: General;
+  margin: 15px;
+}
+
+.icon1 {
+  border-radius: 1000px;
+  border: 3px dotted black;
+  margin: 15px;
+  height: 50px;
+  width: 50px;
+  grid-area: icon1;
+}
+.icon1:hover {
+  text-decoration: underline 3px grey solid;
+}
+
+.icon2 {
+  border-radius: 1000px;
+  border: 3px dotted black;
+  margin: 15px;
+  height: 50px;
+  width: 50px;
+
+  grid-area: icon2;
+}
+
+.icon3 {
+  border-radius: 1000px;
+  border: 3px dotted black;
+  margin: 15px;
+  height: 50px;
+  width: 50px;
+
+  grid-area: icon3;
+}
+
+.icon4 {
+  border-radius: 1000px;
+  border: 3px dotted black;
+  margin: 15px;
+  height: 50px;
+  width: 50px;
+
+  grid-area: icon4;
+}
+
+.icon5 {
+  border-radius: 1000px;
+  border: 3px dotted black;
+  margin: 15px;
+  height: 50px;
+  width: 50px;
+
+  grid-area: icon5;
+}
