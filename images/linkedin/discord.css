@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.side-nav {
+    width: 80px;
+    background-color: #2C2F33;
+    padding: 10px;
+    border-right: 2px solid #000;
+    border: 3px solid #1ac528;
+    border-radius: 8px;
+    margin: 3px;
+}
+
+.server-icons img, .bottom-icons {
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    border: 3px solid #1ac528;
+    border-radius: 8px;
+    margin: 3px;
+}
+
+.channels {
+    width: 200px;
+    background-color: #2C2F33;
+    border-right: 2px solid #000;
+    padding: 10px;
+    border: 3px solid #1ac528;
+    border-radius: 8px;
+    margin: 3px;
+}
+
+.channel {
+    color: white;
+    padding: 5px;
+    border: 3px solid #1ac528;
+    border-radius: 8px;
+    margin: 3px;
+}
+
+.chat {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex-grow: 1;
+    padding: 10px;
+    border-bottom: 2px solid #000;
+    overflow-y: auto;
+    border: 3px solid #1ac528;
+    border-radius: 8px;
+    margin: 3px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.username {
+    font-weight: bold;
+    border: 3px solid #1ac528;
+    border-radius: 8px;
+    margin: 3px;
+}
+
+.input-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 3px solid #1ac528;
+    border-radius: 8px;
+    margin: 3px;
+}
+
+@media (max-width: 768px) {
+    body, main {
+        flex-direction: column;
+    }
+
+    .side-nav, .channels, .members {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #000;
+    }
+
+    .chat {
+        height: calc(100vh - 360px);
+    }
+}
