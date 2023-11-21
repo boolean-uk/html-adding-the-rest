@@ -13,7 +13,6 @@
     row-gap: 10px;
 }
 
-
 .center {
     grid-area: center;
     background-color: lightgrey;
@@ -28,17 +27,16 @@
     grid-template-rows: 40px 1fr 70px 40px;
 }
 
-
 img {
     height: 35px;
 }
 
 .leftlogos {
     border: dotted 2px black;
-    border-radius: 70%;
+    border-radius: 50%; /* Adjusted to 50% for a perfect circle */
     display: grid;
     place-items: center;
-
+    overflow: hidden; /* Added to prevent content from overflowing */
 }
 
 .centerbox {
@@ -53,8 +51,7 @@ img {
     background-color: lightgray;
     margin: 2px;
     border-radius: 3px;
-      color: Grey;
-
+    color: grey;
 }
 
 .rightbox.last {

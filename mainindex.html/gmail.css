@@ -1,23 +1,52 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: 200px 200px 1fr; 
-    grid-template-rows: 100px 1fr;
-    height: 100vh; 
-  }
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px 1fr;
+  grid-template-rows: 100px 1fr;
+  height: 100vh;
+}
 
-  .header {
-    grid-column: 1 / span 3;
-    background-color: pink;
-    padding: 20px;
-  }
+.header {
+  grid-column: 1 / span 3;
+  background-color: #dd4b39; /* Gmail red color */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
 
-  .sidebar {
-    background-color: blueviolet;
-    padding: 20px;
-  }
+.sidebar {
+  background-color: #404040; /* Dark gray background */
+  padding: 20px;
+}
+
+.sidebar div {
+  margin-bottom: 10px;
+  color: #fff; /* White text color */
+  cursor: pointer;
+}
+
+.email-overview {
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling for overflow content */
+}
+
+.email-item {
+  border-bottom: 1px solid #ddd; /* Light gray border between emails */
+  padding: 10px;
+  cursor: pointer;
+}
+
+.email-item:hover {
+  background-color: #f5f5f5; /* Light gray background on hover */
+}
+
+.email-content {
+  padding: 20px;
+}
