@@ -1,105 +1,182 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-}
-
-.side-nav {
-    width: 80px;
-    background-color: #2C2F33;
+    font-family: sans-serif;
+  }
+  
+  .darkestColour {
+    background-color: #E5E5E5;
+  }
+  
+  .mediumColour {
+    middle: #EDEDEC
+  }
+  
+  .lightestColour {
+    background-color: #F4F3F2;
+  }
+  
+  .container {
+    display: grid;
+    grid-template:
+      "nav sidebar header" 40px 
+      "nav sidebar main"  1fr /
+      60px 230px 1fr;
+    min-height: 100%;
+  }
+  
+  .nav {
+    grid-area: nav;
+    background-color: #E5E5E5;
+  }
+  
+  .logo {
+    grid-area: logo;
+    padding: 10px
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    display: grid;
+    background-color: #F4F3F2;
+    grid-template: 
+    "logo" 40px
+    "invitation" 150px
+    "channels"  1fr
+    "status" 60px /
+    1fr;
+  }
+  
+  .invitation {
+    grid-area: invitation;
+    padding: 10px
+  }
+  
+  .channels {
+    grid-area: channels;
+    padding: 10px
+  }
+  
+  .status {
+    grid-area: status;
+    background-color: #EDEDEC
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: #FFFFFB
+  }
+  
+  .main {
+    grid-area: main;
+    background-color: #FFFFFB;
     padding: 10px;
-    border-right: 2px solid #000;
-    border: 3px solid #1ac528;
-    border-radius: 8px;
-    margin: 3px;
-}
-
-.server-icons img, .bottom-icons {
-    width: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-main {
-    display: flex;
-    flex-grow: 1;
-    border: 3px solid #1ac528;
-    border-radius: 8px;
-    margin: 3px;
-}
-
-.channels {
-    width: 200px;
-    background-color: #2C2F33;
-    border-right: 2px solid #000;
-    padding: 10px;
-    border: 3px solid #1ac528;
-    border-radius: 8px;
-    margin: 3px;
-}
-
-.channel {
-    color: white;
-    padding: 5px;
-    border: 3px solid #1ac528;
-    border-radius: 8px;
-    margin: 3px;
-}
-
-.chat {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.messages {
-    flex-grow: 1;
-    padding: 10px;
-    border-bottom: 2px solid #000;
-    overflow-y: auto;
-    border: 3px solid #1ac528;
-    border-radius: 8px;
-    margin: 3px;
-}
-
-.message {
-    margin-bottom: 10px;
-}
-
-.username {
+    display: grid;
+    align-content: end;
+  }
+  
+  .profileImg {
+    border-radius: 100%;
+    margin: 10px;
+    background-color: rgba(192, 192, 192, 0.73);
+    width: 40px;
+    height: 40px;
+  }
+  
+  .profileImgScaled {
+    border-radius: 100%;
+    margin: 0 0.5em;
+    background-color: rgba(192, 192, 192, 0.73);
+    width: 1em;
+    height: 1em;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0 10px ;
+  }
+  
+  ul > li {
+    padding: 0.2em 0;
+  }
+  
+  .channels li::before {
+    content: "#";
     font-weight: bold;
-    border: 3px solid #1ac528;
-    border-radius: 8px;
-    margin: 3px;
-}
-
-.input-bar input {
-    width: 100%;
+    padding-right: 12px;
+  }
+  
+  .channels li.voice::before {
+    content: "🔈";
+    padding-right: 5px;
+  }
+  
+  
+  .channels .group > .name{
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .channels .group {
+    margin: 10px 0;
+  }
+  
+  h1 {
+    font-weight: bold;
+  }
+  
+  h2, .header {
+    font-weight: bold;
+    font-size: 14px;
+    align-self: start;
     padding: 10px;
-    border: none;
-    border: 3px solid #1ac528;
-    border-radius: 8px;
-    margin: 3px;
-}
-
-@media (max-width: 768px) {
-    body, main {
-        flex-direction: column;
-    }
-
-    .side-nav, .channels, .members {
-        width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #000;
-    }
-
-    .chat {
-        height: calc(100vh - 360px);
-    }
-}
+    border-bottom: #bcbcbc 1px solid;
+  }
+  
+  .user > .name {
+    font-weight: bold;
+  }
+  
+  .messages {
+    display: grid;
+    align-items: end;
+  }
+  
+  .message {
+    font-size: 1rem;
+    margin-bottom: 1em;
+  }
+  
+  .message > .content {
+    font-size: 1em;
+    margin: 0.2em 0.3em;
+  }
+  
+  .message .timestamp {
+    color: #898989;
+    margin-left: 1em;
+    font-size: 0.9em;
+  }
+  
+  .bubble {
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    height: 40px;
+    padding-left: 10px;
+    display: grid;
+    align-content: center;
+  }
+  
+  .mention {
+    color: rgb(119, 119, 230)
+  }
+  
+  .mention::before {
+    content: "@"
+  }
+  
+  .admin {
+    color: red;
+  }
+  
+  .teacher {
+    color: rgb(18, 180, 99);
+  }
