@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+
+}
+.main-container{
+    display: grid;
+    grid-template: 
+    "header-left      header    header-right"  50px
+    "main-left        main      main-right" 600px
+
+     /
+    270px       1fr          400px
+    ;
+}
+
+.header-left{
+    grid-area: header-left;
+    background-color: rgb(254, 254, 254);
+    display: grid;
+    grid-template: 
+    "menu    logo     icon-name" 30px /
+    50px   50px    50px
+
+    ;
+}
+.menu{
+    grid-area: menu;
+    text-align: center;
+    padding-top:10px ;
+
+
+}
+.logo{
+    grid-area: logo;
+    text-align: center;
+    padding-top: 10px;
+}
+.icon-name{
+    grid-area: icon-name;
+    padding-top: 10px;
+}
+.header{
+    grid-area: header;
+    background-color: rgb(220, 213, 213)
+}
+.searchbar{
+    margin: 5px;
+    padding: 10px;
+
+}
+.header-right{
+    grid-area: header-right;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template:
+    "icon      setting       grid    profile" 30px/
+    50px      50px     50px
+    ;
+    padding-top: 12px;
+}
+.icon{
+    grid-area: icon;
+    text-align: center;
+}
+.setting{
+    grid-area: setting;
+    text-align: center;
+
+}
+.grid{
+    grid-area: grid;
+    text-align: center;
+
+}
+.profile{
+    grid-area: profile;
+    border: black solid 1px;
+    display: grid;
+    grid-template: 
+    "profile-name    profile-picture"30px /
+    80px   25px;
+    margin-right: 110px;
+    padding-top: 2px;
+    padding-left: 2px;
+    border-radius: 7px;
+}
+.profile-name{
+    grid-area: profile-name;
+    text-align: center;
+    padding-top: 2px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.profile-picture{
+    grid-area: profile-picture;
+    padding-left: 10px;
+}
+
+.main-left{
+    grid-area: main-left;
+    background-color: rgba(255, 255, 255, 0.893);
+    display: grid;
+    grid-template: 
+    "compose"80px
+    "inbox"260px
+    "meet"110px
+    "chat"minmax(200px,1fr) /
+    200px
+    ;
+
+}
+.compose{
+    grid-area: compose;
+    border: 0.5px solid black;
+    padding-top: 5px;
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    border-radius: 25px;
+     margin-top: 20px;
+     box-shadow: 2px 2px 5px grey;
+}
+
+.container-left{
+   line-height: 25px;
+   padding-left: 30px;
+   /* border: 1px solid black; */
+   margin-bottom: 0px;
+   padding-bottom: 20px;
+
+
+}
+.container-left ul li a{
+    text-decoration: none;    
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.meet{
+    padding-left: 30px;
+    padding-top: 0;
+    /* border: 1px solid black; */
+    line-height: 25px;
+}
+.chat{
+    list-style: circle;
+    padding-left: 30px;
+    overflow-y: scroll;
+
+
+}
+.main{
+    grid-area: main;
+    background-color: rgba(255, 255, 255, 0.893);
+    overflow-y: scroll;
+    border: 1px solid black;
+    display: grid;
+    grid-template: 
+    "heading"    25px
+    "detail1"     30px 
+    "detail2"     30px
+    "detail3"     30px
+    "detail4"     30px
+    "detail5"     30px
+    "detail6"     30px
+    "detail7"     30px /
+    100%
+    ;
+}
+.high2{
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px 20px;
+    height: 25px;
+    color: blue;
+    padding-top: 3px;
+}
+.high1{
+
+    padding: 10px 10px;
+}
+.borderbox{
+    border: 1px solid rgb(224, 219, 219);
+    display: grid;
+    grid-template-columns: 60px 120px 300px 100px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+.heading{
+    grid-area: heading;
+    border: 1px solid black;
+    display: grid;
+    grid-template: 
+    "main-heading1   main-heading2   main-heading3  main-heading4    main-heading5" 25px /
+    30px;
+    padding-top: 3px;
+    padding-left: 4px;
+
+}
+.heading-inside3{
+    margin-left: -138px;
+}
+
+.main-right{
+    grid-area: main-right;
+    background-color: rgba(255, 255, 255, 0.893);
+}
+.main-right{
+    display: grid;
+    grid-template: 
+    "main-right1     main-right2" 1fr /
+    80%        20%  ;
+}
+.main-right1{
+    grid-area: main-right1;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: 100px 130px 250px 100px 
+     ;
+}
+.density{
+    padding-left: 10px;
+
+}
+.theme{
+    padding: 10px;
+}
+.inboxtype{
+    padding-left: 10px;
+}
+.main-right2{
+    grid-area: main-right2;
+    background-color: rgb(255, 255, 255);
+}
