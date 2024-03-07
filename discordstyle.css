@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 100px 300px 1fr;
+    grid-template-areas: 
+    'side-bar info main';
+}
+
+/* Side Bar */
+.side-bar {
+    background-color: #E3E5E8;
+    grid-area: side-bar;
+
+    display: grid;
+
+    padding: 10px;
+    gap: 10px;
+
+    grid-template-rows: 70px 400px 70px;
+}
+
+.direct-messages, .all-channels, .download-apps {
+    border: 2px dotted #5C6BC0;
+}
+
+.direct-messages-icon, .all-channels div, .download-apps-icon {
+    border: 2px dotted #66BB6A;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.direct-messages {
+    display: grid;
+
+    place-content: center;
+    padding: 5px;
+}
+
+.all-channels {
+    display: grid;
+
+    place-content: center;
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.download-apps {
+    display: grid;
+
+    place-content: center;
+    padding: 5px;
+}
+
+/* Info */
+.info {
+    background-color: #F2F3F5;
+    grid-area: info;
+
+    display: grid;
+
+    padding: 10px;
+    gap: 10px;
+
+    grid-template-rows: 50px 800px 50px;
+}
+
+.channel-name, .channel-options, .me {
+    border: 2px dotted #5C6BC0;
+}
+
+.channel-name {
+    display: grid;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.events-and-browse, .general, .classes, .lobby, .staff {
+    border: 2px dotted #66BB6A;
+}
+
+.channel-options {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    overflow: auto;
+
+    grid-template-rows: repeat(5, auto);
+}
+
+.events div, .browse-channels div {
+    border: 2px dotted #EC407A;
+}
+
+.events-and-browse {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+    
+    align-items: center;
+
+    grid-template-rows: 30px 30px;
+}
+
+.events, .browse-channels {
+    display: grid;
+
+    gap: 5px;
+
+    grid-template-columns: 20px 1fr;
+}
+
+.text-general div, .voice-general div {
+    border: 2px dotted #EC407A;
+}
+
+.general {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+    
+    align-items: center;
+
+    grid-template-rows: 30px 30px;
+}
+
+.text-general, .voice-general {
+    display: grid;
+
+    gap: 5px;
+
+    grid-template-columns: 20px 1fr;
+}
+
+.text-class1 div, .voice-class1 div, .pear-group1 div, .pear-group2 div, .pear-group3 div, .pear-group4 div {
+    border: 2px dotted #EC407A;
+}
+
+.classes {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+    
+    align-items: center;
+
+    grid-template-rows: repeat(6, 30px);
+}
+
+.text-class1, .voice-class1, .pear-group1, .pear-group2, .pear-group3, .pear-group4 {
+    display: grid;
+
+    gap: 5px;
+
+    grid-template-columns: 20px 1fr;
+}
+
+.random div, .gaming div, .watching div {
+    border: 2px dotted #EC407A;
+}
+
+.lobby {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+    
+    align-items: center;
+
+    grid-template-rows: repeat(3, 30px);
+}
+
+.random, .gaming, .watching {
+    display: grid;
+
+    gap: 5px;
+
+    grid-template-columns: 20px 1fr;
+}
+
+.text-teaching div, .voice-teaching div {
+    border: 2px dotted #EC407A;
+}
+
+.staff{
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+    
+    align-items: center;
+
+    grid-template-rows: repeat(2, 30px);
+}
+
+.text-teaching, .voice-teaching {
+    display: grid;
+
+    gap: 5px;
+
+    grid-template-columns: 20px 1fr;
+}
+
+.me {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-columns: 40px 1fr 40px 40px 40px;
+}
+
+.name, .mute, .deafen, .settings {
+    border: 2px dotted #66BB6A;
+    display: grid;
+
+    padding: 3px;
+
+    align-items: center;
+}
+
+.profile-picture {
+    border: 2px dotted #66BB6A;
+    border-radius: 50%;
+    display: grid;
+
+    padding: 3px;
+
+    align-items: center;
+}
+
+
+/* Main */
+main {
+    grid-area: main;
+
+    display: grid;
+
+    padding: 10px;
+    gap: 10px;
+
+    grid-template-rows: 50px 800px 50px;
+
+}
+
+header, .posts, footer {
+    border: 2px dotted #5C6BC0;
+}
+
+header div {
+    border: 2px dotted #66BB6A;
+}
+
+header {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-columns: 1fr repeat(3, 50px) 200px repeat(2, 50px);
+}
+
+footer {
+    display: grid;
+
+    padding: 5px;
+}
+
+.footer-container {
+    border: 2px solid black;
+    border-radius: 10px;
+
+    display: grid;
+
+    padding: 3px;
+    gap: 3px;
+
+    grid-template-columns: 40px 1fr repeat(3, 40px);
+}
+
+.footer-container div {
+    border: 2px dotted #EC407A;
+}
+
+.posts {
+    display: grid;
+
+    padding: 10px;
+    gap: 20px;
+
+    overflow: auto;
+}
+
+.post {
+    border: 2px dotted #66BB6A;
+
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-columns: 50px 1fr;
+}
+
+.post-picture {
+    border: 2px dotted #EC407A;
+    border-radius: 50%;
+
+    height: 40px;
+    width: 40px;
+}
+
+.text {
+    border: 2px dotted #EC407A;
+    
+    padding: 5px;
+}
