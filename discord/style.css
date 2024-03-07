@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: darkgray;
+    overflow-x: scroll;
+}
+
+h3 {
+    font-size: 22px;
+    color: whitesmoke;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template-areas: 
+    "serverlist activeserver chat";
+    grid-template-columns: 102px 200px 1fr;
+    grid-template-rows: 100vh;
+    overflow-x: scroll;
+}
+
+.chat {
+    grid-area: chat;
+    display: grid;
+    grid-template-areas:
+    "chatname"
+    "chatwindow"
+    "chatinput";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    background-color: #36393F;
+}
+
+.chat .chatname {
+    grid-area: chatname;
+}
+
+.chat .chatnamecontent {
+    display: flex;
+    margin: 15px;
+}
+
+.chat .chatnamecontent .chaticons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.chat .chatnamecontent .chaticon {
+    border: dashed 1px black;
+    border-radius: 5px;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 0px 5px;
+}
+
+.chat .chatnamecontent input {
+    background-color: #2F3136;
+    border: none;
+    border-radius: 3px;
+    height: 22px;
+    padding: 0px 10px;
+}
+
+.chat hr {
+    border: none;
+    height: 2px;
+    background-color: #3D4148;
+}
+
+.chatinputarea {
+    grid-area: chatinput;
+}
+
+.chatinputarea .chatinput {
+    display: flex;
+    align-content: center;
+    margin: 15px;
+    padding: 5px 10px;
+    background-color: #40444B;
+    border-radius: 15px;
+}
+
+.chatinput .icon {
+    border-radius: 5px;
+    min-width: 22px;
+    min-height: 22px;
+    margin: 0px 5px;
+}
+
+.chatinputarea .chatinput {
+    align-items: center;
+}
+
+.chatinputarea .chatinput .inputdiv input {
+    border: none;
+    background-color: #40444B;
+    color: whitesmoke;
+    width: 100%;
+}
+
+.chatinputarea .chatinput .inputdiv {
+    width: 100%;
+}
+
+.chatinputarea .chatinput ::placeholder {
+    color: grey;
+    opacity: 1;
+}
+
+.serverlist {
+    grid-area: serverlist;
+    background-color: #202225;
+    overflow-x: scroll;
+}
+
+.serverlist .icon {
+    border: dashed 2px white;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+   
+
+}
+
+.serverlist hr {
+    margin: 20px;
+    height: 4px;
+    border: none;
+    border-radius: 2px;
+    background-color: #36393F;
+}
+
+.selectedserver {
+    grid-area: activeserver;
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "invitewindow"
+    "channellist"
+    "userinfo";
+    grid-template-rows: auto min-content 1fr auto;
+    grid-template-columns: 1fr;
+    background-color: #2F3136;
+    min-width: 137px;
+}
+
+.selectedserver .userinfo {
+    grid-area: userinfo;
+    padding: 15px;
+    border: dashed 2px #ffff;
+    border-radius: 5px;
+}
+
+
+.selectedserver .servername {
+    grid-area: name;
+}
+
+.selectedserver .servername .servernamecontent {
+    display: flex;
+    margin: 15px;
+}
+
+.selectedserver hr {
+    border: none;
+    height: 2px;
+    background-color: #202225;
+}
+
+.selectedserver .invitewindow p {
+    margin: 15px;
+}
+
+.selectedserver .invitewindow .invitebutton {
+    border: none;
+    border-radius: 5px;
+    background-color: #717BF7;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.selectedserver .channellist {
+    grid-area: channellist;
+
+}
+
+.selectedserver .channelgroup {
+    margin: 15px 10px;
+   
+}
+
+.selectedserver .channelgroup h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.selectedserver .channelname {
+    margin: 5px;
+    margin-left: 23px;
+}
+
+.selectedserver .channelname.textchannel {
+    list-style: square;
+}
+
+.selectedserver .channelname.voicechannel {
+    list-style: circle;
+}
