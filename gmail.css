@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.layout-container {
+    height: 100vh;
+    background-color: grey;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 150px 1fr 250px;
+    grid-template-areas: 
+    'header header header'
+    'left main right';
+    /* gap: 5px; */
+}
+
+header {
+    grid-area: header;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 150px 1fr 250px;
+}
+
+.logo {
+    background-color: yellow;
+}
+
+.search {
+    background-color: aquamarine;
+    display: grid;
+    margin: 5px;
+    gap: 5px;
+    grid-template-columns: 60px minmax(150px, 1fr) 60px;
+}
+
+.search div {
+    background-color: rgb(177, 0, 0);
+}
+
+.icons {
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: repeat(3, 40px) 80px;
+    align-content: center;
+    justify-content: end;
+    padding: 5px;
+    gap: 5px;
+    grid-template-rows: 40px;
+    /* place-items: center; */
+    
+}
+
+.icons div {
+    background-color: grey;
+}
+
+main {
+    grid-area: main;
+    background-color: white;
+}
+
+.left {
+    grid-area: left;
+    background-color: red;
+}
+
+.right {
+    grid-area: right;
+    background-color: green;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.apps {
+    background-color: blue;
+    padding: 5px;
+}
+
+.apps > div ~ div {
+    background-color: lightgray;
+    margin-top: 5px;
+}
+
+.apps-container {
+    background-color: burlywood;
+    display: grid;
+    grid-auto-rows: 50px;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.apps-container div {
+    background-color: azure;
+}
+
+
