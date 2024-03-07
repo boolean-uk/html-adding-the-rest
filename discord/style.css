@@ -11,43 +11,43 @@ h3 {
     color: whitesmoke;
 }
 
-.gridcontainer {
+.discord-container {
     display: grid;
     grid-template-areas: 
-    "serverlist activeserver chat";
+    "server-list selected-server discord-chat";
     grid-template-columns: 102px 200px 1fr;
     grid-template-rows: 100vh;
     overflow-x: scroll;
 }
 
-.chat {
-    grid-area: chat;
+.discord-chat {
+    grid-area: discord-chat;
     display: grid;
     grid-template-areas:
-    "chatname"
-    "chatwindow"
-    "chatinput";
+    "chat-name"
+    "chat-window"
+    "chat-input";
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
     background-color: #36393F;
 }
 
-.chat .chatname {
-    grid-area: chatname;
+.discord-chat .chat-name {
+    grid-area: chat-name;
 }
 
-.chat .chatnamecontent {
+.discord-chat .chat-name-content {
     display: flex;
     margin: 15px;
 }
 
-.chat .chatnamecontent .chaticons {
+.discord-chat .chat-name-content .chat-icons {
     display: flex;
     align-items: center;
     margin-left: auto;
 }
 
-.chat .chatnamecontent .chaticon {
+.discord-chat .chat-name-content .chat-icon {
     border: dashed 1px black;
     border-radius: 5px;
     min-width: 20px;
@@ -55,7 +55,7 @@ h3 {
     margin: 0px 5px;
 }
 
-.chat .chatnamecontent input {
+.discord-chat .chat-name-content input {
     background-color: #2F3136;
     border: none;
     border-radius: 3px;
@@ -63,17 +63,17 @@ h3 {
     padding: 0px 10px;
 }
 
-.chat hr {
+.discord-chat hr {
     border: none;
     height: 2px;
     background-color: #3D4148;
 }
 
-.chatinputarea {
-    grid-area: chatinput;
+.chat-input-area {
+    grid-area: chat-input;
 }
 
-.chatinputarea .chatinput {
+.chat-input-area .chat-input {
     display: flex;
     align-content: center;
     margin: 15px;
@@ -82,51 +82,49 @@ h3 {
     border-radius: 15px;
 }
 
-.chatinput .icon {
+.chat-input .icon {
     border-radius: 5px;
     min-width: 22px;
     min-height: 22px;
     margin: 0px 5px;
 }
 
-.chatinputarea .chatinput {
+.chat-input-area .chat-input {
     align-items: center;
 }
 
-.chatinputarea .chatinput .inputdiv input {
+.chat-input-area .chat-input .input-div input {
     border: none;
     background-color: #40444B;
     color: whitesmoke;
     width: 100%;
 }
 
-.chatinputarea .chatinput .inputdiv {
+.chat-input-area .chat-input .input-div {
     width: 100%;
 }
 
-.chatinputarea .chatinput ::placeholder {
+.chat-input-area .chat-input ::placeholder {
     color: grey;
     opacity: 1;
 }
 
-.serverlist {
-    grid-area: serverlist;
+.server-list {
+    grid-area: server-list;
     background-color: #202225;
     overflow-x: scroll;
 }
 
-.serverlist .icon {
+.server-list .icon {
     border: dashed 2px white;
     border-radius: 50%;
     margin: 10px;
     margin-left: 20px;
     width: 60px;
     height: 60px;
-   
-
 }
 
-.serverlist hr {
+.server-list hr {
     margin: 20px;
     height: 4px;
     border: none;
@@ -134,48 +132,47 @@ h3 {
     background-color: #36393F;
 }
 
-.selectedserver {
-    grid-area: activeserver;
+.selected-server {
+    grid-area: selected-server;
     display: grid;
     grid-template-areas: 
-    "name"
-    "invitewindow"
-    "channellist"
-    "userinfo";
+    "server-name"
+    "invite-window"
+    "channel-list"
+    "user-info";
     grid-template-rows: auto min-content 1fr auto;
     grid-template-columns: 1fr;
     background-color: #2F3136;
     min-width: 137px;
 }
 
-.selectedserver .userinfo {
-    grid-area: userinfo;
+.selected-server .user-info {
+    grid-area: user-info;
     padding: 15px;
     border: dashed 2px #ffff;
     border-radius: 5px;
 }
 
-
-.selectedserver .servername {
-    grid-area: name;
+.selected-server .server-name {
+    grid-area: server-name;
 }
 
-.selectedserver .servername .servernamecontent {
+.selected-server .server-name .server-name-content {
     display: flex;
     margin: 15px;
 }
 
-.selectedserver hr {
+.selected-server hr {
     border: none;
     height: 2px;
     background-color: #202225;
 }
 
-.selectedserver .invitewindow p {
+.selected-server .invite-window p {
     margin: 15px;
 }
 
-.selectedserver .invitewindow .invitebutton {
+.selected-server .invite-window .invite-button {
     border: none;
     border-radius: 5px;
     background-color: #717BF7;
@@ -185,30 +182,28 @@ h3 {
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
-.selectedserver .channellist {
-    grid-area: channellist;
-
+.selected-server .channel-list {
+    grid-area: channel-list;
 }
 
-.selectedserver .channelgroup {
+.selected-server .channel-group {
     margin: 15px 10px;
-   
 }
 
-.selectedserver .channelgroup h4 {
+.selected-server .channel-group h4 {
     text-transform: uppercase;
     font-size: 14px;
 }
 
-.selectedserver .channelname {
+.selected-server .channel-name {
     margin: 5px;
     margin-left: 23px;
 }
 
-.selectedserver .channelname.textchannel {
+.selected-server .channel-name.text-channel {
     list-style: square;
 }
 
-.selectedserver .channelname.voicechannel {
+.selected-server .channel-name.voice-channel {
     list-style: circle;
 }
