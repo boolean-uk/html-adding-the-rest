@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header'
+        'page'
+    ;
+    gap: 5px;
+    background-color: whit;
+}
+
+.page {
+    grid-area: page;
+    display: grid;
+    grid-template: "left-bar main right-bar" 1fr/ .4fr 1fr .5fr;
+    gap: 40px;
+    background-color: #f3f2ef;
+    padding-top: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+
+}
+
+.header {
+    display: grid;
+    grid-template: "logo search . navbar" 1fr/ 50px 300px 1fr 2fr;
+    grid-area: header;
+    background-color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+    gap: 20px
+}
+
+.header div {
+    border: black solid 1px;
+}
+
+.navbar {
+    grid-area: navbar;
+    grid-template: "home network jobs messaging notifications profile work job-post";
+    display: grid;
+}
+
+.left-bar {
+    display: grid;
+    grid-area: left-bar;
+    grid-template-rows: 250px 200px 200px;
+    padding: 20px 0 20px 0;
+    gap: 5px;
+    border-radius: 15px;
+    align-content: left;
+    height: fit-content;
+}
+
+.left-bar>div {
+    background-color: white;
+    border: black solid 5px;
+    border-radius: 10px;
+}
+
+.profile-window {
+    display: grid;
+    grid-template-rows: 2fr 1fr .5fr .5fr;
+    padding: 5px;
+}
+
+.profile-window div {
+    border: dashed black 1px;
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-rows: 100px 1fr;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 15px;
+}
+
+.main div {
+    background-color: white;
+    border: black solid 5px;
+    border-radius: 10px;
+}
+
+.post-create {
+    display: grid;
+    grid-template: "compose" 1fr
+        "media-bar" 1fr / 1fr;
+    gap: 5px;
+    padding: 5px;
+    height: fit-content;
+}
+
+.post-create div {
+    border: dashed black 1px;
+}
+
+.compose {
+    display: grid;
+    grid-area: "compose";
+    grid-template: "profile-picture text-box" 35px/auto 1fr;
+    padding: 5px;
+    gap: 2px;
+}
+
+.compose div {
+    border: dashed red 1px;
+}
+
+.compose .profile-picture {
+    border-radius: 200px;
+    width: 35px;
+    height: 35px;
+}
+
+.media-bar {
+    display: grid;
+    grid-area: "compose";
+    grid-template: "add-photo add-video add-document create-atricle" 30px/1fr 1fr 1fr 1fr;
+    padding: 5px;
+    gap: 2px;
+}
+
+.media-bar div {
+    border: dashed red 1px;
+}
+
+.content {
+    height: fit-content;
+    width: fit-content;
+}
+
+
+.right-bar {
+    display: grid;
+    grid-area: right-bar;
+    grid-template-rows: 300px 150px 250px;
+    padding: 20px 0px 20px 0px;
+    gap: 30px;
+    border-radius: 15px;
+    height: fit-content;
+}
+
+.right-bar div {
+    background-color: white;
+    border: black solid 5px;
+    border-radius: 10px;
+}
+
+.news{
+    display: grid;
+    padding: 5px;
+    gap:5px
+}
+
+.news div{
+    border: green dashed 1px;
+    border-radius: 10px;
+}
+
+.posts {
+    display: grid;
+    grid-area: main;
+    grid-template-rows: 1fr;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 15px;
+}
+
+.content div {
+    background-color: white;
+    border: black solid 1px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        grid-template:
+            "header header" 1fr
+            "left-bar main" 20fr /
+            .5fr 1fr;
+    }
+
+    .right-bar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        grid-template:
+            "header" 1fr
+            "main" 20fr /
+            1fr;
+    }
+
+    .left-bar {
+        display: none;
+    }
+}
