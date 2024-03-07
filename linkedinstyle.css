@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+
+    grid-template: 
+    'header header header' 100px
+    'left-bar main right-bar' 1fr /
+    300px 1fr 500px;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: white;
+
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    justify-content: left;
+
+    grid-template-columns: 80px 1300px 300px;
+}
+
+.logo, .search, .icons {
+    border: 2px dotted #5C6BC0;
+    border-radius: 5px;
+}
+
+.search-bar {
+    border: 2px solid black;
+    border-radius: 10px;
+
+    width: 500px;
+}
+
+.icons div {
+    border: 2px dotted #66BB6A;
+}
+
+.search {
+    display: grid;
+    padding: 10px;
+}
+
+.icons {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* Left Bar */
+.left-bar {
+    background-color: #E0E0E0;
+
+    grid-area: left-bar;
+
+    display: grid;
+    padding: 20px;
+    gap: 20px;
+
+    grid-template-rows: 400px 200px 200px;
+}
+
+.you, .job, .info {
+    border: 2px dotted #5C6BC0;
+    background-color: white;
+}
+
+.you div {
+    border: 2px dotted #66BB6A;
+}
+
+.you {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-rows: 200px 1fr 1fr 1fr;
+}
+
+/* Main */
+main {
+    background-color: #E0E0E0;
+
+    grid-area: main;
+
+    display: grid;
+
+    padding: 20px;
+    gap: 20px;
+
+    grid-template-rows: 125px 1000px;
+}
+
+.post, .main-section {
+    border: 2px dotted #5C6BC0;
+    background-color: white;
+}
+
+.main-section div, .post div {
+    border: 2px dotted #66BB6A;
+
+}
+
+.post {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+}
+
+.post-part div, .attachement div {
+    border: 2px dotted #EC407A;
+}
+
+.post-profile-picture {
+    border-radius: 50%;
+}
+
+.post-part {
+    display: grid;
+
+    padding: 3px;
+    gap: 4px;
+    
+    grid-template-columns: 40px 1fr;
+}
+
+.attachement {
+    display: grid;
+
+    padding: 3px;
+    gap: 4px;
+    
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-section {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    overflow: auto;
+
+    grid-template-rows: repeat(4, 400px);
+}
+
+/* Right Bar */
+.right-bar {
+    background-color: #E0E0E0;
+
+    grid-area: right-bar;
+
+    display: grid;
+
+    padding: 20px 200px 20px 20px;
+    gap: 20px;
+
+    grid-template-rows: 300px 200px 200px;
+}
+
+.news, .most-viewed, .add-to-feed {
+    border: 2px dotted #5C6BC0;
+    background-color: white;
+}
+
+.news div {
+    border: 2px dotted #66BB6A;
+}
+
+.news {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+}
