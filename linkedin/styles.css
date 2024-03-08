@@ -156,13 +156,13 @@
     border-radius: 10px;
 }
 
-.news{
+.news {
     display: grid;
     padding: 5px;
-    gap:5px
+    gap: 5px
 }
 
-.news div{
+.news div {
     border: green dashed 1px;
     border-radius: 10px;
 }

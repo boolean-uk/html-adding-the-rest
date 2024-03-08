@@ -164,11 +164,11 @@ body {
 
 .theme {
   display: grid;
-  grid-template:"img1 img2 img3 img4" 30px
+  grid-template: "img1 img2 img3 img4" 30px
     "img5 img6 img7 img8" 30px /1fr 1fr 1fr 1fr;
 }
 
-.theme div{
+.theme div {
   border: black solid 1px;
 }
 
