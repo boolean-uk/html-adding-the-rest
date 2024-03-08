@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template: 
+        'header header header header' 80px
+        'left main right sidebar' 1fr / 200px minmax(50px, 1fr) 200px 50px;
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    grid-template: 
+        'header-1 settings perfil' / minmax(200px, 1fr) 200px 200px;
+    border-bottom: 1px solid #F1F3F4;
+    text-align: center;
+    align-items: center;
+}
+
+header .header-1 {
+    display: grid;
+    align-items: center;
+    grid-template: 
+        'first first third' / 80px 50px minmax(50px, 1fr);
+}
+
+header .header-1 img {
+    width: 40px;
+}
+
+header .header-1 button {
+    border-radius: 10px;
+    padding: 22px 300px;
+    border: none;
+    background-color: #F1F3F4;
+}
+
+header .settings {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 20px 20px 20px;
+}
+
+header .perfil {
+    display: grid;
+    border-radius: 10px;
+    align-items: center;
+    padding: 7px;
+    border: 1px solid #d0d0d0;
+    margin: 12px;
+}
+
+header .perfil img {
+    width: 35px;
+}
+
+.left {
+    display: grid;
+    grid-area: left;
+    text-align: center;
+    gap: 5px;
+    grid-template: 
+        'button-compose' 80px
+        'apps' minmax(80px, 1fr)
+        'meet' 80px
+        'chat' 150px
+        'icons' 30px;
+}
+
+.left .button-compose {
+    display: grid;
+    align-items: center;
+}
+
+.left .button-compose button {
+    border: none;
+    box-shadow: 1px 1px 2px #949494;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 40px;
+}
+
+.left .button-compose button i {
+    position: relative;
+    right: 10px;
+}
+
+.left .apps {
+    display: grid;
+    align-items: center;
+    border-bottom: 1px solid #F1F3F4;
+}
+
+.left .meet {
+    display: grid;
+    align-items: center;
+    border-bottom: 1px solid #F1F3F4;
+}
+
+.left .chat {
+    display: grid;
+    align-items: center;
+    border-bottom: 1px solid #F1F3F4;
+}
+
+.left .icons {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.left .icons i {
+    position: relative;
+    left: 65px;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+    grid-template: 
+        'features' 80px
+        'mail' minmax(80px, 1fr);
+}
+
+main .mail {
+    display: grid;
+    background-color: #F5F6F7;
+}
+
+main .mail div {
+    display: inline-flex;
+    align-self: center;
+    border-top: 1px solid #6e6f6f;
+    border-bottom: 1px solid #6e6f6f;
+    gap: 5px;
+}
+
+main .features {
+    display: grid;
+    grid-template: 
+        'features-1 features-2' / 150px 150px;
+}
+
+main .features-1 {
+    display: grid;
+    position:relative;
+    left: 1em;
+    gap: 5px;
+    grid-template: 
+        'div div div' / 50px 50px 50px;
+}
+
+
+main .features-1 i {
+    align-self: center;
+}
+
+main .features-2 {
+    display: grid;
+    position:relative;
+    left: 47em;
+    gap: 5px;
+    grid-template: 
+        'div div div' / 100px 50px 50px;
+}
+
+main .features-2 div {
+    font-size: 15px;
+    align-self: center;
+}
+
+main .features-2 i {
+    align-self: center;
+}
+
+.right {
+    display: grid;
+    grid-area: right;
+    text-align: center;
+    row-gap: 5px;
+    grid-template: 
+        'quick-settings' 100px
+        'density' 150px
+        'theme' 120px
+        'inbox-type' minmax(100px, 1fr);
+    border-left: 1px solid #F1F3F4;
+}
+
+.right .quick-settings {
+    display: grid;
+    align-items: center;
+    position: relative;
+}
+
+.right .quick-settings button {
+    border: 1px solid #d0d0d0;
+    padding: 10px 40px;
+    color: #325bff;
+    background-color: white;
+}
+
+.right .density {
+    border-top: 1px solid #F1F3F4;
+    border-bottom: 1px solid #F1F3F4;
+    display: grid;
+    align-items: center;
+}
+
+.right .theme {
+    display: grid;
+    padding: 22px;
+    gap: 5px;
+    align-content: center;
+    grid-template-rows: 40px 40px;
+    grid-template-columns: 35px 35px 35px 35px;
+    grid-template-areas: 
+        'theme theme theme theme'
+        'first second third fourth'
+        'fifht sixth seventh eigth';
+}
+
+.right .theme div {
+    border: 1px solid #000000;
+}
+
+.right .inbox-type {
+    display: grid;
+    border-top: 1px solid #F1F3F4;
+    border-bottom: 1px solid #F1F3F4;
+    display: grid;
+    align-items: center;
+}
+
+.sidebar {
+    display: grid;
+    border-left: 1px solid #F1F3F4;
+    grid-area: sidebar;
+    text-align: center;
+    grid-template: 
+        'i' 50px
+        'i' 50px
+        'i' 50px
+        'i' minmax(50px, 50px);
+}
+
+.sidebar i {
+    display: grid;
+    position: relative;
+    top: 10px;
+}
