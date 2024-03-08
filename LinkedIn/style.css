@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-color:grey
+}
+
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 100vh;
+    display: grid;
+    grid-template:
+    'header header header' 50px
+    'left feed right' 1fr/
+    150px 1fr 150px;
+    background-color: rgb(169, 168, 168)
+}
+
+.header {
+    background-color:white;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50px 1fr 200px; 
+}
+
+.header div {
+    margin: 5px;
+    background-color:white;
+    border: 1px dotted;
+}
+
+.header .search {
+    display: grid;
+}
+
+.header .search-box {
+    max-width: 200px;
+    min-width: 50px;
+    border: 2px solid;
+    border-radius: 3px;
+    background-color: antiquewhite;
+}
+
+.header .header-menu {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.left {
+    grid-area: left;
+    display: grid;
+    grid-template-rows: 200px 75px 75px;
+    grid-template-areas: 
+    'profile'
+    'employer'
+    'recent';
+    background-color: rgb(169, 168, 168)
+}
+
+.left div {
+    background-color: white;
+    border: 1px dotted;
+}
+
+.left .profile {
+    grid-area: profile;
+    display: grid;
+    grid-template-rows: 100px repeat(3, 1fr);
+    gap: 5px;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+}
+
+.left .employer {
+    grid-area: employer;
+    margin: 0 5px 5px 5px;
+}
+
+.left .recent {
+    grid-area: recent;
+    margin: 0 5px 0 5px;
+}
+
+.feed {
+    grid-area: feed;
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    gap: 5px;
+    background-color: rgb(169, 168, 168)
+
+}
+
+.feed div {
+    background-color: white;
+    border: 1px dotted;
+}
+
+.feed .create-post {
+    display: grid;
+    gap: 2px;
+    padding: 2px;
+    margin: 5px 5px 0 0;
+}
+
+.create-post .top-layer {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    padding: 2px;
+    gap: 2px;
+    border-color: green;
+}
+
+.create-post .top-layer div {
+    border-color: red;
+}
+
+.create-post .top-layer .profile-pic {
+    border-radius: 50%;
+}
+
+.create-post .media-selector {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 2px;
+}
+.create-post .media-selector div {
+    padding: 2px;
+}
+
+.feed .posts {
+    display: grid;
+    margin-right: 5px;
+    padding: 2px;
+    gap: 2px;
+}
+
+
+.right {
+    grid-area: right;
+    display: grid;
+    grid-template-rows: 300px 100px 100px;
+    gap: 5px;
+   margin: 5px 5px 0 0;
+   background-color: rgb(169, 168, 168)
+}
+
+.right div {
+    border: 1px dotted;
+    background-color: white;
+}
+
+.right .news {
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+}
