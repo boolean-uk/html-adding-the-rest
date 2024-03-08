@@ -1,0 +1,86 @@
+* {
+    font-size: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    margin: 0;
+    height: 100vh;
+
+
+
+    grid-template: 
+    "header                header                 header             header" 50px
+    "leftside               main                 rightbar              side"  1fr /
+    250px                    1fr                   250px            auto;
+
+
+}
+
+
+
+.gmail-headerbar {
+    grid-area: header;
+    border: solid 0.5px black;
+    background-color: #2FA14D;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.leftbar {
+    display: grid;
+    grid-area: leftside;
+    border: solid 3px #EA4638;
+    background-color: #D0DFE4;
+    grid-template-columns: auto;
+}
+
+.leftbar > div {
+    text-align: center;
+    border: solid 1px #EA4638;
+}
+
+.mainbar {
+    display: grid;
+    grid-area: main;
+    background-color: #D0DFE4;
+    border: solid 3px #EA4638;
+    overflow-x: scroll;
+}
+
+.mainbar > div {
+    text-align: center;
+    border: solid 1px #EA4638;
+}
+
+
+.rightbar {
+    grid-area: rightbar;
+    border: solid 3px #EA4638;
+    background-color: #FBBC17;
+    color: black;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: side;
+    background-color: #D0DFE4;
+    border: solid 3px #EA4638;
+}
+
+.gmail-button {
+    background-color: #2D7FEE;
+    color: white;
+    margin: 15px 20px 15px 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    height: 30px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);;
+}
