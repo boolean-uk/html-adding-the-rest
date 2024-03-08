@@ -33,14 +33,13 @@
     grid-area: server-nav;
     display: grid;
     grid-template-rows: 
-    50px 160px repeat(3, auto);
+    50px 160px 110px 250px 50px;
     grid-template-areas:
     'server-name'
     'invite'
     'server-category1'
     'server-category2'
-    'server-category3'
-    'server-category4';
+    'voice-controls';
     gap: 5px;
     padding: 5px;
 }
@@ -132,18 +131,269 @@
     grid-area: add-server-button;
     color: green;
     margin-left: 50px;
-    padding-left: 
 }
 
 .server-category1 .channel1 {
+    color:green;
     grid-area: channel1;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 5px;
 }
 
 .server-category1 .channel2 {
+    color:green;
     grid-area: channel2;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 5px;
 }
+
+.server-nav .server-category2 {
+    grid-area: server-category2;
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+    grid-template:
+    'server-title add-server-button' 20px
+    'channel1 channel1' 30px
+    'channel2 channel2' 30px
+    'channel3 channel3' 30px
+    'channel4 channel4' 30px
+    'channel5 channel5' 30px
+    'channel6 channel6' 30px/
+    80px auto;
+}
+
+.server-category2 .server-title {
+    grid-area: server-title;
+    color: green;
+}
+
+.server-category2 .add-server-button {
+    grid-area: add-server-button;
+    color: green;
+    margin-left: 50px;
+}
+
+.server-category2 .channel1 {
+    color:green;
+    grid-area: channel1;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.server-category2 .channel2 {
+    color:green;
+    grid-area: channel2;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.server-category2 .channel3 {
+    color:green;
+    grid-area: channel3;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+
+.server-category2 .channel4 {
+    color:green;
+    grid-area: channel4;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.server-category2 .channel5 {
+    color:green;
+    grid-area: channel5;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+.server-category2 .channel6 {
+    color:green;
+    grid-area: channel6;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 5px;
+    padding: 5px;
+}
+
+
+.channel1 div, .channel2 div, .channel3 div, .channel4 div, .channel5 div, .channel6 div {
+    color: blue;
+}
+
+.server-nav .voice-controls {
+    grid-area: voice-controls;
+    display: grid;
+    margin-top: 315px;
+    height: 40px;
+    grid-template-columns: 30px 50px 20px 20px 20px;
+    grid-template-areas: 
+    'thumbnail username mute deafen settings';
+    gap: 5px;
+    padding: 5px;
+}
+
+.voice-controls .username {
+    grid-area: username;
+
+}
+
+.voice-controls .mute {
+    grid-area: mute;
+    margin-left: 10px;
+    width: 20px;
+}
+.voice-controls .deafen {
+    grid-area: deafen;
+    margin-left: 10px;
+    width: 20px;
+}
+
+.voice-controls .settings {
+    grid-area: settings;
+    margin-left: 10px;
+    width: 20px;
+}
+
+
+
+.voice-controls div {
+    color: green;
+}
+
+
 
 .chat {
     border: 2px dotted;
     grid-area: chat;
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+    grid-template-rows: 50px 1fr 40px;
+    grid-template-areas: 
+    'header'
+    'chat-area'
+    'send-message';
+}
+
+.chat .header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 100px 120px 100px;
+    grid-template-areas:
+    'channel-name channel-nav search-bar support';
+    gap: 5px;
+    padding: 5px;
+    color: red;
+}
+
+.header .channel-name {
+    grid-area: channel-name;
+    display: grid;
+    justify-self: start;
+    width: 100px;
+    color: green
+}
+
+.header .channel-nav {
+    grid-area: channel-nav;
+    display: grid;
+    justify-self: end;
+    width: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 5px;
+    color: green;
+}
+
+.channel-nav div {
+    color: blue;
+}
+
+.header .search-bar {
+    grid-area: search-bar;
+    display: grid;
+    justify-self: end;
+    width: 120px;
+    color: green;
+}
+
+.header .support {
+    grid-area: support;
+    display: grid;
+    justify-self: end;
+    width: 100px;
+    color: green;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    padding: 5px;
+}
+
+.support div {
+    color: blue;
+}
+
+
+.chat div {
+    border: 2px dotted;
+}
+
+.chat .chat-area {
+    color: red;
+}
+
+.chat .send-message {
+    grid-area: send-message;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, auto);
+    grid-template-areas:
+    'media-button gift gif emoji';
+    gap: 5px;
+    padding: 5px;
+    color: red;
+}
+
+.send-message .media-button {
+    color: green;
+    grid-area: media-button;
+    justify-self: start;
+    width: 30px;
+}
+
+.send-message .gift {
+    color: green;
+    grid-area: gift;
+    justify-self: end;
+    width: 30px;
+}
+
+.send-message .gif {
+    color: green;
+    grid-area: gif;
+    justify-self: end;
+    width: 30px;
+}
+
+.send-message .emoji {
+    color: green;
+    grid-area: emoji;
+    justify-self: end;
+    width: 30px;
 }
