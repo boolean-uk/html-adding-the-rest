@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+
+    grid-template: 
+    'header header header' 100px
+    'left-bar main right-bar' 1fr /
+    300px 1fr 500px;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: white;
+
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    justify-content: left;
+
+    grid-template-columns: 80px 1300px 400px;
+}
+
+.search-bar {
+    background-color: #EFF3F7;
+    border-radius: 10px;
+
+    width: 500px;
+
+    display: grid;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.icons div {
+    display: grid;
+    place-items: center;
+}
+
+.search {
+    display: grid;
+    padding: 10px;
+}
+
+.icons {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.logo img {
+    height: 70px;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+}
+
+.icons div img {
+    height: 50px;
+}
+
+/* Left Bar */
+.left-bar {
+    background-color: #E0E0E0;
+
+    grid-area: left-bar;
+
+    display: grid;
+    padding: 20px;
+    gap: 20px;
+
+    grid-template-rows: 400px 200px 200px;
+}
+
+.you, .job, .info {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.you {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-rows: 200px 1fr 1fr 1fr;
+}
+
+.views {
+    display: grid;
+    align-items: center;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-columns: 1fr 30px;
+}
+
+.insights {
+    display: grid;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.items {
+    display: grid;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.profile-picture, .views, .insights {
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.profile-picture {
+    display: grid;
+    gap: 10px;
+    place-content: center;
+
+    grid-template-rows: 100px 1fr;
+}
+
+.you-picture {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+    display: grid;
+}
+
+.name {
+    display: grid;
+    text-align: center;
+}
+
+.you-picture img {
+    height: 100px;
+}
+
+/* Main */
+main {
+    background-color: #E0E0E0;
+
+    grid-area: main;
+
+    display: grid;
+
+    padding: 20px;
+    gap: 20px;
+
+    grid-template-rows: 130px 1000px;
+}
+
+.post, .main-section {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.main-section div {
+    border: 2px dotted #66BB6A;
+
+}
+
+.post {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+}
+
+
+.post-profile-picture {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.post-part {
+    display: grid;
+    align-items: center;
+
+    padding: 3px;
+    gap: 10px;
+    
+    grid-template-columns: 50px 1fr;
+}
+
+.attachement {
+    display: grid;
+    place-items: center;
+
+    padding: 3px;
+    gap: 4px;
+    
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-section {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    overflow: auto;
+
+    grid-template-rows: repeat(4, 400px);
+}
+
+.post-profile-picture img {
+    height: 50px;
+}
+
+.start-posting {
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 20px;
+    height: 30px;
+
+    display: grid;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Right Bar */
+.right-bar {
+    background-color: #E0E0E0;
+
+    grid-area: right-bar;
+
+    display: grid;
+
+    padding: 20px 200px 20px 20px;
+    gap: 20px;
+
+    grid-template-rows: 300px 200px 200px;
+}
+
+.news, .most-viewed, .add-to-feed {
+    border: 2px dotted #5C6BC0;
+    background-color: white;
+}
+
+.news div {
+    border: 2px dotted #66BB6A;
+}
+
+.news {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+}
