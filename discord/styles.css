@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-columns: 70px 200px 1fr 200px;
+  grid-template-areas:
+    'sidebar channels top-bar members'
+    'sidebar channels chat-history members'
+    'sidebar channels chatbox members'
+
+  ;
+  background-color: #424549;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #424549;
+  border: black solid 3px;
+  display: grid;
+  grid-template-rows:60px repeat(auto-fill, 60px);
+  padding-left: 5px;
+  gap: 2px;
+}
+
+
+.sidebar .messages, .sidebar .server {
+  border: gray 1px solid;
+  border-radius: 30px;
+  height: 50px;
+  width: 50px;
+}
+
+.channels {
+  grid-area: channels;
+  background-color: white;
+  border: black solid 3px;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    'server-name'
+    'channel-browser'
+    'user-profile'
+  ;
+
+}
+
+.channel-browser{
+  display: grid;
+  height: 100%;
+  grid-template-rows:150px repeat(auto-fill, 150px);
+}
+
+.category{
+  display: grid;
+  grid-template-rows:repeat(auto-fill, 30px);
+  border: dashed yellow 20px
+}
+.invite{
+  display: grid;
+  grid-template-rows:1fr .75fr .75fr ;
+  justify-items: center;
+    align-items: center;
+}
+
+.channel-browser .icon{
+  width:50px;
+  height:50px;
+  border: dashed white 1px;
+  border-radius: 50px;
+}
+
+.channel-browser div{
+  border: black solid 1px;
+}
+
+.server-name {
+  grid-area: server-name;
+  background-color: #424549;
+  border: solid black 3px;
+}
+
+.channel-browser {
+  grid-area: channel-browser;
+  background-color: #424549;
+  border: solid black 3px;
+}
+
+.user-profile {
+  grid-area: user-profile;
+  background-color: #424549;
+  border: solid black 3px;
+  display: grid;
+  grid-template-columns:50px 1fr 50px ;
+}
+
+.user-profile div{
+  border: 1px black solid;
+}
+
+.controls{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr ;
+}
+
+.top-bar {
+  grid-area: top-bar;
+  background-color: #424549;
+  border: black solid 3px;
+  display: grid;
+  grid-template-columns:minmax(200px, 1fr) auto ;
+  grid-template-rows:1fr
+}
+
+.top-bar div{
+  border: 1px blue solid;
+}
+
+.options{
+  display:grid;
+  grid-template-columns: 25px 25px 25px 100px 25px 25px;
+  grid-template-rows: 1fr;
+}
+
+.options div{
+  border: 1px red solid;
+}
+
+
+.members {
+  grid-area: members;
+  background-color: #424549;
+  border: black solid 3px;
+  display: grid;
+  grid-template-rows:repeat(3, auto);
+
+}
+
+.members div{
+  border: green 2px solid;
+  height: fit-content;
+}
+.group div{
+  border: purple 1px solid;
+}
+
+.members .group{
+  display: grid;
+  grid-template-rows:repeat(auto-fill, 50px)
+}
+
+.chat-history {
+  grid-area: chat-history;
+  background-color: #424549;
+  border: black solid 3px;
+}
+
+.chatbox {
+  grid-area: chatbox;
+  background-color: #424549;
+  border: black solid 3px;
+  display: grid;
+  grid-template-columns: 25px 1fr 75px;
+}
+.chatbox div{
+  border: 1px yellow solid;
+}
+
+.extra-media{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+@media screen and (min-width: 730px) and (max-width: 920px) {
+  .container{
+    grid-template-columns: 100px 200px 1fr;
+    grid-template-areas:
+      'sidebar channels top-bar'
+      'sidebar channels chat-history'
+      'sidebar channels chatbox'
+  
+    ;
+  }
+  .members{
+    display:none
+  }
+  
+}
+
+@media screen and (min-width: 610px) and (max-width: 730px) {
+  .container{
+    grid-template-columns:150px 1fr;
+    grid-template-areas:
+      'channels top-bar'
+      'channels chat-history'
+      'channels chatbox'
+  
+    ;
+  }
+  .sidebar{
+    display: none;
+  }
+  .members{
+    display:none
+  }
+  .channels .invite{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 440px) and (max-width: 610px) {
+  .container{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      'top-bar'
+      'chat-history'
+      'chatbox'
+  
+    ;
+  }
+  .channels{
+    display: none;
+  }
+
+  .sidebar{
+    display: none;
+  }
+  .members{
+    display:none
+  }
+  .channels .invite{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      'top-bar'
+      'chat-history'
+      'chatbox'
+  
+    ;
+  }
+  .channels{
+    display: none;
+  }
+
+  .sidebar{
+    display: none;
+  }
+  .members{
+    display:none
+  }
+  .channels .invite{
+    display: none;
+  }
+  .options{
+    display: none;
+  }
+}
