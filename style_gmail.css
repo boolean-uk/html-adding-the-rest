@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template: 
+    'header header header header' 80px
+    'left main right sidebar' 1fr/
+    1fr 4fr 1fr 60px;
+    height: 100vh;
+}
+
+@media screen and (max-width: 499px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar, .right, .left, header {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 499px) and (max-width: 987px) {
+    .container {
+        grid-template-columns: 1fr 4fr 60px;
+    }
+    .right, .left {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 987px) and (max-width: 1265px) {
+    .container {
+        grid-template-columns: 1fr (minmax(400px, 1fr)) 1fr 60px;
+    }
+}
+
+
+header {
+    grid-area: header;
+    background-color: blueviolet;
+}
+.header-container {
+    display: grid;
+    grid-auto-columns: 60px 150px 1fr 150px 200px;
+    grid-auto-flow: column;
+    height: 75px;
+    gap: 10px;
+    border: 2px dotted black;
+}
+.search-bar {
+    border-radius: 20px;
+}
+.tabs {
+    display: grid;
+    grid-auto-columns: 50px;
+    grid-auto-flow: column;
+}
+
+
+main {
+    grid-area: main;
+    background-color: antiquewhite;
+}
+
+main div {
+    display: grid;
+    grid-template-rows: 45px;
+    border: 2px dotted rgb(67, 190, 19);
+    margin: 2px 2px 0px 2px;
+}
+
+
+
+
+
+.left {
+    grid-area: left;
+    background-color: aquamarine;
+}
+.compose-box, .folders-box, .meet-box, .chat-box, .footer, .footer div, .inbox-type, .header-container div {
+    display: grid;
+    border: 2px dotted rgb(11, 80, 88);
+}
+.compose-box {
+    grid-template-rows: 80px;
+}
+.footer {
+    grid-template-rows: 50px;
+}
+
+.compose {
+    display: grid;
+    grid-template-rows: 35px;
+    gap: 10px;
+    border: 2px dotted rgb(235, 8, 8);
+    border-radius: 40px;
+}
+.folders-box div {
+    display: grid;
+    grid-template-rows: 26px;
+    gap: 8px;
+    border: 2px dotted rgb(50, 7, 152);
+    margin: 1px 0px;
+}
+.meet-box div {
+    display: grid;
+    grid-template-rows: 35px;
+    gap: 8px;
+    border: 2px dotted rgb(236, 13, 232);
+    margin: 1px 0px;
+}
+.chat-box div {
+    display: grid;
+    grid-template-rows: 45px;
+    border: 2px dotted rgb(230, 17, 141);
+    margin: 1px 0px;
+}
+.footer {
+    display: grid;
+    grid-auto-columns: 50px;
+    grid-auto-flow: column;
+    height: 50px;
+    place-content: center;
+    gap: 5px;
+}
+
+
+
+
+
+.right{
+    grid-area: right;
+    background-color: rgb(247, 88, 3);
+}
+.settings, .settings div {
+    display: grid;
+    grid-template-rows: 45px;
+    border: 2px dotted black;
+    margin: 2px;
+}
+.density, .density div {
+    display: grid;
+    grid-template-rows: 45px;
+    border: 2px dotted blueviolet;
+    margin: 2px;
+}
+.theme {
+    display: grid;
+    border: 2px dotted black;
+}
+.theme-container {
+    display: grid;
+    grid-template: 
+    'box box-1 box-2 box-3' 40px
+    'box-4 box-5 box-6 box-7' 40px/
+    55px 55px 55px 55px;
+    gap: 5px;
+    margin: 2px;
+}
+.theme-container .box {
+    grid-area: box;
+    border: 2px dotted black;
+}
+.theme-container .box-1 {
+    grid-area: box-1;
+    border: 2px dotted black;
+}
+.theme-container .box-2 {
+    grid-area: box-2;
+    border: 2px dotted black;
+}
+.theme-container .box-3 {
+    grid-area: box-3;
+    border: 2px dotted black;
+}
+.theme-container .box-4 {
+    grid-area: box-4;
+    border: 2px dotted black;
+}
+.theme-container .box-5 {
+    grid-area: box-5;
+    border: 2px dotted black;
+}
+.theme-container .box-6 {
+    grid-area: box-6;
+    border: 2px dotted black;
+}
+.theme-container .box-7 {
+    grid-area: box-7;
+    border: 2px dotted black;
+}
+.inbox-type div {
+    display: grid;
+    grid-template-rows: repeat(3, 80px);
+    border: 2px dotted black;
+    height: 100px;
+    gap: 10px;
+    margin: 2px;
+}
+
+
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(255, 80, 168);
+}
+.sidebar div {
+    display: grid;
+    grid-template-rows: repeat(4, 60px);
+    border: 2px dotted black;
+    height: 60px;
+    margin: 6px;
+}
