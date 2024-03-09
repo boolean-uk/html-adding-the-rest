@@ -27,7 +27,6 @@ body {
     grid-area: top-bar;
     background-color: white;
     padding: 5px 150px 5px 15px;
-    /* gap: 10px; */
     display: grid;
     grid-template:
         'bar' 1fr;
