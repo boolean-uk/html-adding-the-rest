@@ -24,6 +24,14 @@ header {
 
 .logo {
     background-color: yellow;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    padding: 5px;
+    gap: 5px;
+}
+
+.logo div {
+    background-color:white;
 }
 
 .search {
@@ -63,6 +71,14 @@ main {
 .left {
     grid-area: left;
     background-color: red;
+    display: grid;
+    grid-template-rows: 80px minmax(200px, 1fr) 80px 120px 40px;
+    padding: 5px;
+    gap: 5px;
+}
+
+.left div {
+    background-color: antiquewhite;
 }
 
 .right {
@@ -70,6 +86,43 @@ main {
     background-color: green;
     display: grid;
     grid-template-columns: 200px 1fr;
+}
+
+.settings {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.settings > div + div {
+    /* height: 75%; */
+    background-color: cadetblue;
+}
+
+.quick-settings {
+    display: grid;
+    grid-template-areas: 
+    'quick close'
+    'all all';
+    grid-template-columns: 1fr 40px;
+}
+
+.quick {
+    grid-area: quick;
+    background-color: yellow;
+}
+
+.close {
+    grid-area: close;
+    background-color: aliceblue;
+}
+
+.all {
+    border: solid black 2px;
+    color: blue;
+    grid-area: all;
+    margin: 10px;
+    text-align: center;
+    /* place-items: center; */
 }
 
 .apps {
