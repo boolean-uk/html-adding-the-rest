@@ -1,0 +1,637 @@
+body {
+    background-color: lightblue;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Container */
+/* display: grid */
+/* grid-template */
+/* "header      header    header       header" 150px
+    "left-bar   main      right-bar    icon-bar 800px /
+300px           1fr         350px       50px 
+    */
+
+
+    .container {
+        display: grid;
+        grid-template:
+        "header     header     header       header"     150px
+        "left-bar   main       right-bar   icon-bar"   1500px/
+        300px       1fr         400px         100px
+        ;
+    }
+
+    /* Header */
+    .header {
+        grid-area: header;
+        background-color: lightblue;
+        border: 1px dashed black;
+
+        /* add display grid */
+        /* grid-template */
+        /* "menu    logo    search-bar" 50px
+            70px    300px */
+
+    display: grid;
+    grid-template:
+     "menu    logo    search-bar" 50px /
+       70px     100px    350px  ;
+       gap: 10px;
+      
+    }
+
+    /* Menu */
+    .menu {
+        grid-area: menu;
+        
+        border: 1px dashed black;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    /* Logo */
+    .logo {
+        grid-area: logo;
+      
+        border: 1px dashed black;
+        margin-top: 10px;
+    }
+
+
+    /* Search-bar */
+
+    .search-bar {
+        grid-area: search-bar;;
+        border: 1px dashed black;
+        margin-top: 10px;
+    }
+
+    /* Left-bar */
+    .left-bar {
+    grid-area: left-bar;
+    background-color: lightblue;
+    border: 1px dashed black;
+
+    /* Left Bar container */
+
+    display: grid;
+    grid-template: 
+    "left-container1"
+    "left-container2"
+    "left-container3"
+    ;
+    grid-template-rows: 1fr 400px 400px ;
+    padding: 10px;
+    gap: 5px;
+}
+
+.left-container1 {
+    grid-area: left-container1;
+    border: 1px dashed black;
+
+    display: grid;
+    grid-template: 
+    "compose-container"
+    "inboxblah-container";
+    grid-template-rows: 
+    100px 1fr;
+    padding: 10px;
+    gap: 5px;
+
+
+}
+
+.compose-container {
+    grid-area: compose-container;
+    border: 1px dashed black;
+}
+
+.compose {
+    width: 60%; 
+    height: 50%;
+    border-radius: 30%;
+    justify-content: center;
+}
+
+.inboxblah-container {
+    grid-area: inboxblah-container;
+    border: 1px dashed black;
+
+    display: grid;
+    grid-template-areas: 
+    "inbox"
+    "starred"
+    "snoozed"
+    "important"
+    "sent"
+    "team"
+    "new-rfps"
+    "projects"
+    "personal"
+    "more"
+    ;
+    grid-template-rows: auto,repeat(9,1fr);
+    padding: 10px;
+    gap: 5px;
+}
+
+.inbox {
+    grid-area: inbox;
+    border: 1px dashed black;
+    
+}
+
+.starred {
+    grid-area: starred;
+    border: 1px dashed black;
+    
+}
+
+.snoozed {
+    grid-area: snoozed;
+    border: 1px dashed black;
+    
+}
+
+.important {
+    grid-area: important;
+    border: 1px dashed black;
+    
+}
+
+.sent {
+    grid-area: sent;
+    border: 1px dashed black;
+    
+}
+
+.team {
+    grid-area: team;
+    border: 1px dashed black;
+    
+}
+
+.new-rfps {
+    grid-area: new-rfps;
+    border: 1px dashed black;
+    
+}
+
+.projects {
+    grid-area: projects;
+    border: 1px dashed black;
+    
+}
+
+.personal {
+    grid-area: personal;
+    border: 1px dashed black;
+    
+}
+
+.more {
+    grid-area: more;
+    border: 1px dashed black;
+    
+}
+
+.left-container2 {
+    grid-area: left-container2;
+    border: 1px dashed black;
+
+}
+
+.left-container3 {
+    grid-area: left-container3;
+    border: 1px dashed black;
+
+}
+
+    /* Main */
+    .main {
+        grid-area: main;
+        background-color: lightblue;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        "filter-container"
+        "main-email-container";
+        grid-template-rows: 50px 1fr;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .filter-container {
+        grid-area: filter-container;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: "filter-box refresh three-dots page-num back forward"
+         ;
+         grid-template-columns: 
+         50px 30px 30px 1fr 30px 30px;
+         padding: 10px;
+         gap: 5px;
+    }
+
+    .filter-box {
+        grid-area: filter-box;
+        border: 1px dashed black;
+        /* gap: 30px; */
+        
+    }
+
+    .refresh {
+        grid-area: refresh;
+        border: 1px dashed black;
+        
+    }
+
+    .three-dots {
+        grid-area: three-dots;
+        border: 1px dashed black;
+    }
+
+    .page-num {
+        grid-area: page-num ;
+        border: 1px dashed black;
+    }
+
+    .back {
+        grid-area: back ;
+        border: 1px dashed black;
+    }
+
+    .forward {
+        grid-area: forward ;
+        border: 1px dashed black;
+    }
+
+    .main-email-container {
+        grid-area: main-email-container;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        "email-container1"
+        "email-container2"
+        "email-container3"
+        "email-container4"
+        "email-container5"
+        "email-container6"
+        "email-container7"
+        "email-container8"
+        "email-container9"
+        "email-container10"
+        "email-container11"
+        "email-container12"
+        "email-container13"
+        "email-container14"
+        "email-container15"
+        "email-container16"
+        "email-container17"
+        ;
+
+        grid-template-rows: repeat(auto);
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .email-container1 {
+        grid-area: email-container1;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: "box star name  detail   time";
+        grid-template-columns: 50px 50px 200px 1fr 150px;
+        padding: 10px;
+         gap: 5px;
+   
+
+    }
+
+    .box {
+        grid-area: box;
+        border: 1px dashed black;
+    }
+
+    .star {
+        grid-area: star;
+        border: 1px dashed black;
+    }
+
+    .name {
+        grid-area: name;
+        border: 1px dashed black;
+    }
+
+    .detail {
+        grid-area: detail;
+        border: 1px dashed black;
+    }
+
+    .time {
+        grid-area: time;
+        border: 1px dashed black;
+    }
+
+
+    .email-container2 {
+        grid-area: email-container2;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: "box2 star2 name2  detail2   time2";
+        grid-template-columns: 50px 50px 200px 1fr 150px;
+        padding: 10px;
+         gap: 5px;
+        
+    }
+
+    .box2 {
+        grid-area: box2;
+        border: 1px dashed black;
+    }
+
+    .star2 {
+        grid-area: star2;
+        border: 1px dashed black;
+    }
+
+    .name2 {
+        grid-area: name2;
+        border: 1px dashed black;
+    }
+
+    .detail2 {
+        grid-area: detail2;
+        border: 1px dashed black;
+    }
+
+    .time2 {
+        grid-area: time2;
+        border: 1px dashed black;
+    }
+
+    .email-container3 {
+        grid-area: email-container3;
+        border: 1px dashed black;
+    }
+
+    .email-container4 {
+        grid-area: email-container4;
+        border: 1px dashed black;
+    }
+
+    .email-container5 {
+        grid-area: email-container5;
+        border: 1px dashed black;
+    }
+    .email-container6 {
+        grid-area: email-container6;
+        border: 1px dashed black;
+    }
+    .email-container7 {
+        grid-area: email-container7;
+        border: 1px dashed black;
+    }
+    .email-container8 {
+        grid-area: email-container8;
+        border: 1px dashed black;
+    }
+    .email-container9 {
+        grid-area: email-container9;
+        border: 1px dashed black;
+    }
+    .email-container10 {
+        grid-area: email-container10;
+        border: 1px dashed black;
+    }
+    .email-container11 {
+        grid-area: email-container11;
+        border: 1px dashed black;
+    }
+    .email-container12 {
+        grid-area: email-container12;
+        border: 1px dashed black;
+    }
+    .email-container13 {
+        grid-area: email-container13;
+        border: 1px dashed black;
+    }
+    .email-container14 {
+        grid-area: email-container14;
+        border: 1px dashed black;
+    }
+    .email-container15 {
+        grid-area: email-container15;
+        border: 1px dashed black;
+    }
+    .email-container16 {
+        grid-area: email-container16;
+        border: 1px dashed black;
+    }
+    .email-container17 {
+        grid-area: email-container17;
+        border: 1px dashed black;
+    }
+
+
+
+    /* Right-bar */
+    .right-bar {
+        grid-area: right-bar;
+        background-color: lightblue;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        "quick-settings"
+        "see-all-settings"
+        "density"
+        "theme"
+        "inbox-type"
+    
+        ;
+        grid-template-rows: 
+      50px 50px  300px 300px 300px
+        
+        ;
+        padding: 10px;
+        gap: 5px;
+    }
+
+
+    .quick-settings {
+        grid-area: quick-settings;
+        border: 1px dashed black;
+    }
+
+
+    .see-all-settings {
+        grid-area: see-all-settings;
+        border: 1px dashed black;
+    }
+
+    .density {
+        grid-area: density;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        
+        "density-text"
+        "default"
+        "comfortable"
+        "compact";
+
+        grid-template-rows: 40px 1fr 1fr 1fr;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .density-text {
+        grid-area: density-text;
+        border: 1px dashed black;
+    }
+
+
+    .default {
+        grid-area: default;
+        border: 1px dashed black;
+    }
+
+    .comfortable{
+        grid-area: comfortable;
+        border: 1px dashed black;
+    }
+
+    .compact{
+        grid-area: compact;
+        border: 1px dashed black;
+    }
+    
+    .theme {
+        grid-area: theme;
+        border: 1px dashed black;
+
+     display: grid;
+     grid-template:
+      "theme-text"
+      "pictures"
+     ;
+     grid-template-rows: 40px 1fr;
+     padding: 10px;
+     gap: 5px;
+    }
+
+
+    .theme-text {
+        grid-area: theme-text;
+        border: 1px dashed black;
+    }
+
+    .pictures {
+        grid-area: pictures;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: 
+        "pic1 pic2 pic3 pic4"
+        ;
+        grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+       
+        padding: 10px;
+        gap: 5px;
+    }
+
+   
+    .pic1 {
+        grid-area: pic1;
+        border: 1px dashed black;
+    }
+    .pic2 {
+        grid-area: pic2;
+        border: 1px dashed black;
+    }
+    .pic3 {
+        grid-area: pic3;
+        border: 1px dashed black;
+    }
+
+    .pic4 {
+        grid-area: pic4;
+        border: 1px dashed black;
+    }
+
+
+    .inbox-type {
+        grid-area: inbox-type;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template:
+        "inbox-type-text"
+        "default-container"
+        "important-first-cont"
+        "unread-first-cont";
+
+        grid-template-rows: 
+        40px 1fr 1fr 1fr;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .inbox-type-text {
+        grid-area:inbox-type-text ;
+        border: 1px dashed black;
+    }
+
+    .default-container {
+        grid-area:default-container ;
+        border: 1px dashed black;
+
+        display: grid;
+        grid-template: "bullet default-text";
+        grid-template-columns:50px 1fr ;
+
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .bullet {
+        grid-area: bullet;
+        border: 1px dashed black;
+    }
+
+    .default-text {
+        grid-area: default-text;
+        border: 1px dashed black;
+    }
+
+
+    .important-first-cont {
+        grid-area:important-first-cont ;
+        border: 1px dashed black;
+
+       
+    }
+
+    .unread-first-cont {
+        grid-area:unread-first-cont;
+        border: 1px dashed black;
+    }
+
+
+     /* icon-bar */
+
+     .icon-bar {
+        grid-area: icon-bar;
+        background-color: lightblue;
+        border: 1px dashed black;
+     }
