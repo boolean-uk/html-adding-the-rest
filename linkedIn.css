@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+
+}
+
+body {
+    background-color: #e0e0e0;
+}
+
+
+
+/* ===================================== General-Layout ===================================== */
+
+
+.container {
+    display: grid;
+    height: 100vh;
+    gap: 30px;
+    grid-template:
+        'top-bar top-bar top-bar' 90px
+        'left center right' 1fr /
+        20% 1fr 25%
+    ;
+}
+
+.top-bar {
+    grid-area: top-bar;
+    background-color: white;
+    padding: 5px 150px 5px 15px;
+    display: grid;
+    grid-template:
+        'bar' 1fr;
+}
+
+
+
+.main {
+    grid-area: center;
+    background-color: #e0e0e0;
+}
+
+
+.left {
+    grid-area: left;
+    background-color: #e0e0e0;
+}
+
+.right {
+    grid-area: right;
+    background-color: #e0e0e0;
+}
+
+
+
+/* ===================================== top-bar ===================================== */
+
+.top-bar-container {
+    grid-area: bar;
+    height: 1fr;
+    display: grid;
+    gap: 15px;
+    padding: 11px 15px 11px 15px;
+    grid-template:
+        'logo center nav' 1fr /
+        10% 1fr 1fr;
+}
+
+
+/* ===================================== Logo ===================================== */
+
+.logo {
+    grid-area: logo;
+    border: 1px dashed blue;
+    width: 70px;
+    height: 1fr;
+}
+
+
+/* ===================================== Top-center ===================================== */
+
+.top-center {
+    grid-area: center;
+    border: 1px solid black;
+    display: grid;
+    padding: 10px 50% 10px 10px;
+
+}
+
+
+.top-center input {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+
+input {
+    display: block;
+    background-color: rgba(137, 43, 226, 0.165);
+    border: 0px solid black;
+    height: 100%;
+    width: 100%
+}
+
+
+/* ===================================== Top-right-(nav-bar) ===================================== */
+
+.nav {
+    grid-area: nav;
+    border: 1px solid black;
+    display: grid;
+    padding: 5px;
+    grid-auto-columns: 80px;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+
+.nav div {
+    border: 1px solid black;
+
+}
+
+
+
+/* ===================================== Left-bar ===================================== */
+
+
+
+.left {
+    grid-area: left;
+    height: 80%;
+    display: grid;
+    gap: 25px;
+    margin-left: 10px;
+    grid-template-rows: 45% 15% 1fr;
+}
+
+.left div {
+    border: 1px dashed blue;
+    background-color: white
+}
+
+.profile-info {
+    border: 1px dashed blue;
+    display: grid;
+    padding: 5px;
+    gap: 10px;
+    grid-template-rows: 50% repeat(3, 1fr);
+}
+
+.profile-info div {
+    border: 1px dashed red;
+}
+
+
+/* ===================================== Right-bar ===================================== */
+
+
+.right {
+    grid-area: right;
+    height: 70%;
+    display: grid;
+    gap: 25px;
+    margin-right: 99px;
+    grid-template-rows: 40% 15% 1fr;
+}
+
+.right div {
+    border: 1px dashed blue;
+    background-color: white
+}
+
+.r-top {
+    display: grid;
+    padding: 5px;
+    gap: 10px;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.r-top div {
+    border: 1px dashed red;
+}
+
+
+/* ===================================== Main ===================================== */
+
+
+.main {
+    height: 1fr;
+    display: grid;
+    gap: 130px;
+    grid-template-rows: 20% 1fr;
+}
+
+
+.create-post {
+    display: grid;
+    gap: 3px;
+    grid-template-rows: 50% 50%;
+    background-color: white;
+    border: 1px dashed blue;
+}
+
+.new-post {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 10% 1fr;
+    gap: 5px;
+    border: 1px dashed blue;
+    margin: 5px;
+}
+
+.new-post img {
+    border: 1px dached yellow;
+    height: 80%;
+    margin: 3px;
+    border-radius: 100px;
+}
+
+.new-post form {
+    border: 1px dashed red;
+    margin: 5px;
+}
+
+
+.media {
+    display: grid;
+    height: 1fr;
+    border: 1px dashed blue;
+    margin: 3px;
+
+    padding: 3px;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.media div {
+    height: 1fr;
+    border: 1px dashed blue;
+    margin: 1px;
+}
+
+
+
+
+.c-main {
+    display: grid;
+    background-color: white;
+    padding: 5px;
+    margin-top: 30px;
+    grid-auto-rows: minmax(220px, 0.3fr);
+    grid-auto-flow: row;
+}
+
+.c-main {
+    border: 1px dashed blue;
+}
+
+.content {
+    background-color: white;
+    border: 1px dashed red;
+    margin: 5px;
+}
+
+
+/* ===================================== Responsiveness ===================================== */
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .left,
+    .right,
+    .search {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+    .container {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .right,
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1080px) {
+    .container {
+        grid-template-columns: 100px minmax(400px, 1fr) 400px;
+    }
+}
