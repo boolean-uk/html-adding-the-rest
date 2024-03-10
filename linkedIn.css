@@ -262,144 +262,34 @@ input {
 }
 
 
+/* ===================================== Responsiveness ===================================== */
 
+@media screen and (max-width: 499px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===================================== Old Stuff ===================================== */
-
-/* .container {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 5% 1fr 2%;
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-areas:
-        'header header header'
-        'left center right'
-        'footer footer footer'
-    ;
+    .left,
+    .right,
+    .search,
+    .logo {
+        display: none;
+    }
 }
 
-.header {
-    grid-area: header;
-    background-color: white;
+@media screen and (min-width: 499px) and (max-width: 987px) {
+    .container {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .right,
+    .logo {
+        display: none;
+    }
 }
 
-
-.left {
-    grid-area: left;
-    background-color: #ffeacd;
-    padding: 20px;
+@media screen and (min-width: 987px) and (max-width: 1265px) {
+    .container {
+        grid-template-columns: 100px minmax(400px, 1fr) 400px;
+    }
 }
-
-.left-container {
-    display: grid;
-    height: 100%;
-    grid-template-rows: 200px 100px 1fr;
-    gap: 20px;
-}
-
-.left-container div {
-    background-color: white;
-    border: 2px solid #7efed4;
-    border-radius: 10px;
-    padding: 10px;
-    margin-left: 30px;
-}
-
-.center {
-    grid-area: center;
-    background-color: #7efed4;
-    padding: 20px;
-}
-
-.center-container {
-    display: grid;
-    height: 100%;
-    grid-template-rows: 100px 1fr 1fr;
-    gap: 20px;
-}
-
-.center-container div {
-    background-color: white;
-    border: 2px solid #7efed4;
-    border-radius: 10px;
-    padding: 10px;
-
-}
-
-.right {
-    grid-area: right;
-    background-color: #dbdbdb;
-    padding: 20px;
-}
-
-.right-container {
-    display: grid;
-    height: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-.right-container div {
-    background-color: white;
-    border: 2px solid #7efed4;
-    border-radius: 10px;
-    padding: 10px;
-    margin-right: 30px;
-}
-
-.footer {
-    grid-area: footer;
-    background-color: #f2f1ee;
-} */
