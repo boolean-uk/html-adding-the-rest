@@ -17,6 +17,11 @@
     background-color: whit;
 }
 
+.header, .page{
+    padding-left:400px;
+    padding-right:400px;
+}
+
 .page {
     grid-area: page;
     display: grid;
@@ -24,8 +29,7 @@
     gap: 40px;
     background-color: #f3f2ef;
     padding-top: 30px;
-    padding-left: 200px;
-    padding-right: 200px;
+
 
 }
 
@@ -34,8 +38,6 @@
     grid-template: "logo search . navbar" 1fr/ 50px 300px 1fr 2fr;
     grid-area: header;
     background-color: white;
-    padding-left: 200px;
-    padding-right: 200px;
     gap: 20px
 }
 
@@ -181,13 +183,23 @@
     border: black solid 1px;
     border-radius: 10px;
 }
+@media screen and (max-width: 1500px) {
+    .header, .page{
+        padding-left:100px;
+        padding-right:100px;
+    }
+}
 
-@media screen and (max-width: 700px) {
-    .container {
-        grid-template:
-            "header header" 1fr
-            "left-bar main" 20fr /
-            .5fr 1fr;
+@media screen and (max-width: 1000px) {
+    .header, .page{
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .page{
+        grid-template:"left-bar main";
+        grid-template-columns: 100px 1fr;
     }
 
     .right-bar {
@@ -195,15 +207,22 @@
     }
 }
 
-@media screen and (max-width: 400px) {
-    .container {
-        grid-template:
-            "header" 1fr
-            "main" 20fr /
-            1fr;
+
+
+@media screen and (max-width: 450px) {
+    .page{
+        grid-template:"main";
+        grid-template-columns: 1fr;
     }
 
     .left-bar {
+        display: none;
+    }
+    .header {
+        grid-template: "logo search" 1fr/ 50px 1fr;
+    }
+
+    .navbar{
         display: none;
     }
 }

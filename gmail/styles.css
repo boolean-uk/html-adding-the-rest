@@ -215,25 +215,27 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 540px) {
   .container {
     grid-template:
-      "header header" 1fr
-      "left-menu main" 20fr /
-      75px 1fr;
+      "header" 1fr
+      "main" 20fr /
+       1fr;
     gap: 40px
   }
 
-  .left-menu {
-    padding: 0 10px 0 10px;
-    margin-right: 10px;
+  .email{
+    grid-template-columns:50px 1fr 1.5fr 75px;
   }
+.main{
+  padding: 5px;
+}
 
   .header {
     grid-template-columns: 50px auto 1fr;
   }
 
-  .header .item.support {
+  .header .item.support, .email .interact, .email .selector, .left-menu{
     display: none;
   }
 }
