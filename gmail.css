@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.layout-container {
+    height: 100vh;
+    background-color: grey;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 150px 1fr 250px;
+    grid-template-areas: 
+    'header header header'
+    'left main right';
+    /* gap: 5px; */
+}
+
+header {
+    grid-area: header;
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 150px 1fr 250px;
+}
+
+.logo {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    padding: 5px;
+    gap: 5px;
+}
+
+.logo div {
+    background-color:white;
+}
+
+.search {
+    background-color: aquamarine;
+    display: grid;
+    margin: 5px;
+    gap: 5px;
+    grid-template-columns: 60px minmax(150px, 1fr) 60px;
+}
+
+.search div {
+    background-color: rgb(177, 0, 0);
+}
+
+.icons {
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: repeat(3, 40px) 80px;
+    align-content: center;
+    justify-content: end;
+    padding: 5px;
+    gap: 5px;
+    grid-template-rows: 40px;
+    /* place-items: center; */
+    
+}
+
+.icons div {
+    background-color: grey;
+}
+
+main {
+    grid-area: main;
+    background-color: white;
+}
+
+.left {
+    grid-area: left;
+    background-color: red;
+    display: grid;
+    grid-template-rows: 80px minmax(200px, 1fr) 80px 120px 40px;
+    padding: 5px;
+    gap: 5px;
+}
+
+.left div {
+    background-color: antiquewhite;
+}
+
+.right {
+    grid-area: right;
+    background-color: green;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.settings {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+.settings > div + div {
+    /* height: 75%; */
+    background-color: cadetblue;
+}
+
+.quick-settings {
+    display: grid;
+    grid-template-areas: 
+    'quick close'
+    'all all';
+    grid-template-columns: 1fr 40px;
+}
+
+.quick {
+    grid-area: quick;
+    background-color: yellow;
+}
+
+.close {
+    grid-area: close;
+    background-color: aliceblue;
+}
+
+.all {
+    border: solid black 2px;
+    color: blue;
+    grid-area: all;
+    margin: 10px;
+    text-align: center;
+    /* place-items: center; */
+}
+
+.apps {
+    background-color: blue;
+    padding: 5px;
+}
+
+.apps > div ~ div {
+    background-color: lightgray;
+    margin-top: 5px;
+}
+
+.apps-container {
+    background-color: burlywood;
+    display: grid;
+    grid-auto-rows: 50px;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.apps-container div {
+    background-color: azure;
+}
+
+
