@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Google Sans', Arial, sans-serif;
+}
+
+.header {
+    background-color: #d93025;
+    height: 60px;
+    /* Other styles for the header */
+}
+
+.main-container {
+    display: flex;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    background-color: #f1f3f4;
+    height: calc(100vh - 60px); /* full height minus header */
+    /* Other styles for sidebar */
+}
+
+.emails-list {
+    flex-grow: 1;
+    background-color: #fff;
+    /* Styles for email list */
+}
+
+.right-sidebar {
+    flex: 0 0 200px;
+    background-color: #f1f3f4;
+    /* Other styles for the right sidebar */
+}
+
+
+.header .search-bar,
+.header .header-options,
+.left-sidebar .compose,
+.left-sidebar .folders,
+.emails-list .email,
+.right-sidebar .meet,
+.right-sidebar .hangouts {
+    border: 1px solid #ddd;
+    margin: 8px;
+    padding: 16px;
+    background-color: #f6f7f8;
+}
+
+/* Styles to distinguish each box */
+.header .search-bar { background-color: #eee; }
+.header .header-options { background-color: #ddd; }
+.left-sidebar .compose { background-color: #d93025; color: #fff; }
+.left-sidebar .folders { background-color: #eee; }
+.emails-list .email { background-color: #fff; }
+.right-sidebar .meet { background-color: #eee; }
+.right-sidebar .hangouts { background-color: #f6f7f8; }
