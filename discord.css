@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Whitney', Arial, sans-serif;
+    background-color: #36393f;
+    color: #fff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 100%;
+    background-color: #2f3136;
+    /* Styles for sidebar */
+}
+
+.main-container {
+    margin-left: 72px; /* same as sidebar width */
+    display: flex;
+    height: 100vh;
+}
+
+.server-list {
+    width: 72px;
+    background-color: #202225;
+    /* Styles for server list */
+}
+
+.channel-list {
+    width: 240px;
+    background-color: #2f3136;
+    /* Styles for channel list */
+}
+
+.chat {
+    flex-grow: 1;
+    background-color: #36393f;
+    /* Styles for chat */
+}
+
+.user-panel {
+    width: 240px;
+    background-color: #292b2f;
+    /* Styles for user panel */
+}
+
+
+

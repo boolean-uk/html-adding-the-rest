@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #283e4a;
+    height: 50px;
+    
+}
+
+.main-container {
+    display: flex;
+}
+
+.sidebar, .right-sidebar {
+    flex: 0 0 200px;
+    background-color: #ccc;
+    height: calc(100vh - 50px); 
+    
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.profile-card, .feed {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    
+}
+
+.header .search-bar,
+.header .header-menu,
+.left-sidebar .profile-card,
+.left-sidebar .sidebar-menu,
+.main-content .content-header,
+.main-content .post-box,
+.main-content .news-feed,
+.right-sidebar .ad,
+.right-sidebar .suggestions {
+    border: 1px solid #ddd;
+    margin: 8px;
+    padding: 16px;
+    background-color: #f3f2ef;
+}
+
+/* Styles to distinguish each box */
+.header .search-bar { background-color: #e1e2e2; }
+.header .header-menu { background-color: #c7c8c8; }
+.left-sidebar .profile-card { background-color: #b0b2b3; }
+.left-sidebar .sidebar-menu { background-color: #d0d1d1; }
+.main-content .content-header { background-color: #a1a2a2; }
+.main-content .post-box { background-color: #d1d2d2; }
+.main-content .news-feed { background-color: #e2e3e3; }
+.right-sidebar .ad { background-color: #b1b2b2; }
+.right-sidebar .suggestions { background-color: #f0f1f1; }
