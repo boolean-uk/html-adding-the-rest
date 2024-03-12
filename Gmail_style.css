@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+
+    grid-template: 
+    'header header header header' 80px
+    'left-bar main quick-settings right-bar' 1fr /
+    300px 1000fr 300px 80px;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid #ebebeb;
+
+    grid-area: header;
+
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-columns: 300px 1fr 450px;
+}
+
+.logo {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-columns: 80px 1fr;
+}
+
+.search-bar {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+
+    display: grid;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.search {
+    display: grid;
+    padding: 5px;
+}
+
+.icons {
+    display: grid;
+    justify-content: right;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-columns: 50px 50px 50px 150px;
+}
+
+
+.profile-picture {
+    border-radius: 50%;
+}
+
+.profile {
+    display: grid;
+
+    padding: 3px;
+    gap: 4px;
+
+    grid-template-columns: 1fr 50px;
+}
+
+.menu img {
+    height: 50px;
+}
+
+.menu {
+    display: grid;
+
+    place-items: center;
+}
+
+.gmail-logo img {
+    height: 40px;
+}
+
+.gmail-logo {
+    display: grid;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.icons div img {
+    height: 40px;
+}
+
+.help, .settings, .options {
+    display: grid;
+    place-items: center;
+}
+
+.profile-picture, .name {
+    display: grid;
+    place-items: center;
+}
+
+/* Left Bar */
+.left-bar {
+    grid-area: left-bar;
+
+    display: grid;
+
+    padding: 10px;
+    gap: 5px;
+
+    grid-template-rows: 100px 350px 110px 200px ;
+}
+
+.folders, .meet, .chat {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.compose {
+    border: 1px solid #dddddd;
+    background-color: rgb(162, 198, 240) ;
+    display: grid;
+    place-items: center;
+    border-radius: 40px;
+
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.24);
+}
+
+.folders {
+    display: grid;
+
+    padding: 5px;
+
+    overflow: auto;
+}
+
+.folders ul {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    gap: 5px;
+}
+
+.folders ul li div {
+    display: grid;
+
+    align-items: center;
+}
+
+.folders ul li {
+    list-style: none;
+
+    display: grid;
+    gap: 4px;
+
+    grid-template-columns: 30px 1fr 20px;
+}
+
+.meet {
+    display: grid;
+
+    grid-template-rows: 25px 1fr;
+}
+
+.meet div {
+    display: grid;
+
+    padding: 5px;
+}
+
+.meet ul li {
+    list-style: none;
+
+    display: grid;
+    gap: 4px;
+
+    grid-template-columns: 40px 1fr;
+}
+
+.meet ul li div {
+    display: grid;
+
+    align-items: center;
+}
+
+.meet ul {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    gap: 5px;
+}
+
+.chat {
+    display: grid;
+    overflow: auto;
+
+    grid-template-rows: auto;
+}
+
+.chat ul li {
+    list-style: none;
+
+    display: grid;
+    gap: 4px;
+
+    grid-template-columns: 50px 1fr;
+}
+
+.chat ul li div {
+    display: grid;
+
+    align-items: center;
+}
+
+.chat ul {
+    margin: 0;
+    padding: 5px;
+
+    display: grid;
+    gap: 5px;
+}
+
+.count {
+    display: grid;
+    place-items: center;
+}
+
+.icon img {
+    height: 25px;
+}
+
+.icon {
+    display: grid;
+
+    place-items: center;
+}
+
+/* Main */
+main {
+    grid-area: main;
+
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-rows: 1000px;
+}
+
+.email-container {
+    display: grid;
+    overflow: auto;
+}
+
+.email-container ul li {
+    border-top: 1px solid #F1F3F4;
+    list-style: none;
+
+    display: grid;
+    align-items: center;
+    padding: 4px;
+
+    grid-template-columns: 30px 30px 100px 1fr 30px;
+    grid-template-rows: 30px;
+}
+
+.sender, .preview {
+    display: grid;
+
+    align-items: center;
+
+    padding: 5px;
+}
+
+.email-container ul {
+    margin: 0;
+    padding: 5px;
+
+    display: grid;
+    gap: 5px;
+}
+
+.email-container ul li div img {
+    height: 20px;
+}
+
+
+/* Settings */
+.quick-settings {
+    border: 1px solid #F1F3F4;;
+
+    grid-area: quick-settings;
+
+    display: grid;
+
+    gap: 5px;
+
+    grid-template-rows: 80px 100px 150px 100px ;
+}
+
+.all, .density, .theme, .inbox-type {
+    border-bottom: 1px solid #F1F3F4;
+}
+
+.all {
+    display: grid;
+
+    padding: 10px;
+    gap: 5px;
+}
+
+.all div {
+    border: 1px solid #D6D9DD;
+    border-radius: 5px;
+    color: #4285F4;
+
+    display: grid;
+
+    place-items: center;
+}
+
+.density {
+    display: grid;
+
+    padding: 10px;
+    gap: 5px;
+}
+
+.density ul {
+    list-style: circle;
+}
+
+.picture {
+    border-radius: 5px;
+}
+
+.theme {
+    display: grid;
+    padding: 10px;
+    gap: 5px;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 30px 1fr 1fr;
+    grid-template-areas: 
+    'heading heading heading heading'
+    'picture picture picture picture'
+    'picture picture picture picture';
+}
+
+.heading {
+    grid-area: heading;
+}
+
+.inbox-type {
+    display: grid;
+
+    padding: 10px;
+    gap: 5px;
+}
+
+.inbox-type ul {
+    list-style: circle;
+}
+
+.colourblock1 {
+    background-color: rgb(249, 211, 169);
+}
+
+.colourblock2 {
+    background-color: black;
+}
+
+.colourblock3 {
+    background-color: grey;
+}
+
+.colourblock4 {
+    background-color: rgb(175, 200, 255);
+}
+
+
+
+/* Right Bar */
+.right-bar {
+    grid-area: right-bar;
+
+    display: grid;
+
+    padding: 10px;
+
+    grid-template-rows: 280px;
+}
+
+.right-bar-container {
+    display: grid;
+
+    padding: 3px;
+    gap: 5px;
+
+    grid-template-rows: 200px 50px;
+}
+
+.right-bar-more {
+    border-top: 1px solid #D6D9DD;
+}
+
+.right-bar-icons div {
+    display: grid;
+
+    place-items: center;
+}
+
+.right-bar-icons {
+    display: grid;
+
+    gap: 5px;
+}
+
+.right-bar-icons div img, .right-bar-more img {
+    height: 50px;
+}
+
+/* Make site responsive */
+@media screen and (max-width: 680px) {
+    body {
+      display: grid;
+      grid-template: 
+      'header' 80px
+      'main' 1fr /
+      1000fr;
+    }
+
+    .left-bar, .quick-settings, .right-bar {
+      display: none;
+    }
+
+  }
+  
+@media screen and (min-width: 680px) and (max-width: 1000px) {
+    body {
+        display: grid;
+        grid-template: 
+        'header header' 80px
+        'left-bar main' 1fr /
+        300px 1000fr;
+  
+      .quick-settings, .right-bar {
+        display: none;
+      }
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1290px) {
+    body {
+        display: grid;
+        grid-template: 
+        'header header header' 80px
+        'left-bar main right-bar' 1fr /
+        300px 1000fr 80px;
+  
+      .quick-settings {
+        display: none;
+      }
+    }
+}
