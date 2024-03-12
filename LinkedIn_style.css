@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+
+    grid-template: 
+    'header header header' 90px
+    'left-bar main right-bar' 1fr /
+    300px 1fr 500px;
+}
+
+/* Header/Logo/Search Bar/Icons */
+header {
+    grid-area: header;
+    background-color: redwhite;
+
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    justify-content: left;
+
+    grid-template-columns: 80px 1300px 400px;
+}
+
+.search-bar {
+    background-color: #dedede;
+    border-radius: 10px;
+
+    width: 480px;
+
+    display: grid;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.icons div {
+    display: grid;
+    place-items: center;
+}
+
+.search {
+    display: grid;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.icons {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.logo img {
+    height: 60px;
+}
+
+.logo {
+    display: grid;
+    place-items: center;
+}
+
+.icons div img {
+    height: 40px;
+}
+
+/* Left/ Profile/ Company Page/ Activity */
+
+.left-bar {
+    background-color: #E0E0E0;
+
+    grid-area: left-bar;
+
+    display: grid;
+    padding: 20px;
+    gap: 20px;
+
+    grid-template-rows: 450px 280px 400px;
+}
+
+.profile, .company, .groups {
+    background-color: white;
+    border-radius:10px ;
+    padding: 20px;
+    line-height: 25px;
+}
+
+.profile-picture {
+    width: 40x;
+    height: 40px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+.profile-display {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-rows: 200px 1fr 1fr 1fr;
+
+}
+
+.views {
+    display: grid;
+    align-items: center;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-columns: 1fr 30px;
+}
+
+.insights {
+    display: grid;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.items {
+    display: grid;
+    align-items: center;
+
+    padding: 5px;
+}
+
+.profile-display, .views, .insights {
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.profile-display {
+    display: grid;
+    gap: 10px;
+    place-content: center;
+
+    grid-template-rows: 100px 1fr;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+    display: grid;
+}
+
+.name {
+    display: grid;
+    text-align: center;
+}
+
+.profile-picture img {
+    height: 100px;
+}
+
+
+/* Main */
+main {
+    background-color: #E0E0E0;
+
+    grid-area: main;
+
+    display: grid;
+
+    padding: 20px;
+    gap: 20px;
+
+    grid-template-rows: 180px 900px;
+}
+
+.start-posting {
+   size: 140px 30px;
+   margin: 10px;
+}
+
+.post, .post-published {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.post-published div {
+    border: none;
+
+}
+
+.post {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+}
+
+.attachment div {
+    display: inline-flex;
+    gap:50px
+}
+
+.post-published, .metnion {
+    padding: 10px
+}
+
+.post-author {
+    display: inline-flex;
+    gap:15px
+}
+
+
+
+
+
+/* Posting Section/ Create Post/ Post/ Reactions */
+.main-section {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+    grid-template-rows: repeat(4, 400px);
+}
+
+.post-profile-picture img {
+    height: 50px;
+}
+
+.start-posting {
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 20px;
+    height: 30px;
+
+    display: grid;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-author {
+    line-height: 25px;
+}
+
+.post-title {
+    font-size: 20px;
+    line-height: 30px;
+} 
+.post-text {
+    line-height: 27px;
+}
+.reactions {
+    display: inline-flex;
+    gap: 25px;
+    color: grey;
+    font-size: 20px;
+}
+/* News/Courses/Add to Feed */
+.right-bar {
+    background-color: #E0E0E0;
+
+    grid-area: right-bar;
+
+    display: grid;
+
+    padding: 20px 200px 20px 20px;
+    gap: 50px;
+
+    grid-template-rows: 450px 345px 410px;  
+}
+
+.news, .most-viewed, .add-to-feed {
+    border: 2px none;
+    background-color: white;
+    border-radius:10px ;
+    padding: 20px;
+    line-height: 25px;
+}
+
+.news div {
+    border: none;
+}
+
+.news {
+    display: grid;
+
+    padding: 5px;
+    gap: 5px;
+
+}
+
+
+
+/* Media */
+/* End */
