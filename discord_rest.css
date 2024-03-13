@@ -1,0 +1,112 @@
+*{
+    margin:0
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template: 
+    'sidebar main'/78px 15fr
+}
+.sidebar{
+    grid-area:sidebar;
+    background-color: rgb(28, 28, 30);
+    
+    img{
+        height:50px;
+        width:50px;
+        padding-left:13px;
+        padding-top:5px
+    }
+}
+.main {
+    grid-area: main;
+    background-color: rgb(43, 43, 49);
+    display: grid;
+    grid-template:
+        'server header online' 40px
+        'channels main online' 1fr
+        'user chat online' 50px /
+        200px 1fr 300px;
+}
+.info{
+    padding-top:610px;
+    padding-left:10px;
+    font-family:sans-serif;
+    color: white;
+}
+.channels{
+    grid-area:channels;
+    background-color: rgb(39, 39, 44);
+}
+.voice{
+    display: grid;
+    /* height: 100%; */
+    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px
+    25px 25px 25px 25px 25px 25px 25px 25px;
+    padding: 10px;
+    gap:15px;
+    font-family: sans-serif;
+    color: darkgray;
+}
+.voice div{
+    background-color: rgb(39, 39, 44);
+}
+.server{
+    grid-area:server;
+    background-color: rgb(39, 39, 44);
+    font-size:10px;
+    font-family: sans-serif;
+    color: white;
+    padding-left: 14px;
+    padding-top: 5PX;
+    border-bottom: 1px solid black;
+    border-right: 1px solid gray;
+}
+.user{
+    grid-area:user;
+    background-color: rgb(32, 31, 35);
+    border-right: 1px solid black;
+    padding-left: 150px;
+    padding-top: 15px;
+    img{
+        height:20px
+    }
+}
+.header{
+    grid-area:header;
+    background-color: rgb(43, 43, 49);
+    border-bottom: 1px solid black;
+    padding-top:10px ;
+    padding-left:15px;
+    font-family:sans-serif;
+    color: darkgrey;
+}
+.chat{
+    grid-area:chat;
+    background-color:rgb(43, 43, 49);
+}
+.searchbar{
+    display:grid;
+    grid-template-rows: 25px 25px;
+    padding: 10px;
+    gap:20px;
+    color:rgba(96, 91, 91, 0.657);
+    border-radius: 13px
+}
+.searchbar div{
+    background-color: rgb(57, 55, 60);
+    font-family: sans-serif;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+.online{
+    grid-area:online;
+    background-color: rgb(39, 39, 44);
+    padding:10px;
+    font-size:15px;
+    font-family:sans-serif;
+    color:gray ;
+}
+.members{
+    color:lightgreen
+}

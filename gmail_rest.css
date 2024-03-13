@@ -1,0 +1,97 @@
+*{
+    margin:0
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template: 
+    'sidebar main'/250px 15fr
+}
+.main {
+    grid-area: main;
+    display: grid;
+    background-color: rgb(229, 229, 230);
+    grid-template:
+        'header header user' 60px
+        'inbox inbox user' 1fr
+        'inbox inbox user' 50px /
+        200px 1fr 70px;
+}
+.logo{
+    grid-area:logo;
+    background-color: purple(239, 0, 0);
+    font-size:50px;
+    padding-left: 10px;
+    color:white;
+    img{
+        height: 30px;
+        width:120px
+    }
+}
+.header{
+    grid-area:header;
+    background-color: rgb(229, 229, 230);
+    padding:15px;
+    margin-right: 700px;
+}
+.searchbar{
+    display:grid;
+    grid-template-rows: 35px;
+    background-color: rgba(184, 192, 204, 0.816);
+    border-radius:20px;
+    img{
+        height:25px;
+        padding:5px
+    }
+
+}
+.sidebar{
+    grid-area:sidebar;
+    background-color: rgb(229, 229, 230);
+    gap:20px;
+    padding:10px;
+    padding-right: 100px;
+    font-family: sans-serif;
+}
+.compose{
+    display:grid;
+    grid-template-rows:5px ;
+    background-color: rgb(161, 201, 211);
+    font-family: sans-serif;
+    padding:15px;
+    text-align: center;
+    text-align: right;
+    border-radius: 13px;
+    color: rgba(45, 45, 55, 0.681);
+    img{
+        height: 25px;
+        padding-bottom:45px;
+    }
+}
+.inbox{
+    grid-area:inbox;
+    background-color: rgb(207, 209, 210);
+    padding:20px;
+    border-radius: 13px;
+}
+.emails{
+    display:grid;
+    grid-template-rows: 10px 10px 10px;
+    background-color: white;
+    gap:150px;
+    border-radius: 13px;
+    padding-top: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    color: gray;
+}
+.user{
+    grid-area:user;
+    background-color: rgb(229, 229, 230);
+    padding-left: 7px;
+    img{
+        height:50px;
+        width:65px
+    }
+}
